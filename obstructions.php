@@ -251,7 +251,7 @@
                                       <div class="input-group mb-3">
                                         <!--<span class="input-group-text" id=""><i class="bi bi-copy"></i></span>-->
                                         <button class="btn btn-orange" type="button" id="btnTempStops1"><i class="bi bi-copy"></i> 1</button>
-                                        <input type="text" class="form-control" id="#tempStops1">
+                                        <input type="text" class="form-control" id="tempStops1">
                                       </div>
                                       <div class="input-group mb-3">
                                         <!--<span class="input-group-text" id=""><i class="bi bi-copy"></i></span>-->
