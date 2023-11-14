@@ -16,7 +16,7 @@ switch($page){
 		$page = "Werkorders";
 		break;
 	
-	case "profile.php";
+	case "user_profile_page.php";
 		$page = "Account";
 		break;
 

@@ -22,6 +22,8 @@
     }   
   }
 
+  include('includes/headertitle.inc.php');
+
   $tableBusstopOutput = '';
   $sqlBusStops = 'SELECT * FROM busstops';
   if ($sqlResultBusStops = mysqli_query($conn, $sqlBusStops)) {
@@ -118,7 +120,7 @@
     <link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
 
-    <title>Qbuzz InfraGD | Home</title>
+    <title>Qbuzz InfraGD | <?php echo $page; ?></title>
   </head>
   <body>
 
