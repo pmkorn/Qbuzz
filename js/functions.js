@@ -18,6 +18,24 @@ $(document).ready(function(){
 
   });
 
+  $('#btnTempStops1').click(function(){ 
+    //let a = $('#obstructionLinesList').find(':selected').val().clone(true).prepend('#tempExpiredStops1').val();;
+    //alert(a);
+
+    let obstructionLinesList = [];
+      $('#obstructionLinesList').each(function() {
+        if($(this).find(":selected")) {
+          obstructionLinesList.push($(this).val());
+        }
+      });
+    //obstructionLinesList = obstructionLinesList.toString();
+    //obstructionLinesList.clone();
+    $('#tempStops1').val(obstructionLinesList);
+    //$('#options').find('option').clone().appendTo('#options2');
+    //alert(obstructionLinesList);
+
+  });
+
   $('#btnSaveObstruction').on('click', function(){
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
     console.log(tempExpiredStops1);
