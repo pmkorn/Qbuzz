@@ -51,6 +51,7 @@
             <li><a class="dropdown-item" href="account/profile/">Profiel</a></li>
             <li class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="account/logout/">Logout</a></li>
+            <li><a class="dropdown-item" id="logout" data-logout="logout">Test</a></li>
           </ul>
         </li>
       </ul>

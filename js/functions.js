@@ -173,4 +173,9 @@ $(document).ready(function(){
 
   });
 
+  $('#lougout').on('click', function() {
+    var opdracht = $(this).attr("data-logout");
+    alert(opdracht);
+  })
+
 });
