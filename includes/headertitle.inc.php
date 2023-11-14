@@ -20,25 +20,6 @@ switch($page){
 		$page = "Account";
 		break;
 
-	case "about.php";
-		$page = "Over ons";
-		break;
-
-	case "contact.php";
-		$page = "Contact";
-		break;
-
-	case "Login.php";
-		$page = "Login";
-		break;
-
-	case "register.php";
-		$page = "Registreren";
-		break;
-
-	case "movie.php";
-		$page = "Films";
-		break;
 }
 
 ?>
