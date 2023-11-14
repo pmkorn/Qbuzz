@@ -1,0 +1,36 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^/ index.php [NC,L]
+
+RewriteRule ^account/login user_login.php [NC,L]
+RewriteRule ^account/register user_register.php [NC,L]
+RewriteRule ^account/password-reset user_password_reset.php [NC,L]
+RewriteRule ^account/profile user_profile_page.php [NC,L]
+RewriteRule ^account/logout scripts/user_logout_script.php [NC,L]
+
+RewriteRule ^stremmingen/aanmaken/ obstructions.php [NC,L]
+
+RewriteRule ^haltes/werkorders busstop_workorders.php [NC,L]
+
+
+#RewriteRule ^create-account/ signup.php [NC,L]
+
+#RewriteRule ^password-recover/ password_recover.php [NC,L]
+
+
+
+
+#RewriteRule ^stremming/([0-9a-zA-Z_-]+) stremming.php?obstructionID=S1 [NC,L]
+
+
+#RewriteRule ^vvo vvo.php [NC,L]
+#RewriteRule ^account/uitloggen includes/logout.inc.php [NC,L]
+#RewriteRule ^account account.php [NC,L]
+#RewriteRule ^login pages/login.php [NC,L]
+#RewriteRule ^signup signup.php [NC,L]
+#RewriteRule ^bussen/([0-9a-zA-Z_-]+)/([0-9a-zA-z_-]+) bus_detail.php?busBrand=$1&busNumber=$2 [NC]
+#RewriteRule ^bussen busses.php [NC,L]
