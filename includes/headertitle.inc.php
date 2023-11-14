@@ -5,7 +5,7 @@ $page = basename($_SERVER['PHP_SELF']);
 switch($page){
 	
 	case "index.php";
-		$page = "Home";
+		$page = "Dashboard";
 		break;
 	
 	case "obstructions.php";
