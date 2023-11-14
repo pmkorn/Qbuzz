@@ -170,6 +170,17 @@
 
       </div>
 
+      <div class="row">
+        <div class="col-md-3">
+        <select class="form-control" id="obstructionLinesList" multiple aria-label="Multiple select" size="20">
+          <optgroup label="Veendam, Eems">
+            <option value="Veendam, Eems (12635010)">Veendam, Eems (12635010)</option>
+            <option value="Veendam, Eems (12635020)">Veendam, Eems (12635020)</option>
+          </optgroup>
+        </select>
+        </div>
+      </div>
+
     </div>
 
   </body>
