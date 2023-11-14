@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
 
-    <title>Qbuzz InfraGD | Home</title>
+    <title>Qbuzz InfraGD | <?php echo $page; ?></title>
   </head>
   <body>
 
