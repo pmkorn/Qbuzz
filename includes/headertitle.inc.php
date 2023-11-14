@@ -8,8 +8,8 @@ switch($page){
 		$page = "Home";
 		break;
 	
-	case "login.php";
-		$page = "Inloggen";
+	case "obstructions.php";
+		$page = "Stremmingen";
 		break;
 	
 	case "blog.php";
