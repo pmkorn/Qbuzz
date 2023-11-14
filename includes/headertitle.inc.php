@@ -12,8 +12,8 @@ switch($page){
 		$page = "Stremmingen";
 		break;
 	
-	case "blog.php";
-		$page = "Blog";
+	case "busstop_workorders.php";
+		$page = "Werkorders";
 		break;
 	
 	case "profile.php";
