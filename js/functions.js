@@ -45,6 +45,9 @@ $(document).ready(function(){
 
     let employeeUserName = $('#employeeUserName').val();
     let employeeUserPassword = $('#employeeUserPassword').val();
+    let formdata = $('#userLoginForm').serialize();
+    
+    console.log(formdata);
     
     $.ajax ({
       url: '../scripts/user_login_script.php',
@@ -53,10 +56,9 @@ $(document).ready(function(){
         employeeUserName: employeeUserName,
         employeeUserPassword: employeeUserPassword,
       },
-      //data: $('#userLoginForm').serialize(),
+      data: formdata,
       cache: false,
       success: function(data) {
-        console.log(data);
         if (data === 'success') {
           $('#btnEmployeeLogin').hide();
           $('#btnSpinner').show();

@@ -53,11 +53,11 @@
                   <form id="userLoginForm" action="" autocomplete="off">
                     <div class="form-group mb-3">
                       <label for="employeeUserName">Gebruikersnaam</label>
-                      <input type="text" class="form-control" id="employeeUserName" placeholder="">                      
+                      <input type="text" class="form-control" id="employeeUserName" name="employeeUserName" placeholder="">                      
                     </div>
                     <div class="form-group mb-5">
                       <label for="userPassword">Wachtwoord</label>
-                      <input type="password" class="form-control" id="employeeUserPassword" placeholder="">
+                      <input type="password" class="form-control" id="employeeUserPassword" name="employeeUserPassword" placeholder="">
                     </div>
                     <div class="d-grid mb-3">
                       <button class="btn btn-orange" id="btnEmployeeLogin" type="button">Inloggen</button>
