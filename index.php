@@ -180,6 +180,7 @@
           <optgroup label="Veendam, Gelrelaan">
             <option value="Veendam, Gelrelaan (12635110)">Veendam, Gelrelaan (12635110)</option>
             <option value="Veendam, Gelrelaan (12635120)">Veendam, Gelrelaan (12635120)</option>
+            <option value="Veendam, Gelrelaan (12635120)">Lanterna</option>
           </optgroup>
         </select>
         </div>
