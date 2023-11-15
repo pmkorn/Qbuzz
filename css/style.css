@@ -275,15 +275,11 @@ legend {
 .light { background-color: $background-color-white; color: $font-color-dark-grey;}
 .green { background-image: radial-gradient(circle, $radial-green, $radial-dark-green); color: $font-color-white;}*/
 /****************************************************************/
-/* MOBILE LAYOUT */
-/* END MOBILE LAYOUT */
-/****************************************************************/
-/****************************************************************/
 /* TABLET LAYOUT */
 /* END TABLET LAYOUT */
 /****************************************************************/
 /****************************************************************/
-/* DESKTOP VIEW */
-/* END DESKTOP LAYOUT */
+/* MOBILE LAYOUT */
+/* END MOBILE LAYOUT */
 /****************************************************************/
 /*# sourceMappingURL=style.css.map */
