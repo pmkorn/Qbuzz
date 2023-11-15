@@ -53,8 +53,10 @@ $(document).ready(function(){
         employeeUserName: employeeUserName,
         employeeUserPassword: employeeUserPassword,
       },
+      //data: $('#userLoginForm').serialize(),
       cache: false,
       success: function(data) {
+        console.log(data);
         if (data === 'success') {
           $('#btnEmployeeLogin').hide();
           $('#btnSpinner').show();
@@ -74,9 +76,10 @@ $(document).ready(function(){
             window.location = '../account/login/';
           }, 4000);
         }
-      }
+      }      
       
     });
+    
 
     //alert(employeeEmail+"\n"+employeeUserPassword);
 
