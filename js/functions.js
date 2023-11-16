@@ -181,6 +181,11 @@ $(document).ready(function(){
   $('#logout').on('click', function() {
     var opdracht = $(this).attr("data-logout");
     alert(opdracht);
-  })
+  });
+
+  /*setInterval(function() {
+    let x = Math.ceil(Math.random() * 100);
+    $('#hoofd').html(x);
+  }, 3000);*/
 
 });

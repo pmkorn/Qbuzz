@@ -48,7 +48,7 @@
       <div class="row mb-3">
       
         <div class="col-md-12 mb-3 mb-md-0">          
-          <h1><i class="bi bi-speedometer"></i> Dashboard</h1>
+          <h1 id="hoofd"><i class="bi bi-speedometer"></i> Dashboard</h1>
           <hr>
         </div>
 
