@@ -129,18 +129,21 @@ $(document).ready(function(){
   $('.btnSaveWorkOrder').on('click', function(){
     
     let busStopID = $(this).val();
-    let inputNewWorkOrderDescription = $('#inputNewWorkOrderDescription'+busStopID).val();
-    
+    let inputNewWorkOrderNotification = $('#inputNewWorkOrderNotification'+busStopID).val();
+    let workOrderInsertedBy = $('#workOrderInsertedBy').val();
+    //alert(busStopID+"\n"+inputNewWorkOrderNotification+"\n"+workOrderInsertedBy);
+
     //$('#newWorkOrder'+busStopID).modal('toggle');
     //$('#inputNewWorkOrderForm'+busStopID).trigger("reset");
-    //console.log(busStopID+"\n"+inputNewWorkOrderDescription);
+    //console.log(busStopID+"\n"+inputNewworkOrderNotification);
 
     $.ajax({
       url: '../scripts/insert_workorder.php',
       type: 'POST',
       data: {
         busStopID: busStopID,
-        inputNewWorkOrderDescription: inputNewWorkOrderDescription
+        inputNewWorkOrderNotification: inputNewWorkOrderNotification,
+        workOrderInsertedBy: workOrderInsertedBy
       },
       success: function(data) {      
         
@@ -152,19 +155,23 @@ $(document).ready(function(){
           return false;
         }, 500);
       }
-    });    
+    });
 
   });
 
   $('.btnWorkOrderFinalize').on('click', function() {
 
     let workOrderID = $(this).val();
+    let inputNewWorkOrderRepairNotification = $('#inputNewWorkOrderRepairNotification'+workOrderID).val();
+    let workOrderFinalizedBy = $('#workOrderFinalizedBy').val();
 
     $.ajax({
       url: '../scripts/finalize_workorder.php',
       type: 'POST',
       data: {
-        workOrderID: workOrderID
+        workOrderID: workOrderID,
+        inputNewWorkOrderRepairNotification: inputNewWorkOrderRepairNotification,
+        workOrderFinalizedBy: workOrderFinalizedBy
       },
       success: function(data) {
         $('#workOrderFinalize'+workOrderID).modal('toggle');

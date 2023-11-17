@@ -46,10 +46,11 @@
                 $tableBusstopOutput .= '<div class="modal-body">';
                   $tableBusstopOutput .= '<form id="inputNewWorkOrderForm'.$rowBusStop['busStopID'].'" action="">';
                     $tableBusstopOutput .= '<div class="mb-3">';
-                      $tableBusstopOutput .= '<label class="form-label" for="inputNewWorkOrderDescription'.$rowBusStop['busStopID'].'"><strong>Omschrijving mankement</strong></label>';
-                      $tableBusstopOutput .= '<textarea class="form-control" name="inputNewWorkOrderDescription" id="inputNewWorkOrderDescription'.$rowBusStop['busStopID'].'" cols="30" rows="10"></textarea>';
+                      $tableBusstopOutput .= '<label class="form-label" for="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'"><strong>Omschrijving mankement</strong></label>';
+                      $tableBusstopOutput .= '<textarea class="form-control" name="inputNewWorkOrderNotification" id="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'" cols="30" rows="10"></textarea>';
                     $tableBusstopOutput .= '</div>';
                     $tableBusstopOutput .= '<input type="hidden" id="busStopIDWorkNumber" value="'.$rowBusStop['busStopID'].'" />';
+                    $tableBusstopOutput .= '<input type="hidden" id="workOrderInsertedBy" value="'.$employeeFirstName." ".$employeeLastName.'">';
                   $tableBusstopOutput .= '</form>';
                 $tableBusstopOutput .= '</div>';
                 $tableBusstopOutput .= '<div class="modal-footer">';
@@ -66,17 +67,19 @@
   }
 
   $workOrderOutput = '';
-  $sqlWorkOrders = 'SELECT workorders.workOrderID AS wID, workorders.busStopId AS bID, workorders.workOrderDescription AS wOD, workorders.workOrderStatus AS wOS, workorders.workOrderAddDate as addDate, busstops.busStopID as bSID, busstops.busStopNumber AS bSN, busstops.busStopName AS BSNA FROM workorders INNER JOIN busstops ON workorders.busStopID = busstops.busStopID WHERE workorders.workOrderStatus = 0';
+  $sqlWorkOrders = 'SELECT workorders.workOrderID AS wID, workorders.busStopId AS bID, workorders.workOrderNotification AS wOD, workorders.workOrderStatus AS wOS, workorders.workOrderAddDate as addDate, busstops.busStopID as bSID, busstops.busStopNumber AS bSN, busstops.busStopName AS BSNA FROM workorders INNER JOIN busstops ON workorders.busStopID = busstops.busStopID WHERE workorders.workOrderStatus = 0';
   if ($sqlResultWorkOrders = mysqli_query($conn, $sqlWorkOrders)) {
     if (mysqli_num_rows($sqlResultWorkOrders) > 0) {
       while ($rowWorkOrder = mysqli_fetch_array($sqlResultWorkOrders)) {
-        $workOrderOutput .= '<a href="#" class="list-group-item list-group-item-action" aria-current="true" data-bs-toggle="modal" data-bs-target="#workOrderFinalize'.$rowWorkOrder['wID'].'">';
+        $workOrderOutput .= '<a href="#" class="list-group-item list-group-item-action mb-1" aria-current="true" data-bs-toggle="modal" data-bs-target="#workOrderFinalize'.$rowWorkOrder['wID'].'">';
           $workOrderOutput .= '<div class="d-flex w-100 justify-content-between">';
             $workOrderOutput .= '<h5 class="mb-1">'.$rowWorkOrder['BSNA'].'</h5>';
             $workOrderOutput .= '<small><span class="badge text-bg-primary">'.date("j M - H:m", strtotime($rowWorkOrder['addDate'])).'</span></small>';
           $workOrderOutput .= '</div>';
           $workOrderOutput .= '<p class="mb-1">'.$rowWorkOrder['bSN'].'</p>';
           $workOrderOutput .= '<small>'.$rowWorkOrder['wOD'].'</small>';
+          $workOrderOutput .= '<div class="clearfix"></div>';
+          $workOrderOutput .= '<i class="dot dot-danger"></i><i class="dot dot-warning"></i><i class="dot dot-success"></i>';
         $workOrderOutput .= '</a>';
         $workOrderOutput .= '<div class="modal fade" id="workOrderFinalize'.$rowWorkOrder['wID'].'" tabindex="-1">';
           $workOrderOutput .= '<div class="modal-dialog">';
@@ -86,8 +89,11 @@
                 $workOrderOutput .= '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
               $workOrderOutput .= '</div>';
               $workOrderOutput .= '<div class="modal-body">';
-                $workOrderOutput .= '<label class="form-label" for="inputNewWorkOrderDescription'.$rowWorkOrder['wID'].'"><strong>Omschrijving werkzaamheden</strong></label>';
-                $workOrderOutput .= '<textarea class="form-control" name="inputNewWorkOrderDescription" id="inputNewWorkOrderDescription'.$rowWorkOrder['wID'].'" cols="30" rows="5"></textarea>';
+                $workOrderOutput .= '<p><strong>Melding incident:</strong></p>';
+                $workOrderOutput .= '<p class="text-danger">'.$rowWorkOrder['wOD'].'</p>';
+                $workOrderOutput .= '<label class="form-label" for="inputNewWorkOrderRepairNotification'.$rowWorkOrder['wID'].'"><strong>Omschrijving werkzaamheden</strong></label>';
+                $workOrderOutput .= '<textarea class="form-control" name="inputNewWorkOrderRepairNotification" id="inputNewWorkOrderRepairNotification'.$rowWorkOrder['wID'].'" cols="30" rows="5"></textarea>';
+                $workOrderOutput .= '<input type="hidden" id="workOrderFinalizedBy" value="'.$employeeFirstName." ".$employeeLastName.'">';
               $workOrderOutput .= '</div>';
               $workOrderOutput .= '<div class="modal-footer">';
                 $workOrderOutput .= '<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuleren&nbsp;<i class="bi bi-x-circle"></i></button>';
@@ -100,7 +106,7 @@
     } else {
       $workOrderOutput .= '<a href="#" class="list-group-item list-group-item-action" aria-current="true">';
         $workOrderOutput .= '<div class="d-flex w-100 justify-content-between">';
-          $workOrderOutput .= '<h5 class="mb-1">Geen werkorder beschikbaar</h5>';
+          $workOrderOutput .= '<h5 class="mb-1"><i class="bi bi-exclamation-triangle-fill text-danger"></i> Geen werkorder beschikbaar</h5>';
         $workOrderOutput .= '</div>';
       $workOrderOutput .= '</a>';
     }
@@ -141,39 +147,29 @@
       <div class="row mb-3 mb-md-0">
 
         <div class="col-md-8 mb-3 mb-md-0 d-none d-lg-block">
-          <div class="card">
-            <div class="card-header">
-              <i class="bi bi-list-task"></i> Overzicht haltes
-            </div>
-            <div class="card-body">
-              <table id="busStopTable" class="table table-hover table-striped">
-                <thead>
-                  <tr>
-                    <th>Haltenaam</th>
-                    <th>Haltenummer</th>
-                    <th>Actie</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php echo $tableBusstopOutput; ?>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <h4>Overzicht haltes</h4>
+          <hr>
+          <table id="busStopTable" class="table table-hover table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Haltenaam</th>
+                <th>Haltenummer</th>
+                <th>Actie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php echo $tableBusstopOutput; ?>
+            </tbody>
+          </table>
         </div>
 
         <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card">
-            <div class="card-header">
-              <i class="bi bi-list-task"></i> Openstaande Werkorders
-            </div>
-            <div class="card-body">
-              <div class="list-group overflow-scroll" id="workorder-overview" style="max-height:600px;">
-                <?php echo $workOrderOutput; ?>
-              </div>
-            </div>
+          <h4>Openstaande werkorders</h4>
+          <hr>            
+          <div class="list-group overflow-scroll" id="workorder-overview" style="max-height:600px;">
+            <?php echo $workOrderOutput; ?>
           </div>
-        </div>
+        </div>        
 
       </div>
 
