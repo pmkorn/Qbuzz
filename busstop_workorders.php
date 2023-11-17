@@ -86,11 +86,12 @@
                 $workOrderOutput .= '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
               $workOrderOutput .= '</div>';
               $workOrderOutput .= '<div class="modal-body">';
-                $workOrderOutput .= '<p>Modal body text goes here.</p>';
+                $workOrderOutput .= '<label class="form-label" for="inputNewWorkOrderDescription'.$rowWorkOrder['wID'].'"><strong>Omschrijving werkzaamheden</strong></label>';
+                $workOrderOutput .= '<textarea class="form-control" name="inputNewWorkOrderDescription" id="inputNewWorkOrderDescription'.$rowWorkOrder['wID'].'" cols="30" rows="5"></textarea>';
               $workOrderOutput .= '</div>';
               $workOrderOutput .= '<div class="modal-footer">';
                 $workOrderOutput .= '<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuleren&nbsp;<i class="bi bi-x-circle"></i></button>';
-                $workOrderOutput .= '<button type="button" class="btn btn-success btnWorkOrderFinalize" id="btnWorkOrderFinalize'.$rowWorkOrder['wID'].'" value="'.$rowWorkOrder['wID'].'">Afmelden&nbsp;<i class="bi bi-check"></i></button>';
+                $workOrderOutput .= '<button type="button" class="btn btn-success btnWorkOrderFinalize" id="btnWorkOrderFinalize'.$rowWorkOrder['wID'].'" value="'.$rowWorkOrder['wID'].'">Afmelden&nbsp;<i class="bi bi-check-lg"></i></button>';
               $workOrderOutput .= '</div>';
             $workOrderOutput .= '</div>';
           $workOrderOutput .= '</div>';
