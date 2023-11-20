@@ -37,8 +37,14 @@ $(document).ready(function(){
   });
 
   $('#btnSaveObstruction').on('click', function(){
+    let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
-    console.log(tempExpiredStops1);
+    let tempStops1 = $('#tempStops1').val();
+    console.log(obstructionRegion + '\n' + 'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 'Tijdelijke haltes: ' + tempStops1);
+  });
+
+  $("#btnResetObstruction").on('click', function(){
+    $("#insertObstructionForm").trigger("reset");
   });
 
   $('#btnEmployeeLogin').on('click', function() {

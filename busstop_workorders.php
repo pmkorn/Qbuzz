@@ -85,12 +85,14 @@
           $workOrderOutput .= '<div class="modal-dialog">';
             $workOrderOutput .= ' <div class="modal-content">';
               $workOrderOutput .= '<div class="modal-header">';
-                $workOrderOutput .= '<h5 class="modal-title">'.$rowWorkOrder['BSNA'].'</h5>';
+                $workOrderOutput .= '<h5 class="modal-title"><i class="bi bi-bus-front"></i> '.$rowWorkOrder['BSNA'].'</h5>';
                 $workOrderOutput .= '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
               $workOrderOutput .= '</div>';
               $workOrderOutput .= '<div class="modal-body">';
                 $workOrderOutput .= '<p><strong>Melding incident:</strong></p>';
-                $workOrderOutput .= '<p class="text-danger">'.$rowWorkOrder['wOD'].'</p>';
+                $workOrderOutput .= '<div class="callout callout-info">';
+                  $workOrderOutput .= $rowWorkOrder['wOD'];
+                $workOrderOutput .= '</div>';
                 $workOrderOutput .= '<label class="form-label" for="inputNewWorkOrderRepairNotification'.$rowWorkOrder['wID'].'"><strong>Omschrijving werkzaamheden</strong></label>';
                 $workOrderOutput .= '<textarea class="form-control" name="inputNewWorkOrderRepairNotification" id="inputNewWorkOrderRepairNotification'.$rowWorkOrder['wID'].'" cols="30" rows="5"></textarea>';
                 $workOrderOutput .= '<input type="hidden" id="workOrderFinalizedBy" value="'.$employeeFirstName." ".$employeeLastName.'">';

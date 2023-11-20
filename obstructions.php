@@ -62,10 +62,10 @@
                             <label for="obstructionRegion" class="form-label"><strong>Regio:</strong></label>
                             <select id="obstructionRegion" class="form-select">
                               <option selected>Kies...</option>
-                              <option value="1">Drenthe</option>
-                              <option value="2">Friesland</option>
-                              <option value="3">Groningen</option>
-                              <option value="4">Stad</option>
+                              <option value="Drenthe">Drenthe</option>
+                              <option value="Friesland">Friesland</option>
+                              <option value="Groningen">Groningen</option>
+                              <option value="Stad">Stad</option>
                             </select>
                           </div>
                         </div>
@@ -285,6 +285,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Annuleer</button>
+            <button  class="btn btn-warning text-white" id="btnResetObstruction"><i class="bi bi-arrow-clockwise"></i> Reset</button>
             <button  class="btn btn-success" id="btnSaveObstruction"><i class="bi bi-floppy"></i> Opslaan</button>
           </div>
         </div>
