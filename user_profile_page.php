@@ -56,16 +56,19 @@
 
   <div class="row mb-3">
     <div class="col-md-3">
-    <ul class="list-group">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-      <li class="list-group-item">A fourth item</li>
-      <li class="list-group-item">And a fifth one</li>
-      <li class="list-group-item">
-        <a class="btn btn-link" href="account/logout/">Uitloggen</a>
-      </li>
-    </ul>
+
+      <img class="img-thumbnail rounded-circle mb-3" src="https://via.placeholder.com/800x800" width="150px" alt="Profile pic" title="Profile pic">
+      <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+        <li class="list-group-item">
+          <a class="btn btn-link" href="account/logout/">Uitloggen</a>
+        </li>
+      </ul>
+
     </div>
   </div>
 

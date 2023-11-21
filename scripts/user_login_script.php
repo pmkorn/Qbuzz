@@ -1,12 +1,15 @@
 <?php
 
   session_start();
-
-  $employeeUserName = $_POST['employeeUserName'];
-  $employeeUserPassword = $_POST['employeeUserPassword'];
+  
+  include('../includes/db.inc.php');
+  
+  $employeeUserName = mysqli_real_escape_string($conn, $_POST['employeeUserName']);
+  $employeeUserPassword = mysqli_real_escape_string($conn, $_POST['employeeUserPassword']);
+  $employeeUserPassword = stripslashes($employeeUserPassword);
   $hashedEmployeeUserPassword = hash('sha256', $employeeUserPassword);
 
-  include('../includes/db.inc.php');
+  
 
   $sqlEmployeeLogin = "SELECT * FROM employees WHERE employeeUserName = '$employeeUserName' AND employeeUserPassword = '$hashedEmployeeUserPassword' AND employeeISActive = 1 LIMIT 1";
 
