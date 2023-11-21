@@ -20,6 +20,10 @@ switch($page){
 		$page = "Account";
 		break;
 
+	case "admin.php";
+		$page = "Admin";
+		break;
+
 }
 
 ?>

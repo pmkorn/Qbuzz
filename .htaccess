@@ -6,6 +6,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^/ index.php [NC,L]
 
+RewriteRule ^admin/ admin.php [NC,L]
+
 RewriteRule ^account/login user_login.php [NC,L]
 RewriteRule ^account/register user_register.php [NC,L]
 RewriteRule ^account/password-reset user_password_reset.php [NC,L]

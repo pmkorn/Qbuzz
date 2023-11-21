@@ -54,6 +54,9 @@
             <li><a class="dropdown-item disabled" id="logout" data-logout="logout" aria-disabled="true">Test</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/admin/">Admin</a>
+        </li>
       </ul>
     </div>
   </div>
