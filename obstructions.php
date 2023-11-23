@@ -315,7 +315,7 @@
           <h3>Overzicht stremmingen</h3>
         </div>
 
-        <div class="col-md-9 mb-3 mb-md-0">
+        <div class="col-md-12 mb-3 mb-md-0">
           <div class="card">
             <div class="card-header">
               <i class="bi bi-list-task"></i> Stremmingen
@@ -331,7 +331,7 @@
                       <th>Van - Tot</th>
                       <th>Lijnen</th>
                       <th>Status</th>
-                      <th></th>
+                      <th>Actie's</th>
                     </tr>
                 </thead>
                 <tbody>
