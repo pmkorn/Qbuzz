@@ -38,9 +38,11 @@ $(document).ready(function(){
 
   $('#btnSaveObstruction').on('click', function(){
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
+    let obstructionType = $('#obstructionType').val();
+    let obstructionPriority = $('#obstructionPriority').val();
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
     let tempStops1 = $('#tempStops1').val();
-    console.log(obstructionRegion + '\n' + 'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 'Tijdelijke haltes: ' + tempStops1);
+    console.log(obstructionRegion + '\n' + obstructionType + '\n' + obstructionPriority + '\n' + 'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 'Tijdelijke haltes: ' + tempStops1);
   });
 
   $("#btnResetObstruction").on('click', function(){

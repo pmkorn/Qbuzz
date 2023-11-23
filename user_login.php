@@ -52,11 +52,11 @@
                   <h2 class="mb-3">INLOGGEN</h2>
                   <form id="userLoginForm" action="" autocomplete="off">
                     <div class="form-group mb-3">
-                      <label for="employeeUserName">Gebruikersnaam</label>
+                      <label class="form-label" for="employeeUserName">Gebruikersnaam</label>
                       <input type="text" class="form-control" id="employeeUserName" name="employeeUserName" placeholder="">                      
                     </div>
                     <div class="form-group mb-5">
-                      <label for="userPassword">Wachtwoord</label>
+                      <label class="form-label" for="userPassword">Wachtwoord</label>
                       <input type="password" class="form-control" id="employeeUserPassword" name="employeeUserPassword" placeholder="">
                     </div>
                     <div class="d-grid mb-3">

@@ -82,9 +82,9 @@
                             <label for="obstructionType" class="form-label"><strong>Type:</strong></label>
                             <select id="obstructionType" class="form-select">
                               <option selected>Kies...</option>
-                              <option value="1">Diensmededeling</option>
-                              <option value="2">Omleiding</option>
-                              <option value="3">Verkeershinder</option>
+                              <option value="Diensmededeling">Diensmededeling</option>
+                              <option value="Omleiding">Omleiding</option>
+                              <option value="Verkeershinder">Verkeershinder</option>
                             </select>
                           </div>
                         </div>
@@ -93,8 +93,8 @@
                             <label for="obstructionPriority" class="form-label"><strong>Prioriteit:</strong></label>
                             <select id="obstructionPriority" class="form-select">
                               <option selected>Kies...</option>
-                              <option value="1">Normaal</option>
-                              <option value="2">Spoed</option>
+                              <option value="Normaal">Normaal</option>
+                              <option value="Spoed">Spoed</option>
                             </select>
                           </div>
                         </div>
