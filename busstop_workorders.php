@@ -148,7 +148,7 @@
 
       <div class="row mb-3 mb-md-0">
 
-        <div class="col-md-8 mb-3 mb-md-0 d-none d-lg-block">
+        <div class=" col col-md-12 col-xl-8 mb-3 mb-md-0 d-none d-lg-block">
           <h4>Overzicht haltes</h4>
           <hr>
           <table id="busStopTable" class="table table-hover table-striped table-bordered">
@@ -165,7 +165,7 @@
           </table>
         </div>
 
-        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="col col-md-12 col-xl-4 mb-3 mb-md-0">
           <h4>Openstaande werkorders</h4>
           <hr>            
           <div class="list-group overflow-scroll" id="workorder-overview" style="max-height:600px;">
