@@ -43,6 +43,8 @@
 
     <?php include('includes/navbar.inc.php'); ?>
 
+    
+
   </body>
 
   <script src="js/bootstrap.bundle.js"></script>
