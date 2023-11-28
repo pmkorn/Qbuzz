@@ -45,71 +45,78 @@
 
     <div class="container-fluid p-3">   
       <div class="row">
-        <div class="col-md-6">
-          <div class="item-container">
-            <h4><i class="bi bi-list-task"></i> Overzicht stremmingen</h4>
-            <hr>
-            <table class="table table-striped table-bordered table-hover">
-              <thead>
-                <tr>
-                  <th>Stremmingsnr</th>
-                  <th>Plaats</th>
-                  <th>Van - Tot</th>
-                  <th>PDF</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>GD23-G001</td>
-                  <td>Sorgvlietlaan, Veendam</td>
-                  <td>01/12/2023 - 09/12/2023</td>
-                  <td><i class="bi bi-file-pdf text-danger"></i></td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="col col-xl-6">
+          <div class="card">
+            <div class="card-header">
+              <strong><i class="bi bi-list-task"></i> Overzicht stremmingen</strong>
+            </div>
+            <div class="card-body">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Stremmingsnr</th>
+                    <th>Plaats</th>
+                    <th>Van - Tot</th>
+                    <th>PDF</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                </tbody>
+              </table>  
+            </div>
+            <div class="card-footer">
+              Totaal stremmingen 8
+            </div>
           </div>
+
         </div>
       </div>
     </div>
