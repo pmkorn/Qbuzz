@@ -82,7 +82,7 @@
                             <label for="obstructionType" class="form-label"><strong>Type:</strong></label>
                             <select id="obstructionType" class="form-select">
                               <option selected>Kies...</option>
-                              <option value="Diensmededeling">Diensmededeling</option>
+                              <option value="Dienstmededeling">Dienstmededeling</option>
                               <option value="Omleiding">Omleiding</option>
                               <option value="Verkeershinder">Verkeershinder</option>
                             </select>

@@ -40,9 +40,20 @@ $(document).ready(function(){
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let obstructionType = $('#obstructionType').val();
     let obstructionPriority = $('#obstructionPriority').val();
+    let obstructionPlace = $('#obstructionPlace').val();
+    let obstructionTrajectory = $('#obstructionTrajectory').val();
+    let obstructionReason = $('#obstructionReason').val();
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
     let tempStops1 = $('#tempStops1').val();
-    console.log(obstructionRegion + '\n' + obstructionType + '\n' + obstructionPriority + '\n' + 'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 'Tijdelijke haltes: ' + tempStops1);
+
+    console.log(obstructionRegion + '\n' + 
+                obstructionType + '\n' + 
+                obstructionPriority + '\n' + 
+                'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 
+                'Tijdelijke haltes: ' + tempStops1 + '\n' +
+                obstructionPlace + '\n' +
+                obstructionTrajectory + '\n' +
+                obstructionReason);
   });
 
   $("#btnResetObstruction").on('click', function(){
