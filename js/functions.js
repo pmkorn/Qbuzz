@@ -82,9 +82,9 @@ $(document).ready(function(){
           setTimeout(function () {
             $("#alert-danger").slideUp(500);
           }, 3000);
-          setTimeout(function() {
+          /*setTimeout(function() {
             window.location = '../account/login/';
-          }, 4000);
+          }, 4000);*/
         }
       }      
       

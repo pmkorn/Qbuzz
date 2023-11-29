@@ -50,7 +50,7 @@
           <div class="col col-md-12 col-xl-8">
             <div class="item-container">
               <h4><strong><i class="bi bi-list-task"></i> Overzicht stremmingen</strong></h4>
-              <hr>
+              <hr class="py-3">
               <table id="overzichtStremmingen" class="table table-striped table-bordered table-hover">
                 <thead>
                   <tr>
@@ -63,49 +63,61 @@
                 <tbody>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                   <tr>
                     <td>GD23-G001</td>
-                    <td>Sorgvlietlaan, Veendam</td>
+                    <td>Sorghvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorghvlietlaan, Veendam</td>
+                    <td>01/12/2023 - 09/12/2023</td>
+                    <td><i class="bi bi-file-pdf text-danger"></i></td>
+                  </tr>
+                  <tr>
+                    <td>GD23-G001</td>
+                    <td>Sorghvlietlaan, Veendam</td>
                     <td>01/12/2023 - 09/12/2023</td>
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
@@ -116,9 +128,24 @@
           <div class="col col-md-12 col-xl-4">
             <div class="item-container">
               <h4><strong><i class="bi bi-info-circle"></i> Informatie</strong></h4>
-              <hr>
-              <div class="callout callout-info">
-                ladfbnebnaegbebn bkdfbndfbkdbndkbds bdfklugb dnbkdsf bg
+              <hr class="py-3">
+              <div class="callout callout-success">
+                <strong><i class="bi bi-info-circle-fill"></i> </strong>Stremming <strong>GD23-G001</strong> te <strong>Sorghvlietlaan, Veendam</strong> is toegevoegd!
+              </div>
+              <div class="callout callout-danger">
+                <strong><i class="bi bi-exclamation-triangle-fill"></i> </strong>Stremming <strong>GD23-G001</strong> te <strong>Sorghvlietlaan, Veendam</strong> is gewijzigd!
+              </div>
+              <div class="callout callout-success">
+                <strong><i class="bi bi-info-circle-fill"></i> </strong>Stremming <strong>GD23-G001</strong> te <strong>Sorghvlietlaan, Veendam</strong> is toegevoegd!
+              </div>
+              <div class="callout callout-danger">
+                <strong><i class="bi bi-exclamation-triangle-fill"></i> </strong>Stremming <strong>GD23-G001</strong> te <strong>Sorghvlietlaan, Veendam</strong> is gewijzigd!
+              </div>
+              <div class="callout callout-success">
+                <strong><i class="bi bi-info-circle-fill"></i> </strong>Stremming <strong>GD23-G001</strong> te <strong>Sorghvlietlaan, Veendam</strong> is toegevoegd!
+              </div>
+              <div class="callout callout-danger">
+                <strong><i class="bi bi-exclamation-triangle-fill"></i> </strong>Stremming <strong>GD23-G001</strong> te <strong>Sorghvlietlaan, Veendam</strong> is gewijzigd!
               </div>
             </div>
           </div>
