@@ -43,16 +43,7 @@
 
     <?php include('includes/navbar.inc.php'); ?>
 
-    <div id="side-bar">
-      <nav>
-        <div id="side-bar-nav">
-          nav
-        </div>
-        <div id="side-bar-nav-footer">
-          footer
-        </div>
-      </nav>
-    </div>
+    
 
   </body>
 
