@@ -51,7 +51,7 @@
             <div class="item-container">
               <h4><strong><i class="bi bi-list-task"></i> Overzicht stremmingen</strong></h4>
               <hr class="py-3">
-              <table id="overzichtStremmingen" class="table table-striped table-bordered table-hover">
+              <table id="overzichtStremmingen" class="table table-striped table-bordered table-hover table-responsive">
                 <thead>
                   <tr>
                     <th>Stremmingsnr</th>
@@ -122,7 +122,7 @@
                     <td><i class="bi bi-file-pdf text-danger"></i></td>
                   </tr>
                 </tbody>
-              </table> 
+              </table>
             </div>
           </div>
           <div class="col col-md-12 col-xl-4">

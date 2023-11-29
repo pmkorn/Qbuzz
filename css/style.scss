@@ -292,6 +292,13 @@ legend {
   margin-top: 83px;
 }
 
+#side-bar {
+  margin-top: 83px;
+  width: 225px;
+}
+#side-bar-nav {
+  flex-grow: 1;
+}
 
 /*.dark { background-image: radial-gradient(circle, $radial-antracite, $radial-black); color: $font-color-white; }
 .light { background-color: $background-color-white; color: $font-color-dark-grey;}
