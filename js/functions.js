@@ -209,6 +209,27 @@ $(document).ready(function(){
     alert(opdracht);
   });
 
+
+  $('#loadObstructionOverview').on('click', function(){
+    $('.spinner-wrapper').fadeIn();
+    setTimeout(function(){      
+      $('.spinner-wrapper').fadeOut();
+    }, 2000);
+    setTimeout(function(){
+      $('#layoutSidenav_content').load('obstructions1.php');
+    }, 2100);    
+  });
+
+  $('#insertObstruction').on('click', function(){
+    $('.spinner-wrapper').fadeIn();
+    setTimeout(function(){      
+      $('.spinner-wrapper').fadeOut();
+    }, 2000);
+    setTimeout(function(){
+      $('#layoutSidenav_content').load('b.php');
+    }, 2100);    
+  });
+
   /*setInterval(function() {
     let x = Math.ceil(Math.random() * 100);
     $('#hoofd').html(x);
