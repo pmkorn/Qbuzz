@@ -226,7 +226,7 @@ $(document).ready(function(){
       $('.spinner-wrapper').fadeOut();
     }, 2000);
     setTimeout(function(){
-      $('#layoutSidenav_content').load('b.php');
+      $('#layoutSidenav_content').load('obstructions_add.php');
     }, 2100);    
   });
 

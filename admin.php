@@ -35,8 +35,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
         <title>Dashboard -  <?php echo $page; ?></title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/style_admin.css?q=<?php echo time(); ?>" rel="stylesheet" />
+        <link href="css/style.css?q=<?php echo time(); ?>" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -140,7 +143,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Patrick Korn
+                        <?php echo $employeeFirstName." ".$employeeLastName; ?>
                     </div>
                 </nav>
             </div>
