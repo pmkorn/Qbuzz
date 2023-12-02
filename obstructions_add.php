@@ -3,7 +3,7 @@
 
   <div class="row">
     <div class="col-md-12">
-      <h1 class="mt-4"><i class="bi bi-list-task"></i> Invoer stremming</h1>
+      <h1 class="mt-4"><i class="bi bi-exclamation-triangle-fill text-danger"></i> Invoer stremming</h1>
       <hr class="mb-3">
     </div>
   </div>
@@ -96,6 +96,54 @@
 
       </div>
 
+      <div class="col-md-6">
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="mb-3">
+                  <label for="obstructionDateStart" class="form-label"><strong>Startdatum:</strong></label>
+                  <input type="date" class="form-control" name="obstructionDateStart" id="obstructionDateStart">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="mb-3">
+                  <label for="obstructionTimeStart" class="form-label"><strong>Starttijd:</strong></label>
+                  <input type="time" class="form-control" name="obstructionTimeStart" id="obstructionTimeStart">
+                </div>
+              </div>
+            </div>                       
+          </div>
+          
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="mb-3">
+                  <label for="obstructionDateEnd" class="form-label"><strong>Einddatum:</strong></label>
+                  <input type="date" class="form-control" name="obstructionDateEnd" id="obstructionDateEnd">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="mb-3">
+                  <label for="obstructionTimeEnd" class="form-label"><strong>Starttijd:</strong></label>
+                  <input type="time" class="form-control" name="obstructionTimeEnd" id="obstructionTimeEnd">
+                </div>
+              </div>
+            </div> 
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="mb-3">
+      </div>
     </div>
 
     <div class="row">
@@ -107,6 +155,20 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26270.078395826848!2d5.783051298791366!3d53.19977660179044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1snl!2snl!4v1701449586143!5m2!1snl!2snl" width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>      
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="mb-3">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-end">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Annuleer</button>
+        <button  class="btn btn-warning text-white" id="btnResetObstruction"><i class="bi bi-arrow-clockwise"></i> Reset</button>
+        <button  class="btn btn-success" id="btnSaveObstruction"><i class="bi bi-floppy"></i> Opslaan</button>
+      </div>
     </div>
 
   </form>

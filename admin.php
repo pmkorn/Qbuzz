@@ -70,7 +70,7 @@
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="account/logout/">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -125,6 +125,11 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">Overzicht</a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="401.html">Aanmaken</a>
                                         </nav>
                                     </div>
@@ -142,7 +147,7 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
+                        <div class="small">Ingelogd als:</div>
                         <?php echo $employeeFirstName." ".$employeeLastName; ?>
                     </div>
                 </nav>
