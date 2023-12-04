@@ -136,8 +136,89 @@
 
         </div>
 
+        <div class="mb-3">
+          <label for="obstructionRoute" class="form-label"><strong>Te rijden route:</strong></label>
+          <textarea name="obstructionRoute" id="obstructionRoute" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+
       </div>
 
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="mb-3">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h6>Haltes:</h6>
+      </div>
+      <div class="col-md-4">
+        <h6>Vervallen haltes:</h6>
+      </div>
+      <div class="col-md-4">
+        <h6>Tijdelijke haltes:</h6>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <textarea class="form-control" name="" id="" cols="30" rows="15"></textarea>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+          <button id="" class="btn btn-orange bi bi-chevron-double-right"></button>
+          <input type="text" class="form-control" id="obstructionExpiredStop1" placeholder="">
+        </div>
+      </div>
     </div>
 
     <div class="row">

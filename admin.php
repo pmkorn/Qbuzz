@@ -97,7 +97,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" id="loadObstructionOverview">Overzicht</a>
+                                    <a class="nav-link" id="overviewObstruction">Overzicht</a>
                                     <a class="nav-link" id="insertObstruction">Aanmaken</a>
                                 </nav>
                             </div>
