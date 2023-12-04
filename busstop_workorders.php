@@ -30,7 +30,7 @@
     while ($rowBusStop = mysqli_fetch_array($sqlResultBusStops)) {
       $tableBusstopOutput .= '<tr>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopName'].'</td>';
-        $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
+        $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'></td>';
         $tableBusstopOutput .= '<td><i class="busstopid btn btn-link bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#newWorkOrder'.$rowBusStop['busStopID'].'" data-id="newWorkOrder'.$rowBusStop['busStopID'].'"></i>&nbsp;&nbsp;&nbsp;<i class="bi bi-info-circle"></i>';
    
           $tableBusstopOutput .= '<div class="modal modal-lg fade" id="newWorkOrder'.$rowBusStop['busStopID'].'" tabindex="-1" aria-labelledby="newWorkOrder'.$rowBusStop['busStopID'].'" aria-hidden="true">';
