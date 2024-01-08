@@ -6,4 +6,5 @@ $token = substr($token, 0, 8);
 
 echo($token);
 
+
 ?>
