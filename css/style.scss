@@ -325,6 +325,36 @@ legend {
   }
 }
 
+.tbl-fixed {
+  overflow-y: scroll;
+  height: fit-content;
+  max-height: 87vh;
+}
+table th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+.table th, .table td {
+  padding: 1.5rem;
+}
+
+.haltebord .card-header {
+  background-color: #25408f;
+  color: #fff;
+  height: 100px;
+}
+
+.haltebord .card-body {
+  background-color: #ffc709;
+  color: #000;
+  height: 450px;
+}
+
+.haltebord .card-footer {
+  height: 100px;
+}
+
 /*.dark { background-image: radial-gradient(circle, $radial-antracite, $radial-black); color: $font-color-white; }
 .light { background-color: $background-color-white; color: $font-color-dark-grey;}
 .green { background-image: radial-gradient(circle, $radial-green, $radial-dark-green); color: $font-color-white;}*/

@@ -46,24 +46,24 @@
 
     <section class="main-content">
       <div class="container-fluid py-3">
-        <div class="col-md-12">
-          <table class="table table-hover table-bordered table-striped fixed_header">
+        <div class="col-md-12 tbl-fixed">
+          <table class="table table-hover table-striped align-middle fs-5">
             <thead>
               <tr>
-                <th>#</th>
+                <th class="text-center">#</th>
                 <th>Stremming</th>
-                <th>PDF</th>
+                <th class="text-center">PDF</th>
               </tr>
             </thead>
-            <tbody class="overflow-scroll vh-100">
+            <tbody class="overflow-y-scroll vh-100">
               <?php
                 $i = 1;
                 while ($i <= 40) {
                   echo '
                     <tr>
-                      <td>'.$i.'</td>
+                      <td class="text-center" width="100px">'.$i.'</td>
                       <td>Steenwijkerstraatweg</td>
-                      <td><i class="bi bi-file-pdf"></i></td>
+                      <td class="text-center" width="100px"><i class="bi bi-file-pdf text-danger fs-3"></i></td>
                     </tr>
                   ';
                   $i++;
