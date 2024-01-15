@@ -79,7 +79,25 @@
           $workOrderOutput .= '<p class="mb-1">'.$rowWorkOrder['bSN'].'</p>';
           $workOrderOutput .= '<small>'.$rowWorkOrder['wOD'].'</small>';
           $workOrderOutput .= '<div class="clearfix"></div>';
-          $workOrderOutput .= '<i class="dot dot-danger"></i><i class="dot dot-warning"></i><i class="dot dot-success"></i>';
+
+          $now = time();
+          $then = strtotime($rowWorkOrder['addDate']);
+          $days = floor($now - $then);
+          $totalDays = date("j", $days);
+          if ($totalDays == 1) {
+            $totalDayText = $totalDays.' dag geleden';
+          } else {
+            $totalDayText = $totalDays.' dagen geleden';
+          }
+          
+          if ($totalDays <= 7 ) {
+            $workOrderOutput .= '<span class="badge bg-success">'.$totalDayText.'</span>';
+          } else if ($totalDays <= 14) {
+            $workOrderOutput .= '<span class="badge bg-warning text-white">'.$totalDayText.'</span>';
+          } else {
+            $workOrderOutput .= '<span class="badge bg-danger">'.$totalDayText.'</span>';
+          }
+
         $workOrderOutput .= '</a>';
         $workOrderOutput .= '<div class="modal fade" id="workOrderFinalize'.$rowWorkOrder['wID'].'" tabindex="-1">';
           $workOrderOutput .= '<div class="modal-dialog">';
@@ -168,7 +186,7 @@
         <div class="col col-md-12 col-xl-4 mb-3 mb-md-0">
           <h4>Openstaande werkorders</h4>
           <hr>            
-          <div class="list-group overflow-scroll" id="workorder-overview" style="max-height:600px;">
+          <div class="list-group overflow-y-scroll" id="workorder-overview" style="max-height:600px;">
             <?php echo $workOrderOutput; ?>
           </div>
         </div>        
