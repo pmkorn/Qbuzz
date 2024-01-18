@@ -91,6 +91,37 @@
               <input type="text" class="form-control" id="obstructionReason" placeholder="">
             </div>
           </div>
+
+          <div class="col-md-12">
+            <div class="mb-3">
+              <label for="obstructionLines" class="form-label"><strong>Lijnen:</strong></label>
+              </div>  
+              
+              <?php
+
+                include('includes/db.inc.php');
+
+                $lineOutput = "";
+                $sqlRoutes = "SELECT * FROM routes";
+                if ($resultRoutes = mysqli_query($conn, $sqlRoutes)) {
+                  while ($row = mysqli_fetch_array($resultRoutes)) {
+                    $lineOutput .= '<div class="form-check form-check-inline" title="Lijn '.$row['routeNumber']." ".$row['routeDescription'].'">';
+                      $lineOutput .= '<input class="form-check-input obstructionLines" type="checkbox" id="'.$row['routeID'].'" name="obstructionLine" value="'.$row['routeNumber'].'">';
+                      $lineOutput .= '<label class="form-check-label" for="obstructionLine"> '.$row['routeCode'].' </label>';
+                    $lineOutput .= '</div>';
+                  }
+                }
+                
+                echo $lineOutput;
+
+              ?>
+
+              <div class="form-check mb-3">
+                <input id="selectAllCheckboxesOnAdd" class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label" for="selectAllCheckboxesOnAdd"><strong>Selecteer alles:</strong></label>
+              </div>
+            
+          </div>
           
         </div>
 

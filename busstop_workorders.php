@@ -71,7 +71,7 @@
   if ($sqlResultWorkOrders = mysqli_query($conn, $sqlWorkOrders)) {
     if (mysqli_num_rows($sqlResultWorkOrders) > 0) {
       while ($rowWorkOrder = mysqli_fetch_array($sqlResultWorkOrders)) {
-        $workOrderOutput .= '<a href="#" class="list-group-item list-group-item-action mb-1" aria-current="true" data-bs-toggle="modal" data-bs-target="#workOrderFinalize'.$rowWorkOrder['wID'].'">';
+        $workOrderOutput .= '<a href="#" class="list-group-item list-group-item-action mb-3" aria-current="true" data-bs-toggle="modal" data-bs-target="#workOrderFinalize'.$rowWorkOrder['wID'].'">';
           $workOrderOutput .= '<div class="d-flex w-100 justify-content-between">';
             $workOrderOutput .= '<h5 class="mb-1">'.$rowWorkOrder['BSNA'].'</h5>';
             $workOrderOutput .= '<small><span class="badge text-bg-primary">'.date("j M - H:m", strtotime($rowWorkOrder['addDate'])).'</span></small>';
