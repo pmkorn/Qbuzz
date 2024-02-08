@@ -77,44 +77,6 @@
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row align-content-center justify-content-center text-center vh-100">
-        <div class="col-md-3 col-xl-3">
-          <div class="haltebord">
-            <div class="card">
-              <div class="card-header">
-                <h1 class="fs-1 fw-bold">Login</h1>
-              </div>
-              <div class="card-body p-5">
-                <form id="userLoginForm1" action="" autocomplete="off">
-                  <div class="form-group mb-3">
-                    <label class="form-label" for="employeeUserName">Gebruikersnaam</label>
-                    <input type="text" class="form-control" id="employeeUserName" name="employeeUserName" placeholder="">                      
-                  </div>
-                  <div class="form-group mb-5">
-                    <label class="form-label" for="userPassword">Wachtwoord</label>
-                    <input type="password" class="form-control" id="employeeUserPassword" name="employeeUserPassword" placeholder="">
-                  </div>
-                  <div class="d-grid mb-3">
-                    <button class="btn btn-orange" id="btnEmployeeLogin" type="button">Inloggen</button>
-                    <button class="btn btn-orange" id="btnSpinner" style="display: none;" type="button" disabled>
-                      <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                      <span role="status">Bezig met inloggen...</span>
-                    </button>
-                  </div>
-                </form>
-                <p>Nog geen account? Klik <a href="account/register/" id="openUserRegistrationForm">hier</a> om te registreren.</p>
-                <p>Wachtwoord vergeten? Klik <a href="account/password-reset/" id="openUserPasswordResetForm">hier</a> om je wachtwoord te resetten.</p>
-              </div>
-              <div class="card-footer">
-                <img src="images/qbuzz-logo.png" alt="Qbuzz logo" title="Qbuzz logo" width="200px">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </body>
 
   <script src="js/bootstrap.bundle.js"></script>
