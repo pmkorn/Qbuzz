@@ -14,10 +14,10 @@ RewriteRule ^account/password-reset user_password_reset.php [NC,L]
 RewriteRule ^account/profile user_profile_page.php [NC,L]
 RewriteRule ^account/logout scripts/user_logout_script.php [NC,L]
 
-RewriteRule ^stremmingen/aanmaken/ obstructions.php [NC,L]
-
+RewriteRule ^haltes/overzicht busstop_overview.php [NC,L]
 RewriteRule ^haltes/werkorders busstop_workorders.php [NC,L]
 
+RewriteRule ^stremmingen/aanmaken/ obstructions.php [NC,L]
 
 #RewriteRule ^create-account/ signup.php [NC,L]
 
