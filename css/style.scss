@@ -332,6 +332,17 @@ legend {
   }
 }
 
+.busstop-icon-frame {
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 5px;
+  small {
+    background-color: #ededed;
+    padding: 3px;
+    border-radius: 5px;
+  }
+}
+
 /*.tbl-fixed {
   overflow-y: scroll;
   height: fit-content;
