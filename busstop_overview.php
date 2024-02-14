@@ -61,47 +61,28 @@
                                               </li>
                                             </ul>
                                             <div class="tab-content" id="pills-tabContent">
+
                                               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"></div>
+
                                               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                                                 <div class="container text-center">
                                                   
                                                   <div class="row mb-3">
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-01 perronbreedte.jpg" alt="" class="img-fluid flex">
+                                                        <img src="images/1.jpg" alt="" class="img-fluid flex">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-02 barrierevrije doorgang.jpg" alt="" class="img-fluid flex">
+                                                        <img src="images/2.jpg" alt="" class="img-fluid flex">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-03 toegankelijk vanuit omgeving.jpg" alt="" class="img-fluid flex">
-                                                        <small>Ja/Nee</small>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-
-                                                  <div class="row mb-3">
-                                                    <div class="col">
-                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-04 perronhoogte.jpg" alt="" class="img-fluid">
-                                                        <small>Ja/Nee</small>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col">
-                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-05 hoogteverschil perron omgeving.jpg" alt="" class="img-fluid">
-                                                        <small>Ja/Nee</small>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col">
-                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-06 breedte aanlooproute.jpg" alt="" class="img-fluid">
+                                                        <img src="images/3.jpg" alt="" class="img-fluid flex">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
@@ -110,25 +91,46 @@
                                                   <div class="row mb-3">
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-07 aanwezigheid geleidelijn.jpg" alt="" class="img-fluid">
+                                                        <img src="images/4.jpg" alt="" class="img-fluid">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-08 geleidelijn over volle lengte.jpg" alt="" class="img-fluid">
+                                                        <img src="images/5.jpg" alt="" class="img-fluid">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-09 aansluiting geleidelijn op omgeving.jpg" alt="" class="img-fluid">
+                                                        <img src="images/6.jpg" alt="" class="img-fluid">
+                                                        <small>Ja/Nee</small>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="row mb-3">
+                                                    <div class="col">
+                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
+                                                        <img src="images/7.jpg" alt="" class="img-fluid">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-10 instapmarkering aanwezig.jpg" alt="" class="img-fluid">
+                                                        <img src="images/8.jpg" alt="" class="img-fluid">
+                                                        <small>Ja/Nee</small>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col">
+                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
+                                                        <img src="images/9.jpg" alt="" class="img-fluid">
+                                                        <small>Ja/Nee</small>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col">
+                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
+                                                        <img src="images/10.jpg" alt="" class="img-fluid">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
@@ -136,6 +138,7 @@
 
                                                 </div>
                                               </div>
+                                              
                                               <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
                                               
                                                 <div class="container text-center">
@@ -143,40 +146,19 @@
                                                   <div class="row mb-3">
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-11 abri.jpg" alt="" class="img-fluid flex">
+                                                        <img src="images/11.jpg" alt="" class="img-fluid flex">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-12 zitgelegenheden.jpg" alt="" class="img-fluid flex">
+                                                        <img src="images/12.jpg" alt="" class="img-fluid flex">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-13 stasteun.jpg" alt="" class="img-fluid flex">
-                                                        <small>Ja/Nee</small>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-
-                                                  <div class="row mb-3">
-                                                    <div class="col">
-                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-14 verlichting.jpg" alt="" class="img-fluid">
-                                                        <small>Ja/Nee</small>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col">
-                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-15 afvalbak.jpg" alt="" class="img-fluid">
-                                                        <small>Ja/Nee</small>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col">
-                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-16 fietsvoorziening.jpg" alt="" class="img-fluid">
+                                                        <img src="images/13.jpg" alt="" class="img-fluid flex">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
@@ -185,13 +167,34 @@
                                                   <div class="row mb-3">
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-17 haltevertrekstaat.jpg" alt="" class="img-fluid">
+                                                        <img src="images/14.jpg" alt="" class="img-fluid">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
                                                     <div class="col">
                                                       <div class="busstop-icon-frame justify-content-between align-content-center p-3">
-                                                        <img src="images/pictogram-17 haltevertrekstaat.jpg" alt="" class="img-fluid">
+                                                        <img src="images/15.jpg" alt="" class="img-fluid">
+                                                        <small>Ja/Nee</small>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col">
+                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
+                                                        <img src="images/16.jpg" alt="" class="img-fluid">
+                                                        <small>Ja/Nee</small>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="row mb-3">
+                                                    <div class="col">
+                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
+                                                        <img src="images/17.jpg" alt="" class="img-fluid">
+                                                        <small>Ja/Nee</small>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col">
+                                                      <div class="busstop-icon-frame justify-content-between align-content-center p-3">
+                                                        <img src="images/18.jpg" alt="" class="img-fluid">
                                                         <small>Ja/Nee</small>
                                                       </div>
                                                     </div>
