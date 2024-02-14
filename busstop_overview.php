@@ -29,7 +29,7 @@
   if ($sqlResultBusStops = mysqli_query($conn, $sqlBusStops)) {
     while ($rowBusStop = mysqli_fetch_array($sqlResultBusStops)) {
       $tableBusstopOutput .= '<tr>';
-        $tableBusstopOutput .= '<td>'.$rowBusStop['busStopName'].'</td>';
+        $tableBusstopOutput .= '<td><img src="images/haltebord.png" width="25px" />'.$rowBusStop['busStopName'].'</td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
         $tableBusstopOutput .= '<td><i class="busstopid btn btn-link bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#newWorkOrder'.$rowBusStop['busStopID'].'" data-id="newWorkOrder'.$rowBusStop['busStopID'].'"></i>&nbsp;&nbsp;&nbsp;<i class="bi bi-info-circle"></i>';
    
@@ -100,7 +100,7 @@
 
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-12">
             <table id="busStopTable" class="table table-striped table-hover">
               <thead>
                 <tr>
