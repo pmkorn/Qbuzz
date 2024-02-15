@@ -39,7 +39,7 @@
               $tableBusstopOutput .= '<div class="modal-content">';
                 $tableBusstopOutput .= '<div class="modal-header">';
                   $tableBusstopOutput .= '<div>';
-                  $tableBusstopOutput .= '<h3 class="modal-title fw-light fs-5 w-100">'.$rowBusStop['busStopNumber'].'</h3>';
+                    $tableBusstopOutput .= '<h3 class="modal-title fw-light fs-5 w-100">'.$rowBusStop['busStopNumber'].'</h3>';
                     $tableBusstopOutput .= '<h2 class="modal-title fs-4 w-100" id="exampleModalLabel">'.$rowBusStop['busStopName'].'</h2>';
                   $tableBusstopOutput .= '</div>';
                   $tableBusstopOutput .= '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
@@ -62,7 +62,14 @@
                     $tableBusstopOutput .= '</ul>';
                     $tableBusstopOutput .= '<div class="tab-content" id="pills-tabContent">';
 
-                      $tableBusstopOutput .= '<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"></div>';
+                      $tableBusstopOutput .= '<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">';
+                        $tableBusstopOutput .= '<div class="container">';
+                          $tableBusstopOutput .= '<div class="row">';
+                            $tableBusstopOutput .= '<div class="col">';
+                            $tableBusstopOutput .= '</div>';
+                          $tableBusstopOutput .= '</div>';
+                        $tableBusstopOutput .= '</div>';
+                      $tableBusstopOutput .= '</div>';
 
                       $tableBusstopOutput .= '<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">';
                         $tableBusstopOutput .= '<div class="container text-center">';
