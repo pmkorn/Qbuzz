@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark py-3 fixed-top" data-bs-theme="dark"">
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark py-3 fixed-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img src="../images/qbuzz-logo.png" width="100px" alt="Qbuzz logo">
