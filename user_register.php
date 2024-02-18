@@ -39,46 +39,42 @@
 
     <div class="container-fluid">
       <div class="row align-content-center justify-content-center vh-100">
-        <div class="col-md-6">
-          <div class="card">
+        <div class="col-md-6 col-xl-3">
+          <div class="card signup-screen">
             <div class="card-body p-5">
-              <div class="row">
-                <div class="col-md-6 text-center">
-                  <img src="images/qbuzz-logo.png" alt="Qbuzz Logo" width="200px" class="img-fluid mb-3">
-                  <div class="clearfix"></div>
-                  <img src="images/haltebord.png" alt="Haltebord" width="100px" class="img-fluid mb-3">
-                </div>
-                <div class="col-md-6">
-                  <h2 class="mb-3">REGISTREREN</h2>
-                  <form id="userLoginForm" action="" autocomplete="off">
-                  <div class="form-group mb-3">
-                      <label for="employeeFirstName">Voornaam</label>
-                      <input type="email" class="form-control" id="employeeFirstName" placeholder="">                      
-                    </div>
-                    <div class="form-group mb-3">
-                      <label for="employeeLastName">Achternaam</label>
-                      <input type="email" class="form-control" id="employeeLastName" placeholder="">                      
-                    </div>
-                    <div class="form-group mb-3">
-                      <label for="employeeEmail">Email</label>
-                      <input type="email" class="form-control" id="employeeEmail" placeholder="">                      
-                    </div>
-                    <div class="form-group mb-3">
-                      <label for="employeeUserPassword">Wachtwoord</label>
-                      <input type="password" class="form-control" id="employeeUserPassword" placeholder="">
-                    </div>
-                    <div class="form-group mb-5">
-                      <label for="employeeUserPasswordRepeat">Herhaal wachtwoord</label>
-                      <input type="password" class="form-control" id="employeeUserPasswordRepeat" placeholder="">
-                    </div>
-                    <div class="d-grid mb-3">
-                      <button class="btn btn-orange" id="btnEmployeeRegister" type="button">Registreren</button>
-                    </div>  
-                  </form>
-                  <p>Al een account? Klik <a href="account/login/" id="openUserRegistrationForm">hier</a> om in te loggen.</p>
-                  <p>Wachtwoord vergeten? Klik <a href="account/password-reset/" id="openUserPasswordResetForm">hier</a> om je wachtwoord te resetten.</p>
-                </div>
+              <div class="logo-container">
+                <img src="images/qbuzz-logo.png" alt="Qbuzz Logo" width="200px" class="img-fluid flex mb-3 mx-auto">
               </div>
+              <div>
+                <h2 class="card-title mb-3 text-center">REGISTREREN</h2>
+              </div>              
+              <form id="userLoginForm" action="" autocomplete="off">
+                <div class="form-group mb-3">
+                  <label for="employeeFirstName">Voornaam</label>
+                  <input type="email" class="form-control" id="employeeFirstName" placeholder="">                      
+                </div>
+                <div class="form-group mb-3">
+                  <label for="employeeLastName">Achternaam</label>
+                  <input type="email" class="form-control" id="employeeLastName" placeholder="">                      
+                </div>
+                <div class="form-group mb-3">
+                  <label for="employeeEmail">Email</label>
+                  <input type="email" class="form-control" id="employeeEmail" placeholder="">                      
+                </div>
+                <div class="form-group mb-3">
+                  <label for="employeeUserPassword">Wachtwoord</label>
+                  <input type="password" class="form-control" id="employeeUserPassword" placeholder="">
+                </div>
+                <div class="form-group mb-5">
+                  <label for="employeeUserPasswordRepeat">Herhaal wachtwoord</label>
+                  <input type="password" class="form-control" id="employeeUserPasswordRepeat" placeholder="">
+                </div>
+                <div class="d-grid mb-3">
+                  <button class="btn btn-orange" id="btnEmployeeRegister" type="button">Registreren</button>
+                </div>  
+              </form>
+              <p>Al een account? Klik <a href="account/login/" id="openUserRegistrationForm">hier</a> om in te loggen.</p>
+              <p>Wachtwoord vergeten? Klik <a href="account/password-reset/" id="openUserPasswordResetForm">hier</a> om je wachtwoord te resetten.</p>
             </div>
           </div>
         </div>

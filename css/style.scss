@@ -343,6 +343,11 @@ legend {
   }
 }
 
+/******** LOGIN SCREEN, REGISTER SCREEN AND RESET PASSWORD SCREEN ********/
+.login-screen, .signup-screen, .password-reset-screen {
+  box-shadow: 0 0 10px 1px #cecece;
+}
+
 /*.tbl-fixed {
   overflow-y: scroll;
   height: fit-content;

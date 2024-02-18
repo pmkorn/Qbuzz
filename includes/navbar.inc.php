@@ -28,10 +28,25 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Stremmingen</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="stremmingen/overzicht/">Overzicht</a></li>
+            <li><a class="dropdown-item" href="stremmingen/overzicht/"><i class="bi bi-eye me-2"></i> Overzicht</a></li>
             <?php
               if ($employeeRole == 3) {
-                echo '<li><a class="dropdown-item" href="stremmingen/aanmaken/">Aanmaken</a></li>';
+                echo '<li><a class="dropdown-item" href="stremmingen/aanmaken/"><i class="bi bi-pencil me-2"></i> Aanmaken</a></li>';
+              }
+            ?>
+            <?php
+              if ($employeeRole == 3) {
+                echo '<li><a class="dropdown-item" href="stremmingen/afmelden/"><i class="bi bi-box-arrow-right me-2"></i> Afmelden</a></li>';
+              }
+            ?>
+            <?php
+              if ($employeeRole == 3) {
+                echo '<li><a class="dropdown-item" href="stremmingen/printen/"><i class="bi bi-printer me-2"></i> Printen</a></li>';
+              }
+            ?>
+            <?php
+              if ($employeeRole == 3) {
+                echo '<li><a class="dropdown-item" href="stremmingen/mailen/"><i class="bi bi-envelope me-2"></i> Mailen</a></li>';
               }
             ?>
           </ul>
@@ -39,8 +54,8 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Haltes</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="haltes/overzicht/">Overzicht</a></li>
-            <li><a class="dropdown-item" href="haltes/werkorders/">Werkorders</a></li>
+            <li><a class="dropdown-item" href="haltes/overzicht/"><i class="bi bi-eye me-2"></i> Overzicht</a></li>
+            <li><a class="dropdown-item" href="haltes/werkorders/"><i class="bi bi-check2-square me-2"></i> Werkorders</a></li>
           </ul>
         </li>
       </ul>

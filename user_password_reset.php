@@ -39,30 +39,26 @@
 
     <div class="container-fluid">
       <div class="row align-content-center justify-content-center vh-100">
-        <div class="col-md-12 col-xl-6">
-          <div class="card">
+        <div class="col-md-6 col-xl-3">
+          <div class="card password-reset-screen">
             <div class="card-body p-5">
-              <div class="row">
-                <div class="col-md-6 text-center">
-                  <img src="images/qbuzz-logo.png" alt="Qbuzz Logo" width="200px" class="img-fluid mb-3">
-                  <div class="clearfix"></div>
-                  <img src="images/haltebord.png" alt="Haltebord" width="100px" class="img-fluid mb-3">
-                </div>
-                <div class="col-md-6">
-                  <h2 class="mb-3">Wachtwoord reset</h2>
-                  <form id="userLoginForm" action="" autocomplete="off">
-                    <div class="form-group mb-3">
-                      <label for="employeeUserName">Gebruikersnaam</label>
-                      <input type="text" class="form-control" id="employeeUserName" placeholder="">                      
-                    </div>
-                    <div class="d-grid mb-3">
-                      <button class="btn btn-orange" id="btnEmployeePasswordReset" type="button">Wachtwoord reset</button>
-                    </div>
-                  </form>
-                  <p>Al een account? Klik <a href="account/login/" id="openUserRegistrationForm">hier</a> om in te loggen.</p>
-                  <p>Nog geen account? Klik <a href="account/register/" id="openUserRegistrationForm">hier</a> om te registreren.</p>
-                </div>
+              <div class="logo-container">
+                <img src="images/qbuzz-logo.png" alt="Qbuzz Logo" width="200px" class="img-fluid flex mb-3 mx-auto">
               </div>
+              <div>
+                <h2 class="card-title mb-3 text-center">WACHTWOORD RESET</h2>
+              </div>       
+              <form id="userLoginForm" action="" autocomplete="off">
+                <div class="form-group mb-3">
+                  <label for="employeeUserName">Gebruikersnaam</label>
+                  <input type="text" class="form-control" id="employeeUserName" placeholder="">                      
+                </div>
+                <div class="d-grid mb-3">
+                  <button class="btn btn-orange" id="btnEmployeePasswordReset" type="button">Wachtwoord reset</button>
+                </div>
+              </form>
+              <p>Al een account? Klik <a href="account/login/" id="openUserRegistrationForm">hier</a> om in te loggen.</p>
+              <p>Nog geen account? Klik <a href="account/register/" id="openUserRegistrationForm">hier</a> om te registreren.</p>
             </div>
           </div>
         </div>
