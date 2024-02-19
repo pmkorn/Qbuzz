@@ -32,7 +32,7 @@
         $tableBusstopOutput .= '<td><img src="images/haltebord.png" width="25px" /></td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopName'].'</td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
-        $tableBusstopOutput .= '<td><i class="busstopid btn btn-link bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#newWorkOrder'.$rowBusStop['busStopID'].'" data-id="newWorkOrder'.$rowBusStop['busStopID'].'"></i>&nbsp;&nbsp;&nbsp;<i class="bi bi-info-circle"></i>';
+        $tableBusstopOutput .= '<td><i class="busstopid btn btn-link bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#newWorkOrder'.$rowBusStop['busStopID'].'" data-id="newWorkOrder'.$rowBusStop['busStopID'].'"></i>&nbsp;&nbsp;&nbsp;<a href="haltes/overzicht/'.$rowBusStop['busStopNumber'].'/"><i class="bi bi-info-circle"></i> Meer info...</a>';
 
           $tableBusstopOutput .= ' <div class="modal fade" id="newWorkOrder'.$rowBusStop['busStopID'].'" tabindex="-1" aria-labelledby="newWorkOrder'.$rowBusStop['busStopID'].'" aria-hidden="true">';
             $tableBusstopOutput .= '<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">';

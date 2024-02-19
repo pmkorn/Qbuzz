@@ -299,36 +299,33 @@ legend {
   margin-top: 83px;
 }
 
-.haltebord-container {
-  border: 1px solid #cecece;
-  border-radius: 25px;
-  .haltebord-header{
-    background-color: #0E4E89;
-    border-radius: 25px 25px 0 0;
-    .halte-id {
-      .zone-nummer {
-        background-color: #C2121D;
-        color: #fff;
-        padding: 10px 15px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        font-size: 1.5rem;
-      }
-      .halte-nummer {
-        color: #fff;
-        padding: 10px 15px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        font-size: 1.5rem;
-      }
+.haltebord {
+  border: 3px solid #cecece;
+  border-radius: 20px;
+  .haltebord-header {
+    border-top-left-radius: calc(20px - 5px);
+    border-top-right-radius: calc(20px - 5px);
+    background-color: #25408f;
+    .haltebord-zonepart {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.8rem;
+      padding: 5px 10px; 
+    }
+    .zone {
+      background-color: #f00;
     }
   }
   .haltebord-body {
-    background-color: #E8C400;
+    background-color: #ffc709;
+    height: 250px;
+    .haltebord-haltenaam {
+      font-weight: bold;
+      text-align: center;
+    }
   }
   .haltebord-footer {
-    background-color: #fff;
-    border-radius: 0 0 25px 25px;
+    text-align: center;
   }
 }
 
