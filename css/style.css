@@ -370,42 +370,6 @@ legend {
   margin-top: 83px;
 }
 
-.haltebord {
-  border: 3px solid #cecece;
-  border-radius: 20px;
-}
-
-.haltebord .haltebord-header {
-  border-top-left-radius: calc(20px - 5px);
-  border-top-right-radius: calc(20px - 5px);
-  background-color: #25408f;
-}
-
-.haltebord .haltebord-header .haltebord-zonepart {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.8rem;
-  padding: 5px 10px;
-}
-
-.haltebord .haltebord-header .zone {
-  background-color: #f00;
-}
-
-.haltebord .haltebord-body {
-  background-color: #ffc709;
-  height: 250px;
-}
-
-.haltebord .haltebord-body .haltebord-haltenaam {
-  font-weight: bold;
-  text-align: center;
-}
-
-.haltebord .haltebord-footer {
-  text-align: center;
-}
-
 .busstop-icon-frame {
   border: 1px solid #cecece;
   border-radius: 5px;
