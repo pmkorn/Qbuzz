@@ -76,13 +76,13 @@
         },
         {
         label: 'Friesland',
-        fillColor: "Red",
+        fillColor: "red",
         data: [12, 19, 3, 5, 2, 3, 8, 14, 9, 11, 12, 15],
         borderWidth: 1
       },
       {
         label: 'Groningen',
-        FillColor: 'green',
+        FillColor: 'yellow',
         data: [14, 11, 9, 10, 11, 15, 7, 3, 11, 8, 13, 8],
         borderWidth: 1
       }
