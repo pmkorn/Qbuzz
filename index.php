@@ -69,17 +69,24 @@
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sept', 'Okt', 'Nov', 'Dec'],
       datasets: [
         {
-        label: 'Groningen',
+        label: 'Drenthe',
+        FillColor: 'blue',
+        data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
+        borderWidth: 1
+        },
+        {
+        label: 'Friesland',
         fillColor: "Red",
         data: [12, 19, 3, 5, 2, 3, 8, 14, 9, 11, 12, 15],
         borderWidth: 1
       },
       {
-        label: 'Drenthe',
-        FillColor: 'blue',
-        data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
+        label: 'Groningen',
+        FillColor: 'green',
+        data: [14, 11, 9, 10, 11, 15, 7, 3, 11, 8, 13, 8],
         borderWidth: 1
       }
+
     ]
     },
     options: {
