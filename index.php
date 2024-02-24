@@ -44,10 +44,55 @@
 
     <?php include('includes/navbar.inc.php'); ?>
 
-    <section class="main-content">
-      <div class="container-fluid p-3">   
+    <section class="main-content py-5">
+      <div class="container-fluid">   
         <div class="row">
-          
+          <div class="col-md-12">
+            <h1 class="section-title">Dashboard</h1>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+          <div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sept', 'Okt', 'Nov', 'Dec'],
+      datasets: [
+        {
+        label: 'Groningen',
+        fillColor: "Red",
+        data: [12, 19, 3, 5, 2, 3, 8, 14, 9, 11, 12, 15],
+        borderWidth: 1
+      },
+      {
+        label: 'Drenthe',
+        FillColor: 'blue',
+        data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
+        borderWidth: 1
+      }
+    ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+          </div>
         </div>
       </div>
     </section>
