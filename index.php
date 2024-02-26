@@ -72,24 +72,34 @@
         label: 'Drenthe',
         FillColor: 'blue',
         data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
-        borderWidth: 1
+        borderWidth: 3
         },
         {
         label: 'Friesland',
         fillColor: "red",
         data: [12, 19, 3, 5, 2, 3, 8, 14, 9, 11, 12, 15],
-        borderWidth: 1
+        borderWidth: 3
       },
       {
         label: 'Groningen',
         FillColor: 'yellow',
         data: [14, 11, 9, 10, 11, 15, 7, 3, 11, 8, 13, 8],
-        borderWidth: 1
+        borderWidth: 3
       }
 
     ]
     },
     options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'Overzicht stremmingen per regio',
+          font: {
+            size: '16'
+          }
+
+        }
+      },
       scales: {
         y: {
           beginAtZero: true

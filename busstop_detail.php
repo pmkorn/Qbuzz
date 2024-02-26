@@ -66,19 +66,26 @@
           </div>
           <div class="modal-body">
             <form id="formAddNewBusstopWorkorder">
-              <div class="form-group mb-3">
-                <label class="form-label" for="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'"><strong>Categorie</strong></label>                        
-                <select id="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'" class="form-select">
-                  <option selected>Kies categorie</option>
-                  <option>Haltebord</option>
-                  <option>Haltevertrekstaat</option>
-                  <option>Haltepaal</option>
-                  <option>Abriposter</option>
-                <select>
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label" for="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'"><strong>Omschrijving</strong></label>
-                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'"><strong>Categorie</strong></label>                        
+                    <select id="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'" class="form-select">
+                      <option selected>Kies categorie</option>
+                      <option>Haltebord</option>
+                      <option>Haltevertrekstaat</option>
+                      <option>Haltepaal</option>
+                      <option>Abriposter</option>
+                    <select>
+                  </div>
+                  
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'"><strong>Omschrijving</strong></label>
+                    <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
