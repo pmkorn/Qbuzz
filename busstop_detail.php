@@ -70,8 +70,16 @@
                 <div class="col-md-6">
                   <div class="form-group mb-3">
                     <label class="form-label" for="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'"><strong>Categorie</strong></label>                        
-                    <select id="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'" class="form-select">
+                    <select id="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'" class="form-select mb-3">
                       <option selected>Kies categorie</option>
+                      <option>Haltebord</option>
+                      <option>Haltevertrekstaat</option>
+                      <option>Haltepaal</option>
+                      <option>Abriposter</option>
+                    <select>
+                    <label class="form-label" for="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'"><strong>Subcategorie</strong></label>                        
+                    <select id="inputNewWorkOrderNotification'.$rowBusStop['busStopID'].'" class="form-select mb-3">
+                      <option selected>Kies subcategorie</option>
                       <option>Haltebord</option>
                       <option>Haltevertrekstaat</option>
                       <option>Haltepaal</option>
