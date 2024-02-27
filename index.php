@@ -54,61 +54,7 @@
         </div>
         <div class="row">
           <div class="col-md-6">
-          <div>
-  <canvas id="myChart"></canvas>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sept', 'Okt', 'Nov', 'Dec'],
-      datasets: [
-        {
-        label: 'Drenthe',
-        FillColor: 'blue',
-        data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
-        borderWidth: 3
-        },
-        {
-        label: 'Friesland',
-        fillColor: "red",
-        data: [12, 19, 3, 5, 2, 3, 8, 14, 9, 11, 12, 15],
-        borderWidth: 3
-      },
-      {
-        label: 'Groningen',
-        FillColor: 'yellow',
-        data: [14, 11, 9, 10, 11, 15, 7, 3, 11, 8, 13, 8],
-        borderWidth: 3
-      }
-
-    ]
-    },
-    options: {
-      plugins: {
-        title: {
-          display: true,
-          text: 'Overzicht stremmingen per regio',
-          font: {
-            size: '16'
-          }
-
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-</script>
-
+            <canvas id="myChart"></canvas>
           </div>
         </div>
       </div>
@@ -119,6 +65,7 @@
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/jquery-3.7.2.js"></script>
   <script src="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/functions.js"></script>
   <script>
     let table = new DataTable('#overzichtStremmingen',{
@@ -133,4 +80,52 @@
     });
   </script>
 
+  <script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sept', 'Okt', 'Nov', 'Dec'],
+        datasets: [
+          {
+          label: 'Drenthe',
+          FillColor: 'blue',
+          data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
+          borderWidth: 3
+          },
+          {
+          label: 'Friesland',
+          fillColor: "red",
+          data: [12, 19, 3, 5, 2, 3, 8, 14, 9, 11, 12, 15],
+          borderWidth: 3
+        },
+        {
+          label: 'Groningen',
+          FillColor: 'yellow',
+          data: [14, 11, 9, 10, 11, 15, 7, 3, 11, 8, 13, 8],
+          borderWidth: 3
+        }
+
+      ]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Overzicht stremmingen per regio',
+            font: {
+              size: '16'
+            }
+
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 </html>

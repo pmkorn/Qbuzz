@@ -129,7 +129,7 @@
               </div>
               <div class="row">
                 <div class="col-md-9">
-                  <table class="table table-striped table-hover">
+                  <table id="tableWorkOrders" class="table table-striped table-hover">
                     <thead>
                       <tr>
                         <th>Incident nr.</th>
