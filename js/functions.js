@@ -240,6 +240,8 @@ $(document).ready(function(){
     }, 2100);    
   });
 
+  
+
   /*setInterval(function() {
     let x = Math.ceil(Math.random() * 100);
     $('#hoofd').html(x);

@@ -129,7 +129,7 @@
               </div>
               <div class="row">
                 <div class="col-md-9">
-                  <table id="tableWorkOrders" class="table table-striped table-hover">
+                  <table id="tableWorkOrders" class="table table-striped table-bordered table-hover">
                     <thead>
                       <tr>
                         <th>Incident nr.</th>
@@ -141,7 +141,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>00-00-00-1</td>
+                        <td>24-00000000-1</td>
                         <td>Haltevertrekstaat</td>
                         <td>Haltevertrekstaat mist bij de halte.</td>
                         <td><span class="badge bg-warning text-white">In afwachting...</span></td>
@@ -150,7 +150,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td>00-00-00-2</td>
+                        <td>24-00000000-2</td>
                         <td>Haltevertrekstaat</td>
                         <td>Haltevertrekstaat mist bij de halte.</td>
                         <td><span class="badge bg-success text-white">Gereed <i class="bi bi-check2"></i></span></td>
@@ -159,7 +159,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td>00-00-00-3</td>
+                        <td>24-00000000-3</td>
                         <td>Haltevertrekstaat</td>
                         <td>Haltevertrekstaat mist bij de halte.</td>
                         <td><span class="badge bg-danger text-white">Lang lopend <i class="bi bi-exclamation-triangle"></i></span></td>

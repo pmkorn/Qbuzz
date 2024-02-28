@@ -28,12 +28,11 @@
   $sqlBusStops = 'SELECT * FROM busstops';
   if ($sqlResultBusStops = mysqli_query($conn, $sqlBusStops)) {
     while ($rowBusStop = mysqli_fetch_array($sqlResultBusStops)) {
-      $tableBusstopOutput .= '<tr>';
+      $tableBusstopOutput .= '<tr id="'.$rowBusStop['busStopNumber'].'">';
         $tableBusstopOutput .= '<td><img src="images/haltebord.png" width="25px" /></td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopName'].'</td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
-        $tableBusstopOutput .= '<td><a href="haltes/overzicht/'.$rowBusStop['busStopNumber'].'/"><i class="bi bi-info-circle"></i> Meer info...</a>';
-        $tableBusstopOutput .= '</td>';
+        $tableBusstopOutput .= '<td><i class="bi bi-eye"></i></td>';
       $tableBusstopOutput .= '</tr>';
     }
   }
@@ -73,7 +72,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <table id="busStopTable" class="table table-striped table-hover">
+            <table id="busStopTable" class="table table-striped table-bordered table-hover">
               <thead>
                 <tr>
                   <th>#</th>
@@ -108,7 +107,15 @@
         [10, 25, 50, -1],
         [10, 25, 50, 'All'],
       ],
+      responsive: true
     });
+  </script>
+  <script>
+    $('#busStopTable').on('click', 'tbody tr', function(){
+      let busStopNumberID = $(this).closest('tr').attr('id');
+      window.location = ('haltes/overzicht/'+busStopNumberID+'/');
+      //alert(busStopNumberID);
+    })
   </script>
 
 </html>
