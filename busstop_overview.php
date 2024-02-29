@@ -32,7 +32,8 @@
         $tableBusstopOutput .= '<td><img src="images/haltebord.png" width="25px" /></td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopName'].'</td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
-        $tableBusstopOutput .= '<td><i class="bi bi-eye"></i></td>';
+        $tableBusstopOutput .= '<td></td>';
+        $tableBusstopOutput .= '<td><i class="bi bi-eye text-success me-3"></i><i class="bi bi-pencil text-info me-3"></i><i class="bi bi-trash text-danger me-3"></i></td>';
       $tableBusstopOutput .= '</tr>';
     }
   }
@@ -56,6 +57,33 @@
   </head>
   <body>
 
+    <!-- MODAL FOR MAKING NEW BUSSTOP -->
+    <div class="modal fade" id="newBusstopPlace" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-exclamation-triangle-fill text-danger"></i> Aanmaken nieuwe bushalte</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">1</div>
+                <div class="col-md-4">1</div>
+                <div class="col-md-4">1</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning text-white">Reset</button>
+            <button type="button" class="btn btn-success">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL FOR MAKING NEW BUSSTOP -->
+
     <?php include('includes/navbar.inc.php'); ?>
 
     <section class="main-content py-5">
@@ -72,12 +100,18 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
+          <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#newBusstopPlace">Aanmaken halte <i class="bi bi-stoplights-fill"></i></button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <table id="busStopTable" class="table table-striped table-bordered table-hover">
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Haltenaam:</th>
                   <th>Haltenummer:</th>
+                  <th>GPS:</th>
                   <th>Actie</th>
                 </tr>
               </thead>
@@ -114,8 +148,8 @@
     $('#busStopTable').on('click', 'tbody tr', function(){
       let busStopNumberID = $(this).closest('tr').attr('id');
       window.location = ('haltes/overzicht/'+busStopNumberID+'/');
-      //alert(busStopNumberID);
-    })
+      alert(busStopNumberID);
+    });
   </script>
 
 </html>
