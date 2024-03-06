@@ -53,8 +53,97 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-xl-3 col-md-6">
+            <div class="card mb-4">
+              <div class="card-header">
+                  <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
+              </div>
+              <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="me-3">
+                          <div class="small">Totaal stremmingen</div>
+                          <div class="text-lg fw-bold">100</div>
+                      </div>
+                      <i class="bi bi-signpost-split fs-1"></i>
+                  </div>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-between">
+                  <a class="small " href="#">Naar overzicht</a>
+                  <div class="small"><i class="fas fa-angle-right"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card mb-4">
+              <div class="card-header">
+                  <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
+              </div>
+              <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="me-3">
+                          <div class="small">Totaal stremmingen</div>
+                          <div class="text-lg fw-bold">100</div>
+                      </div>
+                      <i class="bi bi-signpost-split fs-1"></i>
+                  </div>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-between">
+                  <a class="small " href="#">Naar overzicht</a>
+                  <div class="small"><i class="fas fa-angle-right"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card mb-4">
+              <div class="card-header">
+                  <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
+              </div>
+              <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="me-3">
+                          <div class="small">Totaal stremmingen</div>
+                          <div class="text-lg fw-bold">100</div>
+                      </div>
+                      <i class="bi bi-signpost-split fs-1"></i>
+                  </div>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-between">
+                  <a class="small " href="#">Naar overzicht</a>
+                  <div class="small"><i class="fas fa-angle-right"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card mb-4">
+              <div class="card-header">
+                  <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
+              </div>
+              <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="me-3">
+                          <div class="small">Totaal stremmingen</div>
+                          <div class="text-lg fw-bold">100</div>
+                      </div>
+                      <i class="bi bi-signpost-split fs-1"></i>
+                  </div>
+              </div>
+              <div class="card-footer d-flex align-items-center justify-content-between">
+                  <a class="small " href="#">Naar overzicht</a>
+                  <div class="small"><i class="fas fa-angle-right"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-6">
-            <canvas id="myChart"></canvas>
+            <div class="card">
+              <div class="card-header">
+                <i class="bi bi-chart"></i> Overzicht stremmingen
+              </div>
+              <div class="card-body">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
           </div>
         </div>
       </div>

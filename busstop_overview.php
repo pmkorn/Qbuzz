@@ -33,7 +33,11 @@
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopName'].'</td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
         $tableBusstopOutput .= '<td></td>';
-        $tableBusstopOutput .= '<td><i data-id="'.$rowBusStop['busStopNumber'].'" class="showBusstopDetail bi bi-eye text-success me-3"></i><i class="bi bi-pencil text-info me-3"></i><i class="bi bi-trash text-danger me-3"></i></td>';
+        $tableBusstopOutput .= '<td>
+                                  <i data-id="'.$rowBusStop['busStopNumber'].'" class="showBusstopDetail bi bi-eye text-success me-3"></i>
+                                  <i class="bi bi-pencil text-info me-3"></i>
+                                  <i class="bi bi-trash text-danger me-3"></i>
+                                </td>';
       $tableBusstopOutput .= '</tr>';
     }
   }
