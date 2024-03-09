@@ -61,8 +61,8 @@
               <div class="card-body">
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="me-3">
-                          <div class="small">Totaal stremmingen</div>
-                          <div class="text-lg fw-bold">100</div>
+                      <div class="fs-4">Totaal stremmingen</div>
+                          <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
                       </div>
                       <i class="bi bi-signpost-split fs-1"></i>
                   </div>
@@ -76,13 +76,13 @@
           <div class="col-xl-3 col-md-6">
             <div class="card mb-4">
               <div class="card-header">
-                  <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
+                  <img src="images/drenthe-vlag.png" width="50px" alt="Vlag Nederland">
               </div>
               <div class="card-body">
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="me-3">
-                          <div class="small">Totaal stremmingen</div>
-                          <div class="text-lg fw-bold">100</div>
+                      <div class="fs-4">Totaal stremmingen</div>
+                          <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
                       </div>
                       <i class="bi bi-signpost-split fs-1"></i>
                   </div>
@@ -96,13 +96,13 @@
           <div class="col-xl-3 col-md-6">
             <div class="card mb-4">
               <div class="card-header">
-                  <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
+                  <img src="images/friesland-vlag.png" width="50px" alt="Vlag Nederland">
               </div>
               <div class="card-body">
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="me-3">
-                          <div class="small">Totaal stremmingen</div>
-                          <div class="text-lg fw-bold">100</div>
+                          <div class="fs-4">Totaal stremmingen</div>
+                          <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
                       </div>
                       <i class="bi bi-signpost-split fs-1"></i>
                   </div>
@@ -116,13 +116,13 @@
           <div class="col-xl-3 col-md-6">
             <div class="card mb-4">
               <div class="card-header">
-                  <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
+                  <img src="images/groningen-vlag.png" width="50px" alt="Vlag Nederland">
               </div>
               <div class="card-body">
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="me-3">
-                          <div class="small">Totaal stremmingen</div>
-                          <div class="text-lg fw-bold">100</div>
+                      <div class="fs-4">Totaal stremmingen</div>
+                          <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
                       </div>
                       <i class="bi bi-signpost-split fs-1"></i>
                   </div>

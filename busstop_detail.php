@@ -141,7 +141,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>24-00000000-1</td>
+                        <td>WO24-00000000-1</td>
                         <td>Haltevertrekstaat</td>
                         <td>Haltevertrekstaat mist bij de halte.</td>
                         <td><span class="badge bg-warning text-white">In afwachting...</span></td>
@@ -150,7 +150,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td>24-00000000-2</td>
+                        <td>WO24-00000000-2</td>
                         <td>Haltevertrekstaat</td>
                         <td>Haltevertrekstaat mist bij de halte.</td>
                         <td><span class="badge bg-success text-white">Gereed <i class="bi bi-check2"></i></span></td>
@@ -159,7 +159,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td>24-00000000-3</td>
+                        <td>WO24-00000000-3</td>
                         <td>Haltevertrekstaat</td>
                         <td>Haltevertrekstaat mist bij de halte.</td>
                         <td><span class="badge bg-danger text-white">Lang lopend <i class="bi bi-exclamation-triangle"></i></span></td>

@@ -30,12 +30,14 @@
     while ($rowBusStop = mysqli_fetch_array($sqlResultBusStops)) {
       $tableBusstopOutput .= '<tr id="'.$rowBusStop['busStopNumber'].'">';
         $tableBusstopOutput .= '<td><img src="images/haltebord.png" width="25px" /></td>';
-        $tableBusstopOutput .= '<td>'.$rowBusStop['busStopName'].'</td>';
+        $tableBusstopOutput .= '<td>
+                                  <span class="static-field-'.$rowBusStop['busStopID'].'">'.$rowBusStop['busStopName'].'</span>
+                                </td>';
         $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
         $tableBusstopOutput .= '<td></td>';
         $tableBusstopOutput .= '<td>
-                                  <i data-id="'.$rowBusStop['busStopNumber'].'" class="showBusstopDetail bi bi-eye text-success me-3"></i>
-                                  <i class="bi bi-pencil text-info me-3"></i>
+                                  <i data-id="'.$rowBusStop['busStopNumber'].'" class="showBusstopDetail bi bi-eye text-dark me-3"></i>
+                                  <i class="bi bi-pencil text-info me-3 edit-record" data-id="'.$rowBusStop['busStopID'].'"></i>
                                   <i class="bi bi-trash text-danger me-3"></i>
                                 </td>';
       $tableBusstopOutput .= '</tr>';

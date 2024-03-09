@@ -36,6 +36,9 @@ $(document).ready(function(){
 
   });
 
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  // FUNCTION TO SAVE THE OBSTRUCTION
   $('#btnSaveObstruction').on('click', function(){
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let obstructionType = $('#obstructionType').val();
@@ -56,10 +59,14 @@ $(document).ready(function(){
                 obstructionReason);
   });
 
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  // FUNCTION TO RESET THE OBSTRUCTION FORM
   $("#btnResetObstruction").on('click', function(){
     $("#insertObstructionForm").trigger("reset");
   });
 
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  // FUNCTION TO TO LOGIN USER
   $('#btnEmployeeLogin').on('click', function() {
 
     let employeeUserName = $('#employeeUserName').val();
@@ -244,5 +251,11 @@ $(document).ready(function(){
     let x = Math.ceil(Math.random() * 100);
     $('#hoofd').html(x);
   }, 3000);*/
+
+  // FUNCTION TO SHOW BUSSTOP DETAILS IN MODAL
+  $('.edit-record').on('click', function(){
+    let busStopID = $(this).data('id');
+    console.log(busStopID);
+  });
 
 });
