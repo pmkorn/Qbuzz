@@ -287,6 +287,9 @@
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Annuleer</button>
             <button  class="btn btn-warning text-white" id="btnResetObstruction"><i class="bi bi-arrow-clockwise"></i> Reset</button>
             <button  class="btn btn-success" id="btnSaveObstruction"><i class="bi bi-floppy"></i> Opslaan</button>
+            <div class="mb-3">
+              <input class="form-control" type="hidden" id="obstructionYear" value="<?php echo substr(date("Y"),2,2) ?>">
+            </div>
           </div>
         </div>
       </div>

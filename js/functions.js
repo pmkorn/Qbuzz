@@ -36,6 +36,65 @@ $(document).ready(function(){
 
   });
 
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////// GENERATE OBSTRUCTION NUMBER
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  $('#obstructionRegion').on('change', function(){
+
+    let obstructionRegion = $('#obstructionRegion').find(":selected").text();
+    let obstructionYear = $('#obstructionYear').val();
+
+    $.ajax({
+      url: '../scripts/generate_obstructionnumber.php',
+      type: 'POST',
+      data: {
+        obstructionRegion: obstructionRegion
+      },
+      cache: false,
+      success: function(data) {
+        
+        if (data < 9) {
+          dataObstructionNumber = "00" + (parseFloat(data) + parseFloat(1));
+        } else if (data < 99) {
+          dataObstructionNumber = "0" + (parseFloat(data) + parseFloat(1));
+        } else {
+          dataObstructionNumber = (parseFloat(data) + parseFloat(1));
+        }
+
+        if (obstructionRegion == "Drenthe"){
+          $('#obstructionNumber').val("GD"+obstructionYear+"-D" + dataObstructionNumber );
+        } else if (obstructionRegion == "Friesland") {
+          $('#obstructionNumber').val("GD"+obstructionYear+"-F" + dataObstructionNumber );
+        } else if (obstructionRegion == "Groningen") {
+          $('#obstructionNumber').val("GD"+obstructionYear+"-G" + dataObstructionNumber );
+        } else {
+          $('#obstructionNumber').val("GD"+obstructionYear+"-S" + dataObstructionNumber );
+        }
+        console.log(dataObstructionNumber);
+        
+      }
+    });
+
+  });
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////// SAVE OBSTRUCTION INTO DATABASE 
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  $('#btnSaveObstruction').on('click', function(){
+    
+    let obstructionRegion     = $('#obstructionRegion').val();
+    let obscructionNumber     = $('#obstructionNumber').val();
+    let obstructionType       = $('#obstructionType').val();
+    let obstructionPriority   = $('#obstructionPriority').val();
+    let obstructionPlace      = $('#obstructionPlace').val();
+    let obstructionTrajectory = $('#obstructionTrajectory').val();
+    let obstructionReason     = $('#obstructionReason').val();
+    let obstructionLines      = $('#obstructionLines').val();
+
+  });
+
 
 
 
