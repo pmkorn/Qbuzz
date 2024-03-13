@@ -136,17 +136,30 @@
 
         </div>
 
-        <div class="row d-none d-sm-block">
+        <div class="row">
+          
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
                 <i class="bi bi-chart"></i> Overzicht stremmingen
               </div>
               <div class="card-body">
-                <canvas id="myChart"></canvas>
+                <div id="myChart1"></div>
               </div>
             </div>
           </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <i class="bi bi-chart"></i> Overzicht stremmingen
+              </div>
+              <div class="card-body">
+                <div id="myChart2"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -157,7 +170,8 @@
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/jquery-3.7.2.js"></script>
   <script src="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="js/functions.js"></script>
   <script>
     let table = new DataTable('#overzichtStremmingen',{
@@ -171,8 +185,126 @@
       ],
     });
   </script>
-
   <script>
+    var options = {
+          series: [{
+          name: 'Drenthe',
+          data: [44, 55, 41, 67, 22, 43, 21, 49]
+        }, {
+          name: 'Friesland',
+          data: [13, 23, 20, 8, 13, 27, 33, 12]
+        }, {
+          name: 'Groningen',
+          data: [11, 17, 15, 15, 21, 14, 15, 13]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350,
+          stacked: true,
+          toolbar: {
+            show: true
+          },
+          zoom: {
+            enabled: true
+          },
+          stackType: '100%'
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetX: -10,
+              offsetY: 0
+            }
+          }
+        }],
+        xaxis: {
+          categories: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2',
+            '2012 Q3', '2012 Q4'
+          ],
+        },
+        fill: {
+          opacity: 1
+        },
+        legend: {
+          position: 'right',
+          offsetX: 0,
+          offsetY: 50
+        },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#myChart1"), options);
+        chart.render();
+  </script>
+  <script>
+    var options = {
+          series: [{
+          name: 'Drenthe',
+          data: [44, 55, 41, 67, 22, 43]
+        }, {
+          name: 'Friesland',
+          data: [13, 23, 20, 8, 13, 27]
+        }, {
+          name: 'Groningen',
+          data: [11, 17, 15, 15, 21, 14]
+        }],
+          chart: {
+          type: 'bar',
+          height: 350,
+          stacked: true,
+          toolbar: {
+            show: true
+          },
+          zoom: {
+            enabled: true
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetX: -10,
+              offsetY: 0
+            }
+          }
+        }],
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            borderRadius: 10,
+            dataLabels: {
+              total: {
+                enabled: true,
+                style: {
+                  fontSize: '13px',
+                  fontWeight: 900
+                }
+              }
+            }
+          },
+        },
+        xaxis: {
+          type: 'datetime',
+          categories: ['01/01/2011 GMT', '01/02/2011 GMT', '01/03/2011 GMT', '01/04/2011 GMT',
+            '01/05/2011 GMT', '01/06/2011 GMT'
+          ],
+        },
+        legend: {
+          position: 'right',
+          offsetY: 40
+        },
+        fill: {
+          opacity: 1
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#myChart2"), options);
+        chart.render();
+    </script>
+
+  <!--<script>
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
@@ -182,7 +314,7 @@
         datasets: [
           {
           label: 'Drenthe',
-          FillColor: 'blue',
+          fillColor: 'blue',
           data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
           borderWidth: 3
           },
@@ -194,7 +326,7 @@
         },
         {
           label: 'Groningen',
-          FillColor: 'yellow',
+          fillColor: 'yellow',
           data: [14, 11, 9, 10, 11, 15, 7, 3, 11, 8, 13, 8],
           borderWidth: 3
         }
@@ -219,5 +351,5 @@
         }
       }
     });
-  </script>
+  </>-->
 </html>

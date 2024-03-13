@@ -112,7 +112,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="section-title mb-3"><?php echo $busStopName; ?> <small>(<?php echo $busStopNumber ?>)</small></h1>
+            <h1 class="section-title mb-3"><?php echo $busStopName; ?> <small class="fs-5">(<?php echo $busStopNumber ?>)</small></h1>
             <hr class="mb-5">
           </div>
         </div>
