@@ -380,25 +380,28 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  // FUNCTION TO SHOW BUSSTOP DETAILS IN MODAL
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////// EDIT BUSSTOP INFO
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
   $('.edit-record').on('click', function(){
-    let busStopID = $(this).data('id');
-    console.log(busStopID);
+
+    busStopID = $(this).data('id');
+    
+    $.ajax({
+      url: '../scripts/fetch_busstop_data.php',
+      type: 'POST',
+      data: {
+        busStopID: busStopID
+      },
+      success: function(response) {
+        $('#busstopDetails .modal-content').html(response);
+      }
+    });
+    $('#busstopDetails').modal('show');
+
   });
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////// END EDIT BUSSTOP INFO
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 });
