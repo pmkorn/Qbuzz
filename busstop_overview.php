@@ -31,13 +31,16 @@
       $tableBusstopOutput .= '<tr id="'.$rowBusStop['busStopNumber'].'">';
         $tableBusstopOutput .= '<td><img src="images/haltebord.png" width="25px" /></td>';
         $tableBusstopOutput .= '<td>
-                                  <span class="static-field-'.$rowBusStop['busStopID'].'">'.$rowBusStop['busStopName'].'</span>
-                                </td>';
-        $tableBusstopOutput .= '<td>'.$rowBusStop['busStopNumber'].'</td>';
+                                 '.$rowBusStop['busStopName'].'<br>
+                               </td>';
+        $tableBusstopOutput .= '<td>
+                                 '.$rowBusStop['busStopNumber'].'
+                               </td>';                        
+        $tableBusstopOutput .= '<td></td>';
         $tableBusstopOutput .= '<td></td>';
         $tableBusstopOutput .= '<td>
                                   <i data-id="'.$rowBusStop['busStopNumber'].'" class="showBusstopDetail bi bi-eye text-dark me-3"></i>
-                                  <i class="bi bi-pencil text-info me-3 edit-record" data-id="'.$rowBusStop['busStopID'].'"></i>
+                                  <i class="bi bi-pencil text-info me-3 edit-record" data-id="'.$rowBusStop['busStopID'].'" title="Info & werkorder"></i>
                                   <i class="bi bi-trash text-danger me-3"></i>
                                 </td>';
       $tableBusstopOutput .= '</tr>';
@@ -92,7 +95,7 @@
 
     <!-- MODAL FOR DISPLAYING BUSSTOP DETAILS -->
     <div class="modal fade" id="busstopDetails" tabindex="-1">
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
           <!-- -->
           <div class="modal-footer">
@@ -130,8 +133,9 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Haltenaam:</th>
+                  <th>Halte:</th>
                   <th>Haltenummer:</th>
+                  <th>Lijnen:</th>
                   <th>GPS:</th>
                   <th>Actie</th>
                 </tr>
