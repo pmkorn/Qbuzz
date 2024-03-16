@@ -41,6 +41,7 @@
         $tableBusstopOutput .= '<td>
                                   <i data-id="'.$rowBusStop['busStopNumber'].'" class="showBusstopDetail bi bi-eye text-dark me-3"></i>
                                   <i class="bi bi-pencil text-info me-3 edit-record" data-id="'.$rowBusStop['busStopID'].'" title="Info & werkorder"></i>
+                                  <i class="bi bi-pencil-square text-warning me-3"></i>
                                   <i class="bi bi-trash text-danger me-3"></i>
                                 </td>';
       $tableBusstopOutput .= '</tr>';
@@ -163,9 +164,12 @@
       },
       order: [1, 'asc'],
       lengthMenu: [
-        [10, 25, 50, -1],
-        [10, 25, 50, 'All'],
-      ]
+        [10, 25, 50, 100, -1],
+        [10, 25, 50, 100, 'All'],
+      ],
+      paging: false,
+    scrollCollapse: true,
+    scrollY: '50vh'
     });
   </script>
   <script>

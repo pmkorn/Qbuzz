@@ -141,7 +141,7 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                <i class="bi bi-chart"></i> Overzicht stremmingen
+                <i class="bi bi-bar-chart"></i> Overzicht stremmingen in %
               </div>
               <div class="card-body">
                 <div id="myChart1"></div>
@@ -152,7 +152,7 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                <i class="bi bi-chart"></i> Overzicht stremmingen
+                <i class="bi bi-bar-chart"></i> Overzicht stremmingen in aantallen
               </div>
               <div class="card-body">
                 <div id="myChart2"></div>
@@ -182,7 +182,7 @@
       lengthMenu: [
         [10, 25, 50, -1],
         [10, 25, 50, 'All'],
-      ],
+      ]
     });
   </script>
   <script>
