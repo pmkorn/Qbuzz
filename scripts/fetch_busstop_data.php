@@ -65,24 +65,32 @@
             <p>Geef in onderstaand formulier in een zo duidelijke omschrijving aan wat er aan mankement aan de halte of ABRI is en druk dan op aanmaken om een nieuwe werkorder te creeëren.</p>
             <form>
               <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label"><strong>Halte:</strong></label>
+                <label for="busStopNumber" class="col-sm-2 col-form-label"><strong>Halte:</strong></label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control-plaintext fw-bold" id="inputPassword" value="NL:Q:'.$row['busStopNumber'].'" disabled>
+                  <input type="text" class="form-control-plaintext fw-bold" id="busStopNumber" value="NL:Q:'.$row['busStopNumber'].'" disabled>
                 </div>
               </div>
               <div class="mb-3 row">
                 <label for="inputPassword" class="col-sm-2 col-form-label"><strong>Onderwerp:</strong></label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputPassword" >
+                  <select class="form-select">
+                    <option selected>---Selecteer---</option>
+                    <option value="ABRI">ABRI</option>
+                    <option value="ABRI kast">ABRI kast</option>
+                    <option value="Haltebord">Haltebord</option>
+                    <option value="Haltepaal">Haltepaal</option>
+                    <option value="HVS">HVS</option>
+                    <option value="HVS kast">HVS kast</option>
+                  </select>
                 </div>
               </div>
               <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label"><strong>Mankement:</strong></label>
+                <label for="workOrderDescription" class="col-sm-2 col-form-label"><strong>Mankement:</strong></label>
                 <div class="col-sm-10">
-                  <textarea type="text" class="form-control" id="inputPassword" rows="6"></textarea>
+                  <textarea type="text" class="form-control" id="workOrderDescription" rows="6"></textarea>
                 </div>
               </div>
-              <button class="btn btn-success float-end">Melding maken</button>
+              <button id="addNewWorkOrder" class="btn btn-success float-end">Melding maken</button>
             </form>
           </div>
         </div>      
