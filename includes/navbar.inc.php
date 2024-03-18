@@ -65,13 +65,12 @@
       <ul class="navbar-nav ms-auto">    
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="bi
-          bi-person-circle"></span>
+          <?php echo $employeeFirstName." ".$employeeLastName; ?>
           </a>
           <ul class="dropdown-menu">
           <li>
               <a class="dropdown-item disabled" id="logout" data-logout="logout" aria-disabled="true">
-                <?php echo $employeeFirstName." ".$employeeLastName; ?>
+                Account
               </a>
             </li>
             <li class="dropdown-divider"></li>
