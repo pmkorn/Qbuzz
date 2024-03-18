@@ -96,6 +96,11 @@
         </div>      
         '; 
       $html .= '</div>';
+      $html .= '
+        <div class="modal-footer">
+          
+        </div>
+      ';
     }
   }
 

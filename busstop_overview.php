@@ -99,12 +99,6 @@
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
           <!-- -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-warning text-white">Reset</button>
-            <button type="button" class="btn btn-success">Save changes</button>
-            <button id="addNewWorkOrder" class="btn btn-success float-end">Melding maken</button>
-          </div>
         </div>
       </div>
     </div>
