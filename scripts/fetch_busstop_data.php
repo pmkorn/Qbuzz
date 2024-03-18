@@ -97,7 +97,7 @@
         '; 
       $html .= '</div>';
       $html .= '
-        <div class="modal-footer">
+        <div class="modal-footer py-4">
           
         </div>
       ';
