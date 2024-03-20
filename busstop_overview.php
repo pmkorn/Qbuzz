@@ -40,8 +40,8 @@
         $tableBusstopOutput .= '<td></td>';
         $tableBusstopOutput .= '<td>
                                   <i data-id="'.$rowBusStop['busStopNumber'].'" class="showBusstopDetail bi bi-eye text-dark me-3"></i>
-                                  <i class="bi bi-pencil text-info me-3 edit-record" data-id="'.$rowBusStop['busStopID'].'" title="Info & werkorder"></i>
-                                  <i class="bi bi-pencil-square text-warning me-3"></i>
+                                  <i class="bi bi-pencil text-info me-3 fetch-record" data-id="'.$rowBusStop['busStopID'].'" title="Info & werkorder"></i>
+                                  <i class="bi bi-pencil-square text-warning me-3 edit-record" data-id="'.$rowBusStop['busStopID'].'" title="Bewerken""></i>
                                   <i class="bi bi-trash text-danger me-3"></i>
                                 </td>';
       $tableBusstopOutput .= '</tr>';
@@ -96,6 +96,16 @@
 
     <!-- MODAL FOR DISPLAYING BUSSTOP DETAILS -->
     <div class="modal fade" id="busstopDetails" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <!-- -->
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL FOR DISPLAYING BUSSTOP DETAILS -->
+
+    <!-- MODAL FOR DISPLAYING BUSSTOP DETAILS -->
+    <div class="modal fade" id="editBusstopDetails" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
           <!-- -->
