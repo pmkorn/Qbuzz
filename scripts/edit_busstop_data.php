@@ -15,23 +15,24 @@
       $html .= '<div class="modal-body">';
         $html .= '<h4 class="mb-3">'.$row['busStopName'].'</h4>';   
         $html .= '
-          <form>
+          
             <div class="container">
               <div class="mb-3 row">
                 <label for="busStopNumber" class="col-sm-2 col-form-label"><strong>Haltenummer:</strong></label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="busStopNumber" value="'.$row['busStopNumber'].'">
+                  <input type="text" class="form-control" id="updateBusStopNumber" value="'.$row['busStopNumber'].'">
                 </div>
               </div>
               <div class="mb-3 row">
                 <label for="busStopNumber" class="col-sm-2 col-form-label"><strong>Haltenaam:</strong></label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="busStopName" value="'.$row['busStopName'].'">
+                  <input type="text" class="form-control" id="updateBusStopName" value="'.$row['busStopName'].'">
                 </div>
               </div>
-              <button id="addNewWorkOrder" class="btn btn-success float-end">Opslaan <i class="bi bi-floppy"></i></button>
+              <input type="hidden" id="updateBusStopID" value="'.$row['busStopID'].'">
+              <button id="saveEditBusstopData" class="btn btn-success float-end">Opslaan <i class="bi bi-floppy"></i></button>
             </div>
-          <form>
+          
         ';
       $html .= '</div>';
       $html .= '
