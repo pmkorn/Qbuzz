@@ -153,47 +153,41 @@
 
     <?php include('includes/navbar.inc.php'); ?>
 
-    <div class="container-fluid p-3">
+    <section class="main-content py-5">
 
-      <div class="row mb-3">
-
-        <div class="col-md-12">          
-          <h1><i class="bi bi-list-task"></i> Werkorders</h1>
-          <hr>
-        </div>
-
-      </div>
-
-      <div class="row mb-3 mb-md-0">
-
-        <div class=" col col-md-12 col-xl-8 mb-3 mb-md-0 d-none d-lg-block">
-          <h4>Overzicht haltes</h4>
-          <hr>
-          <table id="busStopTable" class="table table-hover table-striped table-bordered">
-            <thead>
-              <tr>
-                <th>Haltenaam</th>
-                <th>Haltenummer</th>
-                <th>Actie</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php echo $tableBusstopOutput; ?>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="col col-md-12 col-xl-4 mb-3 mb-md-0">
-          <h4>Openstaande werkorders</h4>
-          <hr>            
-          <div class="list-group overflow-y-scroll" id="workorder-overview" style="max-height:600px;">
-            <?php echo $workOrderOutput; ?>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-title mb-3">Werkorders</h1>
+            <hr class="mb-5">
           </div>
-        </div>        
+        </div>
+      </div>
+
+      <div class="container-fluid">
+
+        <div class="row mb-3 mb-md-0">
+
+          <div class=" col col-md-12 col-xl-8 mb-3 mb-md-0 d-none d-lg-block">
+            <table id="busStopTable" class="table table-hover table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>Haltenaam</th>
+                  <th>Haltenummer</th>
+                  <th>Actie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php echo $tableBusstopOutput; ?>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
   </body>
 
