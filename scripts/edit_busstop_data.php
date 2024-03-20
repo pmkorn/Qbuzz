@@ -30,14 +30,14 @@
                 </div>
               </div>
               <input type="hidden" id="updateBusStopID" value="'.$row['busStopID'].'">
-              <button id="saveEditBusstopData" class="btn btn-success float-end">Opslaan <i class="bi bi-floppy"></i></button>
+             
             </div>
           
         ';
       $html .= '</div>';
       $html .= '
-        <div class="modal-footer py-4">
-          
+        <div class="modal-footer">
+          <button id="updateBusstopData" class="btn btn-success float-end">Opslaan <i class="bi bi-floppy"></i></button>
         </div>
       ';
     }

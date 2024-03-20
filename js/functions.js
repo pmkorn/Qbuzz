@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+  // CLONE EXPIRED BUSSTOPS
   $('#btnTempExpiredStops1').click(function(){ 
     //let a = $('#obstructionLinesList').find(':selected').val().clone(true).prepend('#tempExpiredStops1').val();;
     //alert(a);
@@ -18,6 +20,9 @@ $(document).ready(function(){
 
   });
 
+
+
+  // CLONE BUSSTOPS
   $('#btnTempStops1').click(function(){ 
     //let a = $('#obstructionLinesList').find(':selected').val().clone(true).prepend('#tempExpiredStops1').val();;
     //alert(a);
@@ -36,9 +41,9 @@ $(document).ready(function(){
 
   });
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// GENERATE OBSTRUCTION NUMBER
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+
+  // GENERATE OBSTRUCTION NUMBER
   $('#obstructionRegion').on('change', function(){
 
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
@@ -79,43 +84,7 @@ $(document).ready(function(){
 
 
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// SAVE OBSTRUCTION INTO DATABASE 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  $('#btnSaveObstruction').on('click', function(){
-    
-    let obstructionRegion     = $('#obstructionRegion').val();
-    let obscructionNumber     = $('#obstructionNumber').val();
-    let obstructionType       = $('#obstructionType').val();
-    let obstructionPriority   = $('#obstructionPriority').val();
-    let obstructionPlace      = $('#obstructionPlace').val();
-    let obstructionTrajectory = $('#obstructionTrajectory').val();
-    let obstructionReason     = $('#obstructionReason').val();
-    let obstructionLines      = $('#obstructionLines').val();
-
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  // FUNCTION TO SAVE THE OBSTRUCTION
+  // SAVE OBSTRUCTION
   $('#btnSaveObstruction').on('click', function(){
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let obstructionType = $('#obstructionType').val();
@@ -136,14 +105,16 @@ $(document).ready(function(){
                 obstructionReason);
   });
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  // FUNCTION TO RESET THE OBSTRUCTION FORM
+
+
+  // RESET OBSTRUCTION FORM
   $("#btnResetObstruction").on('click', function(){
     $("#insertObstructionForm").trigger("reset");
   });
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  // FUNCTION TO TO LOGIN USER
+
+
+  // LOGIN USER
   $('#btnEmployeeLogin').on('click', function() {
 
     let employeeUserName = $('#employeeUserName').val();
@@ -190,8 +161,9 @@ $(document).ready(function(){
 
   });
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  // FUNCTION TO TO REGISTER USER
+
+
+  // REGISTER USER
   $('#btnEmployeeRegister').on('click', function(){
 
     let employeeFirstName = $('#employeeFirstName').val();
@@ -231,6 +203,9 @@ $(document).ready(function(){
 
   });
 
+
+
+  // SAVE WORKORDER
   $('.btnSaveWorkOrder').on('click', function(){
     
     let busStopID = $(this).val();
@@ -266,23 +241,7 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // FINALIZE WORKORDER
   $('.btnWorkOrderFinalize').on('click', function() {
 
     let workOrderID = $(this).val();
@@ -308,36 +267,6 @@ $(document).ready(function(){
     });
 
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  $('#logout').on('click', function() {
-    var opdracht = $(this).attr("data-logout");
-    alert(opdracht);
-  });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -371,18 +300,10 @@ $(document).ready(function(){
     }, 2100);    
   });
 
-  /*setInterval(function() {
-    let x = Math.ceil(Math.random() * 100);
-    $('#hoofd').html(x);
-  }, 3000);*/
 
 
 
-
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// SHOW BUSSTOP INFO
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  // SHOW BUSSTOP INFO
   $('.fetch-record').on('click', function(){
 
     busStopID = $(this).data('id');
@@ -400,15 +321,10 @@ $(document).ready(function(){
     $('#busstopDetails').modal('show');
 
   });
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// END SHOW BUSSTOP INFO
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// END EDIT BUSSTOP INFO
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  // END EDIT BUSSTOP INFO
   $('.edit-record').on('click', function(){
 
     busStopID = $(this).data('id');
@@ -426,41 +342,47 @@ $(document).ready(function(){
     $('#editBusstopDetails').modal('show');
 
   });
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// END EDIT BUSSTOP INFO
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// SAVE BUSSTOP INFO
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  $('#saveEditBusstopData').on('click', function() {
+  // SAVE BUSSTOP INFO
+  $('#updateBusstopData').on('click', function() {
 
     let updateBusStopID = $('#updateBusStopID').val();
     let updateBusStopNumber = $('#updateBusStopNumber').val();
     let updateBusStopName = $('#updateBusStopName').val();
 
-    alert(updateBusStopID+ ' '+ updateBusStopNumber+' '+updateBusStopName );
-
+    console.log(updateBusStopID+ ' '+ updateBusStopNumber+' '+updateBusStopName);
     
   });
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// END SAVE BUSSTOP INFO
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// INSERT WORKORDER
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
+  // INSERT WORKORDER
   $('#addNewWorkOrder').on('click', function(){
 
     alert("hallo");
 
   });
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////// END INSERT WORKORDER
-  ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*setInterval(function() {
+    let x = Math.ceil(Math.random() * 100);
+    $('#hoofd').html(x);
+  }, 3000);*/
+
 
 });
