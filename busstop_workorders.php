@@ -166,9 +166,9 @@
 
       <div class="container-fluid">
 
-        <div class="row mb-3 mb-md-0">
+        <div class="row ">
 
-          <div class=" col col-md-12 col-xl-8 mb-3 mb-md-0 d-none d-lg-block">
+          <div class="col-md-12">
             <table id="busStopTable" class="table table-hover table-striped table-bordered">
               <thead>
                 <tr>

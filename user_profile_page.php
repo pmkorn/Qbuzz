@@ -48,7 +48,7 @@
     <div class="container-fluid">   
       <div class="row">
         <div class="col-md-12">
-          <h1 class="section-title">Profiel: <?php echo $employeeFirstName.' '.$employeeLastName; ?></h1>
+          <h1 class="section-title">Welkom <?php echo $employeeFirstName.' '.$employeeLastName; ?></h1>
           <hr>
         </div>
       </div> 
