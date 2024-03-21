@@ -100,7 +100,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuleren&nbsp;<i class="bi bi-x-circle"></i></button>
             <button type="button" class="btn btn-warning text-white" data-bs-dismiss="modal">Reset&nbsp;<i class="bi bi-arrow-counterclockwise"></i></button>
-            <button class="btn btn-success">Opslaan <i class="bi bi-floppy"></i></button>
+            <button id="saveWorkOrder" class="btn btn-success">Opslaan <i class="bi bi-floppy"></i></button>
           </div>
         </div>
       </div>

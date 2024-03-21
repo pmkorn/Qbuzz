@@ -53,6 +53,23 @@
                 </tr>
               </tbody>
             </table>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Halteverwijzingen
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the first items accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Its also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="callout callout-qbuzz">
+              Dit is een <strong>Slecht toegankelijke halte</strong>, minder goed geschikt voor reizigers met een motorische en reizigers met een visuele beperking.
+            </div>
           </div>
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
           
@@ -90,26 +107,9 @@
                   <textarea type="text" class="form-control" id="workOrderDescription" rows="6"></textarea>
                 </div>
               </div>
-              <button id="addNewWorkOrder" class="btn btn-success float-end">Melding maken</button>
+              <button type="button" id="addNewWorkOrder" class="btn btn-success float-end">Melding maken</button>
             </form>
           </div>
-        </div>
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Halteverwijzingen
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>This is the first items accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Its also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="callout">
-          Dit is een <strong>Slecht toegankelijke halte</strong>, minder goed geschikt voor reizigers met een motorische en reizigers met een visuele beperking.
         </div>  
         '; 
       $html .= '</div>';

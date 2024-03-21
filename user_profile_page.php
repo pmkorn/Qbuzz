@@ -43,54 +43,26 @@
 
   <?php include('includes/navbar.inc.php'); ?>
 
-<div class="container-fluid p-3">
+  <section class="main-content py-5">
 
-  <div class="row mb-3">
+    <div class="container-fluid">   
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="section-title">Profiel: <?php echo $employeeFirstName.' '.$employeeLastName; ?></h1>
+          <hr>
+        </div>
+      </div> 
+    </div> 
 
-    <div class="col-md-12">          
-      <h1><i class="bi bi-person-circle"></i> Account</h1>
-      <hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          
+        </div>
+      </div>
     </div>
 
-  </div>
-
-  <div class="row mb-3">
-    <div class="col-md-3">
-
-      <img class="img-thumbnail rounded-circle mb-3" src="https://via.placeholder.com/800x800" width="150px" alt="Profile pic" title="Profile pic">
-      <ul class="list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-        <li class="list-group-item">
-          <a class="btn btn-link" href="account/logout/">Uitloggen</a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-
-  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="https://placehold.co/20x20" class="rounded me-2" alt="...">
-      <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
-</div>
-
-  
-
-</div>
+  </section>
 
   </body>
 

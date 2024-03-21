@@ -359,7 +359,7 @@ $(document).ready(function(){
 
 
   // INSERT WORKORDER
-  $('#addNewWorkOrder').on('click', function(){
+  $('#saveWorkOrder').on('click', function(){
 
     alert("hallo");
 
