@@ -306,7 +306,7 @@ $(document).ready(function(){
   // SHOW BUSSTOP INFO
   $('.fetch-record').on('click', function(){
 
-    busStopID = $(this).data('id');
+    let busStopID = $(this).data('id');
     
     $.ajax({
       url: '../scripts/fetch_busstop_data.php',
@@ -327,7 +327,7 @@ $(document).ready(function(){
   // END EDIT BUSSTOP INFO
   $('.edit-record').on('click', function(){
 
-    busStopID = $(this).data('id');
+    let busStopID = $(this).data('id');
     
     $.ajax({
       url: '../scripts/edit_busstop_data.php',
@@ -362,6 +362,28 @@ $(document).ready(function(){
   $('#saveWorkOrder').on('click', function(){
 
     alert("hallo");
+
+  });
+
+
+
+  // OPEN WORKORDER
+  $('#btnCompleteWorkorder').on('click', function(){
+
+    let workorderID = $(this).data('workorderID');
+
+    $.ajax({
+      url: '',
+      type: '',
+      data: {
+        workorderID:  workorderID
+      },
+      success: function(response) {
+        $('#workOrder').html(response);
+      }
+    });
+
+    console.log("Hello");
 
   });
 

@@ -20,6 +20,8 @@ RewriteRule ^haltes/werkorders busstop_workorders.php [NC,L]
 
 RewriteRule ^stremmingen/aanmaken/ obstructions.php [NC,L]
 
+RewriteRule ^werkorders/ workorders.php [NC,L]
+
 #RewriteRule ^create-account/ signup.php [NC,L]
 
 #RewriteRule ^password-recover/ password_recover.php [NC,L]

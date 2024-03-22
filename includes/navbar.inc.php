@@ -58,6 +58,9 @@
             <li><a class="dropdown-item" href="haltes/werkorders/"><i class="bi bi-check2-square me-2"></i> Werkorders</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="werkorders/">Werkorders</a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto">    
         <li class="nav-item dropdown">
@@ -76,7 +79,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/admin/">Admin</a>
+          <a class="nav-link" aria-current="page" href="admin/">Admin</a>
         </li>
       </ul>
     </div>
