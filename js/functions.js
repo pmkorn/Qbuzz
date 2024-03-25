@@ -366,11 +366,22 @@ $(document).ready(function(){
   });
 
 
+  
+  // SELECT OPEN WORKORDER IN TABLE
+  $('#openWorkorderTable tr').on ('click', function(){
+
+    let openWorkorderTableID = $(this).data('owotid');
+
+    console.log(openWorkorderTableID);
+
+  })
+
+
 
   // OPEN WORKORDER
   $('#btnCompleteWorkorder').on('click', function(){
 
-    let workorderID = $(this).data('workorderID');
+    let workorderID = $(this).data("workorderID");
 
     $.ajax({
       url: '',

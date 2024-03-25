@@ -408,6 +408,12 @@ table th {
 .green { background-image: radial-gradient(circle, $radial-green, $radial-dark-green); color: $font-color-white;}*/
 /****************************************************************/
 /* TABLET LAYOUT */
+@media (max-width: 991.98px) {
+  * {
+    font-size: 14px;
+  }
+}
+
 /* END TABLET LAYOUT */
 /****************************************************************/
 /****************************************************************/
