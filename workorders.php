@@ -56,9 +56,9 @@
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container-fluid d-none d-md-block">
 
-        <div class="row ">
+        <div class="row">
 
           <div class="col-md-6">
 
@@ -173,7 +173,7 @@
 
               <div class="card">
                 <div class="card-header">
-                  Incident 20240101-1
+                  <b>Incident 20240101-1</b>
                 </div>
                 <div class="card-body">
                   <div class="row">

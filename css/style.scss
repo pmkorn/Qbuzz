@@ -30,6 +30,12 @@ body {
   text-transform: uppercase;
   font-weight: 300;
 }
+.section-title:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #EF7D00;
+}
 
 .flex {
   display: flex;
