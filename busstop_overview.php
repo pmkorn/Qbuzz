@@ -31,7 +31,7 @@
       $tableBusstopOutput .= '<tr id="'.$rowBusStop['busStopNumber'].'">';
         $tableBusstopOutput .= '<td><img src="images/haltebord.png" width="25px" /></td>';
         $tableBusstopOutput .= '<td>
-                                 '.$rowBusStop['busStopName'].'<br>
+                                 '.$rowBusStop['busStopName'].'
                                </td>';
         $tableBusstopOutput .= '<td>
                                  '.$rowBusStop['busStopNumber'].'
@@ -43,6 +43,7 @@
                                   <i class="bi bi-pencil text-info me-3 fetch-record" data-id="'.$rowBusStop['busStopID'].'" title="Info & werkorder"></i>
                                   <i class="bi bi-pencil-square text-warning me-3 edit-record" data-id="'.$rowBusStop['busStopID'].'" title="Bewerken""></i>
                                   <i class="bi bi-trash text-danger me-3"></i>
+                                  <i class="bi bi-slash-circle text-danger me-3"></i>
                                 </td>';
       $tableBusstopOutput .= '</tr>';
     }
@@ -130,7 +131,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-          <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#newBusstopPlace">Aanmaken halte <i class="bi bi-stoplights-fill"></i></button>
+          <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#newBusstopPlace">Aanmaken halte</button>
           </div>
         </div>
         <div class="row">

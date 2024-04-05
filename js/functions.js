@@ -399,6 +399,12 @@ $(document).ready(function(){
   });
 
 
+  $('.list-group-workorder-item').on('click', function() {
+    let workorderItemID = $(this).data("id");
+    alert (workorderItemID);
+  });
+
+
 
 
 

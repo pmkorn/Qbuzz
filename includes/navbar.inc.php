@@ -55,7 +55,6 @@
           <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Haltes</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="haltes/overzicht/"><i class="bi bi-eye me-2"></i> Overzicht</a></li>
-            <li><a class="dropdown-item" href="haltes/werkorders/"><i class="bi bi-check2-square me-2"></i> Werkorders</a></li>
           </ul>
         </li>
         <li class="nav-item">

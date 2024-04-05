@@ -241,6 +241,48 @@
 
       </div>
 
+      <div class="container-fluid d-block d-md-none">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="list-group">
+              <div href="" class="list-group-item list-group-workorder-item list-group-item-action" aria-current="true" data-id="1">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Haltenaam</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Haltenummer</p>
+                <small>Hier een duidelijke omschrijving over het mankement met betrekking tot de halte</small>
+                <div>
+                  <i class="bi bi-person-fill"></i>
+                </div>
+              </div>
+              <div href="" class="list-group-item list-group-workorder-item list-group-item-action" aria-current="true" data-id="2">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Haltenaam</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Haltenummer</p>
+                <small>Hier een duidelijke omschrijving over het mankement met betrekking tot de halte</small>
+                <div>
+                  <i class="bi bi-person-fill"></i>
+                </div>
+              </div>
+              <div href="" class="list-group-item list-group-workorder-item list-group-item-action" aria-current="true" data-id="3">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Haltenaam</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Haltenummer</p>
+                <small>Hier een duidelijke omschrijving over het mankement met betrekking tot de halte</small>
+                <div>
+                  <i class="bi bi-person-fill"></i>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
   </body>
