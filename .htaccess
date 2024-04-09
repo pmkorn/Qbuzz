@@ -21,6 +21,8 @@ RewriteRule ^stremmingen/aanmaken/ obstructions.php [NC,L]
 
 RewriteRule ^werkorders/ workorders.php [NC,L]
 
+RewriteRule ^toegang-geweigerd/ access_denied.php [NC,L]
+
 #RewriteRule ^create-account/ signup.php [NC,L]
 
 #RewriteRule ^password-recover/ password_recover.php [NC,L]

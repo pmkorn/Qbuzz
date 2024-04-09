@@ -3,7 +3,7 @@
   function access($rank, $redirect = true) {
     if (isset($_SESSION['ACCESS']) && !$_SESSION['ACCESS'][$rank]) {
       if ($redirect) {
-        header("Location: /toegang_geweigerd");
+        header("Location: /toegang-geweigerd/");
         die;
       }
       return false;
