@@ -62,7 +62,7 @@
               <div class="d-flex flex-column align-items-center text-center">
                 <img src="https://placehold.co/150x150" class="img-fluid rounded-circle" alt="Random Image" title="Random Image">
                 <div class="mt-3">
-                  <h4>Patrick Korn</h4>
+                  <h4><?php echo $_SESSION['employeeRole']; ?></h4>
                 </div>
               </div>
             </div>

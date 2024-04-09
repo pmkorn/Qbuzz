@@ -22,6 +22,8 @@
   }
 
   include('includes/headertitle.inc.php');
+  include('includes/access.php');
+  access('ADMIN');
 
 ?>
 

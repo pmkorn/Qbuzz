@@ -9,7 +9,7 @@
   $employeeSignupDate = date("Y-m-d H:i:s");
   $employeeSecretCode = rand(0000, 9999);
   $employeeIsActive = '0';
-  $employeeRole = '1';
+  $employeeRole = 'user';
   $employeeOnlineStatus = '0';
 
   include('../includes/db.inc.php');
