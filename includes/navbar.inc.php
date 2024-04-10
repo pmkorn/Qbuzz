@@ -62,17 +62,22 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">    
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown dropstart">
           <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <?php echo $employeeFirstName." ".$employeeLastName; ?>
+            <i class="bi bi-gear"></i>
           </a>
           <ul class="dropdown-menu">
-          <li>
+            <li>
               <a class="dropdown-item disabled" id="logout" data-logout="logout" aria-disabled="true">
                 Account
               </a>
             </li>
             <li class="dropdown-divider"></li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">
+                <?php echo $employeeFirstName." ".$employeeLastName; ?>
+              </a>
+            </li>
             <li><a class="dropdown-item" href="account/profile/">Profiel</a></li>
             <li><a class="dropdown-item" href="account/logout/">Logout</a></li>            
           </ul>
