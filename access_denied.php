@@ -43,15 +43,14 @@
   <!--<body oncontextmenu="return false">-->
   <body>
 
-    <section class="main-content py-5">
-      <div class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-md-12">
-            <h1 class="display-1"><i class="bi bi-exclamation-triangle-fill text-danger display-1"></i> Toegang geweigerd</h1>
-          </div>
+
+    <div class="vh-100 container-fluid">
+      <div class="row h-100 justify-content-center align-content-center">
+        <div class="col-md-12 text-center">
+          <h1 class="display-1"><i class="bi bi-exclamation-triangle-fill text-danger display-1"></i> Toegang geweigerd</h1>
         </div>
       </div>
-    </section>
+    </div>
 
   </body>
 
