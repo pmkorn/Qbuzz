@@ -299,77 +299,73 @@
 
     <section class="main-content py-5">
 
-      <div class="container-fluid">
+      <div class="container-fluid mb-3">
         <div class="row">
           <div class="col-md-12">
             <h1 class="section-title mb-3">Stremmingen</h1>
-            <hr class="mb-5">
+            <hr>
           </div>
         </div>
       </div>
 
       <div class="container-fluid">
 
-        <div class="row mb-5">
-
+        <div class="row">
           <div class="col-md-12 mb-3">
-            <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-folder-plus"></i> Invoer stremming</button>
+            <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#exampleModal">Invoer stremming</button>
           </div>
+        </div>
 
+        <div class="row">
           <div class="col-md-12 mb-3 mb-md-0">
-            <div class="card">
-              <div class="card-header">
-                <i class="bi bi-list-task"></i> Stremmingen
-              </div>
-              <div class="card-body">
-                <table class="table table-striped table-hover table-responsive">
-                  <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Stremmingsnr.</th>
-                        <th>Plaats</th>
-                        <th>Traject</th>
-                        <th>Van - Tot</th>
-                        <th>Lijnen</th>
-                        <th>Status</th>
-                        <th>Actie's</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>3</td>
-                      <td>GD23-D001</td>
-                      <td>Emmen</td>
-                      <td>Hondsrugweg</td>
-                      <td>01-01-2023 - 01-02-2023</td>
-                      <td>3, 4, 44</td>
-                      <td><i class="dot dot-danger"></i></td>
-                      <td><i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>GD23-G001</td>
-                      <td>Veendam</td>
-                      <td>Sorghvlietlaan</td>
-                      <td>01-01-2023 - 01-02-2023</td>
-                      <td>71, 171, 310</td>
-                      <td><i class="dot dot-success"></i></td>
-                      <td><i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>GD23-S001</td>
-                      <td>Groningen</td>
-                      <td>Vondellaan</td>
-                      <td>01-01-2023 - 01-02-2023</td>
-                      <td>9, 19</td>
-                      <td><i class="dot dot-warning"></i></td>
-                      <td><i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            
+            <table class="table table-striped table-hover table-responsive">
+              <thead>
+                  <tr>
+                    <th>Stremmingsnr.</th>
+                    <th>Plaats</th>
+                    <th>Traject</th>
+                    <th>Periode</th>
+                    <th>Lijnen</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>GD23-D001</strong></td>
+                  <td>Emmen</td>
+                  <td>Hondsrugweg</td>
+                  <td>01-jan-23 / 01-feb-23</td>
+                  <td>3, 4, 44</td>
+                  <td><span class="badge bg-warning">Pending</span></td>
+                  <td><i class="bi bi-three-dots-vertical"></i></td>
+                  <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                </tr>
+                <tr>
+                  <td><strong>GD23-D001</strong></td>
+                  <td>Emmen</td>
+                  <td>Hondsrugweg</td>
+                  <td>01-jan-23 / 01-feb-23</td>
+                  <td>3, 4, 44</td>
+                  <td><span class="badge bg-success">active</span></td>
+                  <td><i class="bi bi-three-dots-vertical"></i></td>
+                  <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                </tr>
+                <tr>
+                  <td><strong>GD23-D001</strong></td>
+                  <td>Emmen</td>
+                  <td>Hondsrugweg</td>
+                  <td>01-jan-23 / 01-feb-23</td>
+                  <td>3, 4, 44</td>
+                  <td><span class="badge bg-danger">Closed</span></td>
+                  <td><i class="bi bi-three-dots-vertical"></i></td>
+                  <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
 
         </div>

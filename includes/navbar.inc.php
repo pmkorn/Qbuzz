@@ -23,39 +23,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Home</span></a>
+          <a class="nav-link" href="/">Home</span></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Stremmingen</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="stremmingen/overzicht/"><i class="bi bi-eye me-2"></i> Overzicht</a></li>
-            <?php
-              if ($employeeRole == "admin") {
-                echo '<li><a class="dropdown-item" href="stremmingen/aanmaken/"><i class="bi bi-pencil me-2"></i> Aanmaken</a></li>';
-              }
-            ?>
-            <?php
-              if ($employeeRole == "admin") {
-                echo '<li><a class="dropdown-item" href="stremmingen/afmelden/"><i class="bi bi-box-arrow-right me-2"></i> Afmelden</a></li>';
-              }
-            ?>
-            <?php
-              if ($employeeRole == "admin") {
-                echo '<li><a class="dropdown-item" href="stremmingen/printen/"><i class="bi bi-printer me-2"></i> Printen</a></li>';
-              }
-            ?>
-            <?php
-              if ($employeeRole == "admin") {
-                echo '<li><a class="dropdown-item" href="stremmingen/mailen/"><i class="bi bi-envelope me-2"></i> Mailen</a></li>';
-              }
-            ?>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="stremmingen/aanmaken/">Stremmingen</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Haltes</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="haltes/overzicht/"><i class="bi bi-eye me-2"></i> Overzicht</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="haltes/overzicht/">Haltes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="werkorders/">Werkorders</a>
