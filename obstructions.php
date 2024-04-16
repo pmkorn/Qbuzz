@@ -5,11 +5,13 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
-
+  
+  include('includes/db.inc.php');
+  
+  // Get user information
   if (!isset($_SESSION['employeeID'])) {
     header('Location: account/login/'); 
-  } else {
-    include('includes/db.inc.php');
+  } else {    
     $employeeID = $_SESSION['employeeID'];
     $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
     if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
@@ -19,6 +21,26 @@
         $employeeRole = $row['employeeRole'];
       }
     }   
+  }
+
+  // Get obstruction information
+  $obstructionOutput = '';
+  $sqlSelectObstructionData = "SELECT * FROM obstructions";
+  if ($sqlResultObstructionData = mysqli_query($conn, $sqlSelectObstructionData)) {
+    while ($rowObstruction = mysqli_fetch_array($sqlResultObstructionData)) {
+      $obstructionOutput = '
+                              <tr>
+                                <td><strong>GD23-D001</strong></td>
+                                <td>Emmen</td>
+                                <td>Hondsrugweg</td>
+                                <td>01-jan-23 / 01-feb-23</td>
+                                <td>3, 4, 44</td>
+                                <td><span class="badge bg-warning">Pending</span></td>
+                                <td><i class="bi bi-three-dots-vertical"></i></td>
+                                <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                              </tr>
+                            ';
+    }
   }
 
   include('includes/headertitle.inc.php');
