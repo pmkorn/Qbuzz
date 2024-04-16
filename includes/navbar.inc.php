@@ -43,15 +43,10 @@
           <ul class="dropdown-menu">
             <li>
               <a class="dropdown-item disabled" id="logout" data-logout="logout" aria-disabled="true">
-                Account
+              <?php echo $employeeFirstName." ".$employeeLastName; ?>
               </a>
             </li>
             <li class="dropdown-divider"></li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">
-                <?php echo $employeeFirstName." ".$employeeLastName; ?>
-              </a>
-            </li>
             <li><a class="dropdown-item" href="account/profile/">Profiel</a></li>
             <li><a class="dropdown-item" href="account/logout/">Logout</a></li>            
           </ul>
