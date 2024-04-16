@@ -201,6 +201,11 @@
                                     <textarea class="form-control" name="obstructionComment" id="obstructionComment" rows="6"></textarea>
                                   </div>
                                 </div>
+                                <div class="col-md-12">
+                                  <div class="mb-3">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19119.44335951701!2d6.529798593946442!3d53.20116406123705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sOv-haltes!5e0!3m2!1snl!2snl!4v1713261001824!5m2!1snl!2snl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
