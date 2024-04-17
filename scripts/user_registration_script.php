@@ -18,8 +18,8 @@
                     VALUES ('".$employeeFirstName."', '".$employeeLastName."', '".$employeeEmail."', '".$employeeUserName."', '".$hashedEmployeeUserPassword."', now(), '".$employeeSecretCode."', '".$employeeIsActive."', '".$employeeRole."', '".$employeeOnlineStatus."')";
 
   if (mysqli_query($conn, $sqlInsertUser)) {
-    //$id = mysqli_insert_id($conn);
-    //mkdir("../users/".$id, 0775, true);
+    $employeeID = mysqli_insert_id($conn);
+    mkdir('../users/'.$employeeID, 0755);
 
     //Send mail to user for account activation
     /*$to = $email;

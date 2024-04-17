@@ -54,8 +54,22 @@
             <hr>
           </div>
         </div>
-
       </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="card mb-3">
+              <div class="card-body text-center">
+                <i class="bi bi-file-earmark-pdf text-danger display-1"></i>
+                <h5 class="card-title">Stremmingen</h5>
+                <a href="#" class="btn btn-primary stretched-link">Overzicht</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
   </body>

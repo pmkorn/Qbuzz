@@ -6,10 +6,11 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
 
+  include('includes/db.inc.php');
+
   if (!isset($_SESSION['employeeID'])) {
     header('Location: account/login/'); 
   } else {
-    include('includes/db.inc.php');
     $employeeID = $_SESSION['employeeID'];
     $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
     if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
@@ -19,6 +20,18 @@
         $employeeRole = $row['employeeRole'];
       }
     }   
+  }
+
+  //Get all users info for table output
+  $sqlAllEmployees = "SELECT * FROM employees";
+  if ($sqlResultAllEmployees = mysqli_query($conn, $sqlAllEmployees)) {
+    while ($row = mysqli_fetch_array($sqlResultAllEmployees)) {
+      $employeeTableOutput = '
+                                <tr>
+                                  <td>'.$row['employeeFirstName'].' '.$row['employeesLastName'].'</td>
+                                </tr>
+                              ';
+    }
   }
 
   include('includes/headertitle.inc.php');
@@ -163,7 +176,23 @@
 
         </div>
 
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Naam</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php echo $employeeTableOutput; ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
+
     </section>
 
   </body>
