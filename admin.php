@@ -26,9 +26,17 @@
   $sqlAllEmployees = "SELECT * FROM employees";
   if ($sqlResultAllEmployees = mysqli_query($conn, $sqlAllEmployees)) {
     while ($row = mysqli_fetch_array($sqlResultAllEmployees)) {
-      $employeeTableOutput = '
+      $employeeTableOutput .= '
                                 <tr>
-                                  <td>'.$row['employeeFirstName'].' '.$row['employeesLastName'].'</td>
+                                  <td>'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>
+                                  <td>'.$row['employeeSignUpDate'].'</td>
+                                  <td>'.$row['employeeLastLogin'].'</td>
+                                  <td>
+                                    <div class="form-check form-switch">
+                                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" data-on-text="active" data-off-text="inactive" checked>
+                                      <label class="form-check-label" for="flexSwitchCheckChecked"><span class="badge bg-success">Active</span></label>
+                                    </div>                                  
+                                  </td>
                                 </tr>
                               ';
     }
@@ -153,7 +161,7 @@
         <div class="row">
           
           <div class="col-md-6">
-            <div class="card">
+            <div class="card mb-4">
               <div class="card-header">
                 <i class="bi bi-bar-chart"></i> Overzicht stremmingen in %
               </div>
@@ -164,7 +172,7 @@
           </div>
 
           <div class="col-md-6">
-            <div class="card">
+            <div class="card mb-4">
               <div class="card-header">
                 <i class="bi bi-bar-chart"></i> Overzicht stremmingen in aantallen
               </div>
@@ -182,6 +190,9 @@
               <thead>
                 <tr>
                   <th>Naam</th>
+                  <th>Account sinds</th>
+                  <th>Laatste login</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
