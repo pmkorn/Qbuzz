@@ -22,6 +22,45 @@ if (!isset($_SESSION['employeeID'])) {
   }   
 }
 
+//Get all users info for table output
+if (isset($_SESSION['employeeID'])) {
+  $id = $_SESSION['employeeID'];
+}
+$sqlAllEmployees = "SELECT * FROM employees WHERE employeeID NOT IN('".$id."')";
+if ($sqlResultAllEmployees = mysqli_query($conn, $sqlAllEmployees)) {
+    $employeeTableOutput .= '
+                            <table class="table table-bordered table-hover table-striped">
+                              <thead>
+                                <tr>
+                                  <th>Naam</th>
+                                  <th>Sinds</th>
+                                  <th>Laatste login</th>
+                                  <th>Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                            ';
+  while ($row = mysqli_fetch_array($sqlResultAllEmployees)) {
+    $employeeTableOutput .= '
+                                <tr>
+                                  <td>'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>
+                                  <td>'.$row['employeeSignUpDate'].'</td>
+                                  <td>'.$row['employeeLastLogin'].'</td>
+                                  <td>
+                                    <div class="form-check form-switch user-status-switch">
+                                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked'.$row['employeeID'].'" data-id="'.$row['employeeID'].'" checked>
+                                      <label class="form-check-label" for="flexSwitchCheckChecked'.$row['employeeID'].'"><span class="badge bg-success">Active</span></label>
+                                    </div>                                  
+                                  </td>
+                                </tr>                            
+                            ';
+  }
+    $employeeTableOutput .= '
+                              </tbody>
+                            </table>
+                          ';
+}
+
 include('includes/headertitle.inc.php');
 include('includes/access.php');
 access('ADMIN');
@@ -73,8 +112,22 @@ access('ADMIN');
         <div id="layoutSidenav">
             <?php include('includes/admin.navbar.inc.php'); ?>
             <div id="layoutSidenav_content">
-                <main class="p-5">
-                    
+                <main>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h1 class="section-title mb-3">Gebruikers</h1>
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <?php echo $employeeTableOutput; ?>
+                      </div>
+                    </div>
+                  </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">

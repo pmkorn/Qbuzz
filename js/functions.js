@@ -3,7 +3,7 @@ $(document).ready(function(){
 
   // CLONE EXPIRED BUSSTOPS
   $('#btnTempExpiredStops1').click(function(){ 
-    //let a = $('#obstructionLinesList').find(':selected').val().clone(true).prepend('#tempExpiredStops1').val();;
+    //let a = $('#obstructionLinesList').find(':selected').val().clone(true).prepend('#tempExpiredStops1').val();
     //alert(a);
 
     let obstructionLinesList = [];
@@ -418,10 +418,26 @@ $(document).ready(function(){
 
 
 
-  // Loading pages in the admin section
-  $('#loadUsersOverview').on('click', function(){
-    $('#main').load('user_overview.php');
-  });
+
+
+
+  //Set status of user
+  $('.user-status-switch input[type="checkbox"]').on('change', function(){
+    
+    let employeeID = $(this).data("id");
+    
+    $.ajax({
+      url: '../scripts/update_user_status.php',
+      type: 'POST',
+      data: {
+        employeeID: employeeID
+      },
+      success: function(response){
+
+      }
+    });
+
+  });  
 
 
 
