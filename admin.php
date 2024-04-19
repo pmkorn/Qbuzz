@@ -1,396 +1,172 @@
 <?php
 
-  session_start();
+session_start();
 
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-  include('includes/db.inc.php');
+include('includes/db.inc.php');
 
-  if (!isset($_SESSION['employeeID'])) {
-    header('Location: account/login/'); 
-  } else {
-    $employeeID = $_SESSION['employeeID'];
-    $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
-    if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
-      while ($row = mysqli_fetch_array($sqlResultSelectEmployeeData)) {
-        $employeeFirstName = $row['employeeFirstName'];
-        $employeeLastName = $row['employeeLastName'];
-        $employeeRole = $row['employeeRole'];
-      }
-    }   
-  }
-
-  //Get all users info for table output
-  $sqlAllEmployees = "SELECT * FROM employees";
-  if ($sqlResultAllEmployees = mysqli_query($conn, $sqlAllEmployees)) {
-    while ($row = mysqli_fetch_array($sqlResultAllEmployees)) {
-      $employeeTableOutput .= '
-                                <tr>
-                                  <td>'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>
-                                  <td>'.$row['employeeSignUpDate'].'</td>
-                                  <td>'.$row['employeeLastLogin'].'</td>
-                                  <td>
-                                    <div class="form-check form-switch">
-                                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" data-on-text="active" data-off-text="inactive" checked>
-                                      <label class="form-check-label" for="flexSwitchCheckChecked"><span class="badge bg-success">Active</span></label>
-                                    </div>                                  
-                                  </td>
-                                </tr>
-                              ';
+if (!isset($_SESSION['employeeID'])) {
+  header('Location: account/login/'); 
+} else {
+  $employeeID = $_SESSION['employeeID'];
+  $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
+  if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
+    while ($row = mysqli_fetch_array($sqlResultSelectEmployeeData)) {
+      $employeeFirstName = $row['employeeFirstName'];
+      $employeeLastName = $row['employeeLastName'];
+      $employeeRole = $row['employeeRole'];
     }
-  }
+  }   
+}
 
-  include('includes/headertitle.inc.php');
-  include('includes/access.php');
-  access('ADMIN');
+include('includes/headertitle.inc.php');
+include('includes/access.php');
+access('ADMIN');
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <base href="/">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
-
-    <title>Qbuzz InfraGD | <?php echo $page; ?></title>
-  </head>
-  <!--<body oncontextmenu="return false">-->
-  <body>
-
-    <?php include('includes/navbar.inc.php'); ?>
-
-    <section class="main-content py-5">
-
-      <div class="container-fluid">   
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="section-title">Dashboard</h1>
-            <hr>
-          </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col-xl-3 col-md-6">
-            <div class="region-card card mb-4">
-              <div class="card-body">
-                <img src="images/nederland-vlag.png" width="50px" alt="Vlag Nederland">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="me-3">
-                    <div class="fs-4">Totaal stremmingen</div>
-                        <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
+    <head>
+        <base href="/">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Qbuzz InfraGD | <?php echo $page; ?></title>
+        <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
+        <link rel="stylesheet" href="css/admin.css?q=<?php echo time(); ?>"/>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html"><img src="../images/qbuzz-logo.png" width="100px" alt="Qbuzz logo"></a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-circle"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="/account/logout/">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="/admin/">
+                                <div class="sb-nav-link-icon"><i class="bi bi-speedometer"></i></div>
+                                Dashboard
+                            </a>
+                            <a class="nav-link" href="/">
+                                <div class="sb-nav-link-icon"><i class="bi bi-globe"></i></div>
+                                Home
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Overzichten</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="bi bi-people"></i></div>
+                                Gebruikers
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" id="loadUsersOverview">Overzicht</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Aanmaken</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pages
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
+                        </div>
                     </div>
-                    <i class="bi bi-signpost-split fs-1"></i>
-                  </div>
-              </div>
-              <div class="card-footer d-flex align-items-center justify-content-between">
-                  <a class="small " href="#">Naar overzicht</a>
-                  <div class="small"><i class="fas fa-angle-right"></i></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <img src="images/drenthe-vlag.png" width="50px" alt="Vlag Nederland">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="me-3">
-                    <div class="fs-4">Totaal stremmingen</div>
-                        <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
                     </div>
-                    <i class="bi bi-signpost-split fs-1"></i>
-                  </div>
-              </div>
-              <div class="card-footer d-flex align-items-center justify-content-between">
-                  <a class="small " href="#">Naar overzicht</a>
-                  <div class="small"><i class="fas fa-angle-right"></i></div>
-              </div>
+                </nav>
             </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <img src="images/friesland-vlag.png" width="50px" alt="Vlag Nederland">
-                  <div class="d-flex justify-content-between align-items-center">
-                      <div class="me-3">
-                          <div class="fs-4">Totaal stremmingen</div>
-                          <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
-                      </div>
-                      <i class="bi bi-signpost-split fs-1"></i>
-                  </div>
-              </div>
-              <div class="card-footer d-flex align-items-center justify-content-between">
-                  <a class="small " href="#">Naar overzicht</a>
-                  <div class="small"><i class="fas fa-angle-right"></i></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <img src="images/groningen-vlag.png" width="50px" alt="Vlag Nederland">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="me-3">
-                    <div class="fs-4">Totaal stremmingen</div>
-                        <div class="display-2 fw-bold">100<small class="display-5 fw-bold">/100</small></div>
+            <div id="layoutSidenav_content">
+                <main id="main" class="p-5">
+                    
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
                     </div>
-                    <i class="bi bi-signpost-split fs-1"></i>
-                  </div>
-              </div>
-              <div class="card-footer d-flex align-items-center justify-content-between">
-                  <a class="small " href="#">Naar overzicht</a>
-                  <div class="small"><i class="fas fa-angle-right"></i></div>
-              </div>
+                </footer>
             </div>
-          </div>
-
         </div>
-
-        <div class="row">
-          
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-header">
-                <i class="bi bi-bar-chart"></i> Overzicht stremmingen in %
-              </div>
-              <div class="card-body">
-                <div id="myChart1"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-header">
-                <i class="bi bi-bar-chart"></i> Overzicht stremmingen in aantallen
-              </div>
-              <div class="card-body">
-                <div id="myChart2"></div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <table class="table table-striped table-bordered table-hover">
-              <thead>
-                <tr>
-                  <th>Naam</th>
-                  <th>Account sinds</th>
-                  <th>Laatste login</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php echo $employeeTableOutput; ?>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-  </body>
-
-  <script src="js/bootstrap.bundle.js"></script>
-  <script src="js/jquery-3.7.2.js"></script>
-  <script src="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.js"></script>
-  <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script src="js/functions.js"></script>
-  <script>
-    let table = new DataTable('#overzichtStremmingen',{
-      language: {
-        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/nl-NL.json',
-      },
-      order: [1, 'asc'],
-      lengthMenu: [
-        [10, 25, 50, -1],
-        [10, 25, 50, 'All'],
-      ]
-    });
-  </script>
-  <script>
-    var options = {
-          series: [{
-          name: 'Drenthe',
-          data: [44, 55, 41, 67, 22, 43, 21, 49]
-        }, {
-          name: 'Friesland',
-          data: [13, 23, 20, 8, 13, 27, 33, 12]
-        }, {
-          name: 'Groningen',
-          data: [11, 17, 15, 15, 21, 14, 15, 13]
-        }],
-          chart: {
-          type: 'bar',
-          height: 350,
-          stacked: true,
-          toolbar: {
-            show: true
-          },
-          zoom: {
-            enabled: true
-          },
-          stackType: '100%'
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            legend: {
-              position: 'bottom',
-              offsetX: -10,
-              offsetY: 0
-            }
-          }
-        }],
-        xaxis: {
-          categories: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2',
-            '2012 Q3', '2012 Q4'
-          ],
-        },
-        fill: {
-          opacity: 1
-        },
-        legend: {
-          position: 'right',
-          offsetX: 0,
-          offsetY: 50
-        },
-        };
-
-        var chart = new ApexCharts(document.querySelector("#myChart1"), options);
-        chart.render();
-  </script>
-  <script>
-    var options = {
-          series: [{
-          name: 'Drenthe',
-          data: [44, 55, 41, 67, 22, 43]
-        }, {
-          name: 'Friesland',
-          data: [13, 23, 20, 8, 13, 27]
-        }, {
-          name: 'Groningen',
-          data: [11, 17, 15, 15, 21, 14]
-        }],
-          chart: {
-          type: 'bar',
-          height: 350,
-          stacked: true,
-          toolbar: {
-            show: true
-          },
-          zoom: {
-            enabled: true
-          }
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            legend: {
-              position: 'bottom',
-              offsetX: -10,
-              offsetY: 0
-            }
-          }
-        }],
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            borderRadius: 10,
-            dataLabels: {
-              total: {
-                enabled: true,
-                style: {
-                  fontSize: '13px',
-                  fontWeight: 900
-                }
-              }
-            }
-          },
-        },
-        xaxis: {
-          type: 'datetime',
-          categories: ['01/01/2011 GMT', '01/02/2011 GMT', '01/03/2011 GMT', '01/04/2011 GMT',
-            '01/05/2011 GMT', '01/06/2011 GMT'
-          ],
-        },
-        legend: {
-          position: 'right',
-          offsetY: 40
-        },
-        fill: {
-          opacity: 1
-        }
-        };
-
-        var chart = new ApexCharts(document.querySelector("#myChart2"), options);
-        chart.render();
-    </script>
-
-  <!--<script>
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sept', 'Okt', 'Nov', 'Dec'],
-        datasets: [
-          {
-          label: 'Drenthe',
-          fillColor: 'blue',
-          data: [8, 14, 10, 9, 5, 12, 6, 16, 8, 10, 12, 8],
-          borderWidth: 3
-          },
-          {
-          label: 'Friesland',
-          fillColor: "red",
-          data: [12, 19, 3, 5, 2, 3, 8, 14, 9, 11, 12, 15],
-          borderWidth: 3
-        },
-        {
-          label: 'Groningen',
-          fillColor: 'yellow',
-          data: [14, 11, 9, 10, 11, 15, 7, 3, 11, 8, 13, 8],
-          borderWidth: 3
-        }
-
-      ]
-      },
-      options: {
-        plugins: {
-          title: {
-            display: true,
-            text: 'Overzicht stremmingen per regio',
-            font: {
-              size: '16'
-            }
-
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  </>-->
+        <script src="js/bootstrap.bundle.js" ></script>
+        <script src="js/jquery-3.7.2.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/scripts.js"></script>
+        
+        
+    </body>
 </html>

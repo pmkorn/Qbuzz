@@ -418,6 +418,25 @@ $(document).ready(function(){
 
 
 
+  // Loading pages in the admin section
+  $('#loadUsersOverview').on('click', function(){
+    $('#main').load('user_overview.php');
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*setInterval(function() {
     let x = Math.ceil(Math.random() * 100);
     $('#hoofd').html(x);
