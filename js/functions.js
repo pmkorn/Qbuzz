@@ -425,6 +425,7 @@ $(document).ready(function(){
   $('.user-status-switch input[type="checkbox"]').on('change', function(){
     
     let employeeID = $(this).data("id");
+    console.log(employeeID);
     
     $.ajax({
       url: '../scripts/update_user_status.php',

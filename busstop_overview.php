@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
 
     <title>Qbuzz InfraGD | <?php echo $page; ?></title>
@@ -161,12 +161,12 @@
 
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/jquery-3.7.2.js"></script>
-  <script src="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.js"></script>
+  <script src="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.js"></script>
   <script src="js/functions.js"></script>
   <script>
     let table = new DataTable('#busStopTable',{
       language: {
-        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/nl-NL.json',
+        url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
       },
       order: [1, 'asc'],
       lengthMenu: [
