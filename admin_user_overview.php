@@ -77,7 +77,7 @@ session_start();
         <div id="layoutSidenav">
             <?php include('includes/admin.navbar.side.inc.php'); ?>
             <div id="layoutSidenav_content">
-                <main class="py-3">
+                <main class="py-5">
                     <div class="container-fluid ">
                         <div class="row">
                             <div class="col-md-12">
