@@ -75,7 +75,7 @@ session_start();
     <body class="sb-nav-fixed">
         <?php include('includes/admin.navbar.top.inc.php'); ?>
         <div id="layoutSidenav">
-            <?php include('includes/admin.navbar.inc.php'); ?>
+            <?php include('includes/admin.navbar.side.inc.php'); ?>
             <div id="layoutSidenav_content">
                 <main class="py-3">
                     <div class="container-fluid ">
@@ -88,18 +88,7 @@ session_start();
                         
                     </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include('includes/admin.footer.inc.php'); ?>
             </div>
         </div>
         <<script src="js/bootstrap.bundle.js"></script>
