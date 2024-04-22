@@ -107,7 +107,6 @@ session_start();
                         
                     </div>
                 </main>
-                <?php include('includes/admin.footer.inc.php'); ?>
             </div>
         </div>
         <<script src="js/bootstrap.bundle.js"></script>
