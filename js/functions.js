@@ -425,16 +425,17 @@ $(document).ready(function(){
   $('.user-status-switch input[type="checkbox"]').on('change', function(){
     
     let employeeID = $(this).data("id");
-    console.log(employeeID);
+    let employeeIsActive = $(this).data("status");
     
     $.ajax({
       url: '../scripts/update_user_status.php',
       type: 'POST',
       data: {
-        employeeID: employeeID
+        employeeID: employeeID,
+        employeeIsActive: employeeIsActive
       },
       success: function(response){
-
+        $('#employee-'+employeeID).html(response);
       }
     });
 

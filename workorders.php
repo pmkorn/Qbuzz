@@ -70,7 +70,7 @@
                 <button class="nav-link" id="progress-tab" data-bs-toggle="tab" data-bs-target="#workorderInProgress" type="button" role="tab" aria-controls="workorderInProgress" aria-selected="false">In behandeling <span class="badge rounded-pill text-bg-primary">0</span></button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="completed-tad" data-bs-toggle="tab" data-bs-target="#workordercompleted" type="button" role="tab" aria-controls="workordercompleted" aria-selected="false">Afgerond <span class="badge rounded-pill text-bg-primary">0</span></button>
+                <button class="nav-link" id="completed-tad" data-bs-toggle="tab" data-bs-target="#workorderCompleted" type="button" role="tab" aria-controls="workordercompleted" aria-selected="false">Afgerond <span class="badge rounded-pill text-bg-primary">0</span></button>
               </li>
             </ul>
             <div class="tab-content" id="workOrdersContent">
@@ -125,7 +125,7 @@
                   </tbody>
                 </table>
               </div>
-              <div class="tab-pane fade py-3" id="workordercompleted" role="tabpanel" aria-labelledby="completed-tab" tabindex="0">
+              <div class="tab-pane fade py-3" id="workorderCompleted" role="tabpanel" aria-labelledby="completed-tab" tabindex="0">
                 <table id="completedWorkorderTable" class="table table-hover table-striped table-bordered">
                   <thead>
                     <tr>
@@ -292,23 +292,11 @@
   <script src="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.js"></script>
   <script src="js/functions.js"></script>
   <script>
-    let table1 = new DataTable('#openWorkorderTable',{
-      language: {
-        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/nl-NL.json',
-      },
-      order: [1, 'asc'],
-      lengthMenu: [
-        [10, 25, 50, -1],
-        [10, 25, 50, 'All'],
-      ],
-    });
-  </script>
-  <script>
-    let table2 = new DataTable('#progressWorkorderTable',{
+    let openWorkorderTable = new DataTable('#openWorkorderTable',{
       language: {
         url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
       },
-      order: [1, 'asc'],
+      order: [0, 'asc'],
       lengthMenu: [
         [10, 25, 50, -1],
         [10, 25, 50, 'All'],
@@ -316,11 +304,23 @@
     });
   </script>
   <script>
-    let table3 = new DataTable('#completedWorkorderTable',{
+    let progressWorkorderTable = new DataTable('#progressWorkorderTable',{
       language: {
-        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/nl-NL.json',
+        url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
       },
-      order: [1, 'asc'],
+      order: [0, 'asc'],
+      lengthMenu: [
+        [10, 25, 50, -1],
+        [10, 25, 50, 'All'],
+      ],
+    });
+  </script>
+  <script>
+    let completedWorkorderTable = new DataTable('#completedWorkorderTable',{
+      language: {
+        url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
+      },
+      order: [0, 'asc'],
       lengthMenu: [
         [10, 25, 50, -1],
         [10, 25, 50, 'All'],

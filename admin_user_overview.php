@@ -81,10 +81,29 @@ session_start();
                     <div class="container-fluid ">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1 class="section-title">Dashboard</h1>
+                                <h1 class="section-title">Gebruikers</h1>
                                 <hr>
                             </div>
-                        </div>                   
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table id="employeeTable" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                    <th>Naam</th>
+                                    <th>Account sinds</th>
+                                    <th>Laatste login</th>
+                                    <th>Accounttype</th>
+                                    <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php echo $employeeTableOutput; ?>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>                     
                         
                     </div>
                 </main>
