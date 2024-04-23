@@ -421,7 +421,7 @@ $(document).ready(function(){
 
 
 
-  //Set status of user
+  //Set status of employee
   $('.user-status-switch input[type="checkbox"]').on('change', function(){
     
     let employeeID = $(this).data("id");
@@ -439,7 +439,27 @@ $(document).ready(function(){
       }
     });
 
-  });  
+  }); 
+  
+  //Edit setting of employee
+  $('.edit-employee').on('click', function() {
+    
+    let employeeID = $(this).data("id");
+
+    $.ajax({
+      url: '../scripts/edit_employee_details.php',
+      type: 'POST',
+      data: {
+        employeeID: employeeID
+      },
+      success: function(response){
+        $('#employeeDetails .modal-content').html(response);
+      }
+    });
+
+    $('#employeeDetails').modal('show');
+
+  });
 
 
 

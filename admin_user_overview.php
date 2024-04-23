@@ -38,6 +38,7 @@ session_start();
                                   <td>'.$row['employeeSignUpDate'].'</td>
                                   <td>'.$row['employeeLastLogin'].'</td>
                                   <td><span class="badge bg-primary">'.$row['employeeRole'].'</span></td>
+                                  <td><i data-id="'.$row['employeeID'].'" class="bi bi-three-dots-vertical mx-5 edit-employee"></i></td>
                                   <td>
                                     <div class="form-check form-switch user-status-switch" id="employee-'.$row['employeeID'].'">
                                       '.$switchbox.'
@@ -73,6 +74,17 @@ session_start();
     
     </head>
     <body class="sb-nav-fixed">
+
+      <!-- MODAL FOR DISPLAYING EMPLOYEE DETAILS -->
+      <div class="modal fade" id="employeeDetails" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <!-- -->
+          </div>
+        </div>
+      </div>
+      <!-- END MODAL FOR DISPLAYING EMPLOYEE DETAILS -->
+
         <?php include('includes/admin.navbar.top.inc.php'); ?>
         <div id="layoutSidenav">
             <?php include('includes/admin.navbar.side.inc.php'); ?>
@@ -95,6 +107,7 @@ session_start();
                                     <th>Account sinds</th>
                                     <th>Laatste login</th>
                                     <th>Accounttype</th>
+                                    <th>Action</th>
                                     <th>Status</th>
                                     </tr>
                                 </thead>
