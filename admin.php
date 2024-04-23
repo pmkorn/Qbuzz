@@ -90,7 +90,7 @@ session_start();
                 </main>
             </div>
         </div>
-        <<script src="js/bootstrap.bundle.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
         <script src="js/jquery-3.7.2.js"></script>
         <script src="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.js"></script>
         <script src="js/functions.js"></script>
