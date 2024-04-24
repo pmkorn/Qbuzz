@@ -17,7 +17,7 @@
                       <strong>Dashboard</strong>
                     </div>
                     <div class="col">
-                      <button value="dashboard_view" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">View</button>
+                      <span data-id="dashboard_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
                     </div>
                     <div class="col">
 
@@ -34,16 +34,16 @@
                       <strong>Stremmingen</strong>
                     </div>
                     <div class="col">
-                      <button value="obstruction_view" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">View</button>
+                      <span data-id="obstruction_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
                     </div>
                     <div class="col">
-                      <button value="obstruction_create" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Create</button>
+                      <span data-id="obstruction_create" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
                     </div>
                     <div class="col">
-                      <button value="obstruction_update" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Update</button>
+                      <span data-id="obstruction_update" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
                     </div>
                     <div class="col">
-                      <button value="obstruction_delete" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Delete</button>
+                      <span data-id="obstruction_delete" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
                     </div>
                   </div>
                   <div class="row mb-5">
@@ -51,16 +51,16 @@
                       <strong>Haltes</strong>
                     </div>
                     <div class="col">
-                      <button value="busstop_view" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">View</button>
+                      <span data-id="busstop_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
                     </div>
                     <div class="col">
-                      <button value="busstop_create" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Create</button>
+                      <span data-id="busstop_create" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
                     </div>
                     <div class="col">
-                      <button value="busstop_update" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Update</button>
+                      <span data-id="busstop_update" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
                     </div>
                     <div class="col">
-                      <button value="busstop_delete" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Delete</button>
+                      <span data-id="busstop_delete" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
                     </div>
                   </div>
                   <div class="row mb-5">
@@ -68,21 +68,21 @@
                       <strong>Werkorders</strong>
                     </div>
                     <div class="col">
-                      <button value="workorder_view" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">View</button>
+                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
                     </div>
                     <div class="col">
-                      <button value="workorder_view" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Create</button>
+                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
                     </div>
                     <div class="col">
-                      <button value="workorder_view" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Update</button>
+                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
                     </div>
                     <div class="col">
-                      <button value="workorder_view" class="btn btn-sm btn-outline-success" role="button" data-bs-toggle="button">Delete</button>
+                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
                     </div>
                   </div>
                 </div>';
       $html .= '<div class="modal-footer">
-                  <button id="updateBusstopData" class="btn btn-success float-end">Opslaan <i class="bi bi-floppy"></i></button>
+                  <button id="updateBusstopData" class="btn btn-success float-end save">Opslaan <i class="bi bi-floppy"></i></button>
                 </div>';
     }
   }

@@ -24,6 +24,7 @@ session_start();
 
   //Get all users info for table output
   $employeeID = $_SESSION['employeeID'];
+  $employeeTableOutput = '';
   $sqlAllEmployees = "SELECT * FROM employees WHERE employeeID NOT IN ('".$employeeID."')";
   if ($sqlResultAllEmployees = mysqli_query($conn, $sqlAllEmployees)) {
     while ($row = mysqli_fetch_array($sqlResultAllEmployees)) {

@@ -461,6 +461,21 @@ $(document).ready(function(){
 
   });
 
+  //Set employee Permissions
+  $('.permissionFunction').on('click', function() {
+
+    let permission = $(this).data("id");
+
+    alert(permission);
+
+
+
+  });
+
+  $('.save').on('click', function(){
+    alert("you clicked save");
+  })
+
 
 
 
