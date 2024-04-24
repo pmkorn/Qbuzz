@@ -54,6 +54,17 @@
                         </div>
                     </nav>
                 </div>
+                <a class="nav-link collapsed" href="!#" data-bs-toggle="collapse" data-bs-target="#collapseBusstops" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="bi bi-bus-front"></i></div>
+                    Haltes
+                    <div class="sb-sidenav-collapse-arrow"><i class="bi bi-chevron-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseBusstops" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="!#">Overzicht</a>
+                        <a class="nav-link" href="!#">Aanmaken</a>
+                    </nav>
+                </div>
                 <div class="sb-sidenav-menu-heading">Addons</div>
                 <a class="nav-link" href="charts.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
