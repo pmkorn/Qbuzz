@@ -41,6 +41,11 @@ session_start();
                                   <td><span class="badge bg-primary">'.$row['employeeRole'].'</span></td>
                                   <td><i data-id="'.$row['employeeID'].'" class="bi bi-three-dots-vertical mx-5 edit-employee"></i></td>
                                   <td>
+                                    <button class="btn btn-warning btn-sm me-2 text-white">View</button>
+                                    <button class="btn btn-success btn-sm me-2">Update</button>
+                                    <button class="btn btn-danger btn-sm me-2">Delete</button>
+                                  </td>
+                                  <td>
                                     <div class="form-check form-switch user-status-switch" id="employee-'.$row['employeeID'].'">
                                       '.$switchbox.'
                                     </div>                                  
@@ -108,6 +113,7 @@ session_start();
                                     <th>Account sinds</th>
                                     <th>Laatste login</th>
                                     <th>Accounttype</th>
+                                    <th>Permissions</th>
                                     <th>Action</th>
                                     <th>Status</th>
                                     </tr>
@@ -140,6 +146,5 @@ session_start();
             ],
             });
         </script>
-
     </body>
 </html>

@@ -16,6 +16,15 @@ $dark-cornflower-blue: #25408f;
 $mikado-yellow: #ffc709;
 
 /****************************************************************/
+* {
+  font-size: 14px;
+}
+.navbar {
+   border-bottom: 5px solid $orange !important;
+}
+.sb-sidenav-menu .nav {
+  margin-top: 5px;
+}
 /* DESKTOP LAYOUT */
 body {
   /*font-family: 'Raleway', sans-serif;*/
@@ -31,6 +40,9 @@ body {
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 300;
+}
+main {
+  margin-top: 83px;
 }
 // .section-title:after {
 //     content: "";

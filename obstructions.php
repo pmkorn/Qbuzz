@@ -346,7 +346,7 @@
         <div class="row">
           <div class="col-md-12 mb-3 mb-md-0">
             
-            <table class="table table-striped table-hover table-responsive">
+            <table class="table table-striped table-hover table-bordered table-responsive">
               <thead>
                   <tr>
                     <th>Stremmingsnr.</th>
@@ -366,7 +366,7 @@
                   <td>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
-                  <td><span class="badge bg-warning">Pending</span></td>
+                  <td><span class="badge bg-warning">Aankomend</span></td>
                   <td><i class="bi bi-three-dots-vertical"></i></td>
                   <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
                 </tr>
@@ -376,7 +376,7 @@
                   <td>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
-                  <td><span class="badge bg-success">active</span></td>
+                  <td><span class="badge bg-success">Lopend</span></td>
                   <td><i class="bi bi-three-dots-vertical"></i></td>
                   <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
                 </tr>
@@ -386,7 +386,7 @@
                   <td>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
-                  <td><span class="badge bg-danger">Closed</span></td>
+                  <td><span class="badge bg-danger">Afgelopen</span></td>
                   <td><i class="bi bi-three-dots-vertical"></i></td>
                   <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
                 </tr>

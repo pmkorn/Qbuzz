@@ -12,77 +12,98 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>';
       $html .= '<div class="modal-body py-5">
-                  <div class="row mb-5">
-                    <div class="col">
-                      <strong>Dashboard</strong>
-                    </div>
-                    <div class="col">
-                      <span data-id="dashboard_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
-                    </div>
-                    <div class="col">
+                  <div class="row">
+                    <div class="col-md-6">
 
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
+                      <h5>Rechten:</h5>
+                      <hr class="mb-3">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <div class="row my-3">
+                            <div class="col">
+                              <strong>Dashboard</strong>
+                            </div>
+                            <div class="col">
+                              <span data-id="dashboard_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
+                            </div>
+                            <div class="col">
 
-                    </div>
-                    <div class="col">
+                            </div>
+                            <div class="col">
 
+                            </div>
+                            <div class="col">
+
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="row my-3">
+                            <div class="col">
+                              <strong>Stremmingen</strong>
+                            </div>
+                            <div class="col">
+                              <span data-id="obstruction_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="obstruction_create" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="obstruction_update" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="obstruction_delete" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="row my-3">
+                            <div class="col">
+                              <strong>Haltes</strong>
+                            </div>
+                            <div class="col">
+                              <span data-id="busstop_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="busstop_create" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="busstop_update" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="busstop_delete" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="row my-3">
+                            <div class="col">
+                              <strong>Werkorders</strong>
+                            </div>
+                            <div class="col">
+                              <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
+                            </div>
+                            <div class="col">
+                              <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="row mb-5">
-                    <div class="col">
-                      <strong>Stremmingen</strong>
-                    </div>
-                    <div class="col">
-                      <span data-id="obstruction_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="obstruction_create" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="obstruction_update" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="obstruction_delete" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
-                    </div>
-                  </div>
-                  <div class="row mb-5">
-                    <div class="col">
-                      <strong>Haltes</strong>
-                    </div>
-                    <div class="col">
-                      <span data-id="busstop_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="busstop_create" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="busstop_update" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="busstop_delete" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
-                    </div>
-                  </div>
-                  <div class="row mb-5">
-                    <div class="col">
-                      <strong>Werkorders</strong>
-                    </div>
-                    <div class="col">
-                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">View</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Create</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Update</span>
-                    </div>
-                    <div class="col">
-                      <span data-id="workorder_view" class="btn btn-sm btn-outline-success permissionFunction" role="button" data-bs-toggle="button">Delete</span>
-                    </div>
-                  </div>
+                  
+                  
                 </div>';
       $html .= '<div class="modal-footer">
-                  <button id="updateBusstopData" class="btn btn-success float-end save">Opslaan <i class="bi bi-floppy"></i></button>
+                  <button class="btn btn-success float-end save" data-id="'.$row['employeeID'].'">Opslaan <i class="bi bi-floppy"></i></button>
                 </div>';
     }
   }
@@ -90,3 +111,9 @@
   echo $html;
 
 ?>
+<script>
+  $('.save').on('click', function(){
+    let empid = $(this).data("id");
+    alert(empid);
+  });
+</script>
