@@ -22,6 +22,12 @@ $mikado-yellow: #ffc709;
 .navbar {
    border-bottom: 5px solid $orange !important;
 }
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+ box-shadow: none;
+}
 .sb-sidenav-menu .nav {
   margin-top: 5px;
 }

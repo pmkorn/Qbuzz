@@ -39,7 +39,9 @@ session_start();
                                   <td>'.$row['employeeSignUpDate'].'</td>
                                   <td>'.$row['employeeLastLogin'].'</td>
                                   <td><span class="badge bg-primary">'.$row['employeeRole'].'</span></td>
-                                  <td><i data-id="'.$row['employeeID'].'" class="bi bi-three-dots-vertical mx-5 edit-employee"></i></td>
+                                  <td>
+                                    <i data-id="'.$row['employeeID'].'" class="bi bi-three-dots-vertical edit-employee mx-5"></i>
+                                  </td>
                                   <td>
                                     <button class="btn btn-warning btn-sm me-2 text-white">View</button>
                                     <button class="btn btn-success btn-sm me-2">Update</button>

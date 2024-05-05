@@ -13,6 +13,15 @@
   border-bottom: 5px solid #EF7D00 !important;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .sb-sidenav-menu .nav {
   margin-top: 5px;
 }

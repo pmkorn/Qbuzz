@@ -65,7 +65,7 @@
             <p>Team <strong>InfraGD</strong>.</p>
           </div>
           <div class="col-md-4">
-            <img src="images/road_block.jpg" class="img-fluid" alt="Road Block">
+
           </div>
           <div class="col-md-4">
             <h5>Updates</h5>
