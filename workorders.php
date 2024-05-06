@@ -64,18 +64,18 @@
 
             <ul class="nav nav-tabs" id="workOrdersTabs" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="open-tab" data-bs-toggle="tab" data-bs-target="#workorderOpen" type="button" role="tab" aria-controls="workOrderOpen" aria-selected="true">Open <span class="badge rounded-pill text-bg-primary">0</span></button>
+                <button class="nav-link active" id="open-tab" data-bs-toggle="tab" data-bs-target="#workorderOpen" type="button" role="tab" aria-controls="workOrderOpen" aria-selected="true">Openstaand <span class="badge rounded-pill text-bg-primary ms-3">0</span></button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="progress-tab" data-bs-toggle="tab" data-bs-target="#workorderInProgress" type="button" role="tab" aria-controls="workorderInProgress" aria-selected="false">In behandeling <span class="badge rounded-pill text-bg-primary">0</span></button>
+                <button class="nav-link" id="progress-tab" data-bs-toggle="tab" data-bs-target="#workorderInProgress" type="button" role="tab" aria-controls="workorderInProgress" aria-selected="false">In behandeling <span class="badge rounded-pill text-bg-primary ms-3">0</span></button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="completed-tad" data-bs-toggle="tab" data-bs-target="#workorderCompleted" type="button" role="tab" aria-controls="workordercompleted" aria-selected="false">Afgerond <span class="badge rounded-pill text-bg-primary">0</span></button>
+                <button class="nav-link" id="completed-tad" data-bs-toggle="tab" data-bs-target="#workorderCompleted" type="button" role="tab" aria-controls="workordercompleted" aria-selected="false">Afgerond <span class="badge rounded-pill text-bg-primary ms-3">0</span></button>
               </li>
             </ul>
             <div class="tab-content" id="workOrdersContent">
               <div class="tab-pane fade show active py-3" id="workorderOpen" role="tabpanel" aria-labelledby="open-tab" tabindex="0">
-                <table id="openWorkorderTable" class="table table-hover table-striped table-bordered">
+                <table id="openWorkorderTable" class="table table-hover table-striped table-bordered display-table" style="width: 100%;">
                   <thead>
                     <tr>
                       <th>#</th>
@@ -84,7 +84,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr data-owotid="23">
+                    <tr>
                       <td>20240101-1</td>
                       <td>2e Exlo rmond, A. de Vesstraat (18790070)</td>
                       <td>01 jan. 7:30</td>
@@ -103,7 +103,7 @@
                 </table>
               </div>
               <div class="tab-pane fade py-3" id="workorderInProgress" role="tabpanel" aria-labelledby="progress-tab" tabindex="0">
-                <table id="progressWorkorderTable" class="table table-hover table-striped table-bordered">
+                <table id="progressWorkorderTable" class="table table-hover table-striped table-bordered display-table" style="width: 100%;">
                   <thead>
                     <tr>
                       <th>#</th>
@@ -126,7 +126,7 @@
                 </table>
               </div>
               <div class="tab-pane fade py-3" id="workorderCompleted" role="tabpanel" aria-labelledby="completed-tab" tabindex="0">
-                <table id="completedWorkorderTable" class="table table-hover table-striped table-bordered">
+                <table id="completedWorkorderTable" class="table table-hover table-striped table-bordered display-table" style="width: 100%;">
                   <thead>
                     <tr>
                       <th>#</th>
@@ -291,8 +291,20 @@
   <script src="js/jquery-3.7.2.js"></script>
   <script src="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.js"></script>
   <script src="js/functions.js"></script>
+  <!-- <script>
+    let table = new DataTable('.display-table', {
+      language: {
+        url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
+      },
+      order: [0, 'asc'],
+      lengthMenu: [
+        [10, 25, 50, -1],
+        [10, 25, 50, 'All'],
+      ],
+    });
+  </script> -->
   <script>
-    let openWorkorderTable = new DataTable('#openWorkorderTable',{
+    let openWorkorderTable = new DataTable('#openWorkorderTable', {
       language: {
         url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
       },
