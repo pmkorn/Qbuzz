@@ -6,20 +6,20 @@
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
 
-  if (!isset($_SESSION['employeeID'])) {
-    header('Location: account/login/'); 
-  } else {
-    include('includes/db.inc.php');
-    $employeeID = $_SESSION['employeeID'];
-    $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
-    if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
-      while ($row = mysqli_fetch_array($sqlResultSelectEmployeeData)) {
-        $employeeFirstName = $row['employeeFirstName'];
-        $employeeLastName = $row['employeeLastName'];
-        $employeeRole = $row['employeeRole'];
-      }
-    }   
-  }
+  // if (!isset($_SESSION['employeeID'])) {
+  //   header('Location: account/login/'); 
+  // } else {
+  //   include('includes/db.inc.php');
+  //   $employeeID = $_SESSION['employeeID'];
+  //   $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
+  //   if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
+  //     while ($row = mysqli_fetch_array($sqlResultSelectEmployeeData)) {
+  //       $employeeFirstName = $row['employeeFirstName'];
+  //       $employeeLastName = $row['employeeLastName'];
+  //       $employeeRole = $row['employeeRole'];
+  //     }
+  //   }   
+  // }
 
   include('includes/headertitle.inc.php');
 
@@ -47,7 +47,11 @@
     <div class="vh-100 container-fluid">
       <div class="row h-100 justify-content-center align-content-center">
         <div class="col-md-12 text-center">
-          <h1 class="display-1"><i class="bi bi-exclamation-triangle-fill text-danger display-1"></i> Toegang geweigerd</h1>
+          <i class="bi bi-exclamation-triangle-fill text-danger display-1 mb-5"></i>
+          <h1 class="display-1 mb-5">Toegang geweigerd</h1>
+          <hr class="mb-5">
+          <h5 class="mb-5">U heeft geen toegang tot deze pagina. Voor vragen kunt u terecht bij de behherder van deze applicatie.</h5>
+          <a class="btn btn-orange btn-lg" href="/">Inloggen</a>
         </div>
       </div>
     </div>
