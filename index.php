@@ -61,7 +61,7 @@
           <div class="col-md-4">
             <p>Hier vind je alles over de aankomende en lopende stremmingen. Mocht je vragen hebben over een van de stremmingen neem dan contact op met een van jouw collega's van <strong>InfraGD</strong> of via <a href="mailto:stremmingenGD@qbuzz.nl">mail</a>.</p>
             <p>Mochten er onduidelijkheden zijn laat het ons graag weten.</p>
-            <p>Mocht je niet kunnen inloggen of kunnen vavigeren binnen de webomgeving neem dan contact op met <a href="mail:patrick.korn@qbuzz.nl">Patrick Korn</a></p>
+            <p>Mocht je niet kunnen inloggen of kunnen vavigeren binnen de webomgeving neem dan contact op met <a href="mailto:patrick.korn@qbuzz.nl">Patrick Korn</a></p>
             <p>Team <strong>InfraGD</strong>.</p>
           </div>
           <div class="col-md-4">

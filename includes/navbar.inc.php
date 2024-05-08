@@ -34,6 +34,9 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="werkorders/">Werkorders</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="admin/gebruikers/">Gebruikers</a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto">    
         <li class="nav-item dropdown dropstart">
