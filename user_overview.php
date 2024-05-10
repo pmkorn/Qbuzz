@@ -27,8 +27,7 @@ session_start();
   $employeeTableOutput = '';
   $sqlAllEmployees = "SELECT * FROM employees WHERE employeeID NOT IN ('".$employeeID."')";
   if ($sqlResultAllEmployees = mysqli_query($conn, $sqlAllEmployees)) {
-    while ($row = mysqli_fetch_array($sqlResultAllEmployees)) {
-
+    while ($row = mysqli_fetch_array($sqlResultAllEmployees)) {      
       if ($row['employeeIsActive'] == 0) {
         $switchbox = '<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked'.$row['employeeID'].'" data-id="'.$row['employeeID'].'" data-status="'.$row['employeeIsActive'].'">';
       } else {
@@ -41,12 +40,10 @@ session_start();
                                   <td>'.$row['employeeLastLogin'].'</td>
                                   <td><span class="badge bg-primary">'.$row['employeeRole'].'</span></td>
                                   <td>
-                                    <span class="badge bg-primary">display permission</span>
+                                    <span class="badge bg-primary">'.$row['employeePermissions'].'</span>
                                   </td>
                                   <td>
-                                    <button class="btn btn-warning btn-sm me-2 text-white">View</button>
-                                    <button class="btn btn-success btn-sm me-2 edit-employee" data-id="'.$row['employeeID'].'">Update</button>
-                                    <button class="btn btn-danger btn-sm me-2">Delete</button>
+                                    <button class="btn btn-sm btn-orange me-2 edit-employee" data-id="'.$row['employeeID'].'"><i class="bi bi-info-circle"></i> Meer info...</button>
                                   </td>
                                   <td>
                                     <div class="form-check form-switch user-status-switch" id="employee-'.$row['employeeID'].'">
