@@ -34,7 +34,7 @@ session_start();
         $switchbox = '<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked'.$row['employeeID'].'" data-id="'.$row['employeeID'].'" data-status="'.$row['employeeIsActive'].'" checked>';
       }
       $employeeTableOutput .= '
-                                <tr>
+                                <tr class="align-middle">
                                   <td>'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>
                                   <td>'.$row['employeeSignUpDate'].'</td>
                                   <td>'.$row['employeeLastLogin'].'</td>
