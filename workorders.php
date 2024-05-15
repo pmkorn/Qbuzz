@@ -43,6 +43,16 @@
   </head>
   <body>
 
+    <!-- MODAL FOR DISPLAYING WORKORDER DETAILS -->
+    <div class="modal fade" id="workorderDetails" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+        <div class="modal-content">
+          <!-- -->
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL FOR DISPLAYING WORKORDER DETAILS -->
+
     <?php include('includes/navbar.inc.php'); ?>
 
     <section class="main-content py-5">
