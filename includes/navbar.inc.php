@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item d-none d-lg-block d-xl-none">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link disabled">
             <?php
               $Y = date("Y");
@@ -18,7 +18,7 @@
 
               $daySerial = $Y . $M . $D . $v;
 
-              echo $daySerial;
+              echo "V".$daySerial;
             ?>
           </a>
         </li>

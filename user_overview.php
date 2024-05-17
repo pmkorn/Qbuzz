@@ -105,7 +105,7 @@ session_start();
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <table id="employeeTable" class="table table-striped table-bordered table-hover">
+            <table id="employeeTable" class="table table-striped table-bordered table-hover table-responsive">
               <thead>
                   <tr>
                   <th>Naam</th>
@@ -146,7 +146,7 @@ session_start();
         lengthMenu: [
           [10, 25, 50, -1],
           [10, 25, 50, 'All'],
-        ],
+        ]
       });
     </script>
   </body>
