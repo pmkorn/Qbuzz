@@ -95,17 +95,17 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>20240101-1</td>
+                      <td><strong>W202401011</strong></td>
                       <td>2e Exlo rmond, A. de Vesstraat (18790070)</td>
                       <td>01 jan. 7:30</td>
                     </tr>
                     <tr>
-                      <td>20240101-1</td>
+                      <td><strong>W202401012</strong></td>
                       <td>2e Exlo rmond, A. de Vesstraat (18790070)</td>
                       <td>01 jan. 7:30</td>
                     </tr>
                     <tr>
-                      <td>20240101-1</td>
+                      <td><strong>W202401013</strong></td>
                       <td>2e Exlo rmond, A. de Vesstraat (18790070)</td>
                       <td>01 jan. 7:30</td>
                     </tr>

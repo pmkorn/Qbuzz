@@ -86,6 +86,7 @@ $(document).ready(function(){
 
   // SAVE OBSTRUCTION
   $('#btnSaveObstruction').on('click', function(){
+    let obstructionNumber  = $('#obstructionNumber').val();
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let obstructionType = $('#obstructionType').val();
     let obstructionPriority = $('#obstructionPriority').val();
@@ -95,7 +96,8 @@ $(document).ready(function(){
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
     let tempStops1 = $('#tempStops1').val();
 
-    console.log(obstructionRegion + '\n' + 
+    console.log(obstructionNumber + '\n' +  
+                obstructionRegion + '\n' + 
                 obstructionType + '\n' + 
                 obstructionPriority + '\n' + 
                 'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 
@@ -103,6 +105,8 @@ $(document).ready(function(){
                 obstructionPlace + '\n' +
                 obstructionTrajectory + '\n' +
                 obstructionReason);
+
+    
   });
 
 
