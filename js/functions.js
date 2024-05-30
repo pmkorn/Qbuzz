@@ -105,7 +105,6 @@ $(document).ready(function(){
                 obstructionPlace + '\n' +
                 obstructionTrajectory + '\n' +
                 obstructionReason);
-
     
   });
 
