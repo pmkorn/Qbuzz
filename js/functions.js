@@ -303,51 +303,6 @@ $(document).ready(function(){
     }, 2100);    
   });
 
-
-
-
-  // SHOW BUSSTOP INFO
-  $('.fetch-record').on('click', function(){
-
-    let busStopID = $(this).data('id');
-    
-    $.ajax({
-      url: '../scripts/fetch_busstop_data.php',
-      type: 'POST',
-      data: {
-        busStopID: busStopID
-      },
-      success: function(response) {
-        $('#busstopDetails .modal-content').html(response);
-      }
-    });
-    $('#busstopDetails').modal('show');
-
-  });
-
-
-
-  // END EDIT BUSSTOP INFO
-  $('.edit-record').on('click', function(){
-
-    let busStopID = $(this).data('id');
-    
-    $.ajax({
-      url: '../scripts/edit_busstop_data.php',
-      type: 'POST',
-      data: {
-        busStopID: busStopID
-      },
-      success: function(response) {
-        $('#editBusstopDetails .modal-content').html(response);
-      }
-    });
-    $('#editBusstopDetails').modal('show');
-
-  });
-
-
-
   // SAVE BUSSTOP INFO
   $('#updateBusstopData').on('click', function() {
 
