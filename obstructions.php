@@ -23,6 +23,18 @@
     }   
   }
 
+  $lineOutput = "";
+  $sqlRoutes = "SELECT * FROM routes";
+  if ($resultRoutes = mysqli_query($conn, $sqlRoutes)) {
+    while ($row = mysqli_fetch_array($resultRoutes)) {
+      $lineOutput .= '<div class="form-check form-check-inline" title="Lijn '.$row['routeNumber']." ".$row['routeDescription'].'">';
+        $lineOutput .= '<input class="form-check-input obstructionLines" type="checkbox" id="'.$row['routeID'].'" name="obstructionLine" value="'.$row['routeNumber'].'">';
+        $lineOutput .= '<label class="form-check-label" for="obstructionLine"> '.$row['routeCode'].' </label>';
+      $lineOutput .= '</div>';
+    }
+  }
+
+
   // Get obstruction information
   $obstructionOutput = '';
   $sqlSelectObstructionData = "SELECT * FROM obstructions";
@@ -190,10 +202,24 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="card">
-                            <div class="card-header"><i class="bi bi-bus-front"></i> Lijnen</div>
-                          </div>
-                          <div class="card-body">
-
+                            <div class="card-header">
+                                <i class="bi bi-bus-front"></i> Lijnen
+                            </div>
+                            <div class="card-body">
+                              <?php
+                                echo $lineOutput;
+                              ?>
+                              <div class="row my-3">
+                                <div class="col-md-12">
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="selectAllCheckboxesOnAdd">
+                                    <label class="form-check-label" for="selectAllCheckboxesOnAdd">
+                                      <strong>Selecteer alles</strong>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
