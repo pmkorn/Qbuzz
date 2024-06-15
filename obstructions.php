@@ -27,9 +27,11 @@
   $sqlRoutes = "SELECT * FROM routes";
   if ($resultRoutes = mysqli_query($conn, $sqlRoutes)) {
     while ($row = mysqli_fetch_array($resultRoutes)) {
-      $lineOutput .= '<div class="form-check form-check-inline" title="Lijn '.$row['routeNumber']." ".$row['routeDescription'].'">';
-        $lineOutput .= '<input class="form-check-input obstructionLines" type="checkbox" id="'.$row['routeID'].'" name="obstructionLine" value="'.$row['routeNumber'].'">';
-        $lineOutput .= '<label class="form-check-label" for="obstructionLine"> '.$row['routeCode'].' </label>';
+      $lineOutput .= '<div class="col-2">';
+        $lineOutput .= '<div class="form-check form-check-inline" title="Lijn '.$row['routeNumber']." ".$row['routeDescription'].'">';
+          $lineOutput .= '<input class="form-check-input obstructionLines" type="checkbox" id="'.$row['routeID'].'" name="obstructionLine" value="'.$row['routeNumber'].'">';
+          $lineOutput .= '<label class="form-check-label" for="obstructionLine"> '.$row['routeCode'].' </label>';
+        $lineOutput .= '</div>';
       $lineOutput .= '</div>';
     }
   }
@@ -80,7 +82,7 @@
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-exclamation-triangle-fill text-danger"></i> InfraGD | Invoer nieuwe stremming</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-exclamation-triangle-fill text-danger"></i> InfraGD | Nieuwe invoer</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -206,9 +208,11 @@
                                 <i class="bi bi-bus-front"></i> Lijnen
                             </div>
                             <div class="card-body">
-                              <?php
-                                echo $lineOutput;
-                              ?>
+                              <div class="row">
+                                <?php
+                                  echo $lineOutput;
+                                ?>
+                              </div>                      
                               <div class="row my-3">
                                 <div class="col-md-12">
                                   <div class="form-check mb-3">
