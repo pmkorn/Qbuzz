@@ -179,7 +179,7 @@
     $('.showBusstopDetail').on('click', function(){
       let busStopNumberID = $(this).data('id');
       window.location = ('haltes/overzicht/'+busStopNumberID+'/');
-      alert(busStopNumberID);
+      //alert(busStopNumberID);
     });
 
     // SHOW BUSSTOP INFO
