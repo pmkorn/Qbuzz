@@ -183,44 +183,44 @@
     });
 
     // SHOW BUSSTOP INFO
-  $('.fetch-record').on('click', function(){
+    $('.fetch-record').on('click', function(){
 
-let busStopID = $(this).data('id');
+      let busStopID = $(this).data('id');
 
-$.ajax({
-  url: '../scripts/fetch_busstop_data.php',
-  type: 'POST',
-  data: {
-    busStopID: busStopID
-  },
-  success: function(response) {
-    $('#busstopDetails .modal-content').html(response);
-  }
-});
-$('#busstopDetails').modal('show');
+      $.ajax({
+        url: '../scripts/fetch_busstop_data.php',
+        type: 'POST',
+        data: {
+          busStopID: busStopID
+        },
+        success: function(response) {
+          $('#busstopDetails .modal-content').html(response);
+        }
+      });
+      $('#busstopDetails').modal('show');
 
-});
+    });
 
 
 
-// END EDIT BUSSTOP INFO
-$('.edit-record').on('click', function(){
+    // END EDIT BUSSTOP INFO
+    $('.edit-record').on('click', function(){
 
-let busStopID = $(this).data('id');
+      let busStopID = $(this).data('id');
 
-$.ajax({
-  url: '../scripts/edit_busstop_data.php',
-  type: 'POST',
-  data: {
-    busStopID: busStopID
-  },
-  success: function(response) {
-    $('#editBusstopDetails .modal-content').html(response);
-  }
-});
-$('#editBusstopDetails').modal('show');
+      $.ajax({
+        url: '../scripts/edit_busstop_data.php',
+        type: 'POST',
+        data: {
+          busStopID: busStopID
+        },
+        success: function(response) {
+          $('#editBusstopDetails .modal-content').html(response);
+        }
+      });
+      $('#editBusstopDetails').modal('show');
 
-});
+    });
     //$('#busStopTable').on('click', 'tbody tr', function(){
       //let busStopNumberID = $(this).closest('tr').attr('id');
       //window.location = ('haltes/overzicht/'+busStopNumberID+'/');
