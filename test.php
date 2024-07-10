@@ -30,6 +30,14 @@
     echo "Gebruikersnaam: <strong>" . $gebruikersnaam . "</strong>.<br><br>";
     echo "Wachtwoord: <strong>FBosma-" . $wachtwoord .  "</strong>.<br><br>";
     echo "md5 = " . md5($wachtwoord) . "<br>";
+    echo uniqid('user_', true) . "<br>";
+    echo random_int(100000, 999999) . "<br>";
+    try {
+      $bytes = random_bytes(10);
+      echo bin2hex($bytes);
+  } catch (Exception $e) {
+      echo 'Error: ' . $e->getMessage();
+  }
 
 
 ?>

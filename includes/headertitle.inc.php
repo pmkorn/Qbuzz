@@ -12,7 +12,7 @@ switch($page){
 		$page = "Stremmingen";
 		break;
 	
-	case "busstop_workorders.php";
+	case "workorders.php";
 		$page = "Werkorders";
 		break;
 	

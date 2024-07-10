@@ -22,6 +22,14 @@
     }   
   }
 
+  $optionList = '';
+  $sqlBusstopInfo = "SELECT * FROM busstops ORDER BY busStopNumber ASC";
+  if ($sqlResultBusstopInfo = mysqli_query($conn, $sqlBusstopInfo)) {
+    while ($row = mysqli_fetch_array($sqlResultBusstopInfo)) {
+      $optionList .= '<option value="'.$row['busStopName'].' ('.$row['busStopNumber'].')">';
+    }
+  }
+
   include('includes/headertitle.inc.php'); 
 
 ?>
@@ -44,10 +52,40 @@
   <body>
 
     <!-- MODAL FOR DISPLAYING WORKORDER DETAILS -->
-    <div class="modal fade" id="workorderDetails" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+    <div class="modal fade" id="inputWorkOrder" tabindex="-1" aria-labelledby="inputWorkOrderLabel">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
-          <!-- -->
+          <div class="modal-header">
+            <h1 class="modal-title fs-5"><i class="bi bi-exclamation-triangle-fill text-danger"></i> Invoer werkorder</h1>
+          </div>
+          <div class="modal-body">
+
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <label for="busstop"><strong>Halte:</strong></label>
+                <input class="form-control" list="datalistBusstopDetail" id="busstopList" placeholder="Zoek op haltenummer of naam">
+                <datalist id="datalistBusstopDetail">
+                  <?php echo $optionList; ?>
+                </datalist>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                slgngsgl
+              </div>
+              <div class="col-md-6">
+                <label for=""><strong>Omschrijving:</strong></label>
+                <textarea class="form-control" name="" id="" rows="10"></textarea>
+              </div>
+            </div>
+            <input type="hidden" name="" value="<?php echo $_SESSION['employeeName']; ?>">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Annuleer</button>
+            <button  class="btn btn-warning text-white" id="btnResetObstruction"><i class="bi bi-arrow-clockwise"></i> Reset</button>
+            <button  class="btn btn-success" id="btnSaveObstruction"><i class="bi bi-floppy"></i> Opslaan</button>
+          </div>
         </div>
       </div>
     </div>
@@ -70,30 +108,64 @@
 
         <div class="row">
           <div class="col-md-12 mb-3">
-            <button class="btn btn-orange" data-bs-toggle="text" data-bs-target="#test">Invoer workorder</button>
+            <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#inputWorkOrder">Invoer werkorder</button>
           </div>
         </div>
 
         <div class="row">
 
-          <table id="workorderTable" class="table table-striped table-bordered table-hover">
+          <table id="workorderTable" class="table table-bordered table-hover table-responsive">
             <thead>
               <tr>
                 <th>Workorder ID</th>
                 <th>Halte</th>
                 <th>Datum</th>
+                <th style="width: 30%;">Omschrijving:</th>
                 <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider">
               <tr>
                 <td>WO-24000001</td>
-                <td>Veendam, Eems (12635010)</td>
-                <td>01-01-2024</td>
-                <td><span class="badge bg-warning">Pending...</span></td>
                 <td>
-                  <i class="bi bi-clipboard2-check me-3"></i>
+                  Veendam, Eems<br>
+                  12635010
+                </td>
+                <td>01-01-2024 12:00:00</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, reprehenderit fugit? Dolorum error delectus aut maxime perspiciatis, ducimus fugiat repellat tempora placeat blanditiis id nulla vel aperiam inventore doloremque commodi?</td>
+                <td><span class="badge bg-warning">Pending</span></td>
+                <td>
+                  <i class="bi bi-clipboard2-check me-3 fs-5"></i>
+                  <i class="bi bi-person-fill fs-5" title=""></i>
+                </td>
+              </tr>
+              <tr>
+                <td>WO-24000001</td>
+                <td>
+                  Veendam, Eems<br>
+                  12635010
+                </td>
+                <td>01-01-2024 12:00:00</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, reprehenderit fugit? Dolorum error delectus aut maxime perspiciatis, ducimus fugiat repellat tempora placeat blanditiis id nulla vel aperiam inventore doloremque commodi?</td>
+                <td><span class="badge bg-primary">In Progress</span></td>
+                <td>
+                  <i class="bi bi-clipboard2-check me-3 fs-5"></i>
+                  <i class="bi bi-person-fill text-danger fs-5" title="Patrick Korn"></i> 
+                </td>
+              </tr>
+              <tr>
+                <td>WO-24000001</td>
+                <td>
+                  Veendam, Eems<br>
+                  12635010
+                </td>
+                <td>01-01-2024 12:00:00</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, reprehenderit fugit? Dolorum error delectus aut maxime perspiciatis, ducimus fugiat repellat tempora placeat blanditiis id nulla vel aperiam inventore doloremque commodi?</td>
+                <td><span class="badge bg-success">Completed</span></td>
+                <td>
+                  <i class="bi bi-clipboard2-check me-3 fs-5"></i>
+                  <i class="bi bi-person-fill fs-5" title=""></i>
                 </td>
               </tr>
             </tbody>
@@ -101,48 +173,6 @@
 
         </div>
 
-      </div>
-
-      <div class="container-fluid d-block d-md-none">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="list-group">
-              <div href="" class="list-group-item list-group-workorder-item list-group-item-action" aria-current="true" data-id="1">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Haltenaam</h5>
-                  <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Haltenummer</p>
-                <small>Hier een duidelijke omschrijving over het mankement met betrekking tot de halte</small>
-                <div>
-                  <i class="bi bi-person-fill"></i>
-                </div>
-              </div>
-              <div href="" class="list-group-item list-group-workorder-item list-group-item-action" aria-current="true" data-id="2">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Haltenaam</h5>
-                  <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Haltenummer</p>
-                <small>Hier een duidelijke omschrijving over het mankement met betrekking tot de halte</small>
-                <div>
-                  <i class="bi bi-person-fill"></i>
-                </div>
-              </div>
-              <div href="" class="list-group-item list-group-workorder-item list-group-item-action" aria-current="true" data-id="3">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Haltenaam</h5>
-                  <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Haltenummer</p>
-                <small>Hier een duidelijke omschrijving over het mankement met betrekking tot de halte</small>
-                <div>
-                  <i class="bi bi-person-fill"></i>
-                </div>
-              </div>              
-            </div>
-          </div>
-        </div>
       </div>
 
     </section>
@@ -163,6 +193,15 @@
         [10, 25, 50, -1],
         [10, 25, 50, 'All'],
       ],
+      columnDefs: [
+        {
+          targets: '_all',
+          className: 'dt-left'
+        }
+      ]
+    });
+    DataTable.types().forEach(type => {
+      DataTable.type(type, 'detect', () => false);
     });
   </script>
 

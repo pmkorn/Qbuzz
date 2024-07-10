@@ -22,6 +22,9 @@
         $employeeRole = $row['employeeRole'];
         $_SESSION['employeeRole'] = $employeeRole;
 
+        $employeeName = $row['employeeFirstName']." ".$row['employeeLastName'];
+        $_SESSION['employeeName'] = $employeeName;
+
         $employeeLoginUpdate = "UPDATE employees SET employeeLastLogin = now(), employeeOnlineStatus = '1' WHERE employeeID = '$employeeID'";
         $employeeResultUpdate = mysqli_query($conn, $employeeLoginUpdate);
         mysqli_close($conn);
