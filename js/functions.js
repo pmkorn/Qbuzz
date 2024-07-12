@@ -182,7 +182,7 @@ $(document).ready(function(){
         employeeFirstName: employeeFirstName,
         employeeLastName: employeeLastName,
         employeeEmail: employeeEmail,
-        employeeUserPassword: employeeUserPassword,
+        employeeUserPassword: employeeUserPassword
         //employeeUserPasswordRepeat: employeeUserPasswordRepeat
       },
       cache: false,
