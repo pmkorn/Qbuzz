@@ -3,7 +3,7 @@
   $employeeFirstName = $_POST['employeeFirstName'];
   $employeeLastName = $_POST['employeeLastName'];
   $employeeEmail = $_POST['employeeEmail'];
-  $employeeUserName = strtolower(substr($employeeFirstName, 0, 1).''.$employeeLastName);
+  $employeeUserName = strtolower(substr($employeeFirstName, 0, 1).''.str_replace(" ","", $employeeLastName));
   $employeeUserPassword = $_POST['employeeUserPassword'];
   $hashedEmployeeUserPassword = hash('sha256', $employeeUserPassword);
   $employeeSignupDate = date("Y-m-d H:i:s");
