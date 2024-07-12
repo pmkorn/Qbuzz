@@ -353,8 +353,9 @@
     </div>
 
     <?php include('includes/navbar.inc.php'); ?>
-
-    <section class="main-content py-5">
+    
+    <!-- Desktop layout -->
+    <section class="main-content py-5 d-none d-md-block">
 
       <div class="container-fluid mb-3">
         <div class="row">
@@ -429,6 +430,67 @@
 
       </div>
 
+    </section>
+
+    <!-- Mobile layout -->
+    <section class="main-content py-5 d-block d-sm-none">
+      
+      <div class="container-fluid mb-3">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-title mb-3">Stremmingen</h1>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-6 col-sm-12 mb-3">
+            <div class="card obstruction-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Stadskanaal</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Atlantislaan</h6>
+                <p class="card-text">GD24-G001</p>
+                <i class="bi bi-file-pdf text-danger display-1"></i>
+                <div>
+                  <span class="badge bg-warning">Aankomend</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-12 mb-3">
+            <div class="card obstruction-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Stadskanaal</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Atlantislaan</h6>
+                <p class="card-text">GD24-G001</p>
+                <i class="bi bi-file-pdf text-danger display-1"></i>
+                <div>
+                  <span class="badge bg-success">Lopend</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-sm-12 mb-3">
+            <div class="card obstruction-card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Stadskanaal</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Atlantislaan</h6>
+                <p class="card-text">GD24-G001</p>
+                <i class="bi bi-file-pdf text-danger display-1"></i>
+                <div>
+                  <span class="badge bg-danger">Afgelopen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </body>

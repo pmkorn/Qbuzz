@@ -437,7 +437,9 @@ $(document).ready(function(){
 
 
 
-
+  $('.obstruction-card').on('click', function(){
+    alert('HELLO');
+  })
 
 
 

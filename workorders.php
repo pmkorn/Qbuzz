@@ -26,7 +26,7 @@
   $sqlBusstopInfo = "SELECT * FROM busstops ORDER BY busStopNumber ASC";
   if ($sqlResultBusstopInfo = mysqli_query($conn, $sqlBusstopInfo)) {
     while ($row = mysqli_fetch_array($sqlResultBusstopInfo)) {
-      $optionList .= '<option value="'.$row['busStopName'].' ('.$row['busStopNumber'].')">';
+      $optionList .= '<option id="'.$row['busStopID'].'" value="'.$row['busStopName'].' ('.$row['busStopNumber'].')">';
     }
   }
 

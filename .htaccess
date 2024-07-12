@@ -23,6 +23,8 @@ RewriteRule ^stremmingen/aanmaken/ obstructions.php [NC,L]
 
 RewriteRule ^werkorders/ workorders.php [NC,L]
 
+RewriteRule ^contact/ contact.php [NC,L]
+
 RewriteRule ^toegang-geweigerd/ access_denied.php [NC,L]
 
 #RewriteRule ^create-account/ signup.php [NC,L]
