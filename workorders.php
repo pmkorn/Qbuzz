@@ -197,9 +197,10 @@
             <div class="card mb-3">
               <h5 class="card-header">WO-24000001</h5>
               <div class="card-body">
-              <h5>Veendam, Eems (12635010)</h5>
+                <h5>Veendam, Eems (12635010)</h5>
+                <p>2 days ago</p>
                 <p class="card-text"><strong>Omschrijving:</strong> Supporting text below as a natural lead-in to additional content.</p>
-                <div class="pb-3">
+                <div class="mb-3">
                   <i class="bi bi-person-fill display-5"></i>
                 </div>
                 <a href="#" class="btn btn-orange">In behandeling nemen</a>
@@ -209,9 +210,10 @@
             <div class="card mb-3">
               <h5 class="card-header">WO-24000002</h5>
               <div class="card-body">
-              <h5>Veendam, Eems (12635010)</h5>
+                <h5>Veendam, Eems (12635010)</h5>
+                <p>2 days ago</p>
                 <p class="card-text"><strong>Omschrijving:</strong> Supporting text below as a natural lead-in to additional content.</p>
-                <div class="pb-3">
+                <div class="mb-3">
                   <i class="bi bi-person-fill display-5"></i>
                 </div>
                 <a href="#" class="btn btn-orange">In behandeling nemen</a>
@@ -222,6 +224,7 @@
               <h5 class="card-header">WO-24000003</h5>
               <div class="card-body">
                 <h5>Veendam, Eems (12635010)</h5>
+                <p>2 days ago</p>
                 <p class="card-text"><strong>Omschrijving:</strong> Supporting text below as a natural lead-in to additional content.</p>
                 <div class="pb-3">
                   <i class="bi bi-person-fill display-5"></i>

@@ -64,7 +64,28 @@
 
     <?php include('includes/navbar.inc.php'); ?>
 
-    <section class="main-content py-5">
+     <!-- Desktop layout -->
+     <section class="main-content py-5 d-none d-md-block">
+
+      <div class="container-fluid">   
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-title">Contact</h1>
+            <hr class="mb-5">
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Mobile layout -->
+    <section class="main-content py-5 d-block d-md-none">
 
       <div class="container-fluid">   
         <div class="row">
