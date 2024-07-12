@@ -29,9 +29,9 @@
       $contacts .= '<div class="col-6 col-md-2 mb-3">
                         <div class="card h-100">
                           <div class="card-body text-center">
-                            <h5 class="card-title mb-5">'.substr($row['employeeFirstName'], 0, 1).'. '.$row['employeeLastName'].'</h5>
+                            <h5 class="card-title mb-3">'.substr($row['employeeFirstName'], 0, 1).'. '.$row['employeeLastName'].'</h5>
                             <div class="d-grid">
-                              <a href="tel:'.$row['employeeMobile'].'" data-rel="external" class="btn btn-block btn-orange py-2"><i class="bi bi-telephone fs-1"></i></a>
+                              <a href="tel:'.$row['employeeMobile'].'" data-rel="external" class="btn btn-block btn-orange py-1"><i class="bi bi-telephone fs-1"></i></a>
                             </div>                
                           </div>
                         </div>

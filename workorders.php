@@ -93,7 +93,8 @@
 
     <?php include('includes/navbar.inc.php'); ?>
 
-    <section class="main-content py-5">
+    <!-- Desktop layout -->
+    <section class="main-content py-5 d-none d-md-block">
 
       <div class="container-fluid">
         <div class="row">
@@ -175,6 +176,37 @@
 
       </div>
 
+    </section>
+
+    <!-- Mobile layout -->
+    <section class="main-content py-5 d-block d-md-none">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-title mb-3">Werkorders</h1>
+            <hr class="mb-5">
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <h5 class="card-header">Veendam, Eems (12635010)</h5>
+              <div class="card-body">
+                <p class="card-text"><strong>Omschrijving:</strong> Supporting text below as a natural lead-in to additional content.</p>
+                <div class="pb-3">
+                  <i class="bi bi-person-fill display-5"></i>
+                </div>
+                <a href="#" class="btn btn-orange">In behandeling nemen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     </section>
 
   </body>

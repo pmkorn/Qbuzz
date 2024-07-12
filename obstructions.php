@@ -433,7 +433,7 @@
     </section>
 
     <!-- Mobile layout -->
-    <section class="main-content py-5 d-block d-sm-none">
+    <section class="main-content py-5 d-block d-md-none">
       
       <div class="container-fluid mb-3">
         <div class="row">
