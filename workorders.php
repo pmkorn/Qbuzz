@@ -193,9 +193,11 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <div class="card">
-              <h5 class="card-header">Veendam, Eems (12635010)</h5>
+            
+            <div class="card mb-3">
+              <h5 class="card-header">WO-24000001</h5>
               <div class="card-body">
+              <h5>Veendam, Eems (12635010)</h5>
                 <p class="card-text"><strong>Omschrijving:</strong> Supporting text below as a natural lead-in to additional content.</p>
                 <div class="pb-3">
                   <i class="bi bi-person-fill display-5"></i>
@@ -203,6 +205,31 @@
                 <a href="#" class="btn btn-orange">In behandeling nemen</a>
               </div>
             </div>
+
+            <div class="card mb-3">
+              <h5 class="card-header">WO-24000002</h5>
+              <div class="card-body">
+              <h5>Veendam, Eems (12635010)</h5>
+                <p class="card-text"><strong>Omschrijving:</strong> Supporting text below as a natural lead-in to additional content.</p>
+                <div class="pb-3">
+                  <i class="bi bi-person-fill display-5"></i>
+                </div>
+                <a href="#" class="btn btn-orange">In behandeling nemen</a>
+              </div>
+            </div>
+
+            <div class="card mb-3">
+              <h5 class="card-header">WO-24000003</h5>
+              <div class="card-body">
+                <h5>Veendam, Eems (12635010)</h5>
+                <p class="card-text"><strong>Omschrijving:</strong> Supporting text below as a natural lead-in to additional content.</p>
+                <div class="pb-3">
+                  <i class="bi bi-person-fill display-5"></i>
+                </div>
+                <a href="#" class="btn btn-orange">In behandeling nemen</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
