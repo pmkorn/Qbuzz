@@ -136,7 +136,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <table id="busStopTable" class="table table-striped table-bordered table-hover">
+            <table id="busStopTable" class="table table-bordered table-hover">
               <thead>
                 <tr>
                   <th>#</th>

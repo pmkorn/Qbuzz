@@ -23,19 +23,36 @@
   }
 
   $contacts = '';
-  $sqlContacts = "SELECT * FROM employees WHERE employeeID NOT IN ('".$employeeID."')";
+  $sqlContacts = "SELECT * FROM employees WHERE employeeID NOT IN('$employeeID') ORDER BY employeeFirstName";
   if ($sqlResultContacts = mysqli_query($conn, $sqlContacts)) {
     while ($row = mysqli_fetch_array($sqlResultContacts)) {
-      $contacts .= '<div class="col-6 col-md-2 mb-3">
-                        <div class="card h-100">
-                          <div class="card-body text-center">
-                            <h5 class="card-title mb-3">'.substr($row['employeeFirstName'], 0, 1).'. '.$row['employeeLastName'].'</h5>
-                            <div class="d-grid">
-                              <a href="tel:'.$row['employeeMobile'].'" data-rel="external" class="btn btn-block btn-orange py-1"><i class="bi bi-telephone fs-1"></i></a>
-                            </div>                
+      $contacts .= '<div class="col-xl-2 col-sm-6 mb-5">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="dropdown float-end">
+                            <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bi bi-three-dots-vertical"></i></a>
+                               <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Remove</a></div>
+                          </div>
+                          <div class="d-flex align-items-center">
+                            <img src="https://placehold.co/100x100" alt="" class="rounded-circle img-thumbnail" />
+                            <div class="flex-1 ms-3">
+                              <h6 class="font-size-16 mb-1">'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</h6>
+                              <span class="badge bg-success mb-0">'.$row['employeePosition'].'</span>
+                            </div>
+                          </div>
+                          <div class="mt-3 pt-1">
+                            <p class="text-muted mb-0"><i class="bi bi-telephone-fill font-size-15 align-middle pe-2 text-primary"></i>'.$row['employeeMobile'].'</p>
+                            <p class="text-muted mb-0 mt-2"><i class="bi bi-envelope-at-fill font-size-15 align-middle pe-2 text-primary"></i>'.$row['employeeEmail'].'</p>
+                            <p class="text-muted mb-0 mt-2"><i class="bi bi-geo-alt-fill font-size-15 align-middle pe-2 text-primary"></i>Peizerweg 126, 9727AK Groningen</p>
+                          </div>
+                          <div class="d-flex gap-2 pt-4">
+                            <a class="btn btn-light w-50"><i class="bi bi-person me-1"></i></a>
+                            <a class="btn btn-orange w-50"><i class="bi bi-chat-dots-fill me-1"></i></a>
+                            <a class="btn btn-orange w-50" href="tel:'.$row['employeeMobile'].'"><i class="bi bi-telephone-fill me-1"></i></a>
                           </div>
                         </div>
-                      </div>';
+                      </div>
+                    </div>';
     }
   }
   
@@ -64,28 +81,7 @@
 
     <?php include('includes/navbar.inc.php'); ?>
 
-     <!-- Desktop layout -->
-     <section class="main-content py-5 d-none d-md-block">
-
-      <div class="container-fluid">   
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="section-title">Contact</h1>
-            <hr class="mb-5">
-          </div>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row">
-          
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Mobile layout -->
-    <section class="main-content py-5 d-block d-md-none">
+    <section class="main-content py-5">
 
       <div class="container-fluid">   
         <div class="row">

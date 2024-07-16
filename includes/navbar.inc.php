@@ -40,6 +40,9 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="contact/">Contact</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#"><i class="bi bi-chat-dots"></i></a>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto">    
         <li class="nav-item dropdown dropstart">

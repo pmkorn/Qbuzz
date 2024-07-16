@@ -377,11 +377,12 @@
         <div class="row">
           <div class="col-md-12 mb-3 mb-md-0">
             
-            <table class="table table-hover table-bordered table-responsive">
+            <table class="table table-striped table-hover table-bordered table-responsive">
               <thead>
                   <tr>
                     <th>Stremmingsnr.</th>
-                    <th>Plaats + Traject</th>
+                    <th>Plaats</th>
+                    <th>Traject</th>
                     <th>Periode</th>
                     <th>Lijnen</th>
                     <th>Status</th>
@@ -392,7 +393,8 @@
               <tbody>
                 <tr>
                   <td><strong>GD23-D001</strong></td>
-                  <td>Emmen<br>Hondsrugweg</td>
+                  <td>Emmen</td>
+                  <td>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
                   <td><span class="badge bg-warning">Aankomend</span></td>
@@ -401,7 +403,8 @@
                 </tr>
                 <tr>
                   <td><strong>GD23-D001</strong></td>
-                  <td>Emmen<br>Hondsrugweg</td>
+                  <td>Emmen</td>
+                  <td>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
                   <td><span class="badge bg-success">Lopend</span></td>
@@ -410,7 +413,8 @@
                 </tr>
                 <tr>
                   <td><strong>GD23-D001</strong></td>
-                  <td>Emmen<br>Hondsrugweg</td>
+                  <td>Emmen</td>
+                  <td>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
                   <td><span class="badge bg-danger">Afgelopen</span></td>
