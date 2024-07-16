@@ -139,6 +139,7 @@ session_start();
     </script>
     <script>
       let employeeTable = new DataTable('#employeeTable',{
+        responsive: true,
         language: {
           url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
         },

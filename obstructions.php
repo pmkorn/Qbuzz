@@ -50,8 +50,12 @@
                                 <td>01-jan-23 / 01-feb-23</td>
                                 <td>3, 4, 44</td>
                                 <td><span class="badge bg-warning">Pending</span></td>
-                                <td><i class="bi bi-three-dots-vertical"></i></td>
-                                <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                                <td>
+                                  <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
+                                  <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
+                                  <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
+                                  <a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i>
+                                </td>
                               </tr>
                             ';
     }
@@ -352,6 +356,25 @@
       </div>
     </div>
 
+    <div class="modal fade" id="PDFModal" tabindex="-1" aria-labelledby="PDFModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="PDFModalLabel"><i class="bi bi-geo-fill"></i> GD24-Q001 | Emmen, Hondsrugweg</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <embed src="obstructions/facture2424488670.pdf" frameborder="0" width="100%" height="100%">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success"><i class="bi bi-floppy"></i> Opslaan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <?php include('includes/navbar.inc.php'); ?>
     
     <!-- Desktop layout -->
@@ -385,8 +408,7 @@
                     <th>Periode</th>
                     <th>Lijnen</th>
                     <th>Status</th>
-                    <th></th>
-                    <th></th>
+                    <th>Action</th>
                   </tr>
               </thead>
               <tbody>
@@ -396,8 +418,13 @@
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
                   <td><span class="badge bg-warning">Aankomend</span></td>
-                  <td><i class="bi bi-three-dots-vertical"></i></td>
-                  <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                  <td>
+                      <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
+                      <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
+                      <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
+                      <a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
+                      <i class="bi bi-envelope-at me-3" title="Mailen"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>GD23-D001</strong></td>
@@ -405,8 +432,13 @@
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
                   <td><span class="badge bg-success">Lopend</span></td>
-                  <td><i class="bi bi-three-dots-vertical"></i></td>
-                  <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                  <td>
+                    <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
+                    <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
+                    <a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
+                    <i class="bi bi-envelope-at me-3" title="Mailen"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>GD23-D001</strong></td>
@@ -414,8 +446,13 @@
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
                   <td><span class="badge bg-danger">Afgelopen</span></td>
-                  <td><i class="bi bi-three-dots-vertical"></i></td>
-                  <td><i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i> <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i><a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a><a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i></td>
+                  <td>
+                    <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
+                    <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#PDFModal"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
+                    <i class="bi bi-envelope-at me-3" title="Mailen"></i>
+                  </td>
                 </tr>
               </tbody>
             </table>
