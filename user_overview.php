@@ -105,7 +105,7 @@ session_start();
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <table id="employeeTable" class="table table-striped table-bordered table-hover table-responsive">
+            <table id="employeeTable" class="table table-bordered table-hover table-responsive">
               <thead>
                   <tr>
                   <th>Naam</th>
@@ -117,7 +117,7 @@ session_start();
                   <th>Status</th>
                   </tr>
               </thead>
-              <tbody>
+              <tbody  class="table-group-divider">
                   <?php echo $employeeTableOutput; ?>
               </tbody>
             </table>

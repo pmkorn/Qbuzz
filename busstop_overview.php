@@ -147,7 +147,7 @@
                   <th>Actie</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="table-group-divider">
                 <?php echo $tableBusstopOutput; ?>
               </tbody>
             </table>
