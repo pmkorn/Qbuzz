@@ -75,6 +75,7 @@
     <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/flag-icon.css">
     <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
 
     <title>Qbuzz InfraGD | <?php echo $page; ?></title>
@@ -108,7 +109,9 @@
                               <option value="Stad">Stad</option>
                             </select>
                           </div>
+
                         </div>
+
                         <div class="col-md-6">
                           <div class="mb-3">
                             <label for="obstructionNumber" class="form-label"><strong>Stremmingsnummer:</strong></label>
@@ -413,7 +416,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>GD23-D001</strong></td>
+                  <td><strong>GDF24-Q001</strong></td>
                   <td>Emmen<br>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
@@ -427,7 +430,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>GD23-D001</strong></td>
+                  <td><strong>GDF24-Q002</strong></td>
                   <td>Emmen<br>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>
@@ -441,7 +444,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>GD23-D001</strong></td>
+                  <td><strong>GDF24-Q003</strong></td>
                   <td>Emmen<br>Hondsrugweg</td>
                   <td>01-jan-23 / 01-feb-23</td>
                   <td>3, 4, 44</td>

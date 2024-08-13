@@ -86,6 +86,7 @@ $(document).ready(function(){
 
   // SAVE OBSTRUCTION
   $('#btnSaveObstruction').on('click', function(){
+    
     let obstructionNumber  = $('#obstructionNumber').val();
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let obstructionType = $('#obstructionType').val();
@@ -95,6 +96,8 @@ $(document).ready(function(){
     let obstructionReason = $('#obstructionReason').val();
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
     let tempStops1 = $('#tempStops1').val();
+    let obstructionDateStart = $('#obstructionDateStart').val();
+    let obstructionTimeStart = $('#obstructionTimeStart').val();
 
     console.log(obstructionNumber + '\n' +  
                 obstructionRegion + '\n' + 
@@ -104,7 +107,9 @@ $(document).ready(function(){
                 'Tijdelijke haltes: ' + tempStops1 + '\n' +
                 obstructionPlace + '\n' +
                 obstructionTrajectory + '\n' +
-                obstructionReason);
+                obstructionReason + '\n' +
+                obstructionDateStart + '\n' +
+                obstructionTimeStart);
     
   });
 
