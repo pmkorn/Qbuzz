@@ -82,6 +82,20 @@ $(document).ready(function(){
 
   });
 
+  // SELECT LINES
+  $('#selectAllCheckboxesOnAdd').on('click', function() {   
+
+    $('input:checkbox').prop('checked', this.checked);
+    let abc = [];
+      $('.obstructionLines').each(function() {
+        if($(this).is(":checked")) {
+          abc.push($(this).val());
+        }
+      });
+      // abc = abc.toString();
+      // console.log(abc);
+  });
+
 
 
   // SAVE OBSTRUCTION
@@ -100,7 +114,12 @@ $(document).ready(function(){
     let obstructionTimeStart = $('#obstructionTimeStart').val();
     let obstructionDateEnd = $('#obstructionDateEnd').val();
     let obstructionTimeEnd = $('#obstructionTimeEnd').val();
-    let obstructionLines = 'ddd';
+    let obstructionLines = [];
+      $('.obstructionLines').each(function() {
+        if($(this).is(":checked")) {
+          obstructionLines.push($(this).val());
+        }
+      });
     let obstructionRoute = $('#obstructionRoute').val();
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
     let tempStops1 = $('#tempStops1').val();
