@@ -149,6 +149,36 @@ $(document).ready(function(){
                 obstructionCommentsInternal + '\n' +
                 obstructionDocument                
               );
+    $.ajax({
+      url: '../scripts/insert_obstruction.php',
+      type: 'POST',
+      data: {
+              obstructionNumber: obstructionNumber,
+              obstructionMakeDate: obstructionMakeDate,
+              obstructionMadeBy: obstructionMadeBy,
+              obstructionRegion: obstructionRegion,
+              obstructionType: obstructionType,
+              obstructionPriority: obstructionPriority,
+              obstructionPlace: obstructionPlace,
+              obstructionTrajectory: obstructionTrajectory,
+              obstructionReason: obstructionReason,
+              obstructionDateStart: obstructionDateStart,
+              obstructionTimeStart: obstructionTimeStart,
+              obstructionDateEnd: obstructionDateEnd,
+              obstructionTimeEnd: obstructionTimeEnd,
+              obstructionLines: obstructionLines,
+              obstructionRoute: obstructionRoute,
+              tempExpiredStops1: tempExpiredStops1,
+              tempStops1: tempStops1,
+              obstructionCommentsExternal: obstructionCommentsExternal,
+              obstructionCommentsInternal: obstructionCommentsInternal,
+              obstructionDocument: obstructionDocument
+      },
+      cache: false,
+      success: function(data) {
+        console.log(data);
+      }
+    });
     
   });
 
