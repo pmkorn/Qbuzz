@@ -252,12 +252,16 @@
                                 </div>
                                 <div class="div col-md-4">
                                   <div class="mb-3">
-                                    <label for="obstructionMap" class="form-label"><strong>Kaart:</strong></label>
-                                    <input type="file" class="form-control" id="obstructionMap" name="obstructionMap">
+                                    <label for="obstructionDocument" class="form-label"><strong>Kaart:</strong></label>
+                                    <input type="file" class="form-control" id="obstructionDocument" name="obstructionDocument">
                                   </div>
                                   <div class="mb-3">
-                                    <label for="obstructionComment" class="form-label"><strong>Opmerking:</strong></label>
-                                    <textarea class="form-control" name="obstructionComment" id="obstructionComment" rows="6"></textarea>
+                                    <label for="obstructionCommentsExternal" class="form-label"><strong>Opmerking Extern:</strong></label>
+                                    <textarea class="form-control" name="obstructionCommentsExternal" id="obstructionCommentsExternal" rows="3"></textarea>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="obstructionCommentsInternal" class="form-label"><strong>Opmerking Intern:</strong></label>
+                                    <textarea class="form-control" name="obstructionCommentsInternal" id="obstructionCommentsInternal" rows="3"></textarea>
                                   </div>
                                 </div>
                                 <div class="col-md-12">
@@ -353,6 +357,7 @@
             <button  class="btn btn-success" id="btnSaveObstruction"><i class="bi bi-floppy"></i> Opslaan</button>
             <div class="mb-3">
               <input class="form-control" type="hidden" id="obstructionYear" value="<?php echo substr(date("Y"),2,2) ?>">
+              <input class="form-control" type="hidden" id="obstructionMadeBy" value="<?php echo $employeeFirstName.' '.$employeeLastName ?>">
             </div>
           </div>
         </div>
@@ -371,7 +376,6 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success"><i class="bi bi-floppy"></i> Opslaan</button>
           </div>
         </div>
       </div>

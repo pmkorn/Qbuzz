@@ -67,13 +67,13 @@ $(document).ready(function(){
         }
 
         if (obstructionRegion == "Drenthe"){
-          $('#obstructionNumber').val("GD"+obstructionYear+"-D" + dataObstructionNumber );
+          $('#obstructionNumber').val("GDF"+obstructionYear+"-D" + dataObstructionNumber );
         } else if (obstructionRegion == "Friesland") {
-          $('#obstructionNumber').val("GD"+obstructionYear+"-F" + dataObstructionNumber );
+          $('#obstructionNumber').val("GDF"+obstructionYear+"-F" + dataObstructionNumber );
         } else if (obstructionRegion == "Groningen") {
-          $('#obstructionNumber').val("GD"+obstructionYear+"-G" + dataObstructionNumber );
+          $('#obstructionNumber').val("GDF"+obstructionYear+"-G" + dataObstructionNumber );
         } else {
-          $('#obstructionNumber').val("GD"+obstructionYear+"-S" + dataObstructionNumber );
+          $('#obstructionNumber').val("GDF"+obstructionYear+"-S" + dataObstructionNumber );
         }
         console.log(dataObstructionNumber);
         
@@ -88,28 +88,48 @@ $(document).ready(function(){
   $('#btnSaveObstruction').on('click', function(){
     
     let obstructionNumber  = $('#obstructionNumber').val();
+    let obstructionMakeDate = '';
+    let obstructionMadeBy = $('#obstructionMadeBy').val();
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let obstructionType = $('#obstructionType').val();
     let obstructionPriority = $('#obstructionPriority').val();
     let obstructionPlace = $('#obstructionPlace').val();
     let obstructionTrajectory = $('#obstructionTrajectory').val();
     let obstructionReason = $('#obstructionReason').val();
-    let tempExpiredStops1 = $('#tempExpiredStops1').val();
-    let tempStops1 = $('#tempStops1').val();
     let obstructionDateStart = $('#obstructionDateStart').val();
     let obstructionTimeStart = $('#obstructionTimeStart').val();
+    let obstructionDateEnd = $('#obstructionDateEnd').val();
+    let obstructionTimeEnd = $('#obstructionTimeEnd').val();
+    let obstructionLines = 'ddd';
+    let obstructionRoute = $('#obstructionRoute').val();
+    let tempExpiredStops1 = $('#tempExpiredStops1').val();
+    let tempStops1 = $('#tempStops1').val();
+    let obstructionCommentsExternal = $('#obstructionCommentsExternal').val();
+    let obstructionCommentsInternal = $('#obstructionCommentsInternal').val();
+    let obstructionDocument = $('#obstructionDocument').val();
+    
 
-    console.log(obstructionNumber + '\n' +  
+    console.log(obstructionNumber + '\n' +
+                obstructionMakeDate + '\n' +
+                obstructionMadeBy + '\n' +  
                 obstructionRegion + '\n' + 
                 obstructionType + '\n' + 
                 obstructionPriority + '\n' + 
-                'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 
-                'Tijdelijke haltes: ' + tempStops1 + '\n' +
                 obstructionPlace + '\n' +
                 obstructionTrajectory + '\n' +
                 obstructionReason + '\n' +
                 obstructionDateStart + '\n' +
-                obstructionTimeStart);
+                obstructionTimeStart + '\n' +
+                obstructionDateEnd + '\n' +
+                obstructionTimeEnd + '\n' +
+                obstructionLines + '\n' +
+                obstructionRoute + '\n' +
+                'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 
+                'Tijdelijke haltes: ' + tempStops1 + '\n' +
+                obstructionCommentsExternal + '\n' +
+                obstructionCommentsInternal + '\n' +
+                obstructionDocument                
+              );
     
   });
 
