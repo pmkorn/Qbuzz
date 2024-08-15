@@ -23,7 +23,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Home</span></a>
+          <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="stremmingen/aanmaken/">Stremmingen</a>

@@ -110,16 +110,17 @@ $(document).ready(function(){
     let obstructionPlace = $('#obstructionPlace').val();
     let obstructionTrajectory = $('#obstructionTrajectory').val();
     let obstructionReason = $('#obstructionReason').val();
-    let obstructionDateStart = $('#obstructionDateStart').val();
-    let obstructionTimeStart = $('#obstructionTimeStart').val();
-    let obstructionDateEnd = $('#obstructionDateEnd').val();
-    let obstructionTimeEnd = $('#obstructionTimeEnd').val();
+    let obstructionStartDate = $('#obstructionStartDate').val();
+    let obstructionStartTime = $('#obstructionStartTime').val();
+    let obstructionEndDate = $('#obstructionEndDate').val();
+    let obstructionEndTime = $('#obstructionEndTime').val();
     let obstructionLines = [];
       $('.obstructionLines').each(function() {
         if($(this).is(":checked")) {
           obstructionLines.push($(this).val());
         }
       });
+    obstructionLines = obstructionLines.toString();
     let obstructionRoute = $('#obstructionRoute').val();
     let tempExpiredStops1 = $('#tempExpiredStops1').val();
     let tempStops1 = $('#tempStops1').val();
@@ -127,34 +128,11 @@ $(document).ready(function(){
     let obstructionCommentsInternal = $('#obstructionCommentsInternal').val();
     let obstructionDocument = $('#obstructionDocument').val();
     
-
-    console.log(obstructionNumber + '\n' +
-                obstructionMakeDate + '\n' +
-                obstructionMadeBy + '\n' +  
-                obstructionRegion + '\n' + 
-                obstructionType + '\n' + 
-                obstructionPriority + '\n' + 
-                obstructionPlace + '\n' +
-                obstructionTrajectory + '\n' +
-                obstructionReason + '\n' +
-                obstructionDateStart + '\n' +
-                obstructionTimeStart + '\n' +
-                obstructionDateEnd + '\n' +
-                obstructionTimeEnd + '\n' +
-                obstructionLines + '\n' +
-                obstructionRoute + '\n' +
-                'Vervallen haltes: '+ tempExpiredStops1 + '\n' + 
-                'Tijdelijke haltes: ' + tempStops1 + '\n' +
-                obstructionCommentsExternal + '\n' +
-                obstructionCommentsInternal + '\n' +
-                obstructionDocument                
-              );
     $.ajax({
       url: '../scripts/insert_obstruction.php',
       type: 'POST',
       data: {
               obstructionNumber: obstructionNumber,
-              obstructionMakeDate: obstructionMakeDate,
               obstructionMadeBy: obstructionMadeBy,
               obstructionRegion: obstructionRegion,
               obstructionType: obstructionType,
@@ -162,10 +140,10 @@ $(document).ready(function(){
               obstructionPlace: obstructionPlace,
               obstructionTrajectory: obstructionTrajectory,
               obstructionReason: obstructionReason,
-              obstructionDateStart: obstructionDateStart,
-              obstructionTimeStart: obstructionTimeStart,
-              obstructionDateEnd: obstructionDateEnd,
-              obstructionTimeEnd: obstructionTimeEnd,
+              obstructionStartDate: obstructionStartDate,
+              obstructionStartTime: obstructionStartTime,
+              obstructionEndDate: obstructionEndDate,
+              obstructionEndTime: obstructionEndTime,
               obstructionLines: obstructionLines,
               obstructionRoute: obstructionRoute,
               tempExpiredStops1: tempExpiredStops1,
@@ -176,7 +154,8 @@ $(document).ready(function(){
       },
       cache: false,
       success: function(data) {
-        console.log(data);
+        $('#exampleModal').modal('toggle');
+        location.reload(true);
       }
     });
     

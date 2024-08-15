@@ -42,19 +42,26 @@
   $sqlSelectObstructionData = "SELECT * FROM obstructions";
   if ($sqlResultObstructionData = mysqli_query($conn, $sqlSelectObstructionData)) {
     while ($rowObstruction = mysqli_fetch_array($sqlResultObstructionData)) {
-      $obstructionOutput = '
+      if ($rowObstruction['obstructionStatus'] == 1) {
+        $status = '<span class="badge bg-warning">Aankomend</span>';                        
+      } elseif ($rowObstruction['obstructionStatus'] == 2) {
+        $status = '<span class="badge bg-success">Lopend</span>';
+      } else {
+        $status = '<span class="badge bg-danger">Afgelopen</span>';
+      }
+      $obstructionOutput .= '
                               <tr>
-                                <td><strong>GD23-D001</strong></td>
-                                <td>Emmen</td>
-                                <td>Hondsrugweg</td>
-                                <td>01-jan-23 / 01-feb-23</td>
-                                <td>3, 4, 44</td>
-                                <td><span class="badge bg-warning">Pending</span></td>
+                                <td><strong>'.$rowObstruction['obstructionNumber'].'</strong></td>
+                                <td>'.$rowObstruction['obstructionPlace'].', '.$rowObstruction['obstructionTrajectory'].'</td>
+                                <td>'.date('D d M Y', strtotime($rowObstruction['obstructionStartDate'])).' '.date('H:m', strtotime($rowObstruction['obstructionStartTime'])).' t/m '.date('D d M Y', strtotime($rowObstruction['obstructionEndDate'])).' '.date('H:m', strtotime($rowObstruction['obstructionEndTime'])).'</td>
+                                <td>'.str_replace(',', ', ', $rowObstruction['obstructionLines']).'</td>
+                                <td>'.$status.'</td>
                                 <td>
-                                  <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
-                                  <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
+                                  <i class="bi bi-person-fill me-3" title="Door: '.$rowObstruction['obstructionMadeBy'].'"></i>
+                                  <i class="bi bi-check2-square me-3 obstructionSignOut" data-bs-toggle="modal" data-bs-target="#obstructionSignOut'.$rowObstruction['obstructionID'].'" data-id="'.$rowObstruction['obstructionID'].'" title="Afmelden"></i>
                                   <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
-                                  <a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a><i class="bi bi-envelope-at me-3" title="Mailen"></i>
+                                  <a href="'.$rowObstruction['obstructionPDF'].'" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i>
+                                  </a><i class="bi bi-envelope-at me-3" title="Mailen"></i>
                                 </td>
                               </tr>
                             ';
@@ -75,6 +82,7 @@
     <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link href="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/flag-icon.css">
     <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
 
@@ -82,7 +90,7 @@
   </head>
   <body>
 
-    <!-- Modal -->
+    <!-- Modal for making obstruction -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
@@ -174,14 +182,14 @@
                                   <div class="row">
                                     <div class="col-md-8">
                                       <div class="mb-3">
-                                        <label for="obstructionDateStart" class="form-label"><strong>Startdatum:</strong></label>
-                                        <input type="date" class="form-control" name="obstructionDateStart" id="obstructionDateStart">
+                                        <label for="obstructionStartDate" class="form-label"><strong>Startdatum:</strong></label>
+                                        <input type="date" class="form-control" name="obstructionStartDate" id="obstructionStartDate">
                                       </div>
                                     </div>
                                     <div class="col-md-4">
                                       <div class="mb-3">
-                                        <label for="obstructionTimeStart" class="form-label"><strong>Starttijd:</strong></label>
-                                        <input type="time" class="form-control" name="obstructionTimeStart" id="obstructionTimeStart">
+                                        <label for="obstructionStartTime" class="form-label"><strong>Starttijd:</strong></label>
+                                        <input type="time" class="form-control" name="obstructionStartTime" id="obstructionStartTime">
                                       </div>
                                     </div>
                                   </div>                       
@@ -190,14 +198,14 @@
                                   <div class="row">
                                     <div class="col-md-8">
                                       <div class="mb-3">
-                                        <label for="obstructionDateEnd" class="form-label"><strong>Einddatum:</strong></label>
-                                        <input type="date" class="form-control" name="obstructionDateEnd" id="obstructionDateEnd">
+                                        <label for="obstructionEndDate" class="form-label"><strong>Einddatum:</strong></label>
+                                        <input type="date" class="form-control" name="obstructionEndDate" id="obstructionEndDate">
                                       </div>
                                     </div>
                                     <div class="col-md-4">
                                       <div class="mb-3">
-                                        <label for="obstructionTimeEnd" class="form-label"><strong>Starttijd:</strong></label>
-                                        <input type="time" class="form-control" name="obstructionTimeEnd" id="obstructionTimeEnd">
+                                        <label for="obstructionEndTime" class="form-label"><strong>Eindtijd:</strong></label>
+                                        <input type="time" class="form-control" name="obstructionEndTime" id="obstructionEndTime">
                                       </div>
                                     </div>
                                   </div> 
@@ -363,7 +371,26 @@
         </div>
       </div>
     </div>
+    
+    <!-- Modal for singing of obstruction -->
+    <div class="modal fade" id="obstructionSignOut" tabindex="-1" aria-labelledby="obstructionSignOut" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="PDFModalLabel"><i class="bi bi-geo-fill"></i> GD24-Q001 | Emmen, Hondsrugweg</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <embed src="obstructions/facture2424488670.pdf" frameborder="0" width="100%" height="100%">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Modal for Generating PDF -->
     <div class="modal fade" id="PDFModal" tabindex="-1" aria-labelledby="PDFModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
@@ -407,7 +434,7 @@
         <div class="row">
           <div class="col-md-12 mb-3 mb-md-0">
             
-            <table class="table table-hover table-bordered table-responsive">
+            <table id="obstructionTable" class="table table-hover table-bordered table-responsive">
               <thead>
                   <tr>
                     <th>Stremmingsnr.</th>
@@ -415,52 +442,11 @@
                     <th>Periode</th>
                     <th>Lijnen</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    <th></th>
                   </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><strong>GDF24-Q001</strong></td>
-                  <td>Emmen<br>Hondsrugweg</td>
-                  <td>01-jan-23 / 01-feb-23</td>
-                  <td>3, 4, 44</td>
-                  <td><span class="badge bg-warning">Aankomend</span></td>
-                  <td>
-                      <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
-                      <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
-                      <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
-                      <a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
-                      <i class="bi bi-envelope-at me-3" title="Mailen"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>GDF24-Q002</strong></td>
-                  <td>Emmen<br>Hondsrugweg</td>
-                  <td>01-jan-23 / 01-feb-23</td>
-                  <td>3, 4, 44</td>
-                  <td><span class="badge bg-success">Lopend</span></td>
-                  <td>
-                    <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
-                    <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
-                    <a href="#" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
-                    <i class="bi bi-envelope-at me-3" title="Mailen"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>GDF24-Q003</strong></td>
-                  <td>Emmen<br>Hondsrugweg</td>
-                  <td>01-jan-23 / 01-feb-23</td>
-                  <td>3, 4, 44</td>
-                  <td><span class="badge bg-danger">Afgelopen</span></td>
-                  <td>
-                    <i class="bi bi-person-fill me-3" title="Door: Patrick Korn"></i>
-                    <i class="bi bi-check2-square me-3" data-bs-toggle="modal" data-bs-target="#obstructionSignOut4" data-id="4" title="Afmelden"></i>
-                    <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#PDFModal"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
-                    <i class="bi bi-envelope-at me-3" title="Mailen"></i>
-                  </td>
-                </tr>
+                <?php echo $obstructionOutput; ?>
               </tbody>
             </table>
 
@@ -537,6 +523,39 @@
 
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/jquery-3.7.2.js"></script>
-  <script src="js/functions.js"></script>  
+  <script src="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script>
+    let table = new DataTable('#obstructionTable',{
+      language: {
+        url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
+      },
+      order: [1, 'asc'],
+      lengthMenu: [
+        [10, 25, 50, 100, -1],
+        [10, 25, 50, 100, 'All'],
+      ]
+    });
+  </script>
+  <script>
+    // SHOW BUSSTOP INFO
+    $('.obstructionSignOut').on('click', function(){
+
+      let obstructionID = $(this).data('id');
+      $.ajax({
+        url: 'scripts/update_obstruction_status.php',
+        type: 'POST',
+        data: {
+          obstructionID: obstructionID
+        },
+        success: function(response) {
+          location.reload(true);
+        }
+      });
+
+
+    });
+
+  </script>
 
 </html>

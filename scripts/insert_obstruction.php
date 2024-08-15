@@ -23,15 +23,76 @@
        $obstructionDocument = $_POST['obstructionDocument'];
        $obstructionStatus = '1';
 
-       $sqlInsertObstruction = "INSERT INTO obstructions (obstructionNumber, obstructionMakeDate, obstructionMadeBy, obstructionRegion, obstructionType, obstructionPriority, obstructionPlace, obstructionTrajectory, obstructionReason, obstructionStartDate, obstructionStartTime, obstructionEndDate, obstructionEndTime, obstructionLines, obstructionRoute, obstructionExpiredStops, obstructionTemporaryStops, obstructionCommentsExternal, obstructionCommentsInternal, obstructionDocument, obstructionStatus)
-                                    VALUES ('".$obstructionNumber."', now(), '".$obstructionMadeBy."', '".$obstructionRegion."', '".$obstructionType."', '".$obstructionPriority."', '".$obstructionPlace."', '".$obstructionTrajectory."', '".$obstructionReason."', '".$obstructionStartDate."', '".$obstructionStartTime."', '".$obstructionEndDate."', '".$obstructionEndTime."', '".$obstructionLines."', '".$obstructionRoute."', '".$obstructionExpiredStops."', '".$obstructionTemporaryStops."', '".$obstructionCommentsExternal."', '".$obstructionCommentsInternal."', '".$obstructionDocument."', '".$obstructionStatus."')";
+       $obstructionStartDate = date('Y-m-d',strtotime($obstructionStartDate));
+       $obstructionStartTime = date('H:i:s',strtotime($obstructionStartTime));
+       $obstructionEndDate = date('Y-m-d',strtotime($obstructionEndDate));
+       $obstructionEndTime = date('H:i:s',strtotime($obstructionEndTime));
+       
+       $obstructionYear = date("Y");
 
-       // $sqlInsertObstruction = "INSERT INTO obstructions (obstructionNumber) VALUES ('".$obstructionNumber."')";
+       if (!file_exists('../pdf/'.$obstructionYear.'/'.$obstructionRegion.'/')) {
+              mkdir('../pdf/'.$obstructionYear.'/'.$obstructionRegion.'/', 755, true);
+       }
 
-       if(mysqli_query($conn, $sqlInsertObstruction)) {
-              echo "Goed"; 
+       require('../fpdf.php');              
+       $pdf = new FPDF();
+       $pdf->AddPage();
+       $pdf->Output('F', '../pdf/'.$obstructionYear.'/'.$obstructionRegion.'/'.$obstructionNumber.'.pdf');
+
+       $obstructionPDF = '../pdf/'.$obstructionYear.'/'.$obstructionRegion.'/'.$obstructionNumber.'.pdf';
+
+       $sqlInsertObstruction = "INSERT INTO obstructions (obstructionNumber, 
+                                                          obstructionMakeDate,
+                                                          obstructionMadeBy,
+                                                          obstructionRegion,
+                                                          obstructionType, 
+                                                          obstructionPriority, 
+                                                          obstructionPlace, 
+                                                          obstructionTrajectory, 
+                                                          obstructionReason,
+                                                          obstructionStartDate,
+                                                          obstructionStartTime,
+                                                          obstructionEndDate,
+                                                          obstructionEndTime,
+                                                          obstructionLines,
+                                                          obstructionRoute,
+                                                          obstructionExpiredStops,
+                                                          obstructionTemporaryStops,
+                                                          obstructionCommentsExternal,
+                                                          obstructionCommentsInternal,
+                                                          obstructionDocument,
+                                                          obstructionPDF,
+                                                          obstructionStatus
+                                                         ) 
+                                                  
+                                                  VALUES ('$obstructionNumber', 
+                                                          now(),
+                                                          '$obstructionMadeBy',
+                                                          '$obstructionRegion',
+                                                          '$obstructionType',
+                                                          '$obstructionPriority',
+                                                          '$obstructionPlace',
+                                                          '$obstructionTrajectory',
+                                                          '$obstructionReason',
+                                                          '$obstructionStartDate',
+                                                          '$obstructionStartTime',
+                                                          '$obstructionEndDate',
+                                                          '$obstructionEndTime',
+                                                          '$obstructionLines',
+                                                          '$obstructionRoute',
+                                                          '$obstructionExpiredStops',
+                                                          '$obstructionTemporaryStops',
+                                                          '$obstructionCommentsExternal',
+                                                          '$obstructionCommentsInternal',
+                                                          '$obstructionDocument',
+                                                          '$obstructionPDF',
+                                                          '$obstructionStatus'
+                                                         )";
+
+       if (mysqli_query($conn, $sqlInsertObstruction)) {
+                      
        } else {
-              echo "Fout";
+              
        }
 
 ?>
