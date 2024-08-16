@@ -102,7 +102,6 @@ $(document).ready(function(){
   $('#btnSaveObstruction').on('click', function(){
     
     let obstructionNumber  = $('#obstructionNumber').val();
-    let obstructionMakeDate = '';
     let obstructionMadeBy = $('#obstructionMadeBy').val();
     let obstructionRegion = $('#obstructionRegion').find(":selected").text();
     let obstructionType = $('#obstructionType').val();
@@ -111,9 +110,7 @@ $(document).ready(function(){
     let obstructionTrajectory = $('#obstructionTrajectory').val();
     let obstructionReason = $('#obstructionReason').val();
     let obstructionStartDate = $('#obstructionStartDate').val();
-    let obstructionStartTime = $('#obstructionStartTime').val();
     let obstructionEndDate = $('#obstructionEndDate').val();
-    let obstructionEndTime = $('#obstructionEndTime').val();
     let obstructionLines = [];
       $('.obstructionLines').each(function() {
         if($(this).is(":checked")) {
@@ -141,9 +138,7 @@ $(document).ready(function(){
               obstructionTrajectory: obstructionTrajectory,
               obstructionReason: obstructionReason,
               obstructionStartDate: obstructionStartDate,
-              obstructionStartTime: obstructionStartTime,
               obstructionEndDate: obstructionEndDate,
-              obstructionEndTime: obstructionEndTime,
               obstructionLines: obstructionLines,
               obstructionRoute: obstructionRoute,
               tempExpiredStops1: tempExpiredStops1,
@@ -158,6 +153,8 @@ $(document).ready(function(){
         location.reload(true);
       }
     });
+
+    console.log(obstructionStartDate);
     
   });
 

@@ -11,9 +11,7 @@
        $obstructionTrajectory = $_POST['obstructionTrajectory'];
        $obstructionReason = $_POST['obstructionReason'];
        $obstructionStartDate = $_POST['obstructionStartDate'];
-       $obstructionStartTime = $_POST['obstructionStartTime'];
        $obstructionEndDate = $_POST['obstructionEndDate'];
-       $obstructionEndTime = $_POST['obstructionEndTime'];
        $obstructionLines = $_POST['obstructionLines'];
        $obstructionRoute = $_POST['obstructionRoute'];
        $obstructionExpiredStops = $_POST['tempExpiredStops1'];
@@ -21,12 +19,9 @@
        $obstructionCommentsExternal = $_POST['obstructionCommentsExternal'];
        $obstructionCommentsInternal = $_POST['obstructionCommentsInternal'];
        $obstructionDocument = $_POST['obstructionDocument'];
-       $obstructionStatus = '1';
 
-       $obstructionStartDate = date('Y-m-d',strtotime($obstructionStartDate));
-       $obstructionStartTime = date('H:i:s',strtotime($obstructionStartTime));
-       $obstructionEndDate = date('Y-m-d',strtotime($obstructionEndDate));
-       $obstructionEndTime = date('H:i:s',strtotime($obstructionEndTime));
+       $obstructionStartDate = date('Y-m-d H:i:s',strtotime($obstructionStartDate));
+       $obstructionEndDate = date('Y-m-d H:i:s',strtotime($obstructionEndDate));
        
        $obstructionYear = date("Y");
 
@@ -51,9 +46,7 @@
                                                           obstructionTrajectory, 
                                                           obstructionReason,
                                                           obstructionStartDate,
-                                                          obstructionStartTime,
                                                           obstructionEndDate,
-                                                          obstructionEndTime,
                                                           obstructionLines,
                                                           obstructionRoute,
                                                           obstructionExpiredStops,
@@ -61,8 +54,7 @@
                                                           obstructionCommentsExternal,
                                                           obstructionCommentsInternal,
                                                           obstructionDocument,
-                                                          obstructionPDF,
-                                                          obstructionStatus
+                                                          obstructionPDF
                                                          ) 
                                                   
                                                   VALUES ('$obstructionNumber', 
@@ -75,9 +67,7 @@
                                                           '$obstructionTrajectory',
                                                           '$obstructionReason',
                                                           '$obstructionStartDate',
-                                                          '$obstructionStartTime',
                                                           '$obstructionEndDate',
-                                                          '$obstructionEndTime',
                                                           '$obstructionLines',
                                                           '$obstructionRoute',
                                                           '$obstructionExpiredStops',
@@ -85,8 +75,7 @@
                                                           '$obstructionCommentsExternal',
                                                           '$obstructionCommentsInternal',
                                                           '$obstructionDocument',
-                                                          '$obstructionPDF',
-                                                          '$obstructionStatus'
+                                                          '$obstructionPDF'
                                                          )";
 
        if (mysqli_query($conn, $sqlInsertObstruction)) {

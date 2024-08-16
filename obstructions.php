@@ -42,9 +42,10 @@
   $sqlSelectObstructionData = "SELECT * FROM obstructions";
   if ($sqlResultObstructionData = mysqli_query($conn, $sqlSelectObstructionData)) {
     while ($rowObstruction = mysqli_fetch_array($sqlResultObstructionData)) {
-      if ($rowObstruction['obstructionStatus'] == 1) {
+      $vandaag = strtotime(date("Y-m-d H:i"));
+      if ($vandaag < strtotime(date($rowObstruction['obstructionStartDate']))) {
         $status = '<span class="badge bg-warning">Aankomend</span>';                        
-      } elseif ($rowObstruction['obstructionStatus'] == 2) {
+      } else if ($vandaag >= strtotime(date($rowObstruction['obstructionStartDate'])) && $vandaag <= strtotime(date($rowObstruction['obstructionEndDate']))) {
         $status = '<span class="badge bg-success">Lopend</span>';
       } else {
         $status = '<span class="badge bg-danger">Afgelopen</span>';
@@ -53,7 +54,7 @@
                               <tr>
                                 <td><strong>'.$rowObstruction['obstructionNumber'].'</strong></td>
                                 <td>'.$rowObstruction['obstructionPlace'].', '.$rowObstruction['obstructionTrajectory'].'</td>
-                                <td>'.date('D d M Y', strtotime($rowObstruction['obstructionStartDate'])).' '.date('H:m', strtotime($rowObstruction['obstructionStartTime'])).' t/m '.date('D d M Y', strtotime($rowObstruction['obstructionEndDate'])).' '.date('H:m', strtotime($rowObstruction['obstructionEndTime'])).'</td>
+                                <td>Van <strong>'.date('d M Y h:i', strtotime($rowObstruction['obstructionStartDate'])).'</strong> tot <strong>'.date('d M Y H:i', strtotime($rowObstruction['obstructionEndDate'])).'</strong></td>
                                 <td>'.str_replace(',', ', ', $rowObstruction['obstructionLines']).'</td>
                                 <td>'.$status.'</td>
                                 <td>
@@ -95,7 +96,7 @@
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-exclamation-triangle-fill text-danger"></i> InfraGD | Nieuwe invoer</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-exclamation-triangle-fill text-danger"></i> InfraGD | Nieuwe invoer stremming</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -180,32 +181,20 @@
                               <div class="row">
                                 <div class="col-md-6">
                                   <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-12">
                                       <div class="mb-3">
-                                        <label for="obstructionStartDate" class="form-label"><strong>Startdatum:</strong></label>
-                                        <input type="date" class="form-control" name="obstructionStartDate" id="obstructionStartDate">
-                                      </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                      <div class="mb-3">
-                                        <label for="obstructionStartTime" class="form-label"><strong>Starttijd:</strong></label>
-                                        <input type="time" class="form-control" name="obstructionStartTime" id="obstructionStartTime">
+                                        <label for="obstructionStartDate" class="form-label"><strong>Startdatum en tijd:</strong></label>
+                                        <input type="datetime-local" class="form-control" name="obstructionStartDate" id="obstructionStartDate">
                                       </div>
                                     </div>
                                   </div>                       
                                 </div>
                                 <div class="col-md-6">
                                   <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-12">
                                       <div class="mb-3">
-                                        <label for="obstructionEndDate" class="form-label"><strong>Einddatum:</strong></label>
-                                        <input type="date" class="form-control" name="obstructionEndDate" id="obstructionEndDate">
-                                      </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                      <div class="mb-3">
-                                        <label for="obstructionEndTime" class="form-label"><strong>Eindtijd:</strong></label>
-                                        <input type="time" class="form-control" name="obstructionEndTime" id="obstructionEndTime">
+                                        <label for="obstructionEndDate" class="form-label"><strong>Einddatum en tijd:</strong></label>
+                                        <input type="datetime-local" class="form-control" name="obstructionEndDate" id="obstructionEndDate">
                                       </div>
                                     </div>
                                   </div> 
