@@ -50,17 +50,23 @@
       } else {
         $status = '<span class="badge bg-danger">Afgelopen</span>';
       }
+      $lines= '';
+      $string = explode(',',$rowObstruction['obstructionLines']);
+      for($i = 0; $i < sizeof($string); $i++) {
+        $lines .= '<span class="badge bg-primary">'.$string[$i].'</span> ';
+      }
       $obstructionOutput .= '
                               <tr>
                                 <td><strong>'.$rowObstruction['obstructionNumber'].'</strong></td>
                                 <td>'.$rowObstruction['obstructionPlace'].', '.$rowObstruction['obstructionTrajectory'].'</td>
                                 <td>Van <strong>'.date('d M Y h:i', strtotime($rowObstruction['obstructionStartDate'])).'</strong> tot <strong>'.date('d M Y H:i', strtotime($rowObstruction['obstructionEndDate'])).'</strong></td>
-                                <td>'.str_replace(',', ', ', $rowObstruction['obstructionLines']).'</td>
+                                <!--<td>'.str_replace(',', ', ', $rowObstruction['obstructionLines']).'</td>-->
+                                <td>'.$lines.'</td>
                                 <td>'.$status.'</td>
                                 <td>
                                   <i class="bi bi-person-fill me-3" title="Door: '.$rowObstruction['obstructionMadeBy'].'"></i>
                                   <i class="bi bi-check2-square me-3 obstructionSignOut" data-bs-toggle="modal" data-bs-target="#obstructionSignOut'.$rowObstruction['obstructionID'].'" data-id="'.$rowObstruction['obstructionID'].'" title="Afmelden"></i>
-                                  <a href="" data-bs-toggle="modal" data-bs-target="#obstructionEdit"><i class="bi bi-pencil-square me-3" title="Bewerken"></i></a>
+                                  <a href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="bi bi-pencil-square me-3 edit-obstruction" data-id="'.$rowObstruction['obstructionID'].'" title="Wijzigen"></i></a>
                                   <a href="'.$rowObstruction['obstructionPDF'].'" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i>
                                   </a><i class="bi bi-envelope-at me-3" title="Mailen"></i>
                                 </td>
@@ -347,6 +353,30 @@
                 </form>
               </div>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Annuleer</button>
+            <button  class="btn btn-warning text-white" id="btnResetObstruction"><i class="bi bi-arrow-clockwise"></i> Reset</button>
+            <button  class="btn btn-success" id="btnSaveObstruction"><i class="bi bi-floppy"></i> Opslaan</button>
+            <div class="mb-3">
+              <input class="form-control" type="hidden" id="obstructionYear" value="<?php echo substr(date("Y"),2,2) ?>">
+              <input class="form-control" type="hidden" id="obstructionMadeBy" value="<?php echo $employeeFirstName.' '.$employeeLastName ?>">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for updating obstruction -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="updateModalLabel"><i class="bi bi-exclamation-triangle-fill text-danger"></i> InfraGD | Wijziging stremming</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Annuleer</button>

@@ -158,6 +158,23 @@ $(document).ready(function(){
     
   });
 
+  //UPDATE OBSTRUCTION
+  $(".edit-obstruction").on('click', function(){
+    let obstructionID = $(this).data("id");
+    
+    $.ajax({
+      url: 'scripts/fetch_obstruction_data.php',
+      type: 'POST',
+      data: {
+        obstructionID: obstructionID
+      },
+      cache: false,
+      success: function(data) {
+        $('#updateModal .modal-body').html(data);
+      }
+    });
+  });
+
 
 
   // RESET OBSTRUCTION FORM
