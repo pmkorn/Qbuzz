@@ -5,6 +5,8 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
+
+  date_default_timezone_set('Europe/Amsterdam');
   
   include('includes/db.inc.php');
   
@@ -53,7 +55,7 @@
       $lines= '';
       $string = explode(',',$rowObstruction['obstructionLines']);
       for($i = 0; $i < sizeof($string); $i++) {
-        $lines .= '<span class="badge bg-primary">'.$string[$i].'</span> ';
+        $lines .= '<span class="badge bg-secondary">'.$string[$i].'</span> ';
       }
       $obstructionOutput .= '
                               <tr>
@@ -62,13 +64,14 @@
                                 <td>Van <strong>'.date('d M Y h:i', strtotime($rowObstruction['obstructionStartDate'])).'</strong> tot <strong>'.date('d M Y H:i', strtotime($rowObstruction['obstructionEndDate'])).'</strong></td>
                                 <!--<td>'.str_replace(',', ', ', $rowObstruction['obstructionLines']).'</td>-->
                                 <td>'.$lines.'</td>
-                                <td>'.$status.'</td>
+                                <td class="obstruction-status">'.$status.'</td>
                                 <td>
-                                  <i class="bi bi-person-fill me-3" title="Door: '.$rowObstruction['obstructionMadeBy'].'"></i>
+                                  <i class="bi bi-person-fill text-secondary me-3" title="Door: '.$rowObstruction['obstructionMadeBy'].'"></i>
                                   <i class="bi bi-check2-square me-3 obstructionSignOut" data-bs-toggle="modal" data-bs-target="#obstructionSignOut'.$rowObstruction['obstructionID'].'" data-id="'.$rowObstruction['obstructionID'].'" title="Afmelden"></i>
                                   <a href="" data-bs-toggle="modal" data-bs-target="#updateModal"><i class="bi bi-pencil-square me-3 edit-obstruction" data-id="'.$rowObstruction['obstructionID'].'" title="Wijzigen"></i></a>
-                                  <a href="'.$rowObstruction['obstructionPDF'].'" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i>
-                                  </a><i class="bi bi-envelope-at me-3" title="Mailen"></i>
+                                  <a href="'.$rowObstruction['obstructionPDF'].'" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
+                                  <a href="stremming_output.php?obstructionID='.$rowObstruction['obstructionID'].'" target="_blank"><i class="bi bi-file-pdf me-3 pdf" title="Print"></i></a>
+                                  <a><i class="bi bi-envelope-at me-3" title="Mailen"></i></a>
                                 </td>
                               </tr>
                             ';
@@ -82,14 +85,17 @@
 <!doctype html>
 <html lang="nl">
   <head>
+
     <base href="/">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link href="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs5/dt-2.0.5/datatables.min.css">
     <link rel="stylesheet" href="css/flag-icon.css">
     <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
 
@@ -431,7 +437,7 @@
     <?php include('includes/navbar.inc.php'); ?>
     
     <!-- Desktop layout -->
-    <section class="main-content py-5 d-none d-md-block">
+    <section class="main-content py-5 ">
 
       <div class="container-fluid mb-3">
         <div class="row">
@@ -571,7 +577,6 @@
           location.reload(true);
         }
       });
-
 
     });
 

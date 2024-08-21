@@ -28,14 +28,17 @@
 <!doctype html>
 <html lang="nl">
   <head>
+
     <base href="/">
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css">
     <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
 
     <title>Qbuzz InfraGD | <?php echo $page; ?></title>

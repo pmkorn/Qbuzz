@@ -39,34 +39,33 @@
   //     echo 'Error: ' . $e->getMessage();
   // }
 
-  $start = "2024-08-01 05:00:00";
-  $eind = "2024-08-31 16:00:00";
+  // $start = "2024-08-01 05:00:00";
+  // $eind = "2024-08-31 16:00:00";
 
-  $datum = "2024-08-01";
-  $tijd = "05:00:00";
+  // $datum = "2024-08-01";
+  // $tijd = "05:00:00";
 
 
 
-  echo $start;
-  echo "<br/>";
-  echo $eind;
-  echo "<br/>";
-  echo "<br/>";
-  echo $startdatum = strtotime($start);
-  echo "<br/>";
-  echo $einddatum = strtotime($eind);
-  echo "<br/>";
-  echo $vandaag = strtotime(date("Y-m-d H:m:s"));
-  echo "<br/>";
-  if ($vandaag < $startdatum) {
-    echo "aankomend";
-  } else if ($vandaag >= $startdatum && $vandaag <= $einddatum) {
-    echo "lopend";
-  } else {
-    echo "afgelopen";
-  }
-  echo "<br/>";
-  echo date("d-m-Y", $startdatum);
-
+  // echo $start;
+  // echo "<br/>";
+  // echo $eind;
+  // echo "<br/>";
+  // echo "<br/>";
+  // echo $startdatum = strtotime($start);
+  // echo "<br/>";
+  // echo $einddatum = strtotime($eind);
+  // echo "<br/>";
+  // echo $vandaag = strtotime(date("Y-m-d H:m:s"));
+  // echo "<br/>";
+  // if ($vandaag < $startdatum) {
+  //   echo "aankomend";
+  // } else if ($vandaag >= $startdatum && $vandaag <= $einddatum) {
+  //   echo "lopend";
+  // } else {
+  //   echo "afgelopen";
+  // }
+  // echo "<br/>";
+  // echo date("d-m-Y", $startdatum);
 
 ?>
