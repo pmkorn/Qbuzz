@@ -41,7 +41,7 @@
 
   // Get obstruction information
   $obstructionOutput = '';
-  $sqlSelectObstructionData = "SELECT * FROM obstructions";
+  $sqlSelectObstructionData = "SELECT * FROM obstructions ORDER BY obstructionID DESC";
   if ($sqlResultObstructionData = mysqli_query($conn, $sqlSelectObstructionData)) {
     while ($rowObstruction = mysqli_fetch_array($sqlResultObstructionData)) {
       $vandaag = strtotime(date("Y-m-d H:i"));
@@ -555,7 +555,7 @@
       language: {
         url: 'https://cdn.datatables.net/plug-ins/2.0.5/i18n/nl-NL.json',
       },
-      order: [1, 'asc'],
+      order: [0, ''],
       lengthMenu: [
         [10, 25, 50, 100, -1],
         [10, 25, 50, 100, 'All'],
