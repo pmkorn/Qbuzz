@@ -28,7 +28,7 @@
       <div class="row ">
         <div class="col-md-6">
           <div id="alert-success" class="alert alert-success" role="alert">
-            Het aanmaken van uw account is gelukt! U kiunt nu inloggen.
+            Het aanmaken van uw account is gelukt! U kunt nu inloggen.
           </div>
           <div id="alert-danger" class="alert alert-danger" role="alert">
             Het aanmaken van uw account is niet gelukt! Probeer opnieuw.
