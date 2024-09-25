@@ -185,7 +185,7 @@ $(document).ready(function(){
 
 
   // LOGIN USER
-  $('#btnEmployeeLogin').on('click', function() {
+  let callback = function() {
 
     let employeeUserName = $('#employeeUserName').val();
     let employeeUserPassword = $('#employeeUserPassword').val();
@@ -225,11 +225,18 @@ $(document).ready(function(){
       }      
       
     });
-    
 
-    //alert(employeeEmail+"\n"+employeeUserPassword);
-
+  };
+  
+  
+  $('#employeeUserName').keypress(function(e){
+    if (e.which == 13) callback();
   });
+  $('#employeeUserPassword').keypress(function(e){
+    if (e.which == 13) callback();
+  })
+  $('#btnEmployeeLogin').on('click', callback);
+
 
 
 

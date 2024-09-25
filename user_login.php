@@ -52,7 +52,7 @@
               <form id="userLoginForm" action="" autocomplete="off">
                 <div class="form-group mb-3">
                 <label class="form-label" for="employeeUserName"><strong>Gebruikersnaam</strong></label>
-                  <input type="text" class="form-control" id="employeeUserName" name="employeeUserName" placeholder="">                      
+                  <input type="text" class="form-control" id="employeeUserName" name="employeeUserName" placeholder="" autofocus>                      
                 </div>
                 <div class="form-group mb-3">
                 <label class="form-label" for="userPassword"><strong>Wachtwoord</strong></label>
