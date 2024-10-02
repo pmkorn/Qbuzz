@@ -1,0 +1,38 @@
+// .order-1 {
+//   order: 1;
+// }
+// .order-2 {
+//   order: 2;
+// }
+
+.project__home:nth-child(even) {
+
+  .project__home-image {
+
+    order: 1;
+
+  }
+
+  .project__home-info {
+
+    order: 2;
+
+  }
+  
+}
+
+.project__home:nth-child(even) {
+
+  .project__home-image {
+
+    order: 2;
+
+  }
+  
+  .project__home-info {
+
+    order: 1;
+
+  }
+  
+}

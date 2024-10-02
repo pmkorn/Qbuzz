@@ -1,38 +1,46 @@
-RewriteEngine on
-
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
 
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^blog/post/ blog_post.php [NC,L]
+RewriteRule ^blog/ blog.php [NC,L]
+RewriteRule ^gallerij/ gallery.php [NC,L]
+RewriteRule ^projecten/ projects.php [NC,L]
+RewriteRule ^contact/ contact.php [NC,L]
+RewriteRule ^over-mij/ about.php [NC,L]
+RewriteRule ^admin/blog/overview/ dashboard/admin_blog_overview.php [NC,L]
+RewriteRule ^admin/user/overview/ dashboard/admin_user_overview.php [NC,L]
+RewriteRule ^admin/ dashboard/admin.php [NC,L]
+RewriteRule ^inloggen/ login.php [NC,L]
+RewriteRule ^registreren/ register.php [NC,L]
+RewriteRule ^wachtwoord-reset/ reset_password.php [NC,L]
+RewriteRule ^uitloggen/ scripts/user_logout.php [NC,L]
 
-RewriteRule ^/ index.php [NC,L]
-
-#RewriteRule ^admin/user-overview/ admin_user_overview.php [NC,L]
-RewriteRule ^admin/gebruikers/ user_overview.php [NC,L]
-RewriteRule ^admin/ admin.php [NC,L]
-
-RewriteRule ^account/login user_login.php [NC,L]
-RewriteRule ^account/register user_register.php [NC,L]
-RewriteRule ^account/password-reset user_password_reset.php [NC,L]
-RewriteRule ^account/profile user_profile_page.php [NC,L]
-RewriteRule ^account/logout scripts/user_logout_script.php [NC,L]
-
-RewriteRule ^haltes/overzicht/([0-9]+)/ busstop_detail.php?busStopNumber=$1 [NC,L]
-RewriteRule ^haltes/overzicht busstop_overview.php [NC,L]
-
-RewriteRule ^stremmingen/aanmaken/ obstructions.php [NC,L]
-
-RewriteRule ^werkorders/ workorders.php [NC,L]
 
 RewriteRule ^contact/ contact.php [NC,L]
+RewriteRule ^over-ons/ about.php [NC,L]
+RewriteRule ^profiel/ profile.php [NC,L]
 
-RewriteRule ^toegang-geweigerd/ access_denied.php [NC,L]
+RewriteRule ^register/ register.php [NC,L]
+RewriteRule ^logout/ scripts/user_logout.php [NC,L]
+RewriteRule ^online-users/ online_users.php [NC,L]
+RewriteRule ^users/ users.php [NC,L]
+RewriteRule ^wachtwoord-vergeten/ password_recovery.php [NC,L]
+RewriteRule ^films/ movie.php [NC,L]
+RewriteRule ^film-info/ movie_detail.php [NC,L]
+#RewriteRule ^winkel/afrekenen/ check_out.php [NC,L]
+RewriteRule ^winkel/winkelmandje/ shopping_cart.php [NC,L]
+RewriteRule ^winkel/ shop.php [NC,L]
+RewriteRule ^admin/ admin.php [NC,L]
+RewriteRule ^website-onderhoud/ maintanance_mode.php [NC,L]
 
-#RewriteRule ^create-account/ signup.php [NC,L]
-
-#RewriteRule ^password-recover/ password_recover.php [NC,L]
-
-#RewriteRule ^stremming/([0-9a-zA-Z_-]+) stremming.php?obstructionID=S1 [NC,L]
+ErrorDocument 404 /404.php
 
 #RewriteRule ^vvo vvo.php [NC,L]
+#RewriteRule ^account/uitloggen includes/logout.inc.php [NC,L]
+#RewriteRule ^account account.php [NC,L]
+#RewriteRule ^login pages/login.php [NC,L]
+#RewriteRule ^signup signup.php [NC,L]
 #RewriteRule ^bussen/([0-9a-zA-Z_-]+)/([0-9a-zA-z_-]+) bus_detail.php?busBrand=$1&busNumber=$2 [NC]
+#RewriteRule ^bussen busses.php [NC,L]
 #RewriteRule ^bussen busses.php [NC,L]

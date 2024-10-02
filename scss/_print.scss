@@ -1,0 +1,14 @@
+@media print {
+
+  @page {
+    size: A4 Portrait;
+  }
+
+  header {
+    visibility: hidden;
+  }
+  .btn-print {
+    visibility: hidden;
+  }
+
+}

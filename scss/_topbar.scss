@@ -1,0 +1,10 @@
+.top-bar {
+  background: linear-gradient(to right, $buttercup, $buddha-gold);
+  color: $white;
+  &-icons {
+    a {
+      text-decoration: none;
+      color: $white;
+    }    
+  }
+}

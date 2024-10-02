@@ -1,0 +1,65 @@
+.gallery__album-item {
+  background-color: $white;
+  border-bottom: 3px solid $buttercup;
+
+  &-wrapper {
+
+    position: relative;
+
+    &-image {
+      
+      &-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $buttercup;
+        opacity: .9;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+
+        &-text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+          }
+
+      }
+
+    }
+
+    &:hover &-image-overlay{
+      height: 100%;
+    }
+
+  }
+
+  &-content {
+    border: 1px solid $light-grey;
+   
+    &-meta {
+      font-weight: bold;
+
+      i {
+        color: $buttercup;
+        
+      }
+
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+  }
+
+}

@@ -1,0 +1,97 @@
+@import 'fonts';
+@import 'social-icons';
+@import 'colors';
+@import 'topbar';
+@import 'navbar';
+@import 'hero';
+@import 'basic';
+@import 'index';
+@import 'blog';
+@import 'admin';
+@import 'gallery';
+@import 'projects';
+@import 'login';
+@import 'modals';
+@import 'responsive';
+@import 'print';
+
+body {
+  background-color: $alabaster;
+}
+
+.site-logo {
+  font-size: 2rem;
+
+  span {
+    color: $buttercup;
+  }
+
+}
+
+textarea {
+  resize: unset;
+}
+
+.btn-yellow {
+  color: #fff;
+  background-color: $buttercup;
+  border-color: $buttercup;
+}
+.btn-yellow:hover {
+  color: #fff;
+  background-color: $buddha-gold;
+  border-color: $buddha-gold;
+}
+.btn-check:focus + .btn-yellow, .btn-yellow:focus {
+  color: #fff;
+  background-color: $buddha-gold;
+  border-color: $buddha-gold;
+  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+}
+.btn-check:checked + .btn-yellow, .btn-check:active + .btn-yellow, .btn-yellow:active, .btn-yellow.active, .show > .btn-yellow.dropdown-toggle {
+  color: #fff;
+  background-color: $buddha-gold;
+  border-color: $buddha-gold;
+}
+.btn-check:checked + .btn-yellow:focus, .btn-check:active + .btn-yellow:focus, .btn-yellow:active:focus, .btn-yellow.active:focus, .show > .btn-yellow.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+}
+.btn-yellow:disabled, .btn-yellow.disabled {
+  color: #fff;
+  background-color: $buttercup;
+  border-color: $buttercup;
+}
+
+.btn-outline-yellow {
+  color: $buttercup;
+  border-color: $buttercup;
+}
+.btn-outline-yellow:hover {
+  color: #fff;
+  background-color: $buttercup;
+  border-color: $buttercup;
+}
+.btn-check:focus + .btn-outline-yellow, .btn-outline-yellow:focus {
+  box-shadow: 0 0 0 0.25rem rgba(114, 176, 29, 0.5);
+}
+.btn-check:checked + .btn-outline-yellow, .btn-check:active + .btn-outline-yellow, .btn-outline-yellow:active, .btn-outline-yellow.active, .btn-outline-yellow.dropdown-toggle.show {
+  color: #fff;
+  background-color: $buttercup;
+  border-color: $buttercup;
+}
+.btn-check:checked + .btn-outline-yellow:focus, .btn-check:active + .btn-outline-yellow:focus, .btn-outline-yellow:active:focus, .btn-outline-yellow.active:focus, .btn-outline-yellow.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(114, 176, 29, 0.5);
+}
+.btn-outline-yellow:disabled, .btn-outline-yellow.disabled {
+  color: $buttercup;
+  background-color: transparent;
+}
+#alert-success, #alert-danger {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  z-index: 10;
+  display: none;
+}

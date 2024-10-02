@@ -1,0 +1,148 @@
+.blog__post-item {
+  text-align: center;
+  background-color: $white;
+  border-bottom: 3px solid $buttercup;
+
+  &-wrapper {
+
+    position: relative;
+
+    &-image {
+
+      &-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $buttercup;
+        opacity: .9;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+
+        &-text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+      }
+
+    }
+
+    &:hover &-image-overlay{
+      height: 100%;
+    }
+
+  }
+
+
+  &-content {
+    position: relative;
+
+    border: 1px solid $light-grey;
+    background-color: $alabaster;
+
+    &-meta {
+
+      p {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $emperor;
+
+        i {
+          color: $buttercup;
+        }
+
+      }
+
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    &-comment {
+
+      p {
+        font-size: 1rem;
+        font-weight: bold;
+        columns: $emperor;
+        
+        i {
+          color: $buttercup;
+        }
+
+      }
+
+    }
+
+    &-footer {
+
+      &-social {
+
+        &-icon {
+          text-decoration: none;
+          
+          i {
+            font-size: 1.2rem;
+            color: $buttercup;
+          }
+  
+        }
+  
+      }
+
+      &-rating {
+
+        &-icon {
+          color: $buttercup;
+        }
+
+        span {
+          columns: $emperor;
+          font-weight: bold;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.blog__posts-widgets {
+  
+  &-container {
+    background-color: $alabaster;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    &-title {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    &-title:after {
+      content:'';
+      border-bottom: 3px solid $buttercup;
+      display: block;
+      height: 1px;
+      width: 50px;
+      margin: 15px 0;
+    }
+
+  }
+
+}

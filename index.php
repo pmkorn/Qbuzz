@@ -2,87 +2,86 @@
 
   session_start();
 
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
+  ini_set('display_errors','1');
+  ini_set('display_startup_errors','1');
   error_reporting(E_ALL);
-
-  if (!isset($_SESSION['employeeID'])) {
-    header('Location: account/login/'); 
-  } else {
-    include('includes/db.inc.php');
-    $employeeID = $_SESSION['employeeID'];
-    $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
-    if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
-      while ($row = mysqli_fetch_array($sqlResultSelectEmployeeData)) {
-        $employeeFirstName = $row['employeeFirstName'];
-        $employeeLastName = $row['employeeLastName'];
-        $employeeRole = $row['employeeRole'];
+  
+  include('conn/db.inc.php');
+  if (isset($_SESSION['memberID'])) {
+    $memberID = $_SESSION['memberID'];
+    $sqlSelectmemberData = "SELECT * FROM members WHERE memberID = '$memberID' LIMIT 1";
+    if ($sqlResultSelectmemberData = mysqli_query($conn, $sqlSelectmemberData)) {
+      while ($row = mysqli_fetch_array($sqlResultSelectmemberData)) {
+        $firstName = $row['firstName'];
+        $lastName = $row['lastName'];
+        $userRole = $row['userRole'];
       }
     }   
   }
 
-  include('includes/headertitle.inc.php');
+  include('include/title.inc.php');
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
-  <head>
+<head>
 
-    <base href="/">
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
 
-    <link rel="shortcut icon" href="images/favicon_qbuzz.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css">
-    <link rel="stylesheet" href="css/style.css?q=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/bootstrap.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/bootstrap-icons.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/flag-icon.css?<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/main.css?<?php echo time(); ?>">
 
-    <title>Qbuzz InfraGD | <?php echo $page; ?></title>
-  </head>
-  <!--<body oncontextmenu="return false">-->
+  <title>PATRICKKORN | <?php echo $page; ?></title>
+
+</head>
   <body>
 
-    <?php include('includes/navbar.inc.php'); ?>
+  <header class="fixed-top">
+    <?php include('include/top-bar.inc.php'); ?>
+    <?php include('include/navbar.inc.php'); ?>
+  </header>
 
-    <section class="main-content py-5">
+  <section class="main">
 
-      <div class="container-fluid">   
-        <div class="row">
+    <!-- HERO -->
+    <?php include('include/hero.inc.php'); ?>
+
+    <!-- FEATURED -->
+    <section id="featured" class="py-5 bg-white">
+      <div class="container">
+        <div class="row mb-3">
           <div class="col-md-12">
-            <h1 class="section-title">Home</h1>
-            <hr class="mb-5">
+            <h2 class="section-title py-3">Featured</h2>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <img src="https://placehold.co/1920x1080" alt="Featured Image" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <h3 class="section-subtitle">Titel</h3>
+            <p class="section-content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, magni? Sequi eveniet, exercitationem temporibus cupiditate nihil sapiente voluptatum. Aliquid, rerum assumenda aspernatur ut, impedit laborum repellat repellendus mollitia laboriosam cumque neque eos maiores quisquam nam, dolor praesentium atque saepe recusandae. Minima quod ipsa rerum in pariatur vitae reiciendis beatae dolorem?</p>
           </div>
         </div>
       </div>
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4">
-            <p>Hier vind je alles over de aankomende en lopende stremmingen. Mocht je vragen hebben over een van de stremmingen neem dan contact op met een van jouw collega's van <strong>InfraGD</strong> of via <a href="mailto:stremmingenGD@qbuzz.nl">mail</a>.</p>
-            <p>Mochten er onduidelijkheden zijn laat het ons graag weten.</p>
-            <p>Mocht je niet kunnen inloggen of kunnen navigeren binnen de webomgeving neem dan contact op met <a href="mailto:patrick.korn@qbuzz.nl">Patrick Korn</a></p>
-            <p>Team <strong>InfraGD</strong>.</p>
-          </div>
-          <div class="col-md-4">
-
-          </div>
-          <div class="col-md-4">
-            <h5>Updates</h5>
-            <p></p>
-          </div>
-        </div>
-      </div>
-
     </section>
+    
+    <!-- FOOTER  -->
+    <?php include('include/footer.inc.php'); ?>
+    
+  </section>
+
+  <?php include('include/modals.php'); ?>
+  
+  <script src="js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
+  <script src="js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
+  <script src="js/functions.js?<?php echo time(); ?>"></script>
 
   </body>
-
-  <script src="js/bootstrap.bundle.js"></script>
-  <script src="js/jquery-3.7.2.js"></script>
-  <script src="js/functions.js"></script>
-
 </html>
