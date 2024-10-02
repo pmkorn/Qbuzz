@@ -50,7 +50,7 @@
           <i class="bi bi-exclamation-triangle-fill text-danger display-1 mb-5"></i>
           <h1 class="display-1 mb-5">Toegang geweigerd</h1>
           <hr class="mb-5">
-          <h5 class="mb-5">U heeft geen toegang tot deze pagina. Voor vragen kunt u terecht bij de behherder van deze applicatie.</h5>
+          <h5 class="mb-5">U heeft geen toegang tot deze pagina. Voor vragen kunt u terecht bij de beheerder van deze applicatie.</h5>
           <a class="btn btn-orange btn-lg" href="/">Inloggen</a>
         </div>
       </div>
