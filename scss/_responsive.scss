@@ -98,27 +98,7 @@
   
 }
 
-section {
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  .section-title:after {
-    content: '';
-    border-bottom: 3px solid $buttercup;
-    display: block;
-    height: 1px;
-    width: 50px;
-    margin: 15px auto;
-  }
-  .section-subtitle {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;  
-  }
-}
+
 
 
 //////////////////////////////////////////////////
@@ -257,9 +237,9 @@ footer {
         content: '';
         opacity: 0;
         transition: all 0.2s;
-        height: 2px;
+        height: 3px;
         width: 100%;
-        background-color: $buttercup;
+        background-color: $darkblue;
         position: absolute;
         bottom: 0;
         left: 0;

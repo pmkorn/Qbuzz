@@ -52,16 +52,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="section-title">Startpagina</h1>
+            <h1 class="section-title">Meldingen</h1>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <p class="section-content">
-              In deze omgeving kun je informatie vinden over stremmingen die eraan zitten te komen alsmede lopende stremmingen.<br>
-              Mochgten er vragen zijn m.b.t. de stremming kun je ons bellen of mailen en wij proberen dan je vraag zo goed mogelijk te beantwoorden.
-            </p>
-            <p class="section-content">Team infraGD</p>
+            <div class="callout callout-orange">
+              iuhiuhiu
+            </div>
           </div>
         </div>
       </div>

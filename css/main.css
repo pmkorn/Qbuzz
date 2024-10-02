@@ -60,7 +60,7 @@ header .navbar .navbar-toggler {
 }
 
 .main {
-  margin-top: 144px;
+  margin-top: 98px;
 }
 
 .blog__post-item {
@@ -308,26 +308,6 @@ header .navbar .navbar-toggler {
   text-align: center;
 }
 
-section .section-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
-section .section-title:after {
-  content: "";
-  border-bottom: 3px solid #f1aa09;
-  display: block;
-  height: 1px;
-  width: 50px;
-  margin: 15px auto;
-}
-section .section-subtitle {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 footer {
   background-color: #f7f7f7;
   color: #2e2e2e;
@@ -406,9 +386,9 @@ footer .footer__copyright p span {
     content: "";
     opacity: 0;
     transition: all 0.2s;
-    height: 2px;
+    height: 3px;
     width: 100%;
-    background-color: #f1aa09;
+    background-color: #003750;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -431,15 +411,53 @@ footer .footer__copyright p span {
     visibility: hidden;
   }
 }
-body {
-  background-color: #f7f7f7;
+.bg-blue-touch {
+  background-color: #eff8fc;
 }
 
-.site-logo {
-  font-size: 2rem;
+section .section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #003750;
 }
-.site-logo span {
-  color: #f1aa09;
+section .section-title:after {
+  content: "";
+  border-bottom: 3px solid #ff7c00;
+  display: block;
+  height: 1px;
+  width: 50px;
+  margin: 15px 0;
+}
+section .section-content {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #003750;
+}
+
+.callout {
+  --bs-link-color-rgb: var(--bd-callout-link);
+  --bs-code-color: var(--bd-callout-code-color);
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--bd-callout-color, inherit);
+  background-color: var(--bd-callout-bg, var(--bs-gray-100));
+  border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+}
+
+.callout {
+  padding: 30px;
+  margin: 20px 0;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+.callout-orange {
+  border-left: 4px solid #ff7c00;
+  background-color: rgba(255, 124, 0, 0.1);
+  color: #ff7c00;
+  font-weight: 600;
 }
 
 textarea {
@@ -519,4 +537,9 @@ textarea {
   margin: auto;
   z-index: 10;
   display: none;
+}
+
+.nav-link {
+  color: #003750;
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */

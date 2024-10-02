@@ -15,18 +15,78 @@
 @import 'responsive';
 @import 'print';
 
-body {
-  background-color: $alabaster;
+.bg-blue-touch {
+  background-color: $blue-touch;
 }
-
-.site-logo {
-  font-size: 2rem;
-
-  span {
-    color: $buttercup;
+section {
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $darkblue;
   }
-
+  .section-title:after {
+    content: '';
+    border-bottom: 3px solid $orange;
+    display: block;
+    height: 1px;
+    width: 50px;
+    margin: 15px 0;
+  }
+  .section-content {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $darkblue;
+  }
 }
+
+// Base class
+.callout {
+  --bs-link-color-rgb: var(--bd-callout-link);
+  --bs-code-color: var(--bd-callout-code-color);
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--bd-callout-color, inherit);
+  background-color: var(--bd-callout-bg, var(--bs-gray-100));
+  border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+}
+
+// Modifier classes
+.callout {
+  padding: 30px;
+  margin: 20px 0;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}
+.callout-orange {
+  border-left: 4px solid $orange;
+  background-color: $orange-10;
+  color: $orange;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 textarea {
   resize: unset;
@@ -94,4 +154,9 @@ textarea {
   margin: auto;
   z-index: 10;
   display: none;
+}
+
+.nav-link {
+  color: $darkblue;
+  font-weight: 700;
 }
