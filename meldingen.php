@@ -58,7 +58,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="callout callout-orange">
-              iuhiuhiu
+              stremming <strong>GD24-G001</strong> is gewijzigd!
             </div>
           </div>
         </div>

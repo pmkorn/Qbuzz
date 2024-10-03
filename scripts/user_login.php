@@ -4,27 +4,27 @@
   
   include('../conn/db.inc.php');
   
-  $userName = mysqli_real_escape_string($conn, $_POST['userName']);
-  $userPassword = mysqli_real_escape_string($conn, $_POST['userPassword']);
-  $userPassword = stripslashes($userPassword);
-  $hashedUserPassword = hash('sha256', $userPassword);
+  $employeeUserName = mysqli_real_escape_string($conn, $_POST['employeeUserName']);
+  $employeeUserPassword = mysqli_real_escape_string($conn, $_POST['employeeUserPassword']);
+  $employeeUserPassword = stripslashes($employeeUserPassword);
+  $employeeHashedUserPassword = hash('sha256', $employeeUserPassword);
 
-  $sqlMemberLogin = "SELECT * FROM members WHERE userName = '$userName' AND userPassword = '$hashedUserPassword' AND isActive = 1 LIMIT 1";
+  $sqlEmployeeLogin = "SELECT * FROM employees WHERE employeeUserName = '$employeeUserName' AND employeeUserPassword = '$employeeHashedUserPassword' AND employeeIsActive = 1 LIMIT 1";
 
-  if ($sqlMemberLoginResult = mysqli_query($conn, $sqlMemberLogin)) {
-    if (mysqli_num_rows($sqlMemberLoginResult) > 0 ) {
-      while ($row = mysqli_fetch_array($sqlMemberLoginResult)) {
-        $memberID = $row['memberID'];
-        $_SESSION['memberID'] = $memberID;
+  if ($sqlEmployeeLoginResult = mysqli_query($conn, $sqlEmployeeLogin)) {
+    if (mysqli_num_rows($sqlEmployeeLoginResult) > 0 ) {
+      while ($row = mysqli_fetch_array($sqlEmployeeLoginResult)) {
+        $employeeID = $row['employeeID'];
+        $_SESSION['employeeID'] = $employeeID;
 
-        $userRole = $row['userRole'];
-        $_SESSION['userRole'] = $userRole;
+        $employeeRole = $row['employeeRole'];
+        $_SESSION['employeeRole'] = $employeeRole;
 
-        $memberName = $row['firstName']." ".$row['lastName'];
-        $_SESSION['memberName'] = $memberName;
+        $employeeName = $row['employeeFirstName']." ".$row['employeeLastName'];
+        $_SESSION['employeeName'] = $employeeName;
 
-        $memberLoginUpdate = "UPDATE members SET lastLogin = now(), onlineStatus = '1' WHERE memberID = '$memberID'";
-        $memberResultUpdate = mysqli_query($conn, $memberLoginUpdate);
+        $employeeLoginUpdate = "UPDATE employees SET employeeLastLogin = now(), employeeOnlineStatus = '1' WHERE employeeID = '$employeeID'";
+        $employeeResultUpdate = mysqli_query($conn, $employeeLoginUpdate);
         mysqli_close($conn);
       }
       echo "success";

@@ -10,49 +10,31 @@
           <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-          <a class="nav-link" href="stremmingen/">Stremmingen</a>
+          <a class="nav-link" href="">Melding maken</a>
         </li>
         <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-          <a class="nav-link" href="meldingen/">Meldingen</a>
+          <a class="nav-link" href="stremmingen/">Stremmingen</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 right-bar">
-        <li class="nav-item">
-          <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search"></i></button>
+          <?php 
+            if (!isset($_SESSION['employeeID'])) {
+              echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
+                echo '<a class="me-3 nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalLogin"><i class="bi bi-person"></i> Inloggen</a>';
+              echo '</li>';
+              echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
+                echo '<a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalRegister"><i class="bi bi-lock"></i> Registreren</a>';
+              echo '</li>';
+            } else {
+              echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
+                echo '<a class="nav-link" href="admin/">Admin</a>';
+              echo '</li>';
+              echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';  
+                echo '<a class="nav-link" href="uitloggen/"><i class="bi bi-unlock"></i> Uitloggen</a>';
+              echo '</li>';
+            }
+          ?>
         </li>
-        <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						<span class="bi bi-person-circle"></span>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">																		
-            <?php
-
-              if (isset($_SESSION['memberID'])) {
-                echo '<li><a class="dropdown-item disabled" href="#">'. $_SESSION['memberName'] .'</a></li>';
-                echo '<li><hr class="dropdown-divider" href="#"></li>';
-              } else {
-
-              }
-
-            ?>
-            <?php
-
-              if (isset($_SESSION['userRole']) && ($_SESSION['userRole'] === 'admin')) {
-                echo '<li><a class="dropdown-item" href="admin/">Dashboard</a></li>';
-                echo '<li><a class="dropdown-item" href="profiel/">Profiel</a></li>';
-                echo '<li><a class="dropdown-item" href="users/">Leden</a></li>';
-              } elseif (isset($_SESSION['userRole']) && ($_SESSION['userRole'] === 'user')) {
-                echo '<li><a class="dropdown-item disabled" href="">Overzicht</a></li>';
-                echo '<li><a class="dropdown-item" href="profiel/">Profiel</a></li>';
-                echo '<li><a class="dropdown-item" href="users/">Leden</a></li>';
-
-              } else {
-                echo "";
-              }
-
-            ?>
-          </ul>
-				</li>
       </ul>
     </div>
   </div>

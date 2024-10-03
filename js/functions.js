@@ -3,16 +3,16 @@ $(document).ready( function(){
   // Login user
   $('#btnUserLogin').on('click', function(){
 
-    let userName = $('#userName').val();
-    let userPassword = $('#userPassword').val();
-    console.log('Gebruikersnaam: '+userName+' Wachtwoord: '+userPassword);
+    let employeeUserName = $('#employeeUserName').val();
+    let employeeUserPassword = $('#employeeUserPassword').val();
+    console.log('Gebruikersnaam: '+employeeUserName+' Wachtwoord: '+employeeUserPassword);
 
     $.ajax ({
       url: '../scripts/user_login.php',
       type: 'POST',
       data: {
-        userName: userName,
-        userPassword: userPassword
+        employeeUserName: employeeUserName,
+        employeeUserPassword: employeeUserPassword
       },
       cache: false,
       success: function(data) {

@@ -42,7 +42,7 @@
                                 <td><strong>#'.$rowObstruction['obstructionID'].'</strong></td>
                                 <td>'.$rowObstruction['obstructionNumber'].'</td>
                                 <td>'.$rowObstruction['obstructionPlace'].',<br>'.$rowObstruction['obstructionTrajectory'].'</td>
-                                <td><i class="bi bi-flag-fill text-success me-3"></i>'.date('d M Y', strtotime($rowObstruction['obstructionStartDate'])).' van '.date('h:i', strtotime($rowObstruction['obstructionStartDate'])).' uur<br><i class="bi bi-x-circle-fill text-danger me-3"></i>'.date('d M Y', strtotime($rowObstruction['obstructionEndDate'])).' tot '.date('H:i', strtotime($rowObstruction['obstructionEndDate'])).' uur</td>
+                                <td><div class="d-inline-block"><i class="bi bi-flag-fill text-success me-3"></i>'.date('d M Y', strtotime($rowObstruction['obstructionStartDate'])).' van '.date('h:i', strtotime($rowObstruction['obstructionStartDate'])).' uur<br><i class="bi bi-x-circle-fill text-danger me-3"></i>'.date('d M Y', strtotime($rowObstruction['obstructionEndDate'])).' tot '.date('H:i', strtotime($rowObstruction['obstructionEndDate'])).' uur</div></td>
                                 <!--<td>'.str_replace(',', ', ', $rowObstruction['obstructionLines']).'</td>-->
                                 <td>'.$lines.'</td>
                                 <td class="obstruction-status">'.$status.'</td>
@@ -71,7 +71,9 @@
   <link rel="stylesheet" href="css/bootstrap.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/bootstrap-icons.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/flag-icon.css?<?php echo time(); ?>">
-  <link rel="stylesheet" href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.1.7/af-2.7.0/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/b-print-3.1.2/cr-2.0.4/date-1.5.4/fc-5.0.2/fh-4.0.1/kt-2.12.1/r-3.0.3/rg-1.5.0/rr-1.5.0/sc-2.4.3/sb-1.8.0/sp-2.3.2/sl-2.1.0/sr-1.4.1/datatables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.bootstrap5.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.bootstrap5.css">
   <link rel="stylesheet" href="css/main.css?<?php echo time(); ?>">
 
   <title>PATRICKKORN | <?php echo $page; ?></title>
@@ -94,8 +96,8 @@
         </div>
         <div class="row mb-5">
           <div class="col-md-12">
-            <div class="table-responsive">
-              <table id="obstructionTable" class="table">
+            <div class="">
+              <table id="obstructionTable" class="table nowrap" style="width:100%">
                 <thead>
                     <tr>
                       <th>#</th>
@@ -104,7 +106,7 @@
                       <th>Periode</th>
                       <th>Lijnen</th>
                       <th>Status</th>
-                      <th></th>
+                      <th>Bestand</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -124,12 +126,19 @@
   <script src="js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
   <script src="js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
   <script src="js/functions.js?<?php echo time(); ?>"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-  <script src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.1.7/af-2.7.0/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/b-print-3.1.2/cr-2.0.4/date-1.5.4/fc-5.0.2/fh-4.0.1/kt-2.12.1/r-3.0.3/rg-1.5.0/rr-1.5.0/sc-2.4.3/sb-1.8.0/sp-2.3.2/sl-2.1.0/sr-1.4.1/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/2.1.7/js/dataTables.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap5.js"></script>
   <script>
-    //Initialize datatable
-    new DataTable('#obstructionTable');
+    $(document).ready(function(){
+       //Initialize datatable
+       let table = new DataTable("#obstructionTable", {
+        responsive: true
+       });
+
+    });
   </script>
 
   </body>

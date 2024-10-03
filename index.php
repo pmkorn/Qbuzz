@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="css/flag-icon.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/main.css?<?php echo time(); ?>">
 
-  <title>PATRICKKORN | <?php echo $page; ?></title>
+  <title>InfraGD | <?php echo $page; ?></title>
 
 </head>
   <body class="bg-blue-touch">
@@ -56,12 +56,22 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <p class="section-content">
               In deze omgeving kun je informatie vinden over stremmingen die eraan zitten te komen alsmede lopende stremmingen.<br>
               Mochgten er vragen zijn m.b.t. de stremming kun je ons bellen of mailen en wij proberen dan je vraag zo goed mogelijk te beantwoorden.
             </p>
             <p class="section-content">Team infraGD</p>
+          </div>
+          <div class="col-md-6">
+            <div class="callout callout-orange">
+              <span class="bi bi-exclamation-triangle-fill"></span>
+              stremming <strong>GD24-G001</strong> is gewijzigd!
+            </div>
+            <div class="callout callout-orange">
+            <span class="bi bi-exclamation-triangle-fill"></span>
+              stremming <strong>GD24-G002</strong> is gewijzigd!
+            </div>
           </div>
         </div>
       </div>

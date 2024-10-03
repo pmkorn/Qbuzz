@@ -51,12 +51,12 @@
       <div class="modal-body"> 
         <form id="login-form" autocomplete="off">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="userName" placeholder="Gebruikersnaam">
-            <label for="userName">Gebruikersnaam</label>
+            <input type="text" class="form-control" id="employeeUserName" placeholder="Gebruikersnaam">
+            <label for="employeeUserName">Gebruikersnaam</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="userPassword" placeholder="Wachtwoord">
-            <label for="userPassword">Wachtwoord</label>
+            <input type="password" class="form-control" id="employeeUserPassword" placeholder="Wachtwoord">
+            <label for="employeeUserPassword">Wachtwoord</label>
           </div>
           <div class="d-grid mb-3">
             <button type="button" id="btnUserLogin" class="btn btn-yellow btn-lg">Inloggen</button>
