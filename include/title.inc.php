@@ -9,24 +9,12 @@ switch($page){
 		$page = "Home";
 		break;
 
-	case "blog.php";
-		$page = "Blog";
+	case "stremmingen.php";
+		$page = "Stremmingen";
 		break;
 
-	case "gallery.php";
-		$page = "Gallerij";
-		break;
-
-	case "projects.php";
-		$page = "Projecten";
-		break;
-
-	case "about.php";
-		$page = "Over ons";
-		break;
-
-	case "contact.php";
-		$page = "Contact";
+	case "meldingen.php";
+		$page = "Melding maken";
 		break;
 
 	case "register.php";

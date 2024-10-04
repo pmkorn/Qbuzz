@@ -8,18 +8,32 @@
 
   // Get obstruction information
   include('conn/db.inc.php');
-  $json=array();
-  $sql = "SELECT * FROM obstructions";
-  $stmt = $conn->prepare($sql);
-  $stmt->execute();
-  $result=$stmt->get_result();
-  echo '<pre>';
-  while($row=$result->fetch_assoc()){
-    array_push($json, $row);
+  // $json=array();
+  // $sql = "SELECT * FROM obstructions";
+  // $stmt = $conn->prepare($sql);
+  // $stmt->execute();
+  // $result=$stmt->get_result();
+  // echo '<pre>';
+  // while($row=$result->fetch_assoc()){
+  //   array_push($json, $row);
+  // }
+  // echo json_encode($json);
+
+  $vandaag = strtotime(date("Y-m-d H:i"));
+  $nu = date("Y-m-d H:i");
+  $out = '';
+  $sql = "SELECT * FROM obstructions WHERE obstructionEndDate >= '$nu'";
+  if ($result = mysqli_query($conn, $sql)) {
+    while ($row = mysqli_fetch_assoc($result)) {
+      // $out .= $nu.'<br>';
+      // $out .= $row['obstructionID'].'<br>';
+      // $out .= 'Vandaag '.$vandaag.'<br>';
+      // $out .= 'Start '.strtotime(date($row['obstructionStartDate'])).'<br>';
+      // $out .= 'Eind '.strtotime(date($row['obstructionEndDate'])).'<br>';
+      $out .= $row['obstructionID'];
+
+    }
   }
-  echo json_encode($json);
-
-
 
   include('include/title.inc.php');
 
@@ -45,7 +59,7 @@
 </head>
   <body class="bg-blue-touch">
 
-  <div class="result"></div>
+  <div class="result"><?php echo $out; ?></div>
 
   <?php include('include/modals.php'); ?>
   

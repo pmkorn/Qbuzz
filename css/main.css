@@ -388,7 +388,11 @@ textarea {
   display: none;
 }
 
-.nav-link {
+.navbar .nav-link {
   color: #003750;
   font-weight: 700;
+}
+
+.dt-input {
+  background-color: white !important;
 }/*# sourceMappingURL=main.css.map */

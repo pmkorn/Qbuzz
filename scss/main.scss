@@ -144,8 +144,13 @@ textarea {
   display: none;
 }
 
-.nav-link {
-  color: $darkblue;
-  font-weight: 700;
+.navbar {
+  .nav-link {
+    color: $darkblue;
+    font-weight: 700;
+  }
 }
 
+.dt-input {
+  background-color: white !important;
+}

@@ -10,7 +10,7 @@
           <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-          <a class="nav-link" href="">Melding maken</a>
+          <a class="nav-link" href="meldingen/">Melding maken</a>
         </li>
         <li class="nav-item me-lg-3 mb-3 mb-lg-0">
           <a class="nav-link" href="stremmingen/">Stremmingen</a>

@@ -10,7 +10,7 @@
   if (isset($_SESSION['employeeID'])) {
     $employeeID = $_SESSION['employeeID'];
     $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
-    if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeerData)) {
+    if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
       while ($row = mysqli_fetch_array($sqlResultSelectEmployeeData)) {
         $employeeFirstName = $row['employeeFirstName'];
         $employeeLastName = $row['employeeLastName'];
@@ -21,7 +21,8 @@
 
   // Get obstruction information
   $obstructionOutput = '';
-  $sqlSelectObstructionData = "SELECT * FROM obstructions ORDER BY obstructionID DESC";
+  $nu = date("Y-m-d H:i");
+  $sqlSelectObstructionData = "SELECT * FROM obstructions WHERE obstructionEndDate >= '$nu' ORDER BY obstructionID DESC";
   if ($sqlResultObstructionData = mysqli_query($conn, $sqlSelectObstructionData)) {
     while ($rowObstruction = mysqli_fetch_array($sqlResultObstructionData)) {
       $vandaag = strtotime(date("Y-m-d H:i"));
@@ -71,9 +72,11 @@
   <link rel="stylesheet" href="css/bootstrap.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/bootstrap-icons.css?<?php echo time(); ?>">
   <link rel="stylesheet" href="css/flag-icon.css?<?php echo time(); ?>">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.bootstrap5.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.bootstrap5.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.bootstrap5.css"> -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.css">
   <link rel="stylesheet" href="css/main.css?<?php echo time(); ?>">
 
   <title>PATRICKKORN | <?php echo $page; ?></title>
@@ -126,11 +129,14 @@
   <script src="js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
   <script src="js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
   <script src="js/functions.js?<?php echo time(); ?>"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
   <script src="https://cdn.datatables.net/2.1.7/js/dataTables.bootstrap5.js"></script>
   <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
-  <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap5.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap5.js"></script> -->
+  <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.dataTables.js"></script>
   <script>
     $(document).ready(function(){
        //Initialize datatable
