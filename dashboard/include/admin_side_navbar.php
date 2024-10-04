@@ -19,7 +19,7 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="admin/blog/overview/">Overzicht</a>
+                        <a class="nav-link" href="admin/stremmingen/">Overzicht</a>
                         <a class="nav-link" href="">Aanmaken</a>
                     </nav>
                 </div>

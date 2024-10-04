@@ -8,7 +8,7 @@
 
   include('../include/title.inc.php');
   include('../scripts/user_access.php');
-  //access('ADMIN');
+  access('ADMIN');
 
 ?>
 

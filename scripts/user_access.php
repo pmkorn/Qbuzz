@@ -11,8 +11,8 @@
     return true;
   }
 
-  $_SESSION['ACCESS']['ADMIN'] = isset($_SESSION['userRole']) && trim($_SESSION['userRole']) == "admin";
-  $_SESSION['ACCESS']['EDITOR'] = isset($_SESSION['userRole']) && (trim($_SESSION['userRole']) == "editor" || trim($_SESSION['userRole']) == "admin");
-  $_SESSION['ACCESS']['USER'] = isset($_SESSION['userRole']) && (trim($_SESSION['userRole']) == "user" || trim($_SESSION['userRole']) == "editor" || trim($_SESSION['userRole']) == "admin");
+  $_SESSION['ACCESS']['ADMIN'] = isset($_SESSION['employeeRole']) && trim($_SESSION['employeeRole']) == "admin";
+  $_SESSION['ACCESS']['EDITOR'] = isset($_SESSION['employeeRole']) && (trim($_SESSION['employeeRole']) == "editor" || trim($_SESSION['employeeRole']) == "admin");
+  $_SESSION['ACCESS']['USER'] = isset($_SESSION['employeeRole']) && (trim($_SESSION['employeeRole']) == "user" || trim($_SESSION['employeeRole']) == "editor" || trim($_SESSION['employeeRole']) == "admin");
 
 ?> 

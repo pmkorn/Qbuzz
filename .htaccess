@@ -4,6 +4,7 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 
 RewriteRule ^stremmingen/ stremmingen.php [NC,L]
 RewriteRule ^meldingen/ meldingen.php [NC,L]
+RewriteRule ^admin/stremmingen/ dashboard/admin_stremming_overzicht.php [NC,L]
 RewriteRule ^admin/ dashboard/admin.php [NC,L]
 RewriteRule ^uitloggen/ scripts/user_logout.php [NC,L] 
 

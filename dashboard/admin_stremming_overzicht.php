@@ -10,6 +10,43 @@
   include('../scripts/user_access.php');
   access('ADMIN');
 
+  include('../conn/db.inc.php');
+  // Get obstruction information
+  $obstructionOutput = '';
+  $nu = date("Y-m-d H:i");
+  $sqlSelectObstructionData = "SELECT * FROM obstructions WHERE obstructionEndDate >= '$nu' ORDER BY obstructionID DESC";
+  if ($sqlResultObstructionData = mysqli_query($conn, $sqlSelectObstructionData)) {
+    while ($rowObstruction = mysqli_fetch_array($sqlResultObstructionData)) {
+      $vandaag = strtotime(date("Y-m-d H:i"));
+      if ($vandaag < strtotime(date($rowObstruction['obstructionStartDate']))) {
+        $status = '<span class="badge bg-warning">Aankomend</span>';                        
+      } else if ($vandaag >= strtotime(date($rowObstruction['obstructionStartDate'])) && $vandaag <= strtotime(date($rowObstruction['obstructionEndDate']))) {
+        $status = '<span class="badge bg-success">Lopend</span>';
+      } else {
+        $status = '<span class="badge bg-danger">Afgelopen</span>';
+      }
+      $lines= '';
+      $string = explode(',',$rowObstruction['obstructionLines']);
+      for($i = 0; $i < sizeof($string); $i++) {
+        $lines .= '<span class="badge bg-secondary">'.$string[$i].'</span> ';
+      }
+      $obstructionOutput .= '
+                              <tr>
+                                <td><strong>#'.$rowObstruction['obstructionID'].'</strong></td>
+                                <td>'.$rowObstruction['obstructionNumber'].'</td>
+                                <td>'.$rowObstruction['obstructionPlace'].',<br>'.$rowObstruction['obstructionTrajectory'].'</td>
+                                <td><div class="d-inline-block"><i class="bi bi-flag-fill text-success me-3"></i>'.date('d M Y', strtotime($rowObstruction['obstructionStartDate'])).' van '.date('h:i', strtotime($rowObstruction['obstructionStartDate'])).' uur<br><i class="bi bi-x-circle-fill text-danger me-3"></i>'.date('d M Y', strtotime($rowObstruction['obstructionEndDate'])).' tot '.date('H:i', strtotime($rowObstruction['obstructionEndDate'])).' uur</div></td>
+                                <!--<td>'.str_replace(',', ', ', $rowObstruction['obstructionLines']).'</td>-->
+                                <td>'.$lines.'</td>
+                                <td class="obstruction-status">'.$status.'</td>
+                                <td>
+                                  <a href="" class="fs-4"><i class="bi bi-file-pdf-fill text-bg-danger"></i></a>
+                                </td>
+                              </tr>
+                            ';
+    }
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -50,35 +87,20 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table-responsive">
-                                    <table class="table">
+                                    <table id="obstructionTable" class="table nowrap" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>Title</th>
-                                                <th>comments</th>
-                                                <th></th>
+                                            <th>#</th>
+                                            <th>Stremmingsnr.</th>
+                                            <th>Plaats + Traject</th>
+                                            <th>Periode</th>
+                                            <th>Lijnen</th>
+                                            <th>Status</th>
+                                            <th>Bestand</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-group-divider">
-                                            <?php
-                                                $i = 1;
-                                                while ($i <= 10) {
-                                                    echo '
-                                                        <tr class="align-middle">
-                                                            <td>'.$i.'</td>
-                                                            <td>Blog '.$i.'</td>
-                                                            <td>'.$i.' Opmerkingen</td>
-                                                            <td>
-                                                                <div class="d-flex">
-                                                                    <button class="btn btn-success me-2">Edit</button>
-                                                                    <button class="btn btn-danger me-2">Delete</button>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    ';
-                                                    $i++;
-                                                }
-                                            ?>
+                                        <?php echo $obstructionOutput; ?>
                                         </tbody>
                                     </table>
                                 </div>                                    
