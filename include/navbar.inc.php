@@ -25,10 +25,14 @@
               echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
                 echo '<a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalRegister"><i class="bi bi-lock"></i> Registreren</a>';
               echo '</li>';
-            } else {
+            } else if (isset($_SESSION['employeeID']) && $_SESSION['employeeRole'] === 'admin') {
               echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
                 echo '<a class="nav-link" href="admin/">Admin</a>';
               echo '</li>';
+              echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';  
+                echo '<a class="nav-link" href="uitloggen/"><i class="bi bi-unlock"></i> Uitloggen</a>';
+              echo '</li>';
+            } else {
               echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';  
                 echo '<a class="nav-link" href="uitloggen/"><i class="bi bi-unlock"></i> Uitloggen</a>';
               echo '</li>';

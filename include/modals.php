@@ -73,11 +73,6 @@
               <a href="wachtwoord-reset/">Wachtwoord vergeten?</a>
             </div>
           </div>
-          <div class="text-center">
-            <a href="/" class="btn btn-link">
-              <i class="bi bi-house"></i>
-            </a>
-          </div>
         </form>
       </div>
     </div>

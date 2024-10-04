@@ -14,7 +14,7 @@
   // Get obstruction information
   $obstructionOutput = '';
   $nu = date("Y-m-d H:i");
-  $sqlSelectObstructionData = "SELECT * FROM obstructions WHERE obstructionEndDate >= '$nu' ORDER BY obstructionID DESC";
+  $sqlSelectObstructionData = "SELECT * FROM obstructions ORDER BY obstructionID DESC";
   if ($sqlResultObstructionData = mysqli_query($conn, $sqlSelectObstructionData)) {
     while ($rowObstruction = mysqli_fetch_array($sqlResultObstructionData)) {
       $vandaag = strtotime(date("Y-m-d H:i"));
@@ -73,17 +73,12 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Blog - Overzicht</h1>
+                        <h1 class="mt-4 section-title">Stremmingen - Overzicht</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Blog</li>
+                            <li class="breadcrumb-item active">Stremmingen</li>
                             <li class="breadcrumb-item">Overzicht</li>
                         </ol>
-                        <hr class="dropdown-divider mb-4">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button class="btn btn-yellow mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-file-plus"></i> Blog toevoegen</button>
-                            </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table-responsive">
@@ -121,44 +116,6 @@
                     </div>
                 </footer>
             </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Nieuwe blog toevoegen</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="blogTitle" class="form-label">Blog titel</label>
-                                <input type="text" class="form-control" id="blogTitle">
-                            </div>
-                            <div class="mb-3">
-                                <label for="blogSubtitle" class="form-label">Blog subtitel</label>
-                                <input type="text" class="form-control" id="blogSubtitle">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="blogContent" class="form-label">Blog subtitel</label>
-                                <textarea class="form-control" name="blogContent" id="blogContent" rows="20"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Afsluiten</button>
-                <button type="button" class="btn btn-success">Opslaan</button>
-            </div>
-            </div>
-        </div>
         </div>
 
         <script src="../js/bootstrap.bundle.js"?<?php echo time(); ?>></script>

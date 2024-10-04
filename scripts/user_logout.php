@@ -2,10 +2,10 @@
 
   session_start();
 
-  $memberID = $_SESSION['memberID'];
+  $employeeID = $_SESSION['employeeID'];
 
   include('../conn/db.inc.php');
-  $update = "UPDATE members SET onlineStatus = '0' WHERE memberID = '$memberID'";
+  $update = "UPDATE employees SET employeeLastLogin = now(), employeeOnlineStatus = 0 WHERE employeeID = '$employeeID'";
   $resultUpdate = mysqli_query($conn, $update);
   mysqli_close($conn);
 
