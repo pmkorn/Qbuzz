@@ -10,7 +10,7 @@
   if (isset($_SESSION['employeeID'])) {
     $employeeID = $_SESSION['employeeID'];
     $sqlSelectEmployeeData = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
-    if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeerData)) {
+    if ($sqlResultSelectEmployeeData = mysqli_query($conn, $sqlSelectEmployeeData)) {
       while ($row = mysqli_fetch_array($sqlResultSelectEmployeeData)) {
         $employeeFirstName = $row['employeeFirstName'];
         $employeeLastName = $row['employeeLastName'];
