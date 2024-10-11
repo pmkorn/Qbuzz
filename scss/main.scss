@@ -18,27 +18,27 @@
 .bg-blue-touch {
   background-color: $blue-touch;
 }
-section {
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $darkblue;
-  }
-  .section-title:after {
-    content: '';
-    border-bottom: 3px solid $orange;
-    display: block;
-    height: 1px;
-    width: 50px;
-    margin: 15px 0;
-  }
-  .section-content {
-    font-size: 1rem;
-    font-weight: bold;
-    color: $darkblue;
-  }
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $darkblue;
 }
+.section-title:after {
+  content: '';
+  border-bottom: 3px solid $orange;
+  display: block;
+  height: 1px;
+  width: 100px;
+  margin: 15px 0;
+}
+.section-content {
+  font-size: 1rem;
+  font-weight: bold;
+  color: $darkblue;
+}
+
 
 
 .callout {
@@ -151,6 +151,11 @@ textarea {
   }
 }
 
+.sb-sidenav-footer {
+  color: $lightblue;
+}
+
 .dt-input {
   background-color: white !important;
 }
+

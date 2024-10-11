@@ -29,96 +29,17 @@
         <link rel="stylesheet" href="../css/main.css">
 
     </head>
-    <body>
-
+    <body class="sb-nav-fixed">
         <?php include('include/admin_top_navbar.php'); ?>
         <div id="layoutSidenav">
             <?php include('include/admin_side_navbar.php'); ?>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                        <hr class="dropdown-divider">
+                        <h1 class="mt-4 section-title my-3">Dashboard</h1>
 
                         <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h2 class="text-end">
-                                            <i class="bi bi-layout-split float-start"></i>
-                                            Blog
-                                        </h2>
-                                        <p class="text-start">
-                                            Totaal items
-                                            <span class="float-end">10</span>
-                                        </p>
-                                        <p class="text-start">
-                                            Totaal likes
-                                            <span class="float-end">40</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h2 class="text-end">
-                                            <i class="bi bi-image float-start"></i>
-                                            Gallerij
-                                        </h2>
-                                        <p class="text-start">
-                                            Totaal items
-                                            <span class="float-end">50</span>
-                                        </p>
-                                        <p class="text-start">
-                                            Totaal likes
-                                            <span class="float-end">40</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h2 class="text-end">
-                                            <i class="bi bi-boxes float-start"></i>
-                                            Projecten
-                                        </h2>
-                                        <p class="text-start">
-                                            Totaal items
-                                            <span class="float-end">50</span>
-                                        </p>
-                                        <p class="text-start">
-                                            Totaal likes
-                                            <span class="float-end">40</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h2 class="text-end">
-                                            <i class="bi bi-people float-start"></i>
-                                            Leden
-                                        </h2>
-                                        <p class="text-start">
-                                            Totaal gebruikers
-                                            <span class="float-end">50</span>
-                                        </p>
-                                        <p class="text-start">
-                                            Aantal premium gebuikers
-                                            <span class="float-end">40</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
 
