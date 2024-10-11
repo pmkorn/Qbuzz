@@ -38,12 +38,36 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4 section-title my-3">Dashboard</h1>
 
-                        <div class="row">
+                        <div class="row row-cols-lg-4s">
 
                             <div class="col">
                                 <div class="card">
                                     <div class="card-header">
-                                        Welkom
+                                        Card 1
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Card 2
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Card 3
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Card 4
                                     </div>
                                 </div>
                             </div>
