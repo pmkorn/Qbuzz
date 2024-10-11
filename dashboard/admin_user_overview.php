@@ -140,10 +140,10 @@
         </div>
         </div>
 
-        <script src="../js/bootstrap.bundle.js"?<?php echo time(); ?>></script>
-        <script src="../js/jquery-3.7.1.js"?<?php echo time(); ?>></script>
+        <script src="../js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
+        <script src="../js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
-        <script src="../js/scripts.js"?<?php echo time(); ?>></script>
+        <script src="../js/scripts.js?<?php echo time(); ?>"></script>
         
     </body>
 </html>

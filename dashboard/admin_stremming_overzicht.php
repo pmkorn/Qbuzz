@@ -114,11 +114,11 @@
             </div>
         </div>
 
-        <script src="../js/bootstrap.bundle.js"?<?php echo time(); ?>></script>
-        <script src="../js/jquery-3.7.1.js"?<?php echo time(); ?>></script>
-        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+        <script src="../js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
+        <script src="../js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
+        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js?<?php echo time(); ?>"></script>
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
-        <script src="../js/scripts.js"?<?php echo time(); ?>></script>
+        <script src="../js/scripts.js?<?php echo time(); ?>"></script>
         <script>
             let table = new DataTable('#obstructionTable', {
               language: {
