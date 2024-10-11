@@ -42,35 +42,12 @@
 
                             <div class="col">
                                 <div class="card">
-                                    <div class="card-header">
-                                        Card 1
+                                    <div class="card-body">
+                                        
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Card 2
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Card 3
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Card 4
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
 
