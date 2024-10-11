@@ -40,6 +40,13 @@
 
                         <div class="row">
 
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Welkom
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
