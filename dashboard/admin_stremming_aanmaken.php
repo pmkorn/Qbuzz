@@ -25,10 +25,10 @@
         <meta name="author" content="" />
         <title>Dashboard - <?php echo $page; ?></title>
 
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/bootstrap-icons.css">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/bootstrap-icons.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/styles.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/main.css?<?php echo time(); ?>">
 
     </head>
     <body class="sb-nav-fixed">
@@ -38,16 +38,70 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4 section-title">Stremmingen - Aanmaken</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Stremmingen</li>
-                            <li class="breadcrumb-item">Aanmaken</li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-md-12">
-                                                                   
+                        <h1 class="mt-4 section-title">Stremmingen - Aanmaken <i class="bi bi-exclamation-triangle-fill text-danger"></i></h1>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb3">
+                                                <label for="obstructionRegion" class="form-label">Regio:</label>
+                                                <select id="obstructionRegion" class="form-select">
+                                                    <option selected>Selecteer regio</option>
+                                                    <option value="Drenthe">Drenthe</option>
+                                                    <option value="Friesland">Friesland</option>
+                                                    <option value="Groningen">Groningen</option>
+                                                    <option value="Groningen Stad">Groningen stad</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="obstructionNumber" class="form-label">Stremmingsnummer:</label>
+                                                <input type="text" id="obstructionNumber" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="obstructionType">Type:</label>
+                                                <select id="obstructionType" class="form-select">
+                                                    <option selected>Selecteer type</option>
+                                                    <option value="Dienst mededeling">Dienst mededeling</option>
+                                                    <option value="Omleiding">Omleiding</option>
+                                                    <option value="Verkeershinder">Verkeershinder</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="obstructionPriority">Prioriteit:</label>
+                                                <select id="obstructionPriority" class="form-select">
+                                                    <option selected>Selecteer prioriteit</option>
+                                                    <option value="Normaal">Normaal</option>
+                                                    <option value="Spoed">Spoed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="obstructionPlace">Plaats:</label>
+                                                <input id="obstructionPlace" class="form-control" list="listObstructionPlaces" placeholder="Type een plaatsnaam">
+                                                <datalist id="listObstructionPlaces">
+                                                    <option value="Assen">
+                                                    <option value="Emmen">
+                                                    <option value="Groningen">
+                                                    <option value="Veendam">
+                                                </datalist>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -106,7 +160,7 @@
         <script src="../js/bootstrap.bundle.js"?<?php echo time(); ?>></script>
         <script src="../js/jquery-3.7.1.js"?<?php echo time(); ?>></script>
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
-        <script src="../js/scripts.js"?<?php echo time(); ?>></script>
+        <script src="../js/scripts.js"?<?php echo time(); ?>></script>        
         
     </body>
 </html>

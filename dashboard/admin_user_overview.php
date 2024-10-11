@@ -11,29 +11,22 @@
   access('ADMIN');
 
   include('../conn/db.inc.php');
-  $userOutput = '';
-  $sql = "SELECT * FROM members WHERE memberID NOT IN ('".$_SESSION['memberID']."')";
+  $employeeOutput = '';
+  $sql = "SELECT * FROM employees WHERE employeeID NOT IN ('".$_SESSION['employeeID']."')";
   if ($result = mysqli_query($conn, $sql)) {
     while ($row = mysqli_fetch_array($result)) {
-        $userOutput .= '<tr>';
-          $userOutput .= '<td>'.$row['memberID'].'</td>';
-          $userOutput .= '<td>'.$row['firstName'].' '.$row['lastName'].'</td>';
-          $userOutput .= '<td>'.$row['userName'].'</td>';
-          $userOutput .= '<td>'.date("d-F-Y", strtotime($row['signUpDate'])).'</td>';
-          if ($row['userMembership'] == 'full') {
-            $userOutput .= '<td><span class="badge badge-warning text-white">'.$row['userMembership'].'</td>';
-          } else if ($row['userMembership'] == 'premium') {
-            $userOutput .= '<td><span class="badge badge-success text-white">'.$row['userMembership'].'</td>';
-          } else {
-            $userOutput .= '<td><span class="badge badge-primary text-white">'.$row['userMembership'].'</td>';
-          }
-          $userOutput .= '<td>
+        $employeeOutput .= '<tr>';
+          $employeeOutput .= '<td>'.$row['employeeID'].'</td>';
+          $employeeOutput .= '<td>'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>';
+          $employeeOutput .= '<td>'.$row['employeeUserName'].'</td>';
+          $employeeOutput .= '<td>'.date("d-F-Y", strtotime($row['employeeSignUpDate'])).'</td>';
+          $employeeOutput .= '<td>
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                                 <label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>
                             </div>
                         </td>';
-        $userOutput .= '</tr>';
+        $employeeOutput .= '</tr>';
     }
   }
 
@@ -50,10 +43,10 @@
         <meta name="author" content="" />
         <title>Dashboard - <?php echo $page; ?></title>
 
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/bootstrap-icons.css">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/bootstrap-icons.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/styles.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/main.css?<?php echo time(); ?>">
 
     </head>
     <body class="sb-nav-fixed">
@@ -63,11 +56,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Gebruikers - Overzicht</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Gebruikers</li>
-                            <li class="breadcrumb-item">Overzicht</li>
-                        </ol>
+                        <h1 class="section-title mt-4">Gebruikers - Overzicht</h1>
                         <hr class="dropdown-divider mb-4">
                         <div class="row">
                             <div class="col-md-12">
@@ -83,14 +72,13 @@
                                                 <th>#</th>
                                                 <th>Naam</th>
                                                 <th>Gebruikersnaam</th>
-                                                <th>Lid sinds</th>
-                                                <th>Lidmaatschap</th>
+                                                <th>Account sinds</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-group-divider">
                                             <?php
-                                                echo $userOutput;
+                                                echo $employeeOutput;
                                             ?>
                                         </tbody>
                                     </table>

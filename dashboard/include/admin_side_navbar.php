@@ -56,7 +56,7 @@
                         <a class="nav-link" href="">Aanmaken</a>
                     </nav>
                 </div>
-                <div class="sb-sidenav-menu-heading">Users</div>
+                <div class="sb-sidenav-menu-heading">Gebruikers</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers">
                     <div class="sb-nav-link-icon"><i class="bi bi-people"></i></div>
                     Gebruikers
@@ -64,7 +64,7 @@
                 </a>
                 <div class="collapse" id="collapseUsers" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="admin/user/overview/">Overzicht</a>
+                        <a class="nav-link" href="admin/gebruikers/overzicht/">Overzicht</a>
                     </nav>
                 </div>
                 <div class="sb-sidenav-menu-heading">Admin</div>

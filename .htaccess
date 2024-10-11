@@ -6,6 +6,7 @@ RewriteRule ^stremmingen/ stremmingen.php [NC,L]
 RewriteRule ^meldingen/ meldingen.php [NC,L]
 RewriteRule ^admin/stremmingen/overzicht/ dashboard/admin_stremming_overzicht.php [NC,L]
 RewriteRule ^admin/stremmingen/aanmaken/ dashboard/admin_stremming_aanmaken.php [NC,L]
+RewriteRule ^admin/gebruikers/overzicht/ dashboard/admin_user_overview.php [NC,L]
 RewriteRule ^admin/ dashboard/admin.php [NC,L]
 RewriteRule ^uitloggen/ scripts/user_logout.php [NC,L] 
 

@@ -23,10 +23,10 @@
         <meta name="author" content="" />
         <title>Dashboard - <?php echo $page; ?></title>
 
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/bootstrap-icons.css">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/bootstrap-icons.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/styles.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/main.css?<?php echo time(); ?>">
 
     </head>
     <body class="sb-nav-fixed">
