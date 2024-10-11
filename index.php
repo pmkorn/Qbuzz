@@ -64,14 +64,7 @@
             <p class="section-content">Team infraGD</p>
           </div>
           <div class="col-md-6">
-            <div class="callout callout-orange">
-              <span class="bi bi-exclamation-triangle-fill"></span>
-              stremming <strong>GD24-G001</strong> is gewijzigd!
-            </div>
-            <div class="callout callout-orange">
-            <span class="bi bi-exclamation-triangle-fill"></span>
-              stremming <strong>GD24-G002</strong> is gewijzigd!
-            </div>
+            
           </div>
         </div>
       </div>

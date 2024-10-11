@@ -40,7 +40,10 @@
                                 <td>'.$lines.'</td>
                                 <td class="obstruction-status">'.$status.'</td>
                                 <td>
-                                  <a href="" class="fs-4"><i class="bi bi-file-pdf-fill text-bg-danger"></i></a>
+                                  <a href="" class="fs-4"><i class="bi bi-file-pdf-fill text-bg-danger me-3"></i></a>
+                                </td>
+                                <td>
+                                  <a href="" class=""><i class="bi bi-pencil-square text-success"></i></a>
                                 </td>
                               </tr>
                             ';
@@ -87,7 +90,8 @@
                                             <th>Periode</th>
                                             <th>Lijnen</th>
                                             <th>Status</th>
-                                            <th>Bestand</th>
+                                            <th>Document</th>
+                                            <th>Actie</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-group-divider">

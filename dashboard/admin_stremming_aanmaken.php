@@ -47,7 +47,7 @@
                                             <div class="mb3">
                                                 <label for="obstructionRegion" class="form-label">Regio:</label>
                                                 <select id="obstructionRegion" class="form-select">
-                                                    <option selected>Selecteer regio</option>
+                                                    <option selected>---Selecteer regio---</option>
                                                     <option value="Drenthe">Drenthe</option>
                                                     <option value="Friesland">Friesland</option>
                                                     <option value="Groningen">Groningen</option>
@@ -67,7 +67,7 @@
                                             <div class="mb-3">
                                                 <label for="obstructionType">Type:</label>
                                                 <select id="obstructionType" class="form-select">
-                                                    <option selected>Selecteer type</option>
+                                                    <option selected>---Selecteer type---</option>
                                                     <option value="Dienst mededeling">Dienst mededeling</option>
                                                     <option value="Omleiding">Omleiding</option>
                                                     <option value="Verkeershinder">Verkeershinder</option>
@@ -78,7 +78,7 @@
                                             <div class="mb-3">
                                                 <label for="obstructionPriority">Prioriteit:</label>
                                                 <select id="obstructionPriority" class="form-select">
-                                                    <option selected>Selecteer prioriteit</option>
+                                                    <option selected>---Selecteer prioriteit---</option>
                                                     <option value="Normaal">Normaal</option>
                                                     <option value="Spoed">Spoed</option>
                                                 </select>

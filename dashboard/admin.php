@@ -38,16 +38,74 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4 section-title my-3">Dashboard</h1>
 
-                        <div class="row row-cols-lg-4s">
+                        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 g-3">
 
                             <div class="col">
-                                <div class="card">
+                                <div class="card h-100">
                                     <div class="card-body">
-                                        
+                                        <div class="d-flex">
+                                            <div class="text-start me-3">
+                                                <i class="bi bi-geo-alt display-3"></i>
+                                            </div>
+                                            <div class="text-start">
+                                                <h4>Stremmingen</h4>
+                                                <p>Drenthe <small></small></p>
+                                                <p>Friesland</p>
+                                                <p>Groningen</p>
+                                                <p>Groningen Stad</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="text-start me-3">
+                                                <i class="bi bi-sign-stop display-3"></i>
+                                            </div>
+                                            <div class="text-start">
+                                                <h5>Haltes</h5>
+                                                <p>slnvslv sfl sfbndbojdnf bk</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="text-start me-3">
+                                                <i class="bi bi-list-task display-3"></i>
+                                            </div>
+                                            <div class="text-start">
+                                                <h5>Werkorders</h5>
+                                                <p>slnvslv sfl sfbndbojdnf bk</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="text-start me-3">
+                                                <i class="bi bi-bell display-3"></i>
+                                            </div>
+                                            <div class="text-start">
+                                                <h5>Meldingen</h5>
+                                                <p>slnvslv sfl sfbndbojdnf bk</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 

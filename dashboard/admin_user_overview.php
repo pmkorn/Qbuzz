@@ -16,7 +16,6 @@
   if ($result = mysqli_query($conn, $sql)) {
     while ($row = mysqli_fetch_array($result)) {
         $employeeOutput .= '<tr>';
-          $employeeOutput .= '<td>'.$row['employeeID'].'</td>';
           $employeeOutput .= '<td>'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>';
           $employeeOutput .= '<td>'.$row['employeeUserName'].'</td>';
           $employeeOutput .= '<td>'.date("d-F-Y", strtotime($row['employeeSignUpDate'])).'</td>';
@@ -45,6 +44,7 @@
 
         <link rel="stylesheet" href="../css/bootstrap.css?<?php echo time(); ?>">
         <link rel="stylesheet" href="../css/bootstrap-icons.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css?<?php echo time(); ?>">
         <link rel="stylesheet" href="../css/styles.css?<?php echo time(); ?>">
         <link rel="stylesheet" href="../css/main.css?<?php echo time(); ?>">
 
@@ -66,10 +66,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table-responsive">
-                                    <table class="table">
+                                    <table id="employeeTable" class="table">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
                                                 <th>Naam</th>
                                                 <th>Gebruikersnaam</th>
                                                 <th>Account sinds</th>
@@ -142,8 +141,16 @@
 
         <script src="../js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
         <script src="../js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
+        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js?<?php echo time(); ?>"></script>
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
         <script src="../js/scripts.js?<?php echo time(); ?>"></script>
+        <script>
+            let table = new DataTable('#employeeTable', {
+              language: {
+                url: 'https://cdn.datatables.net/plug-ins/2.1.8/i18n/nl-NL.json',
+              }
+            });
+        </script>
         
     </body>
 </html>
