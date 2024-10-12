@@ -11,24 +11,7 @@
   access('ADMIN');
 
   include('../conn/db.inc.php');
-  $employeeOutput = '';
-  $sql = "SELECT * FROM employees WHERE employeeID NOT IN ('".$_SESSION['employeeID']."')";
-  if ($result = mysqli_query($conn, $sql)) {
-    while ($row = mysqli_fetch_array($result)) {
-        $employeeOutput .= '<tr>';
-          $employeeOutput .= '<td><img src="https://placehold.co/30x30" alt="Profile picture" class="img-fluid rounded-circle me-3">'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>';
-          $employeeOutput .= '<td>'.$row['employeeUserName'].'</td>';
-          $employeeOutput .= '<td>'.$row['employeeEmail'].'</td>';
-          $employeeOutput .= '<td>'.date("d-F-Y", strtotime($row['employeeSignUpDate'])).'</td>';
-          $employeeOutput .= '<td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>
-                            </div>
-                        </td>';
-        $employeeOutput .= '</tr>';
-    }
-  }
+  
 
 ?>
 
@@ -57,31 +40,28 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="section-title mt-4">Gebruikers - Overzicht</h1>
+                        <h1 class="section-title mt-4">Werkorders - Overzicht</h1>
                         <hr class="dropdown-divider mb-4">
                         <div class="row">
                             <div class="col-md-12">
-                                <button class="btn btn-danger mb-4"><i class="bi bi-dash-circle me-3"></i>Verwijderen</button>
-                                <button class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-plus-circle me-3"></i>Gebruiker toevoegen</button>
+                                
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="table-responsive">
-                                    <table id="employeeTable" class="table">
+                                    <table id="workorderTable" class="table">
                                         <thead>
                                             <tr>
-                                                <th>Naam</th>
-                                                <th>Gebruikersnaam</th>
-                                                <th>Email</th>
-                                                <th>Account sinds</th>
+                                                <th>#</th>
+                                                <th>Halte</th>
+                                                <th>Incident</th>
+                                                <th>Geplaatst</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-group-divider">
-                                            <?php
-                                                echo $employeeOutput;
-                                            ?>
+                                            
                                         </tbody>
                                     </table>
                                 </div>                                    

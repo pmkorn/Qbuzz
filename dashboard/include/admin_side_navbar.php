@@ -41,8 +41,8 @@
                 </a>
                 <div class="collapse" id="collapseWorkorders" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="">Overzicht</a>
-                        <a class="nav-link" href="">Aanmaken</a>
+                        <a class="nav-link" href="admin/werkorders/overzicht/">Overzicht</a>
+                        <a class="nav-link" href="admin/werkorders/aanmaken/">Aanmaken</a>
                     </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseNotofications" aria-expanded="false" aria-controls="collapseNotofications">
