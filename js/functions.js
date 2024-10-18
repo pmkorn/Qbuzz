@@ -42,13 +42,13 @@ $(document).ready( function(){
 
   });
 
-  $('#employeeUserName').keypress(function(e){
-    if (e.which == 13) callback();
-  });
-  $('#employeeUserPassword').keypress(function(e){
-    if (e.which == 13) callback();
-  })
-  $('#btnEmployeeLogin').on('click', callback);
+  // $('#employeeUserName').keypress(function(e){
+  //   if (e.which == 13) callback();
+  // });
+  // $('#employeeUserPassword').keypress(function(e){
+  //   if (e.which == 13) callback();
+  // })
+  // $('#btnEmployeeLogin').on('click', callback);
 
   // Register user
   $('#btnUserRegister').on('click', function() {
@@ -90,5 +90,30 @@ $(document).ready( function(){
     $(".nav").find(".active").removeClass("active");
     $(this).addClass("active");
  });
+
+
+
+  //INSERT WORKORDERS
+  $("#insertWorkOrder").on('click', function() {
+  let busstopList = $("#busstopList").val();
+  let busStopID = $('#busstopListOverview [value="' + busstopList +'"]').data('id');
+   
+  //console.log($('#busstopListOverview [value="' + busstopList +'"]').data('id')+ ' ' + busstopList );
+  });
+
+  $('#category1').on('change', function() {
+    let categoryID = $(this).val();
+    $.ajax ({
+      url: '../scripts/findSubCat.php',
+      type: "POST",
+      cache: false,
+      data: {
+        categoryID: categoryID
+      },
+      success: function(data) {
+        $('#category2').html(data);
+      }
+    });
+  });
 
 });

@@ -13,12 +13,21 @@
   include('../conn/db.inc.php');
   
   $busstopListOverview = '';
-  $sql = "SELECT * FROM busstops";
-  if ($result = mysqli_query($conn, $sql)) {
-    while ($row = mysqli_fetch_array($result)) {
+  $sqlBusstops = "SELECT * FROM busstops";
+  if ($resultBusstops = mysqli_query($conn, $sqlBusstops)) {
+    while ($row = mysqli_fetch_array($resultBusstops)) {
         $busstopListOverview .= '<option value="'.$row['busStopName'].' '.$row['busStopNumber'].'" data-id="'.$row['busStopID'].'">';
     }
   }
+
+  $categoryList = '';
+  $sqlCategory = "SELECT * FROM category WHERE categoryParent = 0";
+  if ($resultCategory = mysqli_query($conn, $sqlCategory)) {
+    while ($rowCategory = mysqli_fetch_array($resultCategory)) {
+        $categoryList .= '<option value="'.$rowCategory['categoryID'].'">'.$rowCategory['categoryName'].'</option>';
+    }
+  }
+
 
 ?>
 
@@ -57,21 +66,27 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="busstopList">Haltes</label>
-                                    <input type="text" class="form-control" list="busstopListOverview" id="busstopList">
+                                    <label for="busstopList">Halte</label>
+                                    <input type="text" class="form-control" list="busstopListOverview" id="busstopList" placeholder="Type haltenaam of nummer">
                                     <datalist id="busstopListOverview">
                                         <?php echo $busstopListOverview; ?>
                                     </datalist>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="incidentType" class="form-label">Incident type</label>
-                                    <select id="incidentType" class="form-select">
+                                    <label for="category1" class="form-label">Incident type</label>
+                                    <select id="category1" class="form-select">
                                         <option value="">---Selecteer optie---</option>
-                                        <option value="haltepaal">Haltepaal</option>
-                                        <option value="haltevertrekstaat">Haltevertrekstaat</option>
-                                        <option value="haltebord">Haltebord</option>
+                                        <?php echo $categoryList; ?>
                                     </select>
-                                </div>                            
+                                </div>
+                                <div class="mb-3">
+                                    <label for="category2" class="form-label">Incident type</label>
+                                    <select id="category2" class="form-select">
+                                        <option value="">---Selecteer optie---</option>
+                                        
+                                    </select>
+                                </div>
+                                <button id="insertWordkOrder" class="btn btn-yellow">Aanmaken</button>                          
                             </div>
                         </div>
                     </div>
@@ -88,61 +103,6 @@
                         </div>
                     </div>
                 </footer>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel"><i class="bi bi-person-add"></i> Werknemer toevoegen</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="addEmployee">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="employeeFirstName" class="form-label">Voornaam</label>
-                                        <input type="text" class="form-control" id="employeeFirstName">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="employeeLastName" class="form-label">Achternaam</label>
-                                        <input type="text" class="form-control" id="employeeLastName">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">    
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="employeeEmail" class="form-label">Email</label>
-                                        <input type="text" class="form-control" id="employeeEmail">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="employeeMobile" class="form-label">Mobiel</label>
-                                        <input type="text" class="form-control" id="employeeMobile">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="mb-3">
-                                         <label for="employeePermissions">Rechten</label>
-                                    </div>                                   
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Afsluiten</button>
-                        <button type="button" class="btn btn-success">Opslaan</button>
-                    </div>
-                </div>
             </div>
         </div>
 
