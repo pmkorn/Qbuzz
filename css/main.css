@@ -248,7 +248,7 @@ header .navbar .navbar-toggler {
     transition: all 0.2s;
     height: 1px;
     width: 100%;
-    background-color: #003750;
+    background-color: rgb(0, 55, 80);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -282,7 +282,7 @@ header .navbar .navbar-toggler {
   font-size: 1.5rem;
   font-weight: 300;
   text-transform: uppercase;
-  color: #003750;
+  color: rgb(0, 55, 80);
 }
 
 .section-title:after {
@@ -297,7 +297,7 @@ header .navbar .navbar-toggler {
 .section-content {
   font-size: 1rem;
   font-weight: bold;
-  color: #003750;
+  color: rgb(0, 55, 80);
 }
 
 .callout {
@@ -393,12 +393,12 @@ textarea {
 }
 
 .navbar .nav-link {
-  color: #003750;
+  color: rgb(0, 55, 80);
   font-weight: 300;
 }
 
 .sb-sidenav-footer {
-  color: #eff8fc;
+  color: rgb(239, 248, 252);
 }
 
 .dt-input {

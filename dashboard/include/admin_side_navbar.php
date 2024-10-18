@@ -30,7 +30,7 @@
                 </a>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="">Overzicht</a>
+                        <a class="nav-link" href="admin/haltes/overzicht/">Overzicht</a>
                         <a class="nav-link" href="">Aanmaken</a>
                     </nav>
                 </div>

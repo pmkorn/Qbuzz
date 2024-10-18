@@ -141,6 +141,9 @@
     $(document).ready(function(){
        //Initialize datatable
        let table = new DataTable("#obstructionTable", {
+        language: {
+                url: 'https://cdn.datatables.net/plug-ins/2.1.8/i18n/nl-NL.json',
+        },
         responsive: true
        });
 

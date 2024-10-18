@@ -11,14 +11,26 @@
   access('ADMIN');
 
   include('../conn/db.inc.php');
-  
-  $busstopListOverview = '';
-  $sql = "SELECT * FROM busstops";
-  if ($result = mysqli_query($conn, $sql)) {
-    while ($row = mysqli_fetch_array($result)) {
-        $busstopListOverview .= '<option value="'.$row['busStopName'].' '.$row['busStopNumber'].'" data-id="'.$row['busStopID'].'">';
+
+  $busstopOutput = '';
+  $sqlBusstops = 'SELECT * FROM busstops';
+  if ($sqlResultBusstops = mysqli_query($conn, $sqlBusstops)) {
+    while ($rowBusstops = mysqli_fetch_array($sqlResultBusstops)) {
+        $busstopOutput .= '<tr>';
+            $busstopOutput .= '<td><img src="../images/haltebord.png" class="img-fluid" width="25px" alt="Bushalte"></td>';
+            $busstopOutput .= '<td>'.$rowBusstops['busStopNumber'].'</td>';
+            $busstopOutput .= '<td>'.$rowBusstops['busStopName'].'</td>';
+            $busstopOutput .= '<td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-eye"></i></button>
+                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-pen"></i></button>
+                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                </div>
+            </td>';
+        $busstopOutput .= '</tr>';
     }
   }
+  
 
 ?>
 
@@ -47,7 +59,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="section-title mt-4">Werkorders - Aanmaken</h1>
+                        <h1 class="section-title mt-4">Halte - Overzicht</h1>
                         <hr class="dropdown-divider mb-4">
                         <div class="row">
                             <div class="col-md-12">
@@ -55,23 +67,22 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="busstopList">Haltes</label>
-                                    <input type="text" class="form-control" list="busstopListOverview" id="busstopList">
-                                    <datalist id="busstopListOverview">
-                                        <?php echo $busstopListOverview; ?>
-                                    </datalist>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="incidentType" class="form-label">Incident type</label>
-                                    <select id="incidentType" class="form-select">
-                                        <option value="">---Selecteer optie---</option>
-                                        <option value="haltepaal">Haltepaal</option>
-                                        <option value="haltevertrekstaat">Haltevertrekstaat</option>
-                                        <option value="haltebord">Haltebord</option>
-                                    </select>
-                                </div>                            
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table id="busstopTable" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Haltenummer</th>
+                                                <th>Haltenaam</th>
+                                                <th>Actie</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider">
+                                            <?php echo $busstopOutput; ?>
+                                        </tbody>
+                                    </table>
+                                </div>                                    
                             </div>
                         </div>
                     </div>
@@ -152,7 +163,10 @@
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
         <script src="../js/scripts.js?<?php echo time(); ?>"></script>
         <script>
-            let table = new DataTable('#employeeTable', {
+            let table = new DataTable('#busstopTable', {
+                columnDefs: [
+                    { targets: '_all', className: 'text-left' }
+                ],
               language: {
                 url: 'https://cdn.datatables.net/plug-ins/2.1.8/i18n/nl-NL.json',
               }

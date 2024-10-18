@@ -68,6 +68,8 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css?<?php echo time(); ?>">
         <link rel="stylesheet" href="../css/styles.css?<?php echo time(); ?>">
         <link rel="stylesheet" href="../css/main.css?<?php echo time(); ?>">
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.css">
 
     </head>
     <body class="sb-nav-fixed">
@@ -123,11 +125,15 @@
         <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js?<?php echo time(); ?>"></script>
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
         <script src="../js/scripts.js?<?php echo time(); ?>"></script>
+        <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+        <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
+        <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.dataTables.js"></script>
         <script>
             let table = new DataTable('#obstructionTable', {
               language: {
                 url: 'https://cdn.datatables.net/plug-ins/2.1.8/i18n/nl-NL.json',
-              }
+              },
+              responsive: true
             });
         </script>
         

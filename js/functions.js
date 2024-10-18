@@ -42,6 +42,14 @@ $(document).ready( function(){
 
   });
 
+  $('#employeeUserName').keypress(function(e){
+    if (e.which == 13) callback();
+  });
+  $('#employeeUserPassword').keypress(function(e){
+    if (e.which == 13) callback();
+  })
+  $('#btnEmployeeLogin').on('click', callback);
+
   // Register user
   $('#btnUserRegister').on('click', function() {
     let firstName = $('#firstName').val();
