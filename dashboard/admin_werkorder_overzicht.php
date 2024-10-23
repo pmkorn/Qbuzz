@@ -145,7 +145,7 @@
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
         <script src="../js/scripts.js?<?php echo time(); ?>"></script>
         <script>
-            let table = new DataTable('#employeeTable', {
+            let table = new DataTable('#workorderTable', {
               language: {
                 url: 'https://cdn.datatables.net/plug-ins/2.1.8/i18n/nl-NL.json',
               }
