@@ -313,6 +313,19 @@ header .navbar .navbar-toggler {
   font-weight: 600;
 }
 
+.sb-sidenav-qbuzz {
+  background-color: rgb(239, 248, 252) !important;
+  color: rgb(0, 55, 80) !important;
+}
+.sb-sidenav-qbuzz .nav-link {
+  color: rgb(0, 55, 80) !important;
+}
+
+.bg-qbuzz {
+  background-color: rgb(239, 248, 252) !important;
+  color: rgb(0, 55, 80) !important;
+}
+
 textarea {
   resize: unset;
 }

@@ -61,8 +61,8 @@
                         <hr class="dropdown-divider mb-4">
                         <div class="row">
                             <div class="col-md-12">
-                                <button class="btn btn-danger mb-4"><i class="bi bi-dash-circle me-3"></i>Verwijderen</button>
-                                <button class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-plus-circle me-3"></i>Gebruiker toevoegen</button>
+                                <button class="btn btn-link mb-4"><i class="bi bi-dash-circle me-3"></i>Verwijderen</button>
+                                <button class="btn btn-link mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-plus-circle me-3"></i>Gebruiker toevoegen</button>
                             </div>
                         </div>
                         <div class="row">

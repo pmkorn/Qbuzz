@@ -53,6 +53,17 @@
   color: $orange;
   font-weight: 600;
 }
+.sb-sidenav-qbuzz {
+  background-color: $lightblue !important;
+  color: $darkblue !important;
+  .nav-link {
+    color: $darkblue !important;
+  }
+}
+.bg-qbuzz {
+  background-color: $lightblue !important;
+  color: $darkblue !important;
+}
 
 
 

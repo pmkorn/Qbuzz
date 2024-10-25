@@ -67,6 +67,11 @@
                         <a class="nav-link" href="admin/gebruikers/overzicht/">Overzicht</a>
                     </nav>
                 </div>
+                <div class="collapse" id="collapseUsers" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="admin/gebruikers/aanmaken/">Aanmaken</a>
+                    </nav>
+                </div>
                 <div class="sb-sidenav-menu-heading">Admin</div>
                 <a class="nav-link" href="uitloggen/" >
                     <div class="sb-nav-link-icon"><i class="bi bi-box-arrow-right"></i></div>
