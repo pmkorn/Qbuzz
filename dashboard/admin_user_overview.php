@@ -96,7 +96,7 @@
                                                 <th>Gebruikersnaam</th>
                                                 <th>Email</th>
                                                 <th>Status</th>
-                                                <th>Opties</th>
+                                                <th>Optyiyiuyiyiyuies</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-group-divider">
