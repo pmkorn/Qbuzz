@@ -33,7 +33,8 @@
                                         <!--<label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>-->
                                     </div>
                                 </td>';
-            $employeeOutput .= '<td>
+          }
+          $employeeOutput .= '<td>
                                     <div class="dropwdown">
                                         <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Actie
@@ -44,8 +45,8 @@
                                                 <a class="dropdown-item" href="">Gegevens</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>';
-          }
         $employeeOutput .= '</tr>';
     }
   }
