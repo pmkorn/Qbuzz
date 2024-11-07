@@ -93,10 +93,10 @@
                                         <thead>
                                             <tr>
                                                 <th>Naam</th>
-                                                <th>Gebruikersnaamrqfwefn1</th>
+                                                <th>Gebruikersnaam</th>
                                                 <th>Email</th>
                                                 <th>Status</th>
-                                                <th>Optyiyiuyiyiyuiiuigiguguyges</th>
+                                                <th>Opties</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-group-divider">
