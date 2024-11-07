@@ -93,7 +93,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Naam</th>
-                                                <th>Gebruikersnaam</th>
+                                                <th>Gebruikersnaam1</th>
                                                 <th>Email</th>
                                                 <th>Status</th>
                                                 <th>Opties</th>
