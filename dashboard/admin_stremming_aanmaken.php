@@ -44,6 +44,17 @@
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="obstructionType">Type:</label>
+                                                <select id="obstructionType" class="form-select">
+                                                    <option selected>---Selecteer type---</option>
+                                                    <option value="Dienst mededeling">Dienstmededeling</option>
+                                                    <option value="Omleiding">Omleiding</option>
+                                                    <option value="Verkeershinder">Verkeershinder</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
                                             <div class="mb3">
                                                 <label for="obstructionRegion" class="form-label">Regio:</label>
                                                 <select id="obstructionRegion" class="form-select">
@@ -51,29 +62,11 @@
                                                     <option value="Drenthe">Drenthe</option>
                                                     <option value="Friesland">Friesland</option>
                                                     <option value="Groningen">Groningen</option>
-                                                    <option value="Groningen Stad">Groningen stad</option>
                                                 </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label for="obstructionNumber" class="form-label">Stremmingsnummer:</label>
-                                                <input type="text" id="obstructionNumber" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label for="obstructionType">Type:</label>
-                                                <select id="obstructionType" class="form-select">
-                                                    <option selected>---Selecteer type---</option>
-                                                    <option value="Dienst mededeling">Dienst mededeling</option>
-                                                    <option value="Omleiding">Omleiding</option>
-                                                    <option value="Verkeershinder">Verkeershinder</option>
-                                                </select>
-                                            </div>
-                                        </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label for="obstructionPriority">Prioriteit:</label>
@@ -99,6 +92,49 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="obstructionRoute">Route:</label>
+                                        <textarea id="obstructionRoute" class="form-control" rows="10" placeholder="Type routebeschrijving..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="obstructionCommentInternal">Opmerking Intern:</label>
+                                        <textarea id="" class="form-control" rows="4" placeholder="Opmerking voor intern"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="obstructionCommentExternal">Opmerking Extern:</label>
+                                        <textarea id="" class="form-control" rows="4" placeholder="Opmerking voor inexternern"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="obstructionExpiredStops">Vervallen haltes:</label>
+                                        <select id="obstructionExpiredStops" class="form-select" size="10" aria-label="Multiple Select" multiple select>
+                                            <option value="Veendam">Veendam</option>
+                                            <option value="Groningen">Groningen</option>
+                                            <option value="Assen">Assen</option>
+                                            <option value="Emmen">Emmen</option>
+                                            <option value="Leeuwarden">Leeuwarden</option>
+                                            <option value="Drachten">Drachten</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="obstructionTempraryStops">Tijdelijke haltes:</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4779.091189167631!2d6.543830187224907!3d53.20806519084199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1snl!2snl!4v1730982125619!5m2!1snl!2snl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </form>

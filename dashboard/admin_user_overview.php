@@ -19,13 +19,33 @@
           $employeeOutput .= '<td><img src="https://placehold.co/30x30" alt="Profile picture" class="img-fluid rounded-circle me-3">'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>';
           $employeeOutput .= '<td>'.$row['employeeUserName'].'</td>';
           $employeeOutput .= '<td>'.$row['employeeEmail'].'</td>';
-          $employeeOutput .= '<td>'.date("d-F-Y", strtotime($row['employeeSignUpDate'])).'</td>';
-          $employeeOutput .= '<td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>
-                            </div>
-                        </td>';
+          if ($row['employeeIsActive'] == 0) {
+            $employeeOutput .= '<td>
+                                    <div class="form-check form-switch" id="employee-status-'.$row['employeeID'].'">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="employee-'.$row['employeeID'].'" data-id="'.$row['employeeID'].'" data-is-active="'.$row['employeeIsActive'].'">
+                                        <!--<label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>-->
+                                    </div>
+                                </td>';
+          } else {
+            $employeeOutput .= '<td>
+                                    <div class="form-check form-switch id="employee-status-'.$row['employeeID'].'"">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="employee-'.$row['employeeID'].'" data-id="'.$row['employeeID'].'" data-is-active="'.$row['employeeIsActive'].'" checked>
+                                        <!--<label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>-->
+                                    </div>
+                                </td>';
+            $employeeOutput .= '<td>
+                                    <div class="dropwdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Actie
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="">Rechten</a>
+                                                <a class="dropdown-item" href="">Gegevens</a>
+                                            </li>
+                                        </ul>
+                                </td>';
+          }
         $employeeOutput .= '</tr>';
     }
   }
@@ -74,8 +94,8 @@
                                                 <th>Naam</th>
                                                 <th>Gebruikersnaam</th>
                                                 <th>Email</th>
-                                                <th>Account sinds</th>
                                                 <th>Status</th>
+                                                <th>Opties</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-group-divider">

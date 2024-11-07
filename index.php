@@ -56,15 +56,23 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <p class="section-content">
-              In deze omgeving kun je informatie vinden over stremmingen die eraan zitten te komen alsmede lopende stremmingen.<br>
-              Mochten er vragen zijn m.b.t. de stremming kun je ons bellen of mailen en wij proberen dan je vraag zo goed mogelijk te beantwoorden.
-            </p>
-            <p class="section-content">Team infraGD</p>
+          <div class="col-lg-4 col-md-6 col">
+            <div class="callout callout-orange h-100">
+              <strong>LET OP!!!</strong>
+              Stremming <strong>GD24-G001</strong> is afgelopen.
+            </div>
           </div>
-          <div class="col-md-6">
-            
+          <div class="col-lg-4 col-md-6 col">
+            <div class="callout callout-orange h-100">
+              <strong>LET OP!!!</strong>
+              Stremming <strong>GD24-D002</strong> is per direct ingegaan.
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col">
+            <div class="callout callout-orange h-100">
+              <strong>LET OP!!!</strong>
+              Stremming <strong>GD24-S003</strong> is per direct ingegaan. Alle wijzigingen zullen worden meegenomen in de wjziging.
+            </div>
           </div>
         </div>
       </div>

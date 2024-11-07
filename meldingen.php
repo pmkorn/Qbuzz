@@ -52,46 +52,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="section-title">Meldingen</h1>
+            <h1 class="section-title">Melding maken</h1>
           </div>
         </div>
-        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3">
-          
-          <div class="col">
-            <div class="callout callout-orange">
-              <i class="bi bi-exclamation-triangle-fill"></i>
-              stremming <strong>GD24-G001</strong> is gewijzigd!
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="callout callout-orange">
-              <i class="bi bi-exclamation-triangle-fill"></i>
-              stremming <strong>GD24-G001</strong> is gewijzigd!
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="callout callout-orange">
-              <i class="bi bi-exclamation-triangle-fill"></i>
-              stremming <strong>GD24-G001</strong> is gewijzigd!
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="callout callout-orange">
-              <i class="bi bi-exclamation-triangle-fill"></i>
-              stremming <strong>GD24-G001</strong> is gewijzigd!
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="callout callout-orange">
-              <i class="bi bi-exclamation-triangle-fill"></i>
-              stremming <strong>GD24-G001</strong> is gewijzigd!
-            </div>
-          </div>
-
+        <div class="row">
+          <div class="col-md-6"></div>
         </div>
       </div>
     </section>

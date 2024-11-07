@@ -20,14 +20,15 @@
           <?php 
             if (!isset($_SESSION['employeeID'])) {
               echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
-                echo '<a class="me-3 nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalLogin"><i class="bi bi-person"></i> Inloggen</a>';
+                //echo '<a class="me-3 nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalLogin"><i class="bi bi-lock"></i> Inloggen</a>';
+                echo '<a class="me-3 nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalLogin"><i class="bi bi-lock"></i></a>';
               echo '</li>';
-              echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
-                echo '<a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalRegister"><i class="bi bi-lock"></i> Registreren</a>';
-              echo '</li>';
+              // echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
+              //   echo '<a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#modalRegister"><i class="bi bi-person"></i> Registreren</a>';
+              // echo '</li>';
             } else if (isset($_SESSION['employeeID']) && $_SESSION['employeeRole'] === 'admin') {
               echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';
-                echo '<a class="nav-link" href="admin/">Admin</a>';
+                echo '<a class="nav-link" href="admin/"><i class="bi bi-speedometer2"></i> Admin</a>';
               echo '</li>';
               echo '<li class="nav-item me-lg-3 mb-3 mb-lg-0">';  
                 echo '<a class="nav-link" href="uitloggen/"><i class="bi bi-unlock"></i> Uitloggen</a>';

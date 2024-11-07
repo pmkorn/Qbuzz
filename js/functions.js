@@ -116,4 +116,24 @@ $(document).ready( function(){
     });
   });
 
+  // Update user Active or Non-Active
+  $('[type="checkbox"]').on('change', function(){
+    
+    let employeeID        = $(this).data("id");
+    let employeeIsActive  = $(this).data("is-active");
+    
+    $.ajax({
+      url: '../scripts/user_status.php',
+      type: 'POST',
+      data: {
+        employeeID: employeeID,
+        employeeIsActive: employeeIsActive
+      },
+      cache: false,
+      success: function(response){
+        $('#employee-status-'+employeeID).html(response);
+      }
+    });
+  });
+
 });
