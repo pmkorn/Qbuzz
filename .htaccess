@@ -10,6 +10,7 @@ RewriteRule ^admin/stremmingen/overzicht/ dashboard/admin_stremming_overzicht.ph
 RewriteRule ^admin/stremmingen/aanmaken/ dashboard/admin_stremming_aanmaken.php [NC,L]
 RewriteRule ^admin/werkorders/overzicht/ dashboard/admin_werkorder_overzicht.php [NC,L]
 RewriteRule ^admin/werkorders/aanmaken/ dashboard/admin_werkorder_aanmaken.php [NC,L]
+RewriteRule ^admin/gebruikers/overzicht/([0-9a-zA-Z_-]+)/ dashboard/admin_user_detail.php?employeeID=$1 [NC,L]
 RewriteRule ^admin/gebruikers/overzicht/ dashboard/admin_user_overview.php [NC,L]
 RewriteRule ^admin/ dashboard/admin.php [NC,L]
 RewriteRule ^uitloggen/ scripts/user_logout.php [NC,L] 

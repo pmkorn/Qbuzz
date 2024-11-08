@@ -1,55 +1,31 @@
 <?php
 
-  session_start();
+    // Start session
+    session_start();
 
-  ini_set('display_errors','1');
-  ini_set('display_startup_errors','1');
-  error_reporting(E_ALL);
+    // Display error notifications on display
+    ini_set('display_errors','1');
+    ini_set('display_startup_errors','1');
+    error_reporting(E_ALL);
 
-  include('../include/title.inc.php');
-  include('../scripts/user_access.php');
-  access('ADMIN');
+    // 
+    include('../include/title.inc.php');
+    include('../scripts/user_access.php');
+    access('ADMIN');
 
-  include('../conn/db.inc.php');
-  $employeeOutput = '';
-  $sql = "SELECT * FROM employees WHERE employeeID NOT IN ('".$_SESSION['employeeID']."')";
-  if ($result = mysqli_query($conn, $sql)) {
-    while ($row = mysqli_fetch_array($result)) {
-        $employeeOutput .= '<tr>';
-          $employeeOutput .= '<td><img src="https://placehold.co/30x30" alt="Profile picture" class="img-fluid rounded-circle me-3">'.$row['employeeFirstName'].' '.$row['employeeLastName'].'</td>';
-          $employeeOutput .= '<td>'.$row['employeeUserName'].'</td>';
-          $employeeOutput .= '<td>'.$row['employeeEmail'].'</td>';
-          if ($row['employeeIsActive'] == 0) {
-            $employeeOutput .= '<td>
-                                    <div class="form-check form-switch" id="employee-status-'.$row['employeeID'].'">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="employee-'.$row['employeeID'].'" data-id="'.$row['employeeID'].'" data-is-active="'.$row['employeeIsActive'].'">
-                                        <!--<label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>-->
-                                    </div>
-                                </td>';
-          } else {
-            $employeeOutput .= '<td>
-                                    <div class="form-check form-switch id="employee-status-'.$row['employeeID'].'"">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="employee-'.$row['employeeID'].'" data-id="'.$row['employeeID'].'" data-is-active="'.$row['employeeIsActive'].'" checked>
-                                        <!--<label class="form-check-label" for="flexSwitchCheckChecked">Aktief</label>-->
-                                    </div>
-                                </td>';
-          }
-          $employeeOutput .= '<td>
-                                    <div class="dropwdown">
-                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Actie
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a class="dropdown-item" href="">Rechten</a>
-                                                <a class="dropdown-item" href="admin/gebruikers/overzicht/'.$row['employeeID'].'/">Gegevens</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>';
-        $employeeOutput .= '</tr>';
+    include('../conn/db.inc.php');
+
+    $employeeID = $_GET['employeeID'];
+
+    $employee_name = '';
+
+    $sql = "SELECT * FROM employees WHERE employeeID = '$employeeID' LIMIT 1";
+    if ($result = mysqli_query($conn, $sql)) {
+        while ($row = mysqli_fetch_array($result)) {
+            $employee_name = $row['employeeFirstName'].' '.$row['employeeLastName'];
+            $employeeMobile = $row['employeeMobile'];
+        }
     }
-  }
 
 ?>
 
@@ -81,31 +57,49 @@
                         <h1 class="section-title mt-4">Gebruikers - Overzicht</h1>
                         <hr class="dropdown-divider mb-4">
                         <div class="row">
-                            <div class="col-md-12">
-                                <button class="btn btn-link mb-4"><i class="bi bi-dash-circle me-3"></i>Verwijderen</button>
-                                <button class="btn btn-link mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-plus-circle me-3"></i>Gebruiker toevoegen</button>
+                            <div class="col-md-3">
+                                <div class="card p-3">
+                                    <div class="profile-img mb-3">
+                                        <img src="https://placehold.co/300x300" alt="" class="img-fluid img-thumbnail rounded-circle">
+                                    </div>
+                                    <div class="profile-meta text-center">
+                                        <h5 class="mb-3"><?php echo $employee_name; ?></h5>
+                                        <a class="btn btn-yellow" href="tel:<?php echo $employeeMobile; ?>">Bellen</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="table-responsive">
-                                    <table id="employeeTable" class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Naam</th>
-                                                <th>Gebruikersnaam</th>
-                                                <th>Email</th>
-                                                <th>Status</th>
-                                                <th>Opties</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="table-group-divider">
-                                            <?php
-                                                echo $employeeOutput;
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                </div>                                    
+                            <div class="col-md-9">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Personalia</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Rechten</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Berichten</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane p-3 active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                        <h6>Personalia</h6>
+                                    </div>
+                                    <div class="tab-pane p-3" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                        <h6>Rechten</h6>
+                                    </div>
+                                    <div class="tab-pane p-3" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+                                        <h6>Berichten</h6>
+                                    </div>
+                                    <div class="tab-pane p-3" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">
+                                        <h6>Instellingen</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,13 +179,6 @@
         <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js?<?php echo time(); ?>"></script>
         <script src="../js/functions.js?<?php echo time(); ?>"></script>
         <script src="../js/scripts.js?<?php echo time(); ?>"></script>
-        <script>
-            let table = new DataTable('#employeeTable', {
-              language: {
-                url: 'https://cdn.datatables.net/plug-ins/2.1.8/i18n/nl-NL.json',
-              }
-            });
-        </script>
         
     </body>
 </html>
