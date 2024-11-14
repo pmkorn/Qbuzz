@@ -19,7 +19,7 @@
     $pdf = new FPDF();
     $pdf->AddPage();
     $pdf->Image('../images/qbuzz-logo.png', 10, 10, 50);
-    $pdf->SetX(80);
+    $pdf->SetXY(80, 30);
     $pdf->SetFont('Arial','B',16);
     $pdf->Cell(50,0,$obstructionType,0,0, 'C');
     $pdf->Output();
