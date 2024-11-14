@@ -8,6 +8,7 @@
     $sql = "SELECT * FROM obstructions WHERE obstructionNumber = '$obstructionNumber' LIMIT 1";
     if ($result = mysqli_query($conn, $sql)) {
         while ($row = mysqli_fetch_array($result)) {
+            $obstructionType = $row['obstructionType'];
             $obstructionNumber = $row['obstructionNumber'];
         }
     }
@@ -17,7 +18,9 @@
 
     $pdf = new FPDF();
     $pdf->AddPage();
+    $pdf->Image('../images/qbuzz-logo.png', 10, 10, 50);
+    $pdf->SetX(80);
     $pdf->SetFont('Arial','B',16);
-    $pdf->Cell(40,10,$obstructionNumber);
+    $pdf->Cell(50,0,$obstructionType,0,0, 'C');
     $pdf->Output();
 ?>
