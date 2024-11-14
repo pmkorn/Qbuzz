@@ -40,7 +40,7 @@
                                 <td>'.$lines.'</td>
                                 <td class="obstruction-status">'.$status.'</td>
                                 <td>
-                                  <a href="" class="fs-4"><i class="bi bi-file-pdf-fill text-bg-danger me-3"></i></a>
+                                  <a href="admin/stremmingen/overzicht/pdf/'.$rowObstruction['obstructionNumber'].'/" target="_blank" class="fs-4"><i class="bi bi-file-pdf-fill text-bg-danger me-3"></i></a>
                                 </td>
                                 <td>
                                   <a href="" class=""><i class="bi bi-pencil-square text-success"></i></a>
