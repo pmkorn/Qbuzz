@@ -10,6 +10,7 @@
         while ($row = mysqli_fetch_array($result)) {
             $obstructionType = $row['obstructionType'];
             $obstructionNumber = $row['obstructionNumber'];
+            $obstructionLines = $row['obstructionLines'];
         }
     }
 
@@ -22,5 +23,6 @@
     $pdf->SetXY(80, 30);
     $pdf->SetFont('Arial','B',16);
     $pdf->Cell(50,0,$obstructionType,0,0, 'C');
+    $pdf->Cell(50,0,str_replace(",",", ",$obstructionLines),0,0, 'C');
     $pdf->Output();
 ?>
