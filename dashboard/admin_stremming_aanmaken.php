@@ -55,6 +55,18 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="obstructionPriority">Prioriteit:</label>
+                                                <select id="obstructionPriority" class="form-select">
+                                                    <option selected>---Selecteer prioriteit---</option>
+                                                    <option value="Normaal">Normaal</option>
+                                                    <option value="Spoed">Spoed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="mb3">
                                                 <label for="obstructionRegion" class="form-label">Regio:</label>
                                                 <select id="obstructionRegion" class="form-select">
@@ -62,18 +74,6 @@
                                                     <option value="Drenthe">Drenthe</option>
                                                     <option value="Friesland">Friesland</option>
                                                     <option value="Groningen">Groningen</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="mb-3">
-                                                <label for="obstructionPriority">Prioriteit:</label>
-                                                <select id="obstructionPriority" class="form-select">
-                                                    <option selected>---Selecteer prioriteit---</option>
-                                                    <option value="Normaal">Normaal</option>
-                                                    <option value="Spoed">Spoed</option>
                                                 </select>
                                             </div>
                                         </div>
