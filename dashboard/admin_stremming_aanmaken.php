@@ -1,16 +1,23 @@
 <?php
 
-  session_start();
+    session_start();
 
-  ini_set('display_errors','1');
-  ini_set('display_startup_errors','1');
-  error_reporting(E_ALL);
+    ini_set('display_errors','1');
+    ini_set('display_startup_errors','1');
+    error_reporting(E_ALL);
 
-  include('../include/title.inc.php');
-  include('../scripts/user_access.php');
-  access('ADMIN');
+    include('../include/title.inc.php');
+    include('../scripts/user_access.php');
+    access('ADMIN');
 
-  include('../conn/db.inc.php');
+    include('../conn/db.inc.php');
+
+    $sql_provincie = "SELECT DISTINCT provincie FROM plaatsen";
+    if ($result_provincie = mysqli_query($conn, $sql_provincie)) {
+        while ($row_provincie = mysqli_fetch_array($result_provincie)) {
+            echo '';
+        }
+    }
 
 ?>
 
