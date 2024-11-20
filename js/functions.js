@@ -136,4 +136,44 @@ $(document).ready( function(){
     });
   });
 
+  // Fetch gemeente
+  $('#obstructionRegion').on('change', function() {
+    
+    let provincie = $(this).find(":selected").val();
+
+    $.ajax({
+      url: '../scripts/fetch_gemeente.php',
+      type: 'POST',
+      data: {
+        provincie: provincie
+      },
+      cache: false,
+      success: function(response) {
+        $('#obstructionCounty').prop("disabled", false);
+        $('#obstructionCounty').html(response);
+      }
+    });
+
+  });
+
+  // Fetch plaats
+  $('#obstructionCounty').on('change', function() {
+    
+    let gemeente = $(this).find(":selected").val();
+
+    $.ajax({
+      url: '../scripts/fetch_plaats.php',
+      type: 'POST',
+      data: {
+        gemeente: gemeente
+      },
+      cache: false,
+      success: function(response) {
+        $('#obstructionPlace').prop("disabled", false);
+        $('#listObstructionPlaces').html(response);
+      }
+    });
+
+  });
+
 });

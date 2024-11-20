@@ -12,10 +12,10 @@
 
     include('../conn/db.inc.php');
 
-    $sql_provincie = "SELECT DISTINCT provincie FROM plaatsen";
+    $sql_provincie = "SELECT * FROM provincies";
     if ($result_provincie = mysqli_query($conn, $sql_provincie)) {
         while ($row_provincie = mysqli_fetch_array($result_provincie)) {
-            echo '';
+            $output_provincie.= '<option value="'.$row_provincie['provincie'].'" data-provincie="'.$row_provincie['provincie'].'">'.$row_provincie['provincie'].'</option>';
         }
     }
 
@@ -78,9 +78,18 @@
                                                 <label for="obstructionRegion" class="form-label">Regio:</label>
                                                 <select id="obstructionRegion" class="form-select">
                                                     <option selected>---Selecteer regio---</option>
-                                                    <option value="Drenthe">Drenthe</option>
+                                                    <?php echo $output_provincie; ?>
+                                                    <!-- <option value="Drenthe">Drenthe</option>
                                                     <option value="Friesland">Friesland</option>
-                                                    <option value="Groningen">Groningen</option>
+                                                    <option value="Groningen">Groningen</option> -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb3">
+                                                <label for="obstructionCounty" class="form-label">Gemeente:</label>
+                                                <select id="obstructionCounty" class="form-select" disabled>
+                                                    <option selected>---Selecteer regio---</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -89,12 +98,9 @@
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label for="obstructionPlace">Plaats:</label>
-                                                <input id="obstructionPlace" class="form-control" list="listObstructionPlaces" placeholder="Type een plaatsnaam">
+                                                <input id="obstructionPlace" class="form-control" list="listObstructionPlaces" placeholder="Type een plaatsnaam" disabled>
                                                 <datalist id="listObstructionPlaces">
-                                                    <option value="Assen">
-                                                    <option value="Emmen">
-                                                    <option value="Groningen">
-                                                    <option value="Veendam">
+                                                    
                                                 </datalist>
                                             </div>
                                         </div>
