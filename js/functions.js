@@ -170,7 +170,7 @@ $(document).ready( function(){
       cache: false,
       success: function(response) {
         $('#obstructionPlace').prop("disabled", false);
-        $('#listObstructionPlaces').html(response);
+        $('#obstructionPlace').html(response);
       }
     });
 
