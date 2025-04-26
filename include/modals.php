@@ -135,7 +135,7 @@
                     <div class="row mb-3">
                         <h4 class="modal-title">Toevoegen</h4>
                     </div>
-                    
+
                     <div class="row mb-3">
                         <label for="omloop" class="col-sm-2 col-form-label">Omloop</label>
                         <div class="col-sm-10">
@@ -191,6 +191,24 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Voertuiginzet -->
+<div class="modal fade" id="voertuigInzet" tabindex="-1" aria-labelledby="voertuigInzet" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Voertuig inzetbaarheid</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+  
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Opslaan</button>
             </div>
         </div>
     </div>

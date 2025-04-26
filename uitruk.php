@@ -6,6 +6,7 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
+$vestiging = '';
 include('conn/db.inc.php');
 $sql = "SELECT * FROM vestiging";
 if ($result = mysqli_query($conn, $sql)) {
@@ -73,7 +74,66 @@ include('include/title.inc.php');
                             </select>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-success">Ga <i class="bi bi-arrow-right"></i></button>
+                            <button class="btn btn-success" id="GoTo">Ga <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-4">
+                        <h5>Openstaand</h5>
+                        <div class="alert alert-danger">
+                            <div class="top-section d-flex">
+                                <div class="d-flex flex-column text-center">
+                                    <span class="bi bi-bus-front-fill fs-3"></span>7614
+                                </div>
+                                <div class="vehicle-details">
+                                    <span class="badge bg-danger">FRL</span>
+                                    <span class="badge bg-danger">Setra S 419 UL 100 km 15 meter FRL</span>
+                                </div>
+                            </div>
+                            <div class="bottom-section">
+                                <span class="badge bg-danger">Lijn F315</span>
+                                <span class="badge bg-danger">Rit 1045</span>
+                                <span class="badge bg-danger">Omloop 200061</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>In behandeling</h5>
+                        <div class="alert alert-warning">
+                            <div class="top-section d-flex">
+                                <div class="d-flex flex-column text-center">
+                                    <span class="bi bi-bus-front-fill fs-3"></span>7614
+                                </div>
+                                <div class="vehicle-details">
+                                    <span class="badge bg-warning">FRL</span>
+                                    <span class="badge bg-warning">Setra S 419 UL 100 km 15 meter FRL</span>
+                                </div>
+                            </div>
+                            <div class="bottom-section">
+                                <span class="badge bg-warning">Lijn F315</span>
+                                <span class="badge bg-warning">Rit 1045</span>
+                                <span class="badge bg-warning">Omloop 200061</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Afgerond</h5>
+                        <div class="alert alert-success">
+                            <div class="top-section d-flex">
+                                <div class="d-flex flex-column text-center">
+                                    <span class="bi bi-bus-front-fill fs-3"></span>7614
+                                </div>
+                                <div class="vehicle-details">
+                                    <span class="badge bg-success">FRL</span>
+                                    <span class="badge bg-success">Setra S 419 UL 100 km 15 meter FRL</span>
+                                </div>
+                            </div>
+                            <div class="bottom-section">
+                                <span class="badge bg-success">Lijn F315</span>
+                                <span class="badge bg-success">Rit 1045</span>
+                                <span class="badge bg-success">Omloop 200061</span>
+                            </div>
                         </div>
                     </div>
                 </div>

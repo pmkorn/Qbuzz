@@ -176,4 +176,22 @@ $(document).ready( function(){
 
   });
 
+  $('.dots').on('click', function(){
+    
+    let voertuigNummer = $(this).data("nummer");
+
+    $.ajax({
+        url: '../scripts/fetch_voertuig_info.php',
+        type: 'POST',
+        data: {
+            voertuigNummer: voertuigNummer
+        },
+        cache: false,
+        success: function(response) {
+            $('#voertuigInzet .modal-body').html(response);
+        }
+    });
+
+  });
+
 });

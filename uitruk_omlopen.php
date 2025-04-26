@@ -7,15 +7,32 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 include('conn/db.inc.php');
-$sql = "SELECT * FROM uitruk";
+$sql = "SELECT *
+            FROM uitruk
+            INNER JOIN vestiging 
+            ON uitruk.vestigingID = vestiging.vestigingID";
 if ($result = mysqli_query($conn, $sql)) {
     while ($row = mysqli_fetch_array($result)) {
         $output .= '<tr>
+                        <td>'.$row['vestiging'].'</td>
                         <td>'.$row['dienst'].'</td>
                         <td>'.$row['omloop'].'</td>
                         <td>'.$row['voertuigID'].'</td>
-                        <td></td>
-                        <td><span class="badge text-bg-warning text-white">Pending</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Voertuig uitgereden
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Ja</a></li>
+                                    <li><a class="dropdown-item" href="#">Nee</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td><i class="bi bi-check-circle-fill text-success"></i>
+                            <i class="bi bi-exclamation-circle-fill text-warning"></i>
+                            <i class="bi bi-x-circle-fill text-danger"></i>
+                        </td>
                     </tr>';
     }
 }
@@ -78,6 +95,7 @@ include('include/title.inc.php');
                             <table id="uitrukTable" class="table nowrap" style="width:100%">
                                 <thead>
                                     <tr>
+                                        <th>Vestiging</th>
                                         <th>Dienst</th>
                                         <th>Omloop</th>
                                         <th>Voertuig</th>
