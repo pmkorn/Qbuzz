@@ -15,23 +15,37 @@
 @import 'responsive';
 @import 'print';
 
+.kenteken {
+    background-color: #F0AD4E;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 0 5px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+
+
 .bg-blue-touch {
   background-color: $blue-touch;
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-transform: uppercase;
   color: $darkblue;
+  margin-bottom: 1.0rem;
 }
 .section-title:after {
   content: '';
-  border-bottom: 3px solid $orange;
+  border-bottom: 1px solid $orange;
   display: block;
   height: 1px;
   width: 100px;
-  margin: 15px 0;
+  margin: 5px 0;
 }
 .section-content {
   font-size: 1rem;
@@ -226,4 +240,15 @@ textarea {
 .dt-input {
   background-color: white !important;
 }
+
+.form-check-input:checked{
+    background-color: $orange-dark !important;
+    border: 0;
+ }
+ .form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+    color: black;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 0.1rem $orange-dark !important;
+ }
 

@@ -274,24 +274,36 @@ header .navbar .navbar-toggler {
     visibility: hidden;
   }
 }
+.kenteken {
+  background-color: #F0AD4E;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 0 5px;
+  display: block;
+  width: 100px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 .bg-blue-touch {
   background-color: #eff8fc;
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-transform: uppercase;
   color: rgb(0, 55, 80);
+  margin-bottom: 1rem;
 }
 
 .section-title:after {
   content: "";
-  border-bottom: 3px solid rgb(255, 124, 0);
+  border-bottom: 1px solid rgb(255, 124, 0);
   display: block;
   height: 1px;
   width: 100px;
-  margin: 15px 0;
+  margin: 5px 0;
 }
 
 .section-content {
@@ -474,4 +486,16 @@ textarea {
 
 .dt-input {
   background-color: white !important;
+}
+
+.form-check-input:checked {
+  background-color: #db5103 !important;
+  border: 0;
+}
+
+.form-check-input:focus, .label::after, label.form-check-label:focus, .form-check-input::after, .form-check-input:not(:disabled):not(.disabled):active:focus {
+  color: black;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 0 0 0.1rem #db5103 !important;
 }/*# sourceMappingURL=main.css.map */
