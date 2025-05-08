@@ -31,6 +31,12 @@ if ($sqlFilterResult = mysqli_query($conn, $sqlFilter)) {
     }
 }
 
+
+
+
+
+
+
 $voertuigOutput = '';
 $sqlVoertuigen = "SELECT * FROM voertuigen";
 if ($sqlResultVoertuigen = mysqli_query($conn, $sqlVoertuigen)) {
@@ -98,9 +104,7 @@ include('include/title.inc.php');
     <link rel="stylesheet" href="css/bootstrap.css?<?php echo time(); ?>">
     <link rel="stylesheet" href="css/bootstrap-icons.css?<?php echo time(); ?>">
     <link rel="stylesheet" href="css/flag-icon.css?<?php echo time(); ?>">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css"> -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.bootstrap5.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.css">
+
     <link rel="stylesheet" href="css/main.css?<?php echo time(); ?>">
 
     <title>InfraGD | <?php echo $page_title; ?></title>
@@ -113,7 +117,7 @@ include('include/title.inc.php');
         <?php include('include/navbar.inc.php'); ?>
     </header>
 
-    <main class="main py-3">
+    <main class="main">
 
         <section>
             <div class="container-fluid">
@@ -123,7 +127,7 @@ include('include/title.inc.php');
                             <strong>Consessie:</strong>
                         </span>
                         <?php echo $filterOutput; ?>
-                        <table id="voertuigTable" class="table table-sm">
+                        <table id="voertuigTable" class="table">
                             <thead>
                                 <tr>
                                     <th>VoertuigStatus</th>
@@ -149,24 +153,6 @@ include('include/title.inc.php');
     <script src="js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
     <script src="js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
     <script src="js/functions.js?<?php echo time(); ?>"></script>
-
-    <!-- <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script> -->
-    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.js"></script>
-    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.bootstrap5.js"></script>
-    <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
-    <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.dataTables.js"></script>
-    <script>
-        $(document).ready(function() {
-            //Initialize datatable
-            let table = new DataTable("#voertuigTable", {
-                language: {
-                    url: 'https://cdn.datatables.net/plug-ins/2.1.8/i18n/nl-NL.json',
-                },
-                responsive: true
-            });
-
-        });
-    </script>
 
 </body>
 

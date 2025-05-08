@@ -60,7 +60,7 @@ header .navbar .navbar-toggler {
 }
 
 .main {
-  margin-top: 98px;
+  margin-top: 58px;
 }
 
 .blog__post-item {
@@ -285,8 +285,11 @@ header .navbar .navbar-toggler {
   font-size: 0.8rem;
 }
 
-.bg-blue-touch {
-  background-color: #eff8fc;
+.list-group {
+  max-height: 450px;
+  margin-bottom: 10px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .section-title {

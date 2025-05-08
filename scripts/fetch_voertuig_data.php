@@ -61,7 +61,9 @@
         $sqlResultVoertuigen .= "AND voertuigConsessieCode = '$voertuigConsessieCode'";
         }
         
-        echo $voertuigOutput;
+        
     }
+
+    echo $voertuigOutput;
 
 ?>

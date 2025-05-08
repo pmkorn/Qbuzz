@@ -25,11 +25,16 @@
     text-align: center;
     font-size: .8rem;
 }
-
+.list-group{
+    max-height: 450px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 
 .bg-blue-touch {
-  background-color: $blue-touch;
+  //background-color: $blue-touch;
 }
 
 .section-title {

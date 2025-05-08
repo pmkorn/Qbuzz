@@ -9,6 +9,9 @@
                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
                     <a class="nav-link" href="voertuigen/">Voertuigen</a>
                 </li>
+                <li class="nav-item me-lg-3 mb-3 mb-lg-0">
+                    <a class="nav-link" href="open-diensten/">Open diensten</a>
+                </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 right-bar">
                 <?php

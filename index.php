@@ -48,8 +48,6 @@
 
   <main class="main">
 
-    
-
   </main>
 
   <?php include('include/modals.php'); ?>

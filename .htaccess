@@ -3,6 +3,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 
 RewriteRule ^voertuigen/ voertuigen.php [NC,L]
+RewriteRule ^open-diensten/ open_diensten.php [NC,L]
 RewriteRule ^stremmingen/ stremmingen.php [NC,L]
 RewriteRule ^meldingen/ meldingen.php [NC,L]
 RewriteRule ^uitruk/ uitruk.php [NC,L]
@@ -16,6 +17,6 @@ RewriteRule ^admin/werkorders/aanmaken/ dashboard/admin_werkorder_aanmaken.php [
 RewriteRule ^admin/gebruikers/overzicht/([0-9a-zA-Z_-]+)/ dashboard/admin_user_detail.php?employeeID=$1 [NC,L]
 RewriteRule ^admin/gebruikers/overzicht/ dashboard/admin_user_overview.php [NC,L]
 RewriteRule ^admin/ dashboard/admin.php [NC,L]
-RewriteRule ^uitloggen/ scripts/user_logout.php [NC,L] 
+RewriteRule ^uitloggen/ scripts/user_logout.php [NC,L]
 
 ErrorDocument 404 /404.php
