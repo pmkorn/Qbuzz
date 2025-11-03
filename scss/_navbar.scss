@@ -1,23 +1,32 @@
 header {
-  box-shadow: 0px 0px 2px 3px #c3c3c3;
+    box-shadow: 0px 0px 2px 3px #c3c3c3;
 
-  .navbar {    
-    .navbar-brand {
+    .navbar {
+        background-color: $blue-dark;
 
-      color: $black;
+        .navbar-brand {
 
-      span {
-        color: $buttercup
-      }
+            color: $black;
+
+            span {
+                color: $buttercup
+            }
+
+        }
+
+        .nav-link {
+            color: $white;
+            font-weight: 300;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
 
     }
-    .navbar-toggler {
-      border: none;
-    }
-
-  }
 
 }
+
 
 // .nav-link {
 //   position: relative;

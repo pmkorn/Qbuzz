@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold me-5" href="/"><img src="../images/qbuzz-logo.png" alt="Qbuzz logo" width="80px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,6 +11,15 @@
                 </li>
                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
                     <a class="nav-link" href="open-diensten/">Open diensten</a>
+                </li>
+                <li class="nav-item me-lg-3 mb-3 mb-lg-0">
+                    <a class="nav-link" href="voertuig-inzet/">Voertuig inzet</a>
+                </li>
+                <li class="nav-item me-lg-3 mb-3 mb-lg-0">
+                    <a class="nav-link" href="uitrijlijst/">Uitrijlijsten</a>
+                </li>
+                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
+                    <a class="nav-link" href="planning/">Planning</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 right-bar">

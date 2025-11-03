@@ -49,11 +49,18 @@ body {
 header {
   box-shadow: 0px 0px 2px 3px #c3c3c3;
 }
+header .navbar {
+  background-color: #004654;
+}
 header .navbar .navbar-brand {
   color: #2e2e2e;
 }
 header .navbar .navbar-brand span {
   color: #f1aa09;
+}
+header .navbar .nav-link {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
 }
 header .navbar .navbar-toggler {
   border: none;
@@ -89,6 +96,8 @@ header .navbar .navbar-toggler {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -115,8 +124,7 @@ header .navbar .navbar-toggler {
 .blog__post-item-content-comment p {
   font-size: 1rem;
   font-weight: bold;
-  -moz-columns: #555555;
-       columns: #555555;
+  columns: #555555;
 }
 .blog__post-item-content-comment p i {
   color: #f1aa09;
@@ -132,8 +140,7 @@ header .navbar .navbar-toggler {
   color: #f1aa09;
 }
 .blog__post-item-content-footer-rating span {
-  -moz-columns: #555555;
-       columns: #555555;
+  columns: #555555;
   font-weight: bold;
 }
 
@@ -193,6 +200,8 @@ header .navbar .navbar-toggler {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -292,6 +301,10 @@ header .navbar .navbar-toggler {
   -webkit-overflow-scrolling: touch;
 }
 
+.bg-blue-touch {
+  background-color: #eff8fc;
+}
+
 .section-title {
   font-size: 1.2rem;
   font-weight: 300;
@@ -346,6 +359,20 @@ header .navbar .navbar-toggler {
   margin: 0 4px;
   height: 20px;
   width: 20px;
+}
+
+.vehicle-item i {
+  font-size: 3rem;
+  margin: 0 10px;
+}
+.vehicle-item p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.vehicle-item small {
+  font-size: 0.6rem;
 }
 
 .callout {
@@ -478,11 +505,6 @@ textarea {
   display: none;
 }
 
-.navbar .nav-link {
-  color: rgb(0, 55, 80);
-  font-weight: 300;
-}
-
 .sb-sidenav-footer {
   color: rgb(239, 248, 252);
 }
@@ -501,4 +523,14 @@ textarea {
   outline: 0;
   border: 0;
   box-shadow: 0 0 0 0.1rem #db5103 !important;
+}
+
+.number-spinner {
+  display: flex;
+  align-items: center;
+  max-width: 160px;
+}
+
+.number-spinner input {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

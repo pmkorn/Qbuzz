@@ -69,7 +69,7 @@ if ($sqlResultVoertuigen = mysqli_query($conn, $sqlVoertuigen)) {
                                         </td>
                                     </td>';
         }
-        $voertuigOutput .= '<td><span class="badge text-bg-dark">' . $row['voertuigNummer'] . '</span></td>';
+        $voertuigOutput .= '<td>' . $row['voertuigNummer'] . '</td>';
         $voertuigOutput .= '<td>' . $row['voertuigMerk'] . ' ' . $row['voertuigType'] . '</span></td>';
         if ($row['voertuigKenteken'] == '') {
             $voertuigOutput .= '<td></td>';
@@ -103,7 +103,7 @@ include('include/title.inc.php');
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.css">
     <link rel="stylesheet" href="css/main.css?<?php echo time(); ?>">
 
-    <title>InfraGD | <?php echo $page_title; ?></title>
+    <title>Qbuzz | <?php echo $page_title; ?></title>
 
 </head>
 
@@ -114,6 +114,14 @@ include('include/title.inc.php');
     </header>
 
     <main class="main py-3">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="section-title"> <?php echo $page_title; ?> </h1>
+                </div>
+            </div>
+        </div>
 
         <section>
             <div class="container-fluid">

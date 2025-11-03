@@ -34,7 +34,7 @@
 
 
 .bg-blue-touch {
-  //background-color: $blue-touch;
+  background-color: $blue-touch;
 }
 
 .section-title {
@@ -91,7 +91,21 @@ width: 20px;
 }
 
 
-
+.vehicle-item {
+                i {
+                    font-size: 3rem;
+                    margin: 0 10px;
+                }
+                p {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                }
+                small {
+                    font-size: 0.6rem;
+                }
+            }
 .callout {
   padding: 30px;
   //margin-bottom: 20px;
@@ -231,13 +245,6 @@ textarea {
   display: none;
 }
 
-.navbar {
-  .nav-link {
-    color: $darkblue;
-    font-weight: 300;
-  }
-}
-
 .sb-sidenav-footer {
   color: $lightblue;
 }
@@ -256,4 +263,13 @@ textarea {
     border: 0;
     box-shadow: 0 0 0 0.1rem $orange-dark !important;
  }
+
+ .number-spinner {
+      display: flex;
+      align-items: center;
+      max-width: 160px;
+    }
+    .number-spinner input {
+      text-align: center;
+    }
 
