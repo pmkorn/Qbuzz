@@ -53,44 +53,141 @@ include('include/title.inc.php');
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                            <h2>Test</h2>
-                            <hr>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <i class="bi bi-battery-full fs-3 text-success" title="SoC 100%"></i>
-                                        <i class="bi bi-battery-half fs-3 text-warning" title="SoC 50%"></i>
-                                        <i class="bi bi-battery-low fs-3 text-danger" title="SoC 10%"></i>
-                                        <i class="bi bi-battery fs-3 text-danger" title="SoC 0%"></i>
-                                        <i class="bi bi-battery-charging fs-3 text-warning" title="Charching"></i>
-                                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <i class="bi bi-buildings"></i>&nbsp;Appingedam&nbsp;<small>(apggar)</small>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Voertuig</th>
+                                                <th>Gepland</th>
+                                                <th>Aanwezig</th>
+                                                <th>Telling</th>
+                                                <th>Delta</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bus 1</td>
+                                                <td>10</td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                                <td class="text-danger">-1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bus 2</td>
+                                                <td>8</td>
+                                                <td>8</td>
+                                                <td>8</td>
+                                                <td class="text-success">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bus 3</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>13</td>
+                                                <td class="text-success">+1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                            <h2>Test</h2>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="bi bi-buildings"></i>&nbsp;Assen&nbsp;<small>(asngrg)</small>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Voertuig</th>
+                                                <th>Gepland</th>
+                                                <th>Aanwezig</th>
+                                                <th>Telling</th>
+                                                <th>Delta</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bus 1</td>
+                                                <td>10</td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                                <td class="text-danger">-1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bus 2</td>
+                                                <td>8</td>
+                                                <td>8</td>
+                                                <td>8</td>
+                                                <td class="text-success">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bus 3</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>13</td>
+                                                <td class="text-success">+1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                            <h2>Test</h2>
-                        </div>
-                        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
-                            <h2>Test</h2>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="bi bi-buildings"></i>&nbsp;Emmen&nbsp;<small>(emngrg)</small>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Voertuig</th>
+                                                <th>Gepland</th>
+                                                <th>Aanwezig</th>
+                                                <th>Telling</th>
+                                                <th>Delta</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bus 1</td>
+                                                <td>10</td>
+                                                <td>9</td>
+                                                <td>9</td>
+                                                <td class="text-danger">-1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bus 2</td>
+                                                <td>8</td>
+                                                <td>8</td>
+                                                <td>8</td>
+                                                <td class="text-success">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bus 3</td>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>13</td>
+                                                <td class="text-success">+1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
