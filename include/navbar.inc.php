@@ -7,19 +7,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 left-bar">
                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-                    <a class="nav-link disabled" href="voertuigen/">Voertuigen</a>
+                    <a class="nav-link " href="afruilingen/">Afruilingen</a>
                 </li>
                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-                    <a class="nav-link disabled" href="open-diensten/">Open diensten</a>
+                    <a class="nav-link " href="voertuigen/">Voertuigen</a>
                 </li>
                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-                    <a class="nav-link disabled" href="voertuig-inzet/">Voertuig inzet</a>
+                    <a class="nav-link " href="open-diensten/">Open diensten</a>
                 </li>
                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-                    <a class="nav-link disabled" href="uitrijlijst/">Uitrijlijsten</a>
+                    <a class="nav-link " href="voertuig-inzet/">Voertuig inzet</a>
+                </li>
+                <li class="nav-item me-lg-3 mb-3 mb-lg-0">
+                    <a class="nav-link " href="uitrijlijst/">Uitrijlijsten</a>
                 </li>
                  <li class="nav-item me-lg-3 mb-3 mb-lg-0">
-                    <a class="nav-link disabled" href="planning/">Planning</a>
+                    <a class="nav-link " href="planning/">Planning</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 right-bar">
