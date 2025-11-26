@@ -60,8 +60,8 @@ include('include/title.inc.php');
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3">
+            <div class="row rows-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                <div class="col">
                     <div class="mb-3">
                         <label for="" class="form-label">Voertuig:</label>
                         <input type="text" class="form-control form-control-sm" id="" placeholder="Typ voertuignummer in...">
@@ -82,7 +82,7 @@ include('include/title.inc.php');
                         <button class="btn btn-sm btn-success">Toevoegen</button>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <div class="mb-3 draggable vehicle-item py-1 d-flex border border-danger border-2 bg-danger-subtle text-danger rounded-1 justify-content-center align-items-center ui-draggable ui-draggable-handle" style="position: relative;">
                         <div class="flex-grow-1">
                             <i class="bi bi-bus-front text-danger"></i>
@@ -99,9 +99,15 @@ include('include/title.inc.php');
                             <small>Locatie:</small>
                             <p>CS</p>
                         </div>
+                        <div class="flex-grow-1 ms-3">
+                            <small>Door:</small>
+                            <p>P. Korn</p>
+                            <small>Status:</small>
+                            <p class="bi bi-check"></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <div class="mb-3 draggable vehicle-item py-1 d-flex border border-warning border-2 bg-warning-subtle text-warning rounded-1 justify-content-center align-items-center ui-draggable ui-draggable-handle" style="position: relative;">
                         <div class="flex-grow-1">
                             <i class="bi bi-bus-front text-warning"></i>
@@ -118,9 +124,15 @@ include('include/title.inc.php');
                             <small>Locatie:</small>
                             <p>CS</p>
                         </div>
+                        <div class="flex-grow-1 ms-3">
+                            <small>Door:</small>
+                            <p>P. Korn</p>
+                            <small>Status:</small>
+                            <p class="bi bi-check"></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col3">
                     <div class="mb-3 draggable vehicle-item py-1 d-flex border border-success border-2 bg-success-subtle text-success rounded-1 justify-content-center align-items-center ui-draggable ui-draggable-handle" style="position: relative;">
                         <div class="flex-grow-1">
                             <i class="bi bi-bus-front text-success"></i>
@@ -136,6 +148,12 @@ include('include/title.inc.php');
                             <p>17:00</p>
                             <small>Locatie:</small>
                             <p>CS</p>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <small>Door:</small>
+                            <p>P. Korn</p>
+                            <small>Status:</small>
+                            <p class="bi bi-check"></p>
                         </div>
                     </div>
                 </div>
