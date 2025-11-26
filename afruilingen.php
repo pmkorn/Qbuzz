@@ -75,7 +75,7 @@ include('include/title.inc.php');
                                 <td>7440</td>
                                 <td>458671</td>
                                 <td>22:59</td>
-                                <td>SoC %</td>
+                                <td>SoC</td>
                                 <td>CS</td>
                                 <td><span class="badge bg-success">In afwachting</span></td>
                                 <td>
