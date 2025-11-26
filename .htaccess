@@ -2,6 +2,7 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 
+RewriteRule ^afruilingen/ afruilingen.php [NC,L]
 RewriteRule ^voertuigen/ voertuigen.php [NC,L]
 RewriteRule ^open-diensten/ open_diensten.php [NC,L]
 RewriteRule ^voertuig-inzet/ voertuig_inzet.php [NC,L]
