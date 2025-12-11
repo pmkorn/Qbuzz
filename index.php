@@ -37,6 +37,35 @@ include('include/title.inc.php');
     <link rel="stylesheet" href="css/bootstrap-icons.css?<?php echo time(); ?>">
     <link rel="stylesheet" href="css/flag-icon.css?<?php echo time(); ?>">
     <link rel="stylesheet" href="css/main.css?<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?<?php echo time(); ?>">
+    <style>
+        #map {
+            height: 300px;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .card-fullscreen {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 9999;
+            overflow: auto;
+            .card-body{
+                height: calc(100vh - 56px) !important;
+                #map {
+                height: 100% !important;
+                width: 100% !important;
+            }
+            }
+        }
+    </style>
 
     <title>Qbuzz | Home</title>
 
@@ -53,139 +82,27 @@ include('include/title.inc.php');
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <i class="bi bi-buildings"></i>&nbsp;Appingedam&nbsp;<small>(apggar)</small>
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Voertuig</th>
-                                                <th>Gepland</th>
-                                                <th>Aanwezig</th>
-                                                <th>Telling</th>
-                                                <th>Delta</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Bus 1</td>
-                                                <td>10</td>
-                                                <td>9</td>
-                                                <td>9</td>
-                                                <td class="text-danger">-1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bus 2</td>
-                                                <td>8</td>
-                                                <td>8</td>
-                                                <td>8</td>
-                                                <td class="text-success">0</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bus 3</td>
-                                                <td>12</td>
-                                                <td>13</td>
-                                                <td>13</td>
-                                                <td class="text-success">+1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                    <div class="section-title">Voertuig overzicht</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-2">
+                    Test
+                </div>
+                <div class="col-12 col-md-10">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">test</div>
+                        <div class="col-12 col-md-6 col-lg-4">test</div>
+                        <!-- Column for displaying card with roadmap -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div id=cardFullScreen class="card">
+                                <div class="card-header">
+                                    Positie voertuig
+                                    <i id="fullScreen" class="bi bi-arrows-fullscreen float-end"></i>
+                                    <i class="bi bi-list-task float-end mx-3"></i>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <i class="bi bi-buildings"></i>&nbsp;Assen&nbsp;<small>(asngrg)</small>
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Voertuig</th>
-                                                <th>Gepland</th>
-                                                <th>Aanwezig</th>
-                                                <th>Telling</th>
-                                                <th>Delta</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Bus 1</td>
-                                                <td>10</td>
-                                                <td>9</td>
-                                                <td>9</td>
-                                                <td class="text-danger">-1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bus 2</td>
-                                                <td>8</td>
-                                                <td>8</td>
-                                                <td>8</td>
-                                                <td class="text-success">0</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bus 3</td>
-                                                <td>12</td>
-                                                <td>13</td>
-                                                <td>13</td>
-                                                <td class="text-success">+1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="bi bi-buildings"></i>&nbsp;Emmen&nbsp;<small>(emngrg)</small>
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Voertuig</th>
-                                                <th>Gepland</th>
-                                                <th>Aanwezig</th>
-                                                <th>Telling</th>
-                                                <th>Delta</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Bus 1</td>
-                                                <td>10</td>
-                                                <td>9</td>
-                                                <td>9</td>
-                                                <td class="text-danger">-1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bus 2</td>
-                                                <td>8</td>
-                                                <td>8</td>
-                                                <td>8</td>
-                                                <td class="text-success">0</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bus 3</td>
-                                                <td>12</td>
-                                                <td>13</td>
-                                                <td>13</td>
-                                                <td class="text-success">+1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="card-body">
+                                    <div id="map"></div>
                                 </div>
                             </div>
                         </div>
@@ -200,6 +117,16 @@ include('include/title.inc.php');
     <script src="js/bootstrap.bundle.js?<?php echo time(); ?>"></script>
     <script src="js/jquery-3.7.1.js?<?php echo time(); ?>"></script>
     <script src="js/functions.js?<?php echo time(); ?>"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?<?php echo time(); ?>"></script>
+    <script src="js/map.js"></script>
+    <script>
+        const cardEl = document.getElementById("cardFullScreen");
+        const expand = document.getElementById("fullScreen");
+
+        expand.addEventListener("click", () => {
+            cardEl.classList.toggle("card-fullscreen");
+        });
+    </script>
 
 </body>
 

@@ -6,7 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 left-bar">
-                <li class="nav-item me-lg-3 mb-3 mb-lg-0">
+                <!-- <li class="nav-item me-lg-3 mb-3 mb-lg-0">
                     <a class="nav-link " href="afruilingen/">Afruilingen</a>
                 </li>
                 <li class="nav-item me-lg-3 mb-3 mb-lg-0">
@@ -23,7 +23,7 @@
                 </li>
                  <li class="nav-item me-lg-3 mb-3 mb-lg-0">
                     <a class="nav-link " href="planning/">Planning</a>
-                </li>
+                </li> -->
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 right-bar">
                 <?php
