@@ -44,6 +44,52 @@ include('include/title.inc.php');
 
 <body class="bg-blue-touch">
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5" id="exampleModalLabel">Voertuiginzet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="busNumber" class="form-label">Busnummer</label>
+                                <input type="text" class="form-control form-control-sm" id="busNumber" placeholder="Vul het busnummer in">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="omloop" class="form-label">Omloop</label>
+                                <input type="text" class="form-control form-control-sm" id="omloop" placeholder="Vul het omloopnummer in">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="busNumber" class="form-label">Busnummer</label>
+                                <input type="text" class="form-control form-control-sm" id="busNumber" placeholder="Vul het busnummer in">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="omloop" class="form-label">Omloop</label>
+                                <input type="text" class="form-control form-control-sm" id="omloop" placeholder="Vul het omloopnummer in">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-sm btn-success">Busruiling aanmaken</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="fixed-top">
         <?php include('include/navbar.inc.php'); ?>
     </header>
@@ -53,38 +99,36 @@ include('include/title.inc.php');
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <button class="btn btn-sm btn-success mb-3">Afruiling <i class="bi bi-plus"></i></button>
+                    <button class="btn btn-sm btn-success mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Afruiling <i class="bi bi-plus"></i></button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-hover table-bordered align-middle">
                         <thead>
                             <tr>
-                                <th>Voertuig</th>
+                                <th>Busnr.</th>
                                 <th>Omloop</th>
                                 <th>Tijd</th>
-                                <th>Reden afruiling</th>
                                 <th>Plaats</th>
                                 <th>Status</th>
                                 <th>Actie</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="table-group-divider">
                             <tr>
-                                <td>7440</td>
-                                <td>458671</td>
-                                <td>22:59</td>
-                                <td>SoC</td>
-                                <td>CS</td>
-                                <td><span class="badge bg-success">In afwachting</span></td>
+                                <td>7701</td>
+                                <td>644001</td>
+                                <td><i class="bi bi-clock"></i> 15:44</td>
+                                <td>Groningen CS</td>
+                                <td><span class="badge bg-warning">Openstaand</span></td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical"></i> <!-- Bootstrap Icons -->
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">In behandeling nemen</a></li>
+                                            <li><a class="dropdown-item" href="#">In behandeling</a></li>
                                             <li><a class="dropdown-item" href="#">Afronden</a></li>
                                             <li><a class="dropdown-item text-danger" href="#">Verwijderen</a></li>
                                         </ul>
@@ -92,32 +136,11 @@ include('include/title.inc.php');
                                 </td>
                             </tr>
                             <tr>
-                                <td>7440</td>
-                                <td>458671</td>
-                                <td>22:59</td>
-                                <td>SoC</td>
-                                <td>CS</td>
-                                <td><span class="badge bg-warning">In behandeling</span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i> <!-- Bootstrap Icons -->
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">In behandeling nemen</a></li>
-                                            <li><a class="dropdown-item" href="#">Afronden</a></li>
-                                            <li><a class="dropdown-item text-danger" href="#">Verwijderen</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7440</td>
-                                <td>458671</td>
-                                <td>22:59</td>
-                                <td>SoC</td>
-                                <td>CS</td>
-                                <td><span class="badge bg-danger">Afgehandeld</span></td>
+                                <td>7702</td>
+                                <td>644002</td>
+                                <td><i class="bi bi-clock"></i> 16:44</td>
+                                <td>Groningen CS</td>
+                                <td><span class="badge bg-danger">In behandeling</span></td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
